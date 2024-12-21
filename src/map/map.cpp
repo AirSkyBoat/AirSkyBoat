@@ -406,6 +406,11 @@ void do_final(int code)
 
     CTaskMgr::delInstance();
     CVanaTime::delInstance();
+    // TODO: Look into and clarify relation of lifetime of objects and logging/profiling of destructors
+    // sql needs to be released here, `TracyZoneScope` macro in SqlConnection destructor depends on logging functionality being available
+    // but the logging is shutdown later down in this function
+    // Before this change, it was released by atexit handlers
+    sql.release();
 
     timer_final();
     socket_final();

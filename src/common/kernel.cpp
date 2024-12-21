@@ -150,12 +150,20 @@ static void sig_proc(int sn)
         case SIGINT:
         case SIGTERM:
             gRunFlag = false;
-            gConsoleService->stop();
+            if (gConsoleService)
+            {
+                gConsoleService->stop();
+            }
+            do_final(EXIT_SUCCESS);
+            exit(EXIT_SUCCESS);
             break;
         case SIGABRT:
         case SIGSEGV:
         case SIGFPE:
-            gConsoleService->stop();
+            if (gConsoleService)
+            {
+                gConsoleService->stop();
+            }
             dump_backtrace();
             do_abort();
 #ifdef _WIN32
@@ -256,10 +264,7 @@ int main(int argc, char** argv)
             }
             else
             {
-#ifndef SIGKILL
-#define SIGKILL 9
-#endif // SIGKILL
-                std::raise(SIGKILL);
+                std::raise(SIGTERM);
             }
         });
         // clang-format on
@@ -276,7 +281,10 @@ int main(int argc, char** argv)
     // Re-enable Quick Edit Mode upon Exiting if it is still disabled
     SetConsoleMode(hInput, prev_mode);
 #endif // _WIN32
-    gConsoleService->stop();
+    if (gConsoleService)
+    {
+        gConsoleService->stop();
+    }
 
     do_final(EXIT_SUCCESS);
 }
