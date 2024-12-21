@@ -388,7 +388,7 @@ end
 function npcUtil.giveCurrency(player, currency, amount)
     local ID = zones[player:getZoneID()]
 
-    if (not type(currency) == "string") or (not type(amount) == "number") then
+    if type(currency) ~= "string" or type(amount) ~= "number" then
         print(string.format("ERROR: invalid parameter given to npcUtil.giveCurrency in zone %s.", player:getZoneName()))
         return false
     end
@@ -870,6 +870,20 @@ end
 function npcUtil.tradeSetInList(trade, itemList)
     for k, v in ipairs(itemList) do
         if npcUtil.tradeHasExactly(trade, itemList[k]) then
+            return true
+        end
+    end
+
+    return false
+end
+
+-- Checks to see if there are any items in the trade with the provided flags (item_flag).
+function npcUtil.tradeContainsItemsWithFlags(trade, flags)
+    local item
+
+    for i = 0, trade:getSlotCount()-1 do
+        item = trade:getItem(i)
+        if bit.band(item:getFlag(), flags) ~= 0 then
             return true
         end
     end
