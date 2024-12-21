@@ -9,6 +9,8 @@ set(UTIL_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/blueutils.h
     ${CMAKE_CURRENT_SOURCE_DIR}/charutils.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/charutils.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/chatfilter.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/chatfilter.h
     ${CMAKE_CURRENT_SOURCE_DIR}/fellowutils.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/fellowutils.h
     ${CMAKE_CURRENT_SOURCE_DIR}/fishingcontest.cpp

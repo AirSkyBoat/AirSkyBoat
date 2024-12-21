@@ -2998,3 +2998,25 @@ void CCharEntity::clearCharVarsWithPrefix(std::string const& prefix)
 
     sql->Query("DELETE FROM char_vars WHERE charid = %u AND varname LIKE '%s%%';", this->id, prefix.c_str());
 }
+
+/*************************************************************************
+ *                                                                       *
+ *  Does the user have all yell mesages filtered?                        *
+ *                                                                       *
+ ************************************************************************/
+
+bool CCharEntity::isYellFiltered() const
+{
+    return (chatFilterFlags & CHATFILTER_YELL) != 0;
+}
+
+/*************************************************************************
+ *                                                                       *
+ *  Does the user have "all yell/shout messages deemed spam" filtered?   *
+ *                                                                       *
+ ************************************************************************/
+
+bool CCharEntity::isYellSpamFiltered() const
+{
+    return (chatFilterFlags & CHATFILTER_YELL_SPAM) != 0;
+}

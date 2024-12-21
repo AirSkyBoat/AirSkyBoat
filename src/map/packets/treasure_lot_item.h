@@ -38,7 +38,7 @@ class CBaseEntity;
 class CTreasureLotItemPacket : public CBasicPacket
 {
 public:
-    CTreasureLotItemPacket(CBaseEntity* PHighestLotter, uint16 HighestLot, CBaseEntity* PLotter, uint8 SlotID, uint16 Lot);
+    CTreasureLotItemPacket(CBaseEntity* PHighestLotter, uint16 HighestLot, CBaseEntity* PLotter, uint8 SlotID, uint16 Lot, bool isFiltered);
     CTreasureLotItemPacket(uint8 slotID, ITEMLOTTYPE MessageType);
     CTreasureLotItemPacket(CBaseEntity* PWinner, uint8 SlotID, uint16 Lot, ITEMLOTTYPE MessageType);
 };

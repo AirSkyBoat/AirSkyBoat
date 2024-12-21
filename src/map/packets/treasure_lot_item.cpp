@@ -52,7 +52,7 @@ CTreasureLotItemPacket::CTreasureLotItemPacket(CBaseEntity* PWinner, uint8 slotI
     memcpy(data + (0x16), PWinner->GetName().c_str(), PWinner->GetName().size());
 }
 
-CTreasureLotItemPacket::CTreasureLotItemPacket(CBaseEntity* PHighestLotter, uint16 HighestLot, CBaseEntity* PLotter, uint8 SlotID, uint16 Lot)
+CTreasureLotItemPacket::CTreasureLotItemPacket(CBaseEntity* PHighestLotter, uint16 HighestLot, CBaseEntity* PLotter, uint8 SlotID, uint16 Lot, bool isFiltered)
 {
     this->setType(0xD3);
     this->setSize(0x3C);
@@ -72,4 +72,11 @@ CTreasureLotItemPacket::CTreasureLotItemPacket(CBaseEntity* PHighestLotter, uint
     ref<uint8>(0x14) = SlotID;
 
     memcpy(data + 0x26, PLotter->GetName().c_str(), PLotter->GetName().size());
+
+    if (isFiltered)
+    {
+        // A NUL here and the client won't show the chat message
+        // (this is really what retail does)
+        ref<uint8>(0x26) = '\0';
+    }
 }

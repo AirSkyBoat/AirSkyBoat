@@ -243,8 +243,13 @@ namespace message
                     {
                         PZone->ForEachChar([&packet, &extra](CCharEntity* PChar)
                         {
-                            // don't push to sender
-                            if (PChar->id != ref<uint32>((uint8*)extra.data(), 0))
+                            auto serverId = ref<uint32>((uint8*)extra.data(), 0);
+
+                            // boolean, is this message considered spam, for the "all yell/shout messages deemed spam" filter
+                            auto isMarkedSpam = (ref<uint32>((uint8*)extra.data(), 4) != 0) && PChar->isYellSpamFiltered();
+
+                            // don't push to the sender or anyone with yell filtered
+                            if (PChar->id != serverId && !PChar->isYellFiltered() && !isMarkedSpam)
                             {
                                 CBasicPacket* newPacket = new CBasicPacket();
                                 memcpy(*newPacket, packet.data(), std::min<size_t>(packet.size(), PACKET_SIZE));

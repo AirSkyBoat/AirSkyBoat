@@ -30,6 +30,7 @@
 #include "recast_container.h"
 #include "treasure_pool.h"
 #include "utils/charutils.h"
+#include "utils/chatfilter.h"
 #include "utils/itemutils.h"
 
 static constexpr duration treasure_checktime = 3s;
@@ -316,9 +317,12 @@ void CTreasurePool::LotItem(CCharEntity* PChar, uint8 SlotID, uint16 Lot)
     }
 
     // Player lots Item for XXX message
+    CChatFilter chatFilter(PChar, CHATFILTER_LOT_RESULTS);
+
     for (auto& member : members)
     {
-        member->pushPacket(new CTreasureLotItemPacket(highestLotter, highestLot, PChar, SlotID, Lot));
+        bool isFiltered = chatFilter.isFiltered(member);
+        member->pushPacket(new CTreasureLotItemPacket(highestLotter, highestLot, PChar, SlotID, Lot, isFiltered));
     }
 
     // if all lotters have lotted, evaluate immediately.
@@ -375,10 +379,14 @@ void CTreasurePool::PassItem(CCharEntity* PChar, uint8 SlotID)
     }
 
     uint16 PassedLot = 65535; // passed mask is FF FF
+
     // Player lots Item for XXX message
+    CChatFilter chatFilter(PChar, CHATFILTER_LOT_RESULTS);
+
     for (auto& member : members)
     {
-        member->pushPacket(new CTreasureLotItemPacket(highestLotter, highestLot, PChar, SlotID, PassedLot));
+        bool isFiltered = chatFilter.isFiltered(member);
+        member->pushPacket(new CTreasureLotItemPacket(highestLotter, highestLot, PChar, SlotID, PassedLot, isFiltered));
     }
 
     // if all lotters have lotted, evaluate immediately.

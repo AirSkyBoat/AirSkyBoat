@@ -675,6 +675,9 @@ public:
     bool   m_Locked;       // Is the player locked in a cutscene
     uint32 m_prevTargetId; // ID of the last target for the player.
 
+    bool isYellFiltered() const;     // Does the user have all yell mesages filtered?
+    bool isYellSpamFiltered() const; // Does the user have "all yell/shout messages deemed spam" filtered?
+
     CCharEntity();
     ~CCharEntity();
 
