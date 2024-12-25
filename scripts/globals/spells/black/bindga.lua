@@ -20,9 +20,10 @@ spellObject.onSpellCast = function(caster, target, spell)
 
     -- Duration not impacted by any non-random effects
     -- Duration from normal distribution with mean of 30 and std dev of 12 based on retail testing
+    -- Duration has a floor of 5 seconds if not fully resisted. Max partial resist is randomDuration * 0.5, so set min_val here to 10
     -- Use the Box-Muller transform to sample from the distribution
     local z0 = math.sqrt(-2 * math.log(math.random())) * math.cos(2 * math.pi * math.random())
-    local randomDuration = utils.clamp(math.floor(30 + z0 * 12), 1, 60)
+    local randomDuration = utils.clamp(math.floor(30 + z0 * 12), 10, 60)
 
     -- Resist
     local params = {}
