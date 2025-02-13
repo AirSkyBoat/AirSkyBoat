@@ -86,22 +86,32 @@ quest.sections =
                 end,
 
                 [309] = function(player, csid, option, npc)
+                    local currentProg = quest:getVar(player, 'Prog')
+                    local maxProg = 6 --prevents repeatable aspects of quest from overflowing and blocking progression
                     if option == 1 then
                         npcUtil.giveCurrency(player, 'gil', 100)
                         player:delKeyItem(xi.ki.DUSTY_TOME)
-                        quest:setVar(player, 'Prog', quest:getVar(player, 'Prog') + 1)
+                        if currentProg < maxProg then
+                            quest:setVar(player, 'Prog', currentProg + 1)
+                        end
                     elseif option == 2 then
                         npcUtil.giveCurrency(player, 'gil', 200)
                         player:delKeyItem(xi.ki.POINTED_JUG)
-                        quest:setVar(player, 'Prog', quest:getVar(player, 'Prog') + 1)
+                        if currentProg < maxProg then
+                            quest:setVar(player, 'Prog', currentProg + 1)
+                        end
                     elseif option == 3 then
                         npcUtil.giveCurrency(player, 'gil', 300)
                         player:delKeyItem(xi.ki.CRACKED_CLUB)
-                        quest:setVar(player, 'Prog', quest:getVar(player, 'Prog') + 1)
+                        if currentProg < maxProg then
+                            quest:setVar(player, 'Prog', currentProg + 1)
+                        end
                     elseif option == 4 then
                         npcUtil.giveCurrency(player, 'gil', 400)
                         player:delKeyItem(xi.ki.PEELING_HAIRPIN)
-                        quest:setVar(player, 'Prog', quest:getVar(player, 'Prog') + 1)
+                        if currentProg < maxProg then
+                            quest:setVar(player, 'Prog', currentProg + 1)
+                        end
                     elseif option == 5 then
                         player:delKeyItem(xi.ki.OLD_NAMETAG)
                         quest:setVar(player, 'Prog', 8)
