@@ -186,6 +186,13 @@ xi.dynamis.onSpawnUmbralDiabolos = function(mob)
     mob:addStatusEffect(xi.effect.BATTLEFIELD, 1, 0, 0, true)
     mob:setMobMod(xi.mobMod.DETECTION, xi.detects.SIGHT)
     mob:setMobMod(xi.mobMod.ALWAYS_AGGRO, 1)
+    -- Roam Cool and Roam Turns are staying the same (default) but now locked in, in case other changes happen in the future
+    mob:setMobMod(xi.mobMod.ROAM_COOL, 20)
+    mob:setMobMod(xi.mobMod.ROAM_TURNS, 1)
+    -- Roam Rate changed from 15 to 1 - removing the snap turns that can happen
+    mob:setMobMod(xi.mobMod.ROAM_RATE, 1)
+    -- Reducing range
+    mob:setMobMod(xi.mobMod.SIGHT_RANGE, 12)
 end
 
 xi.dynamis.onMobEngagedUmbralDiabolos = function(mob, target)
