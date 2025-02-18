@@ -46,19 +46,20 @@ entity.onMobFight = function(mob, target)
     -- Every 25% of its HP Tuchulcha will bury itself under the sand
     -- accompanied by use of the ability Sandpit
     if
-        (mob:getHPP() < 75 and mob:getLocalVar('Sandpits') == 0) or
+        mob:actionQueueEmpty() and
+        ((mob:getHPP() < 75 and mob:getLocalVar('Sandpits') == 0) or
         (mob:getHPP() < 50 and mob:getLocalVar('Sandpits') == 1) or
-        (mob:getHPP() < 25 and mob:getLocalVar('Sandpits') == 2)
+        (mob:getHPP() < 25 and mob:getLocalVar('Sandpits') == 2))
     then
         mob:setLocalVar('Sandpits', mob:getLocalVar('Sandpits') + 1)
         mob:useMobAbility(276)
+        mob:setUntargetable(true)
         mob:timer(4000, function(tuchulcha)
             tuchulcha:disengage()
             tuchulcha:setMobMod(xi.mobMod.NO_MOVE, 1)
             local posIndex = tuchulcha:getLocalVar("sand_pit" .. tuchulcha:getLocalVar('Sandpits'))
             local coords = ID.sheepInAntlionsClothing[tuchulcha:getBattlefield():getArea()].ant_positions[posIndex]
             tuchulcha:setSpawn(coords[1], coords[2], coords[3], 0)
-
             tuchulcha:setPos(coords)
             local players = tuchulcha:getBattlefield():getPlayers()
             for _, char in pairs(players) do
