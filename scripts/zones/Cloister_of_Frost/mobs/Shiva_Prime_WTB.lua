@@ -9,6 +9,7 @@ entity.onMobInitialize = function(mob)
     mob:setMobMod(xi.mobMod.NO_STANDBACK, 1)
     mob:setMobMod(xi.mobMod.SIGHT_RANGE, 21)
     mob:setMobMod(xi.mobMod.ADD_EFFECT, 1)
+    mob:setMobMod(xi.mobMod.MAGIC_RANGE, 40)
 end
 
 entity.onMobSpawn = function(mob)
