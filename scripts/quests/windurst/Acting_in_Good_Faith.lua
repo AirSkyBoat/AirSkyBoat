@@ -2,7 +2,12 @@
 -- Acting in Good Faith
 -----------------------------------
 -- !addquest 2 64
--- Gantineaux : !pos
+-- Gantineaux : !pos -83 -9 3 238
+-- Eperdur   : !pos 129 -6 96 231
+-- qm1        : !pos -460.85, -1.5, 425.14
+--            : !pos -24.10, -9.303, 258.993
+--            : !pos -19.624,-1.631,60.368
+--            : !pos 256.757, -20.489, 335.920
 -----------------------------------
 require('scripts/globals/interaction/quest')
 require('scripts/globals/npc_util')
@@ -85,7 +90,9 @@ quest.sections =
             onEventFinish =
             {
                 [680] = function(player, csid, option, npc)
-                    quest:complete(player)
+                    if quest:complete(player) then
+                        player:delKeyItem(xi.ki.GANTINEUXS_LETTER)
+                    end
                 end,
             },
         },
@@ -106,6 +113,8 @@ quest.sections =
                 [50] = function(player, csid, option, npc)
                     player:messageSpecial(ID.text.SPIRIT_INCENSE_EMITS_PUTRID_ODOR, xi.ki.SPIRIT_INCENSE)
                     player:delKeyItem(xi.ki.SPIRIT_INCENSE)
+
+                    npc:setPos(unpack(ID.npc.QM1_POS[math.random(1, 4)]))
                 end,
             },
         },

@@ -13,6 +13,10 @@ zoneObject.onInitialize = function(zone)
     -- NM Persistance
     xi.mob.nmTODPersistCache(zone, ID.mob.ANEMONE_ONE)
     xi.mob.nmTODPersistCache(zone, ID.mob.ANEMONE_TWO)
+
+    -- Give the Acting in Good Faith ??? a random spawn
+    local qm1 = GetNPCByID(ID.npc.QM1)
+    qm1:setPos(unpack(ID.npc.QM1_POS[math.random(1, 4)]))
 end
 
 zoneObject.onZoneIn = function(player, prevZone)
