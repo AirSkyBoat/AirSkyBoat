@@ -78,7 +78,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.CHUNK_OF_DERFLAND_HUMUS }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.CHUNK_OF_DERFLAND_HUMUS }) then
                         return quest:progressEvent(83)
                     end
                 end,

@@ -8,7 +8,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.ENLIGHT)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.SACRED_LANCE then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.SACRED_LANCE then
         target:delStatusEffect(xi.effect.ENLIGHT)
     end
 
@@ -16,7 +16,7 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.SACRED_LANCE) then
+    if target:hasEquipped(xi.item.SACRED_LANCE) then
         local effect = xi.effect.ENLIGHT
         local magicskill = target:getSkillLevel(xi.skill.ENHANCING_MAGIC)
         local potency = 0
@@ -29,7 +29,7 @@ itemObject.onItemUse = function(target)
 
         potency = utils.clamp(potency, 3, 25)
 
-        target:addStatusEffect(effect, potency, 0, 180, 0, 0, 0, xi.items.SACRED_LANCE)
+        target:addStatusEffect(effect, potency, 0, 180, 0, 0, 0, xi.item.SACRED_LANCE)
     end
 end
 

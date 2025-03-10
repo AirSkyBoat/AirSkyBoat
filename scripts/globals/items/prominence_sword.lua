@@ -8,7 +8,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.ENFIRE)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.PROMINENCE_SWORD then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.PROMINENCE_SWORD then
         target:delStatusEffect(xi.effect.ENFIRE)
     end
 
@@ -16,7 +16,7 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.PROMINENCE_SWORD) then
+    if target:hasEquipped(xi.item.PROMINENCE_SWORD) then
         local effect = xi.effect.ENFIRE
         local magicskill = target:getSkillLevel(xi.skill.ENHANCING_MAGIC)
         local potency = 0
@@ -29,7 +29,7 @@ itemObject.onItemUse = function(target)
 
         potency = utils.clamp(potency, 3, 25)
 
-        target:addStatusEffect(effect, potency, 0, 180, 0, 0, 0, xi.items.PROMINENCE_SWORD)
+        target:addStatusEffect(effect, potency, 0, 180, 0, 0, 0, xi.item.PROMINENCE_SWORD)
     end
 end
 

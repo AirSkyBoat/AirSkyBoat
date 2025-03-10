@@ -9,7 +9,7 @@ itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.REFRESH)
     if
         effect ~= nil and
-        effect:getItemSourceID() == xi.items.HYDRA_HAUBERT
+        effect:getItemSourceID() == xi.item.HYDRA_HAUBERT
     then
         target:delStatusEffect(xi.effect.REFRESH)
     end
@@ -18,11 +18,11 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.HYDRA_HAUBERT) then
+    if target:hasEquipped(xi.item.HYDRA_HAUBERT) then
         if target:hasStatusEffect(xi.effect.REFRESH) then
             target:messageBasic(xi.msg.basic.NO_EFFECT)
         else
-            target:addStatusEffect(xi.effect.REFRESH, 3, 3, 180, 0, 0, 0, xi.items.HYDRA_HAUBERT)
+            target:addStatusEffect(xi.effect.REFRESH, 3, 3, 180, 0, 0, 0, xi.item.HYDRA_HAUBERT)
         end
     end
 end

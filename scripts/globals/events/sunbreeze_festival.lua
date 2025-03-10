@@ -192,33 +192,33 @@ local originalMusic =
 
 local goldfishRewardTable =
 {
-    [10] = { points = 5,  item = xi.items.SUPER_SCOOP,     amount = 1  },
-    [11] = { points = 15, item = xi.items.CRACKLER,        amount = 3  },
-    [14] = { points = 25, item = xi.items.FESTIVE_FAN,     amount = 5  },
-    [12] = { points = 30, item = xi.items.RED_DROP,        amount = 1  },
-    [13] = { points = 50, item = xi.items.SPIRIT_MASQUE,   amount = 12 },
-    [17] = { points = 60, item = xi.items.PUNY_PLANET_KIT, amount = 1  },
-    [15] = { points = 65, item = xi.items.GOLDFISH_SET,    amount = 1  },
+    [10] = { points = 5,  item = xi.item.SUPER_SCOOP,     amount = 1  },
+    [11] = { points = 15, item = xi.item.CRACKLER,        amount = 3  },
+    [14] = { points = 25, item = xi.item.FESTIVE_FAN,     amount = 5  },
+    [12] = { points = 30, item = xi.item.RED_DROP,        amount = 1  },
+    [13] = { points = 50, item = xi.item.SPIRIT_MASQUE,   amount = 12 },
+    [17] = { points = 60, item = xi.item.PUNY_PLANET_KIT, amount = 1  },
+    [15] = { points = 65, item = xi.item.GOLDFISH_SET,    amount = 1  },
     [16] =
     {
-        [55]  = { points = 70, item = xi.items.GLOWFLY,         amount = 5 },
-        [115] = { points = 70, item = xi.items.WHITE_BUTTERFLY, amount = 5 },
-        [139] = { points = 70, item = xi.items.WHITE_BUTTERFLY, amount = 5 },
-        [903] = { points = 70, item = xi.items.BELL_CRICKET,    amount = 5 },
+        [55]  = { points = 70, item = xi.item.GLOWFLY,         amount = 5 },
+        [115] = { points = 70, item = xi.item.WHITE_BUTTERFLY, amount = 5 },
+        [139] = { points = 70, item = xi.item.WHITE_BUTTERFLY, amount = 5 },
+        [903] = { points = 70, item = xi.item.BELL_CRICKET,    amount = 5 },
     },
 }
 
 local fishValue =
 {
-    [xi.items.TINY_GOLDFISH]    = { amount = 1,  isStackable = true  },
-    [xi.items.BLACK_BUBBLE_EYE] = { amount = 2,  isStackable = true  },
-    [xi.items.LIONHEAD]         = { amount = 10, isStackable = false },
-    [xi.items.PEARLSCALE]       = { amount = 30, isStackable = false },
-    [xi.items.CALICO_COMET]     = { amount = 30, isStackable = false },
+    [xi.item.TINY_GOLDFISH]    = { amount = 1,  isStackable = true  },
+    [xi.item.BLACK_BUBBLE_EYE] = { amount = 2,  isStackable = true  },
+    [xi.item.LIONHEAD]         = { amount = 10, isStackable = false },
+    [xi.item.PEARLSCALE]       = { amount = 30, isStackable = false },
+    [xi.item.CALICO_COMET]     = { amount = 30, isStackable = false },
 }
 
 xi.events.sunbreeze_festival.goldfishVendorOnTrade = function(player, npc, trade, csid)
-    local hasBasket  = player:hasItem(xi.items.GOLDFISH_BASKET) and 1 or 0
+    local hasBasket  = player:hasItem(xi.item.GOLDFISH_BASKET) and 1 or 0
     local tradedFish = {}
     local points     = 0
     local itemQty
@@ -251,14 +251,14 @@ xi.events.sunbreeze_festival.goldfishVendorOnTrade = function(player, npc, trade
 end
 
 xi.events.sunbreeze_festival.goldfishVendorOnTrigger = function(player, npc, csid)
-    local hasBasket = player:hasItem(xi.items.GOLDFISH_BASKET) and 1 or 0
+    local hasBasket = player:hasItem(xi.item.GOLDFISH_BASKET) and 1 or 0
     local points    = player:getCharVar("[SUNBREEZE]goldfishPoints")
 
     player:startEvent(csid, hasBasket, points)
 end
 
 xi.events.sunbreeze_festival.goldfishVendorOnEventUpdate = function(player, csid, option)
-    local hasBasket = player:hasItem(xi.items.GOLDFISH_BASKET) and 1 or 0
+    local hasBasket = player:hasItem(xi.item.GOLDFISH_BASKET) and 1 or 0
     local points    = player:getCharVar("[SUNBREEZE]goldfishPoints")
     local cost
 
@@ -283,7 +283,7 @@ xi.events.sunbreeze_festival.goldfishVendorOnEventFinish = function(player, csid
 
     -- Open Shop
     if option == 1 then
-        xi.shop.general(player, { xi.items.SUPER_SCOOP, 100 })
+        xi.shop.general(player, { xi.item.SUPER_SCOOP, 100 })
 
     -- Player's getting a new basket
     elseif
@@ -291,8 +291,8 @@ xi.events.sunbreeze_festival.goldfishVendorOnEventFinish = function(player, csid
         option == 4
     then
         player:setCharVar("[SUNBREEZE]goldfishPoints", 0)
-        if not player:hasItem(xi.items.GOLDFISH_BASKET) then
-            npcUtil.giveItem(player, xi.items.GOLDFISH_BASKET)
+        if not player:hasItem(xi.item.GOLDFISH_BASKET) then
+            npcUtil.giveItem(player, xi.item.GOLDFISH_BASKET)
         end
 
     -- Reward Points

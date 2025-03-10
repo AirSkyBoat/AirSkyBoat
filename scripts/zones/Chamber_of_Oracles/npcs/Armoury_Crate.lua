@@ -153,12 +153,12 @@ local loot =
         },
 
         {
-            { itemid = xi.items.BOURDONASSE,    droprate = 150 },
-            { itemid = xi.items.VILE_ELIXIR,    droprate = 150 },
-            { itemid = xi.items.VILE_ELIXIR_P1, droprate = 150 },
-            { itemid = xi.items.POLE_GRIP,      droprate = 150 },
-            { itemid = xi.items.SWORD_STRAP,    droprate = 350 },
-            { itemid = xi.items.CLAYMORE_GRIP,  droprate =  50 },
+            { itemid = xi.item.BOURDONASSE,    droprate = 150 },
+            { itemid = xi.item.VILE_ELIXIR,    droprate = 150 },
+            { itemid = xi.item.VILE_ELIXIR_P1, droprate = 150 },
+            { itemid = xi.item.POLE_GRIP,      droprate = 150 },
+            { itemid = xi.item.SWORD_STRAP,    droprate = 350 },
+            { itemid = xi.item.CLAYMORE_GRIP,  droprate =  50 },
         },
 
         {
@@ -199,7 +199,7 @@ local loot =
         },
         {
             { itemid =    0,                  droprate = 575 }, -- Nothing
-            { itemid = xi.items.BEETLE_BLOOD, droprate =  85 },
+            { itemid = xi.item.BEETLE_BLOOD, droprate =  85 },
             { itemid =  658,                  droprate =  85 }, -- Damascus Ingot
             { itemid =  836,                  droprate =  65 }, -- Square Of Damascene Cloth
             { itemid =  837,                  droprate =  45 }, -- Spool Of Malboro Fiber
@@ -236,9 +236,9 @@ local loot =
             { itemid = 4174,  droprate = 350 }, -- Vile Elixir
             { itemid = 4175,  droprate = 100 }, -- Vile Elixir +1
             { itemid = 4613,  droprate = 100 }, -- Cure V
-            { itemid = xi.items.POLE_GRIP,     droprate = 250 },
-            { itemid = xi.items.SPEAR_STRAP,   droprate = 100 },
-            { itemid = xi.items.CLAYMORE_GRIP, droprate = 100 },
+            { itemid = xi.item.POLE_GRIP,     droprate = 250 },
+            { itemid = xi.item.SPEAR_STRAP,   droprate = 100 },
+            { itemid = xi.item.CLAYMORE_GRIP, droprate = 100 },
         },
         {
             { itemid = 645,  droprate =  50 }, -- Chunk Of Darksteel Ore

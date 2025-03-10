@@ -3569,7 +3569,7 @@ std::optional<CLuaItem> CLuaBaseEntity::getEquippedItem(uint8 slot)
 /************************************************************************
  *  Function: hasEquipped(equipmentID)
  *  Purpose : Returns true if the player has the item equipped in any slot
- *  Example : player:hasEquipped(xi.items.BREATH_MANTLE)
+ *  Example : player:hasEquipped(xi.item.BREATH_MANTLE)
  *  Notes   :
  ************************************************************************/
 

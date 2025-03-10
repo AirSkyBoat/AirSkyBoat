@@ -53,7 +53,7 @@ quest.sections =
             ['Nogelle'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.CHUNK_OF_LUFET_SALT, 3 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.CHUNK_OF_LUFET_SALT, 3 } }) then
                         return quest:progressEvent(11)
                     end
                 end,

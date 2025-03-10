@@ -16,7 +16,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
-    item = xi.items.HEAVY_AXE,
+    item = xi.item.HEAVY_AXE,
 }
 
 quest.sections =
@@ -81,7 +81,7 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Prog') == 2 and
-                        npcUtil.tradeHasExactly(trade, xi.items.DAHLIA)
+                        npcUtil.tradeHasExactly(trade, xi.item.DAHLIA)
                     then
                         return quest:progressEvent(17)
                     end

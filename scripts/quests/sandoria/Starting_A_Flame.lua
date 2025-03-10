@@ -55,7 +55,7 @@ quest.sections =
             ['Legata'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.FLINT_STONE, 4 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.FLINT_STONE, 4 } }) then
                         return quest:progressEvent(36)
                     end
                 end,

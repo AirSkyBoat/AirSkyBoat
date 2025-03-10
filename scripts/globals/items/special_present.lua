@@ -17,19 +17,19 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    local dreamHatHQ = target:hasItem(xi.items.DREAM_HAT_P1)
+    local dreamHatHQ = target:hasItem(xi.item.DREAM_HAT_P1)
 
     if not dreamHatHQ then
-        npcUtil.giveItem(target, xi.items.DREAM_HAT_P1)
+        npcUtil.giveItem(target, xi.item.DREAM_HAT_P1)
     else
-        npcUtil.giveItem(target, xi.items.CANDY_CANE)
+        npcUtil.giveItem(target, xi.item.CANDY_CANE)
     end
 
     return 0
 end
 
 itemObject.onItemDrop = function(target)
-    local dreamHatHQ = target:hasItem(xi.items.DREAM_HAT_P1)
+    local dreamHatHQ = target:hasItem(xi.item.DREAM_HAT_P1)
 
     if not dreamHatHQ then
         target:setCharVar("[StarlightMisc]DreamHatHQ", 0)

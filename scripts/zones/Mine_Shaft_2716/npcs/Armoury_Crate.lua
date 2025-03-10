@@ -19,28 +19,28 @@ local loot =
     {
         {
             { itemid =    0, droprate = 900 }, -- Nothing
-            { itemid = xi.items.CLOUD_EVOKER, droprate = 100 },
+            { itemid = xi.item.CLOUD_EVOKER, droprate = 100 },
         },
         {
-            { itemid = xi.items.SQUARE_OF_ELTORO_LEATHER, droprate = 333 },
-            { itemid = xi.items.PIECE_OF_CASSIA_LUMBER, droprate = 333 },
-            { itemid = xi.items.DRAGON_BONE, droprate = 334 },
-        },
-        {
-            { itemid =     0, droprate = 625 }, -- nothing
-            { itemid = xi.items.MARTIAL_KNIFE, droprate =  75 },
-            { itemid = xi.items.MARTIAL_SCYTHE, droprate =  75 },
-            { itemid = xi.items.COMMANDERS_CAPE, droprate =  75 },
-            { itemid = xi.items.FAERIE_HAIRPIN, droprate = 100 },
-            { itemid = xi.items.SCROLL_OF_RAISE_III, droprate =  50 },
+            { itemid = xi.item.SQUARE_OF_ELTORO_LEATHER, droprate = 333 },
+            { itemid = xi.item.PIECE_OF_CASSIA_LUMBER, droprate = 333 },
+            { itemid = xi.item.DRAGON_BONE, droprate = 334 },
         },
         {
             { itemid =     0, droprate = 625 }, -- nothing
-            { itemid = xi.items.MARTIAL_KNIFE, droprate =  75 },
-            { itemid = xi.items.MARTIAL_SCYTHE, droprate =  75 },
-            { itemid = xi.items.COMMANDERS_CAPE, droprate =  75 },
-            { itemid = xi.items.FAERIE_HAIRPIN, droprate = 100 },
-            { itemid = xi.items.SCROLL_OF_RAISE_III, droprate =  50 },
+            { itemid = xi.item.MARTIAL_KNIFE, droprate =  75 },
+            { itemid = xi.item.MARTIAL_SCYTHE, droprate =  75 },
+            { itemid = xi.item.COMMANDERS_CAPE, droprate =  75 },
+            { itemid = xi.item.FAERIE_HAIRPIN, droprate = 100 },
+            { itemid = xi.item.SCROLL_OF_RAISE_III, droprate =  50 },
+        },
+        {
+            { itemid =     0, droprate = 625 }, -- nothing
+            { itemid = xi.item.MARTIAL_KNIFE, droprate =  75 },
+            { itemid = xi.item.MARTIAL_SCYTHE, droprate =  75 },
+            { itemid = xi.item.COMMANDERS_CAPE, droprate =  75 },
+            { itemid = xi.item.FAERIE_HAIRPIN, droprate = 100 },
+            { itemid = xi.item.SCROLL_OF_RAISE_III, droprate =  50 },
         },
     },
 
@@ -49,15 +49,15 @@ local loot =
     {
         {
             { itemid = 0,    droprate = 800 }, -- Nothing
-            { itemid = xi.items.LUGWORM_SAND, droprate = 200 },
+            { itemid = xi.item.LUGWORM_SAND, droprate = 200 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.BELINKYS_EARRING, droprate = 100 },
+            { itemid = xi.item.BELINKYS_EARRING, droprate = 100 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.QUANTZS_EARRING, droprate = 100 },
+            { itemid = xi.item.QUANTZS_EARRING, droprate = 100 },
         },
     },
 
@@ -66,15 +66,15 @@ local loot =
     {
         {
             { itemid = 0,    droprate = 800 }, -- Nothing
-            { itemid = xi.items.LUGWORM_SAND, droprate = 200 },
+            { itemid = xi.item.LUGWORM_SAND, droprate = 200 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.DESAMILIONS_EARRING, droprate = 100 },
+            { itemid = xi.item.DESAMILIONS_EARRING, droprate = 100 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.MELNINAS_EARRING, droprate = 100 },
+            { itemid = xi.item.MELNINAS_EARRING, droprate = 100 },
         },
     },
 
@@ -83,15 +83,15 @@ local loot =
     {
         {
             { itemid = 0,    droprate = 800 }, -- Nothing
-            { itemid = xi.items.LUGWORM_SAND, droprate = 200 },
+            { itemid = xi.item.LUGWORM_SAND, droprate = 200 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.WAETOTOS_EARRING, droprate = 100 },
+            { itemid = xi.item.WAETOTOS_EARRING, droprate = 100 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.MORUKAKAS_EARRING, droprate = 100 },
+            { itemid = xi.item.MORUKAKAS_EARRING, droprate = 100 },
         },
     },
 
@@ -100,15 +100,15 @@ local loot =
     {
         {
             { itemid = 0,    droprate = 800 }, -- Nothing
-            { itemid = xi.items.LUGWORM_SAND, droprate = 200 },
+            { itemid = xi.item.LUGWORM_SAND, droprate = 200 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.RYAKHOS_EARRING, droprate = 100 },
+            { itemid = xi.item.RYAKHOS_EARRING, droprate = 100 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.FEYUHS_EARRING, droprate = 100 },
+            { itemid = xi.item.FEYUHS_EARRING, droprate = 100 },
         },
     },
 
@@ -117,15 +117,15 @@ local loot =
     {
         {
             { itemid = 0,    droprate = 800 }, -- Nothing
-            { itemid = xi.items.LUGWORM_SAND, droprate = 200 },
+            { itemid = xi.item.LUGWORM_SAND, droprate = 200 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.ZEDOMAS_EARRING, droprate = 100 },
+            { itemid = xi.item.ZEDOMAS_EARRING, droprate = 100 },
         },
         {
             { itemid = 0,     droprate = 900 }, -- Nothing
-            { itemid = xi.items.GAYANJS_EARRING, droprate = 100 },
+            { itemid = xi.item.GAYANJS_EARRING, droprate = 100 },
         },
     },
 
@@ -134,14 +134,14 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.JANIZARY_EARRING, droprate = 250 },
+            { itemid = xi.item.JANIZARY_EARRING, droprate = 250 },
         },
     },
     [xi.job.MNK] =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.COUNTER_EARRING, droprate = 250 },
+            { itemid = xi.item.COUNTER_EARRING, droprate = 250 },
         },
     },
 
@@ -149,7 +149,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.HEALING_FEATHER, droprate = 250 },
+            { itemid = xi.item.HEALING_FEATHER, droprate = 250 },
         },
     },
 
@@ -157,7 +157,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.SPIRIT_LANTERN, droprate = 250 },
+            { itemid = xi.item.SPIRIT_LANTERN, droprate = 250 },
         },
     },
 
@@ -165,7 +165,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.SANATION_RING, droprate = 250 },
+            { itemid = xi.item.SANATION_RING, droprate = 250 },
         },
     },
 
@@ -173,7 +173,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.ASSASSINS_RING, droprate = 250 },
+            { itemid = xi.item.ASSASSINS_RING, droprate = 250 },
         },
     },
 
@@ -181,7 +181,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.VIAL_OF_REFRESH_MUSK, droprate = 250 },
+            { itemid = xi.item.VIAL_OF_REFRESH_MUSK, droprate = 250 },
         },
     },
 
@@ -189,7 +189,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.TACTICAL_RING, droprate = 250 },
+            { itemid = xi.item.TACTICAL_RING, droprate = 250 },
         },
     },
 
@@ -197,7 +197,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.PACIFIST_RING, droprate = 250 },
+            { itemid = xi.item.PACIFIST_RING, droprate = 250 },
         },
     },
 
@@ -205,7 +205,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.GETSUL_RING, droprate = 250 },
+            { itemid = xi.item.GETSUL_RING, droprate = 250 },
         },
     },
 
@@ -213,7 +213,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.DEADEYE_EARRING, droprate = 250 },
+            { itemid = xi.item.DEADEYE_EARRING, droprate = 250 },
         },
     },
 
@@ -221,7 +221,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.GAMUSHARA_EARRING, droprate = 250 },
+            { itemid = xi.item.GAMUSHARA_EARRING, droprate = 250 },
         },
     },
 
@@ -229,7 +229,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.NARUKO_EARRING, droprate = 250 },
+            { itemid = xi.item.NARUKO_EARRING, droprate = 250 },
         },
     },
 
@@ -237,7 +237,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.BAG_OF_WYVERN_FEED, droprate = 250 },
+            { itemid = xi.item.BAG_OF_WYVERN_FEED, droprate = 250 },
         },
     },
 
@@ -245,7 +245,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.ASTRAL_POT, droprate = 250 },
+            { itemid = xi.item.ASTRAL_POT, droprate = 250 },
         },
     },
 
@@ -253,7 +253,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.DEATH_CHAKRAM, droprate = 250 },
+            { itemid = xi.item.DEATH_CHAKRAM, droprate = 250 },
         },
     },
 
@@ -261,7 +261,7 @@ local loot =
     {
         {
             { itemid = 0, droprate = 750 },
-            { itemid = xi.items.CORSAIR_BULLET_POUCH, droprate = 250 },
+            { itemid = xi.item.CORSAIR_BULLET_POUCH, droprate = 250 },
         },
     },
 
@@ -269,14 +269,14 @@ local loot =
     {
         {
             { itemid = 0, droprate = 200 },
-            { itemid = xi.items.ATTUNER,            droprate = 100 },
-            { itemid = xi.items.TACTICAL_PROCESSOR, droprate = 100 },
-            { itemid = xi.items.DRUM_MAGAZINE,      droprate = 100 },
-            { itemid = xi.items.EQUALIZER,          droprate = 100 },
-            { itemid = xi.items.TARGET_MAKER,       droprate = 100 },
-            { itemid = xi.items.MANA_CHANNELER,     droprate = 100 },
-            { itemid = xi.items.ERASER,             droprate = 100 },
-            { itemid = xi.items.SMOKER_SCREEN,      droprate = 100 },
+            { itemid = xi.item.ATTUNER,            droprate = 100 },
+            { itemid = xi.item.TACTICAL_PROCESSOR, droprate = 100 },
+            { itemid = xi.item.DRUM_MAGAZINE,      droprate = 100 },
+            { itemid = xi.item.EQUALIZER,          droprate = 100 },
+            { itemid = xi.item.TARGET_MAKER,       droprate = 100 },
+            { itemid = xi.item.MANA_CHANNELER,     droprate = 100 },
+            { itemid = xi.item.ERASER,             droprate = 100 },
+            { itemid = xi.item.SMOKER_SCREEN,      droprate = 100 },
         },
     },
 }

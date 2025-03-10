@@ -7,16 +7,16 @@
 local itemObject = {}
 
 itemObject.onItemCheck = function(target)
-    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.BANNARET_MAIL) ~= nil then
-        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.BANNARET_MAIL)
+    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.BANNARET_MAIL) ~= nil then
+        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.BANNARET_MAIL)
     end
 
     return 0
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.BANNARET_MAIL) then
-        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 1800, 0, 0, 0, xi.items.BANNARET_MAIL)
+    if target:hasEquipped(xi.item.BANNARET_MAIL) then
+        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 1800, 0, 0, 0, xi.item.BANNARET_MAIL)
     end
 end
 

@@ -22,12 +22,12 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.SAY_IT_WI
 
 local flowerList =
 {
-    [0] = { itemid = xi.items.CARNATION,  gil = 300 },
-    [1] = { itemid = xi.items.RED_ROSE,   gil = 200 },
-    [2] = { itemid = xi.items.RAIN_LILY,  gil = 250 },
-    [3] = { itemid = xi.items.LILAC,      gil = 150 },
-    [4] = { itemid = xi.items.AMARYLLIS,  gil = 200 },
-    [5] = { itemid = xi.items.MARGUERITE, gil = 100 },
+    [0] = { itemid = xi.item.CARNATION,  gil = 300 },
+    [1] = { itemid = xi.item.RED_ROSE,   gil = 200 },
+    [2] = { itemid = xi.item.RAIN_LILY,  gil = 250 },
+    [3] = { itemid = xi.item.LILAC,      gil = 150 },
+    [4] = { itemid = xi.item.AMARYLLIS,  gil = 200 },
+    [5] = { itemid = xi.item.MARGUERITE, gil = 100 },
 }
 
 quest.reward =
@@ -77,7 +77,7 @@ quest.sections =
             ['Ohbiru-Dohbiru'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(516, { [4] = xi.items.TAHRONGI_CACTUS })
+                    return quest:progressEvent(516, { [4] = xi.item.TAHRONGI_CACTUS })
                 end,
             },
 
@@ -123,7 +123,7 @@ quest.sections =
             ['Ohbiru-Dohbiru'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:event(517, { [4] = xi.items.TAHRONGI_CACTUS })
+                    return quest:event(517, { [4] = xi.item.TAHRONGI_CACTUS })
                 end,
             },
 
@@ -168,14 +168,14 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     local flowers =
                     {
-                        xi.items.CARNATION,
-                        xi.items.RED_ROSE,
-                        xi.items.RAIN_LILY,
-                        xi.items.LILAC,
-                        xi.items.AMARYLLIS,
-                        xi.items.MARGUERITE,
+                        xi.item.CARNATION,
+                        xi.item.RED_ROSE,
+                        xi.item.RAIN_LILY,
+                        xi.item.LILAC,
+                        xi.item.AMARYLLIS,
+                        xi.item.MARGUERITE,
                     }
-                    if npcUtil.tradeHasExactly(trade, { xi.items.TAHRONGI_CACTUS }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.TAHRONGI_CACTUS }) then
                         if player:hasCompletedQuest(xi.quest.log_id.WINDURST, xi.quest.id.windurst.SAY_IT_WITH_FLOWERS) then
                             return quest:progressEvent(525, 400)
                         else
@@ -204,7 +204,7 @@ quest.sections =
                 end,
 
                 [520] = function(player, csid, option, npc) -- Right flower, full reward
-                    if npcUtil.giveItem(player, xi.items.IRON_SWORD) then
+                    if npcUtil.giveItem(player, xi.item.IRON_SWORD) then
                         player:tradeComplete()
                         quest.reward =
                         {
@@ -258,7 +258,7 @@ quest.sections =
             ['Tahrongi_Cacti'] =
             {
                 onTrigger = function(player, npc)
-                    if npcUtil.giveItem(player, xi.items.TAHRONGI_CACTUS, { silent = true }) then
+                    if npcUtil.giveItem(player, xi.item.TAHRONGI_CACTUS, { silent = true }) then
                         player:messageSpecial(tahrongiID.text.BUD_BREAKS_OFF, 0, 950)
                         quest:setVar(player, "CactusAvailable", 0)
                     else

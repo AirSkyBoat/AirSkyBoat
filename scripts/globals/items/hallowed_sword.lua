@@ -7,7 +7,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.ENLIGHT)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.HALLOWED_SWORD then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.HALLOWED_SWORD then
         target:delStatusEffect(xi.effect.ENLIGHT)
     end
 
@@ -15,7 +15,7 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.HALLOWED_SWORD) then
+    if target:hasEquipped(xi.item.HALLOWED_SWORD) then
         local effect = xi.effect.ENLIGHT
         local magicskill = target:getSkillLevel(xi.skill.ENHANCING_MAGIC)
         local potency = 0
@@ -28,7 +28,7 @@ itemObject.onItemUse = function(target)
 
         potency = utils.clamp(potency, 3, 25)
 
-        target:addStatusEffect(effect, potency, 0, 180, 0, 0, 0, xi.items.HALLOWED_SWORD)
+        target:addStatusEffect(effect, potency, 0, 180, 0, 0, 0, xi.item.HALLOWED_SWORD)
     end
 end
 

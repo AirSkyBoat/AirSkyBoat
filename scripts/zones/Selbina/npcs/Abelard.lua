@@ -76,8 +76,8 @@ entity.onTrigger = function(player, npc)
         player:startEvent(40)
     elseif anExplorersFootsteps == QUEST_ACCEPTED then
         if
-            not player:hasItem(xi.items.CLAY_TABLET) and
-            not player:hasItem(xi.items.LUMP_OF_SELBINA_CLAY)
+            not player:hasItem(xi.item.CLAY_TABLET) and
+            not player:hasItem(xi.item.LUMP_OF_SELBINA_CLAY)
         then
             if player:getCharVar("anExplorer-CurrentTablet") == -1 then
                 player:startEvent(42)
@@ -111,18 +111,18 @@ entity.onEventFinish = function(player, csid, option)
     if
         csid == 40 and
         option ~= 0 and
-        npcUtil.giveItem(player, xi.items.LUMP_OF_SELBINA_CLAY)
+        npcUtil.giveItem(player, xi.item.LUMP_OF_SELBINA_CLAY)
     then
         player:addQuest(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.AN_EXPLORER_S_FOOTSTEPS)
         player:setCharVar("anExplorer-ClayTablets", 0)
     elseif
         csid == 42 and
         option == 100 and
-        npcUtil.giveItem(player, xi.items.LUMP_OF_SELBINA_CLAY)
+        npcUtil.giveItem(player, xi.item.LUMP_OF_SELBINA_CLAY)
     then
         player:setCharVar("anExplorer-CurrentTablet", 0)
     elseif csid == 44 then
-        npcUtil.giveItem(player, xi.items.LUMP_OF_SELBINA_CLAY)
+        npcUtil.giveItem(player, xi.item.LUMP_OF_SELBINA_CLAY)
     elseif csid == 41 or csid == 46 or csid == 47 then
         local currtab = player:getCharVar("anExplorer-CurrentTablet")
         local tablets = player:getCharVar("anExplorer-ClayTablets")
@@ -142,7 +142,7 @@ entity.onEventFinish = function(player, csid, option)
         end
 
         if option == 100 then
-            npcUtil.giveItem(player, xi.items.LUMP_OF_SELBINA_CLAY)
+            npcUtil.giveItem(player, xi.item.LUMP_OF_SELBINA_CLAY)
         elseif option == 110 then
             player:setCharVar("anExplorer-CurrentTablet", -1)
         end

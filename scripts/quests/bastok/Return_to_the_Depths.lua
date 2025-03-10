@@ -16,7 +16,7 @@ quest.reward =
 {
     fame     = 60,
     fameArea = xi.quest.fame_area.BASTOK,
-    item     = xi.items.BOWYER_RING,
+    item     = xi.item.BOWYER_RING,
     title    = xi.title.GOBLIN_IN_DISGUISE,
 }
 
@@ -74,14 +74,14 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'prog') == 6 then
-                        return quest:progressEvent(42, 0, 0, 0, 0, xi.items.BULB_OF_MISAREAUX_GARLIC)
+                        return quest:progressEvent(42, 0, 0, 0, 0, xi.item.BULB_OF_MISAREAUX_GARLIC)
                     elseif quest:getVar(player, 'prog') == 7 then
                         return quest:progressEvent(43)
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.BOTTLE_OF_AHRIMAN_TEARS) and
+                    if npcUtil.tradeHasExactly(trade, xi.item.BOTTLE_OF_AHRIMAN_TEARS) and
                     quest:getVar(player, 'prog') == 7 then
                         return quest:progressEvent(44)
                     end
@@ -92,7 +92,7 @@ quest.sections =
             {
                 function(player, prevZone)
                     if quest:getVar(player, 'prog') == 0 then
-                        return quest:progressEvent(40, 0, xi.items.SPRIG_OF_FRESH_MUGWORT, xi.items.MOORISH_IDOL, xi.items.PIECE_OF_ANGEL_SKIN, xi.items.BULB_OF_MISAREAUX_GARLIC)
+                        return quest:progressEvent(40, 0, xi.item.SPRIG_OF_FRESH_MUGWORT, xi.item.MOORISH_IDOL, xi.item.PIECE_OF_ANGEL_SKIN, xi.item.BULB_OF_MISAREAUX_GARLIC)
                     elseif quest:getVar(player, 'prog') == 5 then
                         return quest:progressEvent(41)
                     end
@@ -128,9 +128,9 @@ quest.sections =
             ['Muckvix'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.BULB_OF_MISAREAUX_GARLIC) and
+                    if npcUtil.tradeHasExactly(trade, xi.item.BULB_OF_MISAREAUX_GARLIC) and
                     quest:getVar(player, 'prog') == 1 then
-                        return quest:progressEvent(99, 0, 0, 0, 0, xi.items.BULB_OF_MISAREAUX_GARLIC)
+                        return quest:progressEvent(99, 0, 0, 0, 0, xi.item.BULB_OF_MISAREAUX_GARLIC)
                     end
                 end,
 
@@ -203,7 +203,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'prog') == 8 then
-                        return quest:progressEvent(5, 0, 0, 0, 0, xi.items.BULB_OF_MISAREAUX_GARLIC)
+                        return quest:progressEvent(5, 0, 0, 0, 0, xi.item.BULB_OF_MISAREAUX_GARLIC)
                     end
                 end,
             },
@@ -257,7 +257,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.BOTTLE_OF_AHRIMAN_TEARS) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.BOTTLE_OF_AHRIMAN_TEARS) then
                         return quest:progressEvent(44)
                     end
                 end,

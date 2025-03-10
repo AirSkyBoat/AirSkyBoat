@@ -212,7 +212,7 @@ Below is a more-exhaustive mock example of how a section can be set up, and it t
             end,
 
             onTrade = function(player, npc, trade)
-                if npcUtil.tradeHasExactly(trade, xi.items.SOME_ITEM) then
+                if npcUtil.tradeHasExactly(trade, xi.item.SOME_ITEM) then
                     return quest:progressEvent(111)
                 end
             end,

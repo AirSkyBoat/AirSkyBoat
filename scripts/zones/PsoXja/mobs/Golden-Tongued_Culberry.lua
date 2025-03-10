@@ -9,7 +9,7 @@ local entity = {}
 
 entity.onMobInitialize = function(mob)
     mob:addListener("ITEM_DROPS", "ITEM_DROPS_CULBERRY", function(mobArg, loot)
-        loot:addItemFixed(xi.items.UGGALEPIH_PENDANT, mob:getLocalVar("DropRate"))
+        loot:addItemFixed(xi.item.UGGALEPIH_PENDANT, mob:getLocalVar("DropRate"))
     end)
 
     mob:setBehaviour(bit.bor(mob:getBehaviour(), xi.behavior.STANDBACK))

@@ -86,7 +86,7 @@ end
 
 mission.reward =
 {
-    item = xi.items.TAVNAZIAN_RING,
+    item = xi.item.TAVNAZIAN_RING,
     nextMission = { xi.mission.log_id.COP, xi.mission.id.cop.A_FATE_DECIDED },
 }
 
@@ -206,7 +206,7 @@ mission.sections =
             {
                 [1] = function(player, csid, option)
                     if player:getFreeSlotsCount() == 0 then
-                        mission:messageSpecial(palaceID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.TAVNAZIAN_RING)
+                        mission:messageSpecial(palaceID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.TAVNAZIAN_RING)
                     else
                         mission:complete(player)
                     end

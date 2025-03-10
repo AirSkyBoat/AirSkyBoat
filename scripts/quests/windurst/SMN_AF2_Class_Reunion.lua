@@ -17,7 +17,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.CLASS_REU
 
 quest.reward =
 {
-    item        = xi.items.EVOKERS_SPATS,
+    item        = xi.item.EVOKERS_SPATS,
     fame        = 40,
     fameArea    = xi.quest.fame_area.WINDURST,
 }
@@ -64,7 +64,7 @@ quest.sections =
                     local questProgress = quest:getVar(player, 'Prog')
 
                     if questProgress == 1 then
-                        return quest:progressEvent(412, 0, xi.ki.CARBUNCLES_TEAR, xi.items.ASTRAGALOS)
+                        return quest:progressEvent(412, 0, xi.ki.CARBUNCLES_TEAR, xi.item.ASTRAGALOS)
                     elseif questProgress == 2 then
                         return quest:event(414)
                     elseif
@@ -79,7 +79,7 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Prog') == 2 and
-                        npcUtil.tradeHasExactly(trade, { { xi.items.ASTRAGALOS, 4 } })
+                        npcUtil.tradeHasExactly(trade, { { xi.item.ASTRAGALOS, 4 } })
                     then
                         return quest:progressEvent(407)
                     end
@@ -167,12 +167,12 @@ quest.sections =
                     local questProgress = quest:getVar(player, 'Prog')
 
                     if questProgress == 4 then
-                        return quest:progressEvent(713, 0, xi.items.ICE_PENDULUM)
+                        return quest:progressEvent(713, 0, xi.item.ICE_PENDULUM)
                     elseif
                         questProgress == 5 and
-                        not player:hasItem(xi.items.ICE_PENDULUM)
+                        not player:hasItem(xi.item.ICE_PENDULUM)
                     then
-                        return quest:progressEvent(712, 0, xi.items.ICE_PENDULUM)
+                        return quest:progressEvent(712, 0, xi.item.ICE_PENDULUM)
                     end
                 end,
             },
@@ -180,12 +180,12 @@ quest.sections =
             onEventFinish =
             {
                 [713] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.ICE_PENDULUM)
+                    npcUtil.giveItem(player, xi.item.ICE_PENDULUM)
                     quest:setVar(player, 'Prog', 5)
                 end,
 
                 [712] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.ICE_PENDULUM)
+                    npcUtil.giveItem(player, xi.item.ICE_PENDULUM)
                 end,
             },
         },

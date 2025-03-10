@@ -8,7 +8,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.POTENCY)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.HYDRA_TIARA then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.HYDRA_TIARA then
         target:delStatusEffect(xi.effect.POTENCY)
     end
 
@@ -16,8 +16,8 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.HYDRA_TIARA) then
-        target:addStatusEffect(xi.effect.POTENCY, 7, 0, 180, 0, 0, 0, xi.items.HYDRA_TIARA)
+    if target:hasEquipped(xi.item.HYDRA_TIARA) then
+        target:addStatusEffect(xi.effect.POTENCY, 7, 0, 180, 0, 0, 0, xi.item.HYDRA_TIARA)
     end
 end
 

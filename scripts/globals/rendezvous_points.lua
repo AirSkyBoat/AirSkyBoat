@@ -9,11 +9,11 @@ require("scripts/globals/zone")
 ----------------------------------------------
 xi = xi or {}
 xi.rendezvousPoints = xi.rendezvousPoints or {}
--- xi.items.SIGNAL_PEARL                    = 14810,
--- xi.items.TACTICS_PEARL                   = 14811,
--- xi.items.TACTICS_MANUAL_OF_FORTITUDE     = 1820,
--- xi.items.TACTICS_MANUAL_OF_MIGHT         = 1839,
--- xi.items.TACTICS_MANUAL_OF_ENDURANCE     = 1876,
+-- xi.item.SIGNAL_PEARL                    = 14810,
+-- xi.item.TACTICS_PEARL                   = 14811,
+-- xi.item.TACTICS_MANUAL_OF_FORTITUDE     = 1820,
+-- xi.item.TACTICS_MANUAL_OF_MIGHT         = 1839,
+-- xi.item.TACTICS_MANUAL_OF_ENDURANCE     = 1876,
 
 local cutscenes =
 {
@@ -33,7 +33,7 @@ xi.rendezvousPoints.onTrigger = function(player, npc)
         menuParam = menuParam - 16
     end -- appearances option
 
-    if not player:hasItem(xi.items.SIGNAL_PEARL) then
+    if not player:hasItem(xi.item.SIGNAL_PEARL) then
         menuParam = menuParam - 32
     end -- need pearl option
 
@@ -49,17 +49,17 @@ xi.rendezvousPoints.onTrigger = function(player, npc)
     if player:getQuestStatus(xi.quest.log_id.JEUNO, xi.quest.id.jeuno.MIRROR_MIRROR) == QUEST_COMPLETED then
         if player:getQuestStatus(xi.quest.log_id.JEUNO, xi.quest.id.jeuno.CHAMELEON_CAPERS) == QUEST_COMPLETED then
             if
-                player:hasItem(xi.items.TACTICS_MANUAL_OF_FORTITUDE) and
+                player:hasItem(xi.item.TACTICS_MANUAL_OF_FORTITUDE) and
                 (bit.band(optionsMask, bit.lshift(1, 5)) == 0)
             then -- T.M. Fortitude
                 player:startEvent(cutscenes[zone].manual, zone, 1820, 0, 0, 0, styleParam, lookParam, fellowParam)
             elseif
-                player:hasItem(xi.items.TACTICS_MANUAL_OF_MIGHT) and
+                player:hasItem(xi.item.TACTICS_MANUAL_OF_MIGHT) and
                 (bit.band(optionsMask, bit.lshift(1, 6)) == 0)
             then -- T.M. Might
                 player:startEvent(cutscenes[zone].manual, zone, 1839, 0, 0, 0, styleParam, lookParam, fellowParam)
             elseif
-                player:hasItem(xi.items.TACTICS_MANUAL_OF_ENDURANCE) and
+                player:hasItem(xi.item.TACTICS_MANUAL_OF_ENDURANCE) and
                 (bit.band(optionsMask, bit.lshift(1, 7)) == 0)
             then -- T.M. Endurance
                 player:startEvent(cutscenes[zone].manual, zone, 1876, 0, 0, 0, styleParam, lookParam, fellowParam)
@@ -192,7 +192,7 @@ xi.rendezvousPoints.onEventUpdate = function(player, csid, option)
         csid == cutscenes[zone].standard and
         option == 0xA000004
     then -- need signal pearl
-        if npcUtil.giveItem(player, xi.items.SIGNAL_PEARL) then
+        if npcUtil.giveItem(player, xi.item.SIGNAL_PEARL) then
             if bond >= 5 then
                 player:setFellowValue("bond", bond - 5)
             else

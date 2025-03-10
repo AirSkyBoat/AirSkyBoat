@@ -18,7 +18,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
-    item = xi.items.WHITE_CAPE,
+    item = xi.item.WHITE_CAPE,
 }
 
 quest.sections =
@@ -86,7 +86,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { { xi.items.MYTHRIL_INGOT, 1 } }) and
+                        npcUtil.tradeHasExactly(trade, { { xi.item.MYTHRIL_INGOT, 1 } }) and
                         quest:getVar(player, 'Prog') == 2
                     then
                         return quest:progressEvent(317)

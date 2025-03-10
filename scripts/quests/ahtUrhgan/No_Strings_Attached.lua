@@ -20,7 +20,7 @@ local quest = Quest:new(xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.NO_STR
 
 quest.reward =
 {
-    item = xi.items.ANIMATOR,
+    item = xi.item.ANIMATOR,
     title = xi.title.PROUD_AUTOMATON_OWNER,
 }
 
@@ -134,8 +134,8 @@ quest.sections =
                         player:unlockJob(xi.job.PUP)
                         player:messageSpecial(ahtUrhganID.text.YOU_CAN_BECOME_PUP)
                         player:setPetName(xi.pet.type.AUTOMATON, option + 118)
-                        player:unlockAttachment(xi.items.HARLEQUIN_FRAME)
-                        player:unlockAttachment(xi.items.HARLEQUIN_HEAD)
+                        player:unlockAttachment(xi.item.HARLEQUIN_FRAME)
+                        player:unlockAttachment(xi.item.HARLEQUIN_HEAD)
                     end
                 end,
             },
@@ -174,11 +174,11 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        not player:findItem(xi.items.ANIMATOR) and
+                        not player:findItem(xi.item.ANIMATOR) and
                         npcUtil.tradeHasExactly(trade, { { "gil", 10000 } })
                     then
                         player:confirmTrade()
-                        npcUtil.giveItem(player, xi.items.ANIMATOR)
+                        npcUtil.giveItem(player, xi.item.ANIMATOR)
                     end
                 end,
 

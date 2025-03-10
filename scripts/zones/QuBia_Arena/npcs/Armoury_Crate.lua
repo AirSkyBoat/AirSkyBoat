@@ -22,27 +22,27 @@ local loot =
         },
         {
             { itemid = 0,     droprate = 250 }, -- nothing
-            { itemid = xi.items.SOLDIERS_EARRING, droprate =  50 }, -- Soldier's Earring
-            { itemid = xi.items.KAMPFER_EARRING, droprate =  50 }, -- Kampfer Earring
-            { itemid = xi.items.MEDICINE_EARRING, droprate =  50 }, -- Medicine Earring
-            { itemid = xi.items.SORCERERS_EARRING, droprate =  50 }, -- Sorcerer's Earring
-            { itemid = xi.items.FENCERS_EARRING, droprate =  50 }, -- Fencer's Earring
-            { itemid = xi.items.ROGUES_EARRING, droprate =  50 }, -- Rogue's Earring
-            { itemid = xi.items.GUARDIAN_EARRING, droprate =  50 }, -- Guardian Earring
-            { itemid = xi.items.SLAYERS_EARRING, droprate =  50 }, -- Slayer's Earring
-            { itemid = xi.items.TAMERS_EARRING, droprate =  50 }, -- Tamer's Earring
-            { itemid = xi.items.MINSTRELS_EARRING, droprate =  50 }, -- Minstrel's Earring
-            { itemid = xi.items.TRACKERS_EARRING, droprate =  50 }, -- Tracker's Earring
-            { itemid = xi.items.RONINS_EARRING, droprate =  50 }, -- Ronin's Earring
-            { itemid = xi.items.SHINOBI_EARRING, droprate =  50 }, -- Shinobi Earring
-            { itemid = xi.items.DRAKE_EARRING, droprate =  50 }, -- Drake Earring
-            { itemid = xi.items.CONJURER_EARRING, droprate =  50 }, -- Conjurer Earring
+            { itemid = xi.item.SOLDIERS_EARRING, droprate =  50 }, -- Soldier's Earring
+            { itemid = xi.item.KAMPFER_EARRING, droprate =  50 }, -- Kampfer Earring
+            { itemid = xi.item.MEDICINE_EARRING, droprate =  50 }, -- Medicine Earring
+            { itemid = xi.item.SORCERERS_EARRING, droprate =  50 }, -- Sorcerer's Earring
+            { itemid = xi.item.FENCERS_EARRING, droprate =  50 }, -- Fencer's Earring
+            { itemid = xi.item.ROGUES_EARRING, droprate =  50 }, -- Rogue's Earring
+            { itemid = xi.item.GUARDIAN_EARRING, droprate =  50 }, -- Guardian Earring
+            { itemid = xi.item.SLAYERS_EARRING, droprate =  50 }, -- Slayer's Earring
+            { itemid = xi.item.TAMERS_EARRING, droprate =  50 }, -- Tamer's Earring
+            { itemid = xi.item.MINSTRELS_EARRING, droprate =  50 }, -- Minstrel's Earring
+            { itemid = xi.item.TRACKERS_EARRING, droprate =  50 }, -- Tracker's Earring
+            { itemid = xi.item.RONINS_EARRING, droprate =  50 }, -- Ronin's Earring
+            { itemid = xi.item.SHINOBI_EARRING, droprate =  50 }, -- Shinobi Earring
+            { itemid = xi.item.DRAKE_EARRING, droprate =  50 }, -- Drake Earring
+            { itemid = xi.item.CONJURER_EARRING, droprate =  50 }, -- Conjurer Earring
         },
         {
             { itemid = 0,     droprate = 450 }, -- nothing
-            { itemid = xi.items.SWORD_STRAP, droprate = 250 },
-            { itemid = xi.items.POLE_GRIP,   droprate =  50 },
-            { itemid = xi.items.SPEAR_STRAP, droprate = 250 },
+            { itemid = xi.item.SWORD_STRAP, droprate = 250 },
+            { itemid = xi.item.POLE_GRIP,   droprate =  50 },
+            { itemid = xi.item.SPEAR_STRAP, droprate = 250 },
         },
         {
             { itemid = 0,    droprate = 600 }, -- nothing
@@ -83,21 +83,21 @@ local loot =
     {
         {
             { itemid = 0,     droprate = 250 }, -- nothing
-            { itemid = xi.items.SOLDIERS_EARRING,  droprate =  50 }, -- Soldier's Earring
-            { itemid = xi.items.KAMPFER_EARRING,   droprate =  50 }, -- Kampfer Earring
-            { itemid = xi.items.MEDICINE_EARRING,  droprate =  50 }, -- Medicine Earring
-            { itemid = xi.items.SORCERERS_EARRING, droprate =  50 }, -- Sorcerer's Earring
-            { itemid = xi.items.FENCERS_EARRING,   droprate =  50 }, -- Fencer's Earring
-            { itemid = xi.items.ROGUES_EARRING,    droprate =  50 }, -- Rogue's Earring
-            { itemid = xi.items.GUARDIAN_EARRING,  droprate =  50 }, -- Guardian Earring
-            { itemid = xi.items.SLAYERS_EARRING,   droprate =  50 }, -- Slayer's Earring
-            { itemid = xi.items.TAMERS_EARRING,    droprate =  50 }, -- Tamer's Earring
-            { itemid = xi.items.MINSTRELS_EARRING, droprate =  50 }, -- Minstrel's Earring
-            { itemid = xi.items.TRACKERS_EARRING,  droprate =  50 }, -- Tracker's Earring
-            { itemid = xi.items.RONINS_EARRING,    droprate =  50 }, -- Ronin's Earring
-            { itemid = xi.items.SHINOBI_EARRING,   droprate =  50 }, -- Shinobi Earring
-            { itemid = xi.items.DRAKE_EARRING,     droprate =  50 }, -- Drake Earring
-            { itemid = xi.items.CONJURER_EARRING,  droprate =  50 }, -- Conjurer Earring
+            { itemid = xi.item.SOLDIERS_EARRING,  droprate =  50 }, -- Soldier's Earring
+            { itemid = xi.item.KAMPFER_EARRING,   droprate =  50 }, -- Kampfer Earring
+            { itemid = xi.item.MEDICINE_EARRING,  droprate =  50 }, -- Medicine Earring
+            { itemid = xi.item.SORCERERS_EARRING, droprate =  50 }, -- Sorcerer's Earring
+            { itemid = xi.item.FENCERS_EARRING,   droprate =  50 }, -- Fencer's Earring
+            { itemid = xi.item.ROGUES_EARRING,    droprate =  50 }, -- Rogue's Earring
+            { itemid = xi.item.GUARDIAN_EARRING,  droprate =  50 }, -- Guardian Earring
+            { itemid = xi.item.SLAYERS_EARRING,   droprate =  50 }, -- Slayer's Earring
+            { itemid = xi.item.TAMERS_EARRING,    droprate =  50 }, -- Tamer's Earring
+            { itemid = xi.item.MINSTRELS_EARRING, droprate =  50 }, -- Minstrel's Earring
+            { itemid = xi.item.TRACKERS_EARRING,  droprate =  50 }, -- Tracker's Earring
+            { itemid = xi.item.RONINS_EARRING,    droprate =  50 }, -- Ronin's Earring
+            { itemid = xi.item.SHINOBI_EARRING,   droprate =  50 }, -- Shinobi Earring
+            { itemid = xi.item.DRAKE_EARRING,     droprate =  50 }, -- Drake Earring
+            { itemid = xi.item.CONJURER_EARRING,  droprate =  50 }, -- Conjurer Earring
         },
         {
             { itemid = 700,  droprate =  50 }, -- Mahogany Log
@@ -128,11 +128,11 @@ local loot =
             { itemid = 1110, droprate =  50 }, -- Beetle Blood
         },
         {
-            { itemid = xi.items.CLAYMORE_GRIP,   droprate = 150 },
-            { itemid = xi.items.CORAL_FRAGMENT,  droprate = 150 },
-            { itemid = xi.items.PHOENIX_FEATHER, droprate = 150 },
-            { itemid = xi.items.SWORD_STRAP,     droprate = 350 },
-            { itemid = xi.items.POLE_GRIP,       droprate = 200 },
+            { itemid = xi.item.CLAYMORE_GRIP,   droprate = 150 },
+            { itemid = xi.item.CORAL_FRAGMENT,  droprate = 150 },
+            { itemid = xi.item.PHOENIX_FEATHER, droprate = 150 },
+            { itemid = xi.item.SWORD_STRAP,     droprate = 350 },
+            { itemid = xi.item.POLE_GRIP,       droprate = 200 },
         },
         {
             { itemid = 0,    droprate = 450 }, -- nothing
@@ -158,108 +158,108 @@ local loot =
     {
         {
             { itemid = 0, droprate = 350 }, -- nothing
-            { itemid = xi.items.EBONY_LOG,       droprate = 150 },
-            { itemid = xi.items.PHOENIX_FEATHER, droprate = 500 },
+            { itemid = xi.item.EBONY_LOG,       droprate = 150 },
+            { itemid = xi.item.PHOENIX_FEATHER, droprate = 500 },
         },
         {
             { itemid = 0, droprate = 500 }, -- nothing
-            { itemid = xi.items.PHOENIX_FEATHER, droprate = 500 },
+            { itemid = xi.item.PHOENIX_FEATHER, droprate = 500 },
         },
         {
             { itemid = 0, droprate = 250 }, -- nothing
-            { itemid = xi.items.SOLDIERS_EARRING,  droprate = 50 },
-            { itemid = xi.items.KAMPFER_EARRING,   droprate = 50 },
-            { itemid = xi.items.MEDICINE_EARRING,  droprate = 50 },
-            { itemid = xi.items.SORCERERS_EARRING, droprate = 50 },
-            { itemid = xi.items.FENCERS_EARRING,   droprate = 50 },
-            { itemid = xi.items.ROGUES_EARRING,    droprate = 50 },
-            { itemid = xi.items.GUARDIAN_EARRING,  droprate = 50 },
-            { itemid = xi.items.SLAYERS_EARRING,   droprate = 50 },
-            { itemid = xi.items.TAMERS_EARRING,    droprate = 50 },
-            { itemid = xi.items.MINSTRELS_EARRING, droprate = 50 },
-            { itemid = xi.items.TRACKERS_EARRING,  droprate = 50 },
-            { itemid = xi.items.RONINS_EARRING,    droprate = 50 },
-            { itemid = xi.items.SHINOBI_EARRING,   droprate = 50 },
-            { itemid = xi.items.DRAKE_EARRING,     droprate = 50 },
-            { itemid = xi.items.CONJURER_EARRING,  droprate = 50 },
+            { itemid = xi.item.SOLDIERS_EARRING,  droprate = 50 },
+            { itemid = xi.item.KAMPFER_EARRING,   droprate = 50 },
+            { itemid = xi.item.MEDICINE_EARRING,  droprate = 50 },
+            { itemid = xi.item.SORCERERS_EARRING, droprate = 50 },
+            { itemid = xi.item.FENCERS_EARRING,   droprate = 50 },
+            { itemid = xi.item.ROGUES_EARRING,    droprate = 50 },
+            { itemid = xi.item.GUARDIAN_EARRING,  droprate = 50 },
+            { itemid = xi.item.SLAYERS_EARRING,   droprate = 50 },
+            { itemid = xi.item.TAMERS_EARRING,    droprate = 50 },
+            { itemid = xi.item.MINSTRELS_EARRING, droprate = 50 },
+            { itemid = xi.item.TRACKERS_EARRING,  droprate = 50 },
+            { itemid = xi.item.RONINS_EARRING,    droprate = 50 },
+            { itemid = xi.item.SHINOBI_EARRING,   droprate = 50 },
+            { itemid = xi.item.DRAKE_EARRING,     droprate = 50 },
+            { itemid = xi.item.CONJURER_EARRING,  droprate = 50 },
         },
         {
             { itemid = 0, droprate = 250 }, -- nothing
-            { itemid = xi.items.SOLDIERS_EARRING,  droprate = 50 },
-            { itemid = xi.items.KAMPFER_EARRING,   droprate = 50 },
-            { itemid = xi.items.MEDICINE_EARRING,  droprate = 50 },
-            { itemid = xi.items.SORCERERS_EARRING, droprate = 50 },
-            { itemid = xi.items.FENCERS_EARRING,   droprate = 50 },
-            { itemid = xi.items.ROGUES_EARRING,    droprate = 50 },
-            { itemid = xi.items.GUARDIAN_EARRING,  droprate = 50 },
-            { itemid = xi.items.SLAYERS_EARRING,   droprate = 50 },
-            { itemid = xi.items.TAMERS_EARRING,    droprate = 50 },
-            { itemid = xi.items.MINSTRELS_EARRING, droprate = 50 },
-            { itemid = xi.items.TRACKERS_EARRING,  droprate = 50 },
-            { itemid = xi.items.RONINS_EARRING,    droprate = 50 },
-            { itemid = xi.items.SHINOBI_EARRING,   droprate = 50 },
-            { itemid = xi.items.DRAKE_EARRING,     droprate = 50 },
-            { itemid = xi.items.CONJURER_EARRING,  droprate = 50 },
+            { itemid = xi.item.SOLDIERS_EARRING,  droprate = 50 },
+            { itemid = xi.item.KAMPFER_EARRING,   droprate = 50 },
+            { itemid = xi.item.MEDICINE_EARRING,  droprate = 50 },
+            { itemid = xi.item.SORCERERS_EARRING, droprate = 50 },
+            { itemid = xi.item.FENCERS_EARRING,   droprate = 50 },
+            { itemid = xi.item.ROGUES_EARRING,    droprate = 50 },
+            { itemid = xi.item.GUARDIAN_EARRING,  droprate = 50 },
+            { itemid = xi.item.SLAYERS_EARRING,   droprate = 50 },
+            { itemid = xi.item.TAMERS_EARRING,    droprate = 50 },
+            { itemid = xi.item.MINSTRELS_EARRING, droprate = 50 },
+            { itemid = xi.item.TRACKERS_EARRING,  droprate = 50 },
+            { itemid = xi.item.RONINS_EARRING,    droprate = 50 },
+            { itemid = xi.item.SHINOBI_EARRING,   droprate = 50 },
+            { itemid = xi.item.DRAKE_EARRING,     droprate = 50 },
+            { itemid = xi.item.CONJURER_EARRING,  droprate = 50 },
         },
         {
             { itemid = 0, droprate = 250 }, -- nothing
-            { itemid = xi.items.OCEAN_SASH,  droprate = 150 },
-            { itemid = xi.items.FOREST_SASH, droprate = 150 },
-            { itemid = xi.items.STEPPE_SASH, droprate = 150 },
-            { itemid = xi.items.JUNGLE_SASH, droprate = 150 },
-            { itemid = xi.items.DESERT_SASH, droprate = 150 },
+            { itemid = xi.item.OCEAN_SASH,  droprate = 150 },
+            { itemid = xi.item.FOREST_SASH, droprate = 150 },
+            { itemid = xi.item.STEPPE_SASH, droprate = 150 },
+            { itemid = xi.item.JUNGLE_SASH, droprate = 150 },
+            { itemid = xi.item.DESERT_SASH, droprate = 150 },
         },
         {
             { itemid = 0, droprate = 450 }, -- nothing
-            { itemid = xi.items.STAFF_STRAP,   droprate =  50 },
-            { itemid = xi.items.CLAYMORE_GRIP, droprate =  50 },
-            { itemid = xi.items.POLE_GRIP,     droprate = 300 },
-            { itemid = xi.items.SPEAR_STRAP,   droprate = 150 },
+            { itemid = xi.item.STAFF_STRAP,   droprate =  50 },
+            { itemid = xi.item.CLAYMORE_GRIP, droprate =  50 },
+            { itemid = xi.item.POLE_GRIP,     droprate = 300 },
+            { itemid = xi.item.SPEAR_STRAP,   droprate = 150 },
         },
         {
             { itemid = 0, droprate = 100 }, -- nothing
-            { itemid = xi.items.PHILOSOPHERS_STONE, droprate = 400 },
-            { itemid = xi.items.PHOENIX_FEATHER,    droprate = 500 },
+            { itemid = xi.item.PHILOSOPHERS_STONE, droprate = 400 },
+            { itemid = xi.item.PHOENIX_FEATHER,    droprate = 500 },
         },
         {
             { itemid = 0, droprate = 840 }, -- nothing
-            { itemid = xi.items.SCROLL_OF_CURE_V,      droprate =  10 },
-            { itemid = xi.items.SCROLL_OF_THUNDER_III, droprate =  10 },
-            { itemid = xi.items.SCROLL_OF_SHELL_IV,    droprate =  10 },
-            { itemid = xi.items.LIGHT_SPIRIT_PACT,     droprate = 130 },
+            { itemid = xi.item.SCROLL_OF_CURE_V,      droprate =  10 },
+            { itemid = xi.item.SCROLL_OF_THUNDER_III, droprate =  10 },
+            { itemid = xi.item.SCROLL_OF_SHELL_IV,    droprate =  10 },
+            { itemid = xi.item.LIGHT_SPIRIT_PACT,     droprate = 130 },
         },
 
         {
             { itemid = 0, droprate = 640 }, -- nothing
-            { itemid = xi.items.CHUNK_OF_MYTHRIL_ORE,   droprate = 150 },
-            { itemid = xi.items.CHUNK_OF_DARKSTEEL_ORE, droprate =  50 },
-            { itemid = xi.items.CHUNK_OF_ADAMAN_ORE,    droprate =  10 },
-            { itemid = xi.items.CHUNK_OF_PLATINUM_ORE,  droprate = 100 },
-            { itemid = xi.items.SLAB_OF_GRANITE,        droprate =  50 },
+            { itemid = xi.item.CHUNK_OF_MYTHRIL_ORE,   droprate = 150 },
+            { itemid = xi.item.CHUNK_OF_DARKSTEEL_ORE, droprate =  50 },
+            { itemid = xi.item.CHUNK_OF_ADAMAN_ORE,    droprate =  10 },
+            { itemid = xi.item.CHUNK_OF_PLATINUM_ORE,  droprate = 100 },
+            { itemid = xi.item.SLAB_OF_GRANITE,        droprate =  50 },
         },
         {
             { itemid = 0, droprate = 350 }, -- nothing
-            { itemid = xi.items.PHOENIX_FEATHER, droprate = 500 },
-            { itemid = xi.items.HI_RERAISER,     droprate = 150 },
+            { itemid = xi.item.PHOENIX_FEATHER, droprate = 500 },
+            { itemid = xi.item.HI_RERAISER,     droprate = 150 },
         },
         {
             { itemid = 0, droprate = 200 }, -- nothing
-            { itemid = xi.items.RAINBOW_CLOTH,                 droprate =  50 },
-            { itemid = xi.items.SPOOL_OF_GOLD_THREAD, droprate = 100 },
-            { itemid = xi.items.MAHOGANY_LOG,         droprate = 100 },
-            { itemid = xi.items.PETRIFIED_LOG,        droprate = 150 },
-            { itemid = xi.items.CORAL_FRAGMENT,       droprate = 100 },
-            { itemid = xi.items.RAM_HORN,             droprate = 200 },
-            { itemid = xi.items.DEMON_HORN,           droprate = 100 },
+            { itemid = xi.item.RAINBOW_CLOTH,                 droprate =  50 },
+            { itemid = xi.item.SPOOL_OF_GOLD_THREAD, droprate = 100 },
+            { itemid = xi.item.MAHOGANY_LOG,         droprate = 100 },
+            { itemid = xi.item.PETRIFIED_LOG,        droprate = 150 },
+            { itemid = xi.item.CORAL_FRAGMENT,       droprate = 100 },
+            { itemid = xi.item.RAM_HORN,             droprate = 200 },
+            { itemid = xi.item.DEMON_HORN,           droprate = 100 },
         },
         {
             { itemid = 0, droprate = 270 }, -- nothing
-            { itemid = xi.items.DAMASCUS_INGOT,             droprate =  10 },
-            { itemid = xi.items.SQUARE_OF_DAMASCENE_CLOTH,  droprate =  10 },
-            { itemid = xi.items.SPOOL_OF_MALBORO_FIBER,     droprate =  10 },
-            { itemid = xi.items.PHILOSOPHERS_STONE,         droprate = 250 },
-            { itemid = xi.items.VIAL_OF_BLACK_BEETLE_BLOOD, droprate =  50 },
-            { itemid = xi.items.SQUARE_OF_RAXA,             droprate = 400 },
+            { itemid = xi.item.DAMASCUS_INGOT,             droprate =  10 },
+            { itemid = xi.item.SQUARE_OF_DAMASCENE_CLOTH,  droprate =  10 },
+            { itemid = xi.item.SPOOL_OF_MALBORO_FIBER,     droprate =  10 },
+            { itemid = xi.item.PHILOSOPHERS_STONE,         droprate = 250 },
+            { itemid = xi.item.VIAL_OF_BLACK_BEETLE_BLOOD, droprate =  50 },
+            { itemid = xi.item.SQUARE_OF_RAXA,             droprate = 400 },
         },
     },
 

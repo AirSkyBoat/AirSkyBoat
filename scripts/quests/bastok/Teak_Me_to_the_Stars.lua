@@ -49,7 +49,7 @@ quest.sections =
             ['Raibaht'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.GARHADA_TEAK_LUMBER) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.GARHADA_TEAK_LUMBER) then
                         return quest:event(865)
                     end
                 end,

@@ -47,7 +47,7 @@ entity.onTrigger = function(player, npc)
     local getLegs = player:getCharVar("BrygidGetLegs")
     local wantsSubligar = player:getCharVar("BrygidWantsSubligar")
 
-    local robeEquipped = body == xi.items.ROBE and 1 or 0
+    local robeEquipped = body == xi.item.ROBE and 1 or 0
 
     if
         brygidReturns ~= QUEST_ACCEPTED and

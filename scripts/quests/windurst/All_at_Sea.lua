@@ -15,7 +15,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.ALL_AT_SE
 
 quest.reward =
 {
-    item = xi.items.LEATHER_RING,
+    item = xi.item.LEATHER_RING,
     fame = 30,
     fameArea = xi.quest.fame_area.WINDURST,
 }
@@ -37,7 +37,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if trade:hasItemQty(xi.items.RIPPED_CAP, 1) and trade:getItemCount() == 1 then
+                    if trade:hasItemQty(xi.item.RIPPED_CAP, 1) and trade:getItemCount() == 1 then
                         return quest:progressEvent(292)
                     end
                 end,
@@ -66,7 +66,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if trade:hasItemQty(xi.items.SAILORS_CAP, 1) and trade:getItemCount() == 1 and quest:getVar(player, 'Prog') == 2 then
+                    if trade:hasItemQty(xi.item.SAILORS_CAP, 1) and trade:getItemCount() == 1 and quest:getVar(player, 'Prog') == 2 then
                         return quest:progressEvent(295)
                     end
                 end,
@@ -88,14 +88,14 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 1 then
-                        return quest:progressEvent(548, 0, xi.items.DHALMEL_HIDE)
+                        return quest:progressEvent(548, 0, xi.item.DHALMEL_HIDE)
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if trade:hasItemQty(xi.items.RIPPED_CAP, 1) and trade:getItemCount() == 1 and quest:getVar(player, 'Prog') == 0 then
-                        return quest:progressEvent(547, 0, xi.items.DHALMEL_HIDE)
-                    elseif trade:hasItemQty(xi.items.DHALMEL_HIDE, 4) and trade:getItemCount() == 4 and quest:getVar(player, 'Prog') == 1 then
+                    if trade:hasItemQty(xi.item.RIPPED_CAP, 1) and trade:getItemCount() == 1 and quest:getVar(player, 'Prog') == 0 then
+                        return quest:progressEvent(547, 0, xi.item.DHALMEL_HIDE)
+                    elseif trade:hasItemQty(xi.item.DHALMEL_HIDE, 4) and trade:getItemCount() == 4 and quest:getVar(player, 'Prog') == 1 then
                         return quest:progressEvent(549)
                     end
                 end,
@@ -110,8 +110,8 @@ quest.sections =
                 [549] = function(player, csid, option, npc)
                     player:tradeComplete()
                     quest:setVar(player, 'Prog', 2)
-                    npcUtil.giveItem(player, xi.items.SAILORS_CAP)
-                    npcUtil.giveItem(player, xi.items.DHALMEL_MANTLE)
+                    npcUtil.giveItem(player, xi.item.SAILORS_CAP)
+                    npcUtil.giveItem(player, xi.item.DHALMEL_MANTLE)
                 end,
             },
         },

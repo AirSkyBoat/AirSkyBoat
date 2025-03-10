@@ -8,10 +8,10 @@ local entity = {}
 
 entity.onTrade = function(player, npc, trade)
     if player:getQuestStatus(xi.quest.log_id.BASTOK, xi.quest.id.bastok.WISH_UPON_A_STAR) == QUEST_ACCEPTED and
-    not player:hasItem(xi.items.FALLEN_STAR) and npcUtil.tradeHasExactly(trade, xi.items.HATCHET) then
+    not player:hasItem(xi.item.FALLEN_STAR) and npcUtil.tradeHasExactly(trade, xi.item.HATCHET) then
         player:confirmTrade()
-        player:startEvent(205, xi.items.FALLEN_STAR)
-        player:addItem(xi.items.FALLEN_STAR)
+        player:startEvent(205, xi.item.FALLEN_STAR)
+        player:addItem(xi.item.FALLEN_STAR)
     else
         xi.helm.onTrade(player, npc, trade, xi.helm.type.LOGGING, 10)
     end

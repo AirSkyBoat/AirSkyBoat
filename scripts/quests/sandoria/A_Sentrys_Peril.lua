@@ -18,7 +18,7 @@ quest.reward =
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
     title = xi.title.RONFAURIAN_RESCUER,
-    item = xi.items.BRONZE_SUBLIGAR,
+    item = xi.item.BRONZE_SUBLIGAR,
 }
 
 quest.sections =
@@ -36,7 +36,7 @@ quest.sections =
             onEventFinish =
             {
                 [510] = function(player, csid, option, npc)
-                    if option == 0 and npcUtil.giveItem(player, xi.items.DOSE_OF_OINTMENT) then
+                    if option == 0 and npcUtil.giveItem(player, xi.item.DOSE_OF_OINTMENT) then
                         quest:begin(player)
                     end
                 end,
@@ -60,7 +60,7 @@ quest.sections =
                 end,
 
                 onTrigger = function(player, npc)
-                    if player:hasItem(xi.items.DOSE_OF_OINTMENT) then
+                    if player:hasItem(xi.item.DOSE_OF_OINTMENT) then
                         return quest:event(520) -- reminder to deliver ointment
                     else
                         return quest:progressEvent(644) -- reacquire ointment
@@ -71,7 +71,7 @@ quest.sections =
             onEventFinish =
             {
                 [644] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.DOSE_OF_OINTMENT)
+                    npcUtil.giveItem(player, xi.item.DOSE_OF_OINTMENT)
                 end,
             },
         },
@@ -81,7 +81,7 @@ quest.sections =
             ['Aaveleon'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.DOSE_OF_OINTMENT) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.DOSE_OF_OINTMENT) then
                         if player:getFreeSlotsCount() == 0 then
                             return quest:event(118) -- "Ah...but it seems you're already carrying too much."
                         else
@@ -96,7 +96,7 @@ quest.sections =
             onEventFinish =
             {
                 [100] = function(player, csid, option)
-                    if npcUtil.giveItem(player, xi.items.OINTMENT_CASE) then
+                    if npcUtil.giveItem(player, xi.item.OINTMENT_CASE) then
                         player:confirmTrade()
                         quest:setVar(player, 'TradedAaveleon', 1)
                     end
@@ -116,10 +116,10 @@ quest.sections =
             ['Aaveleon'] =
             {
                 onTrigger = function(player, npc)
-                    if player:hasItem(xi.items.OINTMENT_CASE) then
+                    if player:hasItem(xi.item.OINTMENT_CASE) then
                         return quest:message(westRonfaureID.text.AAVELEON_HEALED) -- "My wounds are healed, thanks to you!"
                     else
-                        return quest:progressEvent(126, xi.items.OINTMENT_CASE) -- reacquire ointment case
+                        return quest:progressEvent(126, xi.item.OINTMENT_CASE) -- reacquire ointment case
                     end
                 end,
             },
@@ -128,7 +128,7 @@ quest.sections =
             {
                 [126] = function(player, csid, option)
                     if option == 1 then
-                        npcUtil.giveItem(player, xi.items.OINTMENT_CASE)
+                        npcUtil.giveItem(player, xi.item.OINTMENT_CASE)
                     end
                 end,
             },
@@ -143,7 +143,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.OINTMENT_CASE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.OINTMENT_CASE) then
                         return quest:progressEvent(513)
                     else
                         return quest:event(514) -- "I cannot accept this. Take it back."

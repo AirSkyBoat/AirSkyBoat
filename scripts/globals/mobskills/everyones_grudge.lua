@@ -26,7 +26,7 @@ mobskillObject.onMobWeaponSkill = function(target, mob, skill)
 
     if
         player and
-        player:getEquipID(xi.slot.NECK) == xi.items.UGGALEPIH_NECKLACE
+        player:getEquipID(xi.slot.NECK) == xi.item.UGGALEPIH_NECKLACE
     then
         realDmg = math.floor(realDmg * (1 - (player:getTP() / 3000)))
         player:setTP(0)

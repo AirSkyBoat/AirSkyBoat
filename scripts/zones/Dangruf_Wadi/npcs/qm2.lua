@@ -22,7 +22,7 @@ end
 
 entity.onEventFinish = function(player, csid, option)
     if csid == 110 and option == 0 then
-        npcUtil.giveItem(player, xi.items.DANGRUF_STONE)
+        npcUtil.giveItem(player, xi.item.DANGRUF_STONE)
     end
 end
 

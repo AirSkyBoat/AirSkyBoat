@@ -16,9 +16,9 @@ chest.zone[xi.zone.QUFIM_ISLAND] =
 
     items =
     {
-        { chest.rate.VERY_COMMON, xi.items.SEASHELL,    }, -- 24%
-        { chest.rate.UNCOMMON,    xi.items.SHALL_SHELL, }, -- 10%
-        { chest.rate.RARE,        xi.items.PEARL,       }, --  5%
+        { chest.rate.VERY_COMMON, xi.item.SEASHELL,    }, -- 24%
+        { chest.rate.UNCOMMON,    xi.item.SHALL_SHELL, }, -- 10%
+        { chest.rate.RARE,        xi.item.PEARL,       }, --  5%
     },
 
     -- Optional

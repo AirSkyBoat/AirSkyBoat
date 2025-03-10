@@ -10,10 +10,10 @@ local entity = {}
 
 entity.onTrade = function(player, npc, trade)
     local shieldChance = 0
-    if npcUtil.tradeHasExactly(trade, xi.items.HICKORY_SHIELD) then
+    if npcUtil.tradeHasExactly(trade, xi.item.HICKORY_SHIELD) then
         shieldChance = 500
         npc:setLocalVar("shield", 1)
-    elseif npcUtil.tradeHasExactly(trade, xi.items.PICAROONS_SHIELD) then
+    elseif npcUtil.tradeHasExactly(trade, xi.item.PICAROONS_SHIELD) then
         shieldChance = 1000
         npc:setLocalVar("shield", 2)
     end
@@ -25,9 +25,9 @@ entity.onTrade = function(player, npc, trade)
         player:confirmTrade()
         GetMobByID(ID.mob.GRATION):setLocalVar("DropRate", shieldChance)
         if npc:getLocalVar("shield") == 1 then
-            player:messageSpecial(ID.text.SNATCHED_AWAY, xi.items.HICKORY_SHIELD)
+            player:messageSpecial(ID.text.SNATCHED_AWAY, xi.item.HICKORY_SHIELD)
         else
-            player:messageSpecial(ID.text.SNATCHED_AWAY, xi.items.PICAROONS_SHIELD)
+            player:messageSpecial(ID.text.SNATCHED_AWAY, xi.item.PICAROONS_SHIELD)
         end
     end
 end

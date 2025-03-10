@@ -14,9 +14,9 @@ end
 entity.onTrigger = function(player, npc)
     if
         npc:getStatus() == xi.status.NORMAL and
-        not player:hasItem(xi.items.UGGALEPIH_WHISTLE)
+        not player:hasItem(xi.item.UGGALEPIH_WHISTLE)
     then
-        if npcUtil.giveItem(player, xi.items.UGGALEPIH_WHISTLE) then -- Uggalepih Whistle
+        if npcUtil.giveItem(player, xi.item.UGGALEPIH_WHISTLE) then -- Uggalepih Whistle
             local positions =
             {
                 { -133.47, -0.33, -49.15 },

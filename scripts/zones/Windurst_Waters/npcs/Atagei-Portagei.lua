@@ -93,7 +93,7 @@ entity.onEventFinish = function(player, csid, option)
     if csid == 892 then
         if player:getFreeSlotsCount() >= 1 then
             player:addItem(1742, 1)
-            player:messageSpecial(ID.text.ITEM_OBTAINED, xi.items.PRESENT_FOR_THE_KIDDIES)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, xi.item.PRESENT_FOR_THE_KIDDIES)
             player:setCharVar("smilebringersconvo", 1)
             player:setCharVar("previousDay", VanadielDayOfTheWeek())
             if player:getCharVar("SmilebringersFameReset") ~= 1 then
@@ -101,7 +101,7 @@ entity.onEventFinish = function(player, csid, option)
                 player:setCharVar("SmilebringersFameReset", 1)
             end
         else
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.PRESENT_FOR_THE_KIDDIES)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.PRESENT_FOR_THE_KIDDIES)
         end
     end
 end

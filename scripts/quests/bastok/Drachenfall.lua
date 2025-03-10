@@ -41,7 +41,7 @@ quest.sections =
             onEventFinish =
             {
                 [101] = function(player, csid, option, npc)
-                    if npcUtil.giveItem(player, xi.items.BRASS_CANTEEN) then
+                    if npcUtil.giveItem(player, xi.item.BRASS_CANTEEN) then
                         quest:begin(player)
                     end
                 end,
@@ -60,15 +60,15 @@ quest.sections =
             ['Black_Mud'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.CANTEEN_OF_DRACHENFALL_WATER) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.CANTEEN_OF_DRACHENFALL_WATER) then
                         return quest:progressEvent(103)
                     end
                 end,
 
                 onTrigger = function(player, npc)
                     if
-                        not player:findItem(xi.items.BRASS_CANTEEN) and
-                        not player:findItem(xi.items.CANTEEN_OF_DRACHENFALL_WATER)
+                        not player:findItem(xi.item.BRASS_CANTEEN) and
+                        not player:findItem(xi.item.CANTEEN_OF_DRACHENFALL_WATER)
                     then
                         return quest:progressEvent(102)
                     end
@@ -78,7 +78,7 @@ quest.sections =
             onEventFinish =
             {
                 [102] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.BRASS_CANTEEN)
+                    npcUtil.giveItem(player, xi.item.BRASS_CANTEEN)
                 end,
 
                 [103] = function(player, csid, option, npc)
@@ -95,8 +95,8 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.BRASS_CANTEEN) and
-                        npcUtil.giveItem(player, xi.items.CANTEEN_OF_DRACHENFALL_WATER)
+                        npcUtil.tradeHasExactly(trade, xi.item.BRASS_CANTEEN) and
+                        npcUtil.giveItem(player, xi.item.CANTEEN_OF_DRACHENFALL_WATER)
                     then
                         player:confirmTrade()
                     end

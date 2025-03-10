@@ -22,7 +22,7 @@ local entity = {}
 ]]
 
 entity.onTrade = function(player, npc, trade)
-    if npcUtil.tradeHasExactly(trade, xi.items.BUNCH_OF_GYSAHL_GREENS) then
+    if npcUtil.tradeHasExactly(trade, xi.item.BUNCH_OF_GYSAHL_GREENS) then
         player:confirmTrade()
         local param7 = 10003 -- controls what CS is shown to the player
         if

@@ -18,7 +18,7 @@ local quest = Quest:new(xi.quest.log_id.OUTLANDS, xi.quest.id.outlands.CHASING_D
 quest.reward =
 {
     fame     = 30,
-    item     = xi.items.VENERER_RING,
+    item     = xi.item.VENERER_RING,
     fameArea = xi.quest.fame_area.SELBINA_RABAO,
     gil      = 4000,
 }
@@ -208,7 +208,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if player:hasKeyItem(xi.ki.STOREROOM_KEY) then
-                        return quest:progressEvent(211, 0, xi.items.PINCH_OF_PRISM_POWDER)
+                        return quest:progressEvent(211, 0, xi.item.PINCH_OF_PRISM_POWDER)
                     end
                 end,
             },
@@ -232,7 +232,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 5 then
-                        return quest:progressEvent(322, 0, xi.items.EASTERN_GEM)
+                        return quest:progressEvent(322, 0, xi.item.EASTERN_GEM)
                     else
                         -- Additional Dialogue
                         return quest:event(324)
@@ -244,7 +244,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { { xi.items.EASTERN_GEM, 5 } }) and
+                        npcUtil.tradeHasExactly(trade, { { xi.item.EASTERN_GEM, 5 } }) and
                         quest:getVar(player, 'Prog') == 6
                     then
                         return quest:progressEvent(323)
@@ -254,7 +254,7 @@ quest.sections =
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 6 then
                         -- Additional Dialogue
-                        return quest:event(326, 0, xi.items.EASTERN_GEM)
+                        return quest:event(326, 0, xi.item.EASTERN_GEM)
                     elseif quest:getVar(player, 'Prog') > 6 then
                         -- Additional Dialogue
                         return quest:event(327)

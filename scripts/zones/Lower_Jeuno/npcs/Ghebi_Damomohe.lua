@@ -17,7 +17,7 @@ entity.onTrade = function(player, npc, trade)
     local astralCovenantCD = player:getCharVar("[ENM]AstralCovenant")
 
     if
-        npcUtil.tradeHas(trade, xi.items.FLORID_STONE) and
+        npcUtil.tradeHas(trade, xi.item.FLORID_STONE) and
         player:hasKeyItem(xi.ki.PSOXJA_PASS) and
         astralCovenantCD < VanadielTime()
     then
@@ -26,7 +26,7 @@ entity.onTrade = function(player, npc, trade)
 
     elseif
         player:getQuestStatus(xi.quest.log_id.JEUNO, xi.quest.id.jeuno.TENSHODO_MEMBERSHIP) ~= QUEST_COMPLETED and
-        npcUtil.tradeHas(trade, xi.items.TENSHODO_INVITE)
+        npcUtil.tradeHas(trade, xi.item.TENSHODO_INVITE)
     then
         player:startEvent(108)
         player:tradeComplete(false)

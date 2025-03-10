@@ -11,34 +11,34 @@ local sharedLoot =
     -- All items are assigned a "weight" here
     item1 =
     {
-        [          xi.items.CORAL_FRAGMENT] =  50,
-        [          xi.items.DRILL_CALAMARY] = 200,
-        [             xi.items.DWARF_PUGIL] = 100,
-        [xi.items.HIGH_QUALITY_PUGIL_SCALES] =  50,
-        --[             xi.items.PAMTAM_KELP] = 250, (ToAU Era, giving weight to SHALL_SHELL as similar value item)
-        [               xi.items.SALINATOR] = 100,
-        [             xi.items.SHALL_SHELL] = 400,
-        [               xi.items.ZEBRA_EEL] = 100,
+        [          xi.item.CORAL_FRAGMENT] =  50,
+        [          xi.item.DRILL_CALAMARY] = 200,
+        [             xi.item.DWARF_PUGIL] = 100,
+        [xi.item.HIGH_QUALITY_PUGIL_SCALES] =  50,
+        --[             xi.item.PAMTAM_KELP] = 250, (ToAU Era, giving weight to SHALL_SHELL as similar value item)
+        [               xi.item.SALINATOR] = 100,
+        [             xi.item.SHALL_SHELL] = 400,
+        [               xi.item.ZEBRA_EEL] = 100,
     },
     item2 =
     {
-        [  xi.items.ARROWWOOD_LOG] = 200,
-        [xi.items.BUTTERFLY_CORAL] = 150,
-        [ xi.items.CORAL_FRAGMENT] =  50,
-        [ xi.items.DRILL_CALAMARY] = 150,
-        [    xi.items.DWARF_PUGIL] = 150,
-        [     xi.items.NEBIMONITE] = 100,
-        [    xi.items.SHALL_SHELL] = 200,
+        [  xi.item.ARROWWOOD_LOG] = 200,
+        [xi.item.BUTTERFLY_CORAL] = 150,
+        [ xi.item.CORAL_FRAGMENT] =  50,
+        [ xi.item.DRILL_CALAMARY] = 150,
+        [    xi.item.DWARF_PUGIL] = 150,
+        [     xi.item.NEBIMONITE] = 100,
+        [    xi.item.SHALL_SHELL] = 200,
     },
     item3 =
     {
-        [         xi.items.FUSCINA] = 880,
-        [  xi.items.MERCURIAL_KRIS] =  28,
-        [xi.items.PIECE_OF_OXBLOOD] =  92,
+        [         xi.item.FUSCINA] = 880,
+        [  xi.item.MERCURIAL_KRIS] =  28,
+        [xi.item.PIECE_OF_OXBLOOD] =  92,
     },
     item4 =
     {
-        [xi.items.ALBATROSS_RING] = 1000,
+        [xi.item.ALBATROSS_RING] = 1000,
     }
 }
 

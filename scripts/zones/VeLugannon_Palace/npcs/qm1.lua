@@ -14,8 +14,8 @@ end
 entity.onTrigger = function(player, npc)
     local hideTime = 0
 
-    if not player:hasItem(xi.items.CURTANA) then
-        npcUtil.giveItem(player, xi.items.CURTANA)
+    if not player:hasItem(xi.item.CURTANA) then
+        npcUtil.giveItem(player, xi.item.CURTANA)
 
         -- ??? dissapears for 3 hours and reappears on new position
         hideTime = 10800

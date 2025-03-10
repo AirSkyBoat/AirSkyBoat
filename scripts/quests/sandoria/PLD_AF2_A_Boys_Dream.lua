@@ -20,7 +20,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.A_BOY_S_D
 
 quest.reward =
 {
-    item     = xi.items.GALLANT_LEGGINGS,
+    item     = xi.item.GALLANT_LEGGINGS,
     fame     = 40,
     fameArea = xi.quest.fame_area.SANDORIA,
 }
@@ -99,12 +99,12 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     local questProgress = quest:getVar(player, 'Prog')
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.GIANT_SHELL_BUG) and
+                        npcUtil.tradeHasExactly(trade, xi.item.GIANT_SHELL_BUG) and
                         questProgress == 3
                     then
                         return quest:progressEvent(15) -- During Quest "A Boy's Dream" (trading bug) madame ?
                     elseif
-                        npcUtil.tradeHasExactly(trade, xi.items.ODONTOTYRANNUS) and
+                        npcUtil.tradeHasExactly(trade, xi.item.ODONTOTYRANNUS) and
                         questProgress == 4
                     then
                         return quest:progressEvent(47) -- During Quest "A Boy's Dream" (trading odontotyrannus)
@@ -166,7 +166,7 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Prog') >= 4 and
-                        npcUtil.tradeHasExactly(trade, xi.items.ODONTOTYRANNUS)
+                        npcUtil.tradeHasExactly(trade, xi.item.ODONTOTYRANNUS)
                     then
                         return quest:progressEvent(85)
                     end

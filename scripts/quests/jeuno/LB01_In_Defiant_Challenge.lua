@@ -56,9 +56,9 @@ local function handleExorayMold(player)
         if player:getFreeSlotsCount() > 0 then
             cleanKIMold(player)
             player:messageSpecial(crawlersID.text.COMBINE_INTO_A_CLUMP, xi.ki.EXORAY_MOLD_CRUMB1)
-            npcUtil.giveItem(player, xi.items.CLUMP_OF_EXORAY_MOLD)
+            npcUtil.giveItem(player, xi.item.CLUMP_OF_EXORAY_MOLD)
         else
-            player:messageSpecial(crawlersID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.CLUMP_OF_EXORAY_MOLD)
+            player:messageSpecial(crawlersID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.CLUMP_OF_EXORAY_MOLD)
         end
     end
 end
@@ -72,9 +72,9 @@ local function handleBombCoal(player)
         if player:getFreeSlotsCount() > 0 then
             cleanKICoal(player)
             player:messageSpecial(garlaigeID.text.COMBINE_INTO_A_CHUNK, xi.ki.BOMB_COAL_FRAGMENT1)
-            npcUtil.giveItem(player, xi.items.CHUNK_OF_BOMB_COAL)
+            npcUtil.giveItem(player, xi.item.CHUNK_OF_BOMB_COAL)
         else
-            player:messageSpecial(garlaigeID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.CHUNK_OF_BOMB_COAL)
+            player:messageSpecial(garlaigeID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.CHUNK_OF_BOMB_COAL)
         end
     end
 end
@@ -88,9 +88,9 @@ local function handleAncientPapyrus(player)
         if player:getFreeSlotsCount() > 0 then
             cleanKIPapyrus(player)
             player:messageSpecial(eldiemeID.text.PUT_TOGUETHER_TO_COMPLETE, xi.ki.ANCIENT_PAPYRUS_SHRED1)
-            npcUtil.giveItem(player, xi.items.PIECE_OF_ANCIENT_PAPYRUS)
+            npcUtil.giveItem(player, xi.item.PIECE_OF_ANCIENT_PAPYRUS)
         else
-            player:messageSpecial(eldiemeID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.PIECE_OF_ANCIENT_PAPYRUS)
+            player:messageSpecial(eldiemeID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.PIECE_OF_ANCIENT_PAPYRUS)
         end
     end
 end
@@ -148,7 +148,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.CLUMP_OF_EXORAY_MOLD, xi.items.CHUNK_OF_BOMB_COAL, xi.items.PIECE_OF_ANCIENT_PAPYRUS }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.CLUMP_OF_EXORAY_MOLD, xi.item.CHUNK_OF_BOMB_COAL, xi.item.PIECE_OF_ANCIENT_PAPYRUS }) then
                         return quest:progressEvent(81)
                     end
                 end,
@@ -176,7 +176,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.CLUMP_OF_EXORAY_MOLD) and
+                        not player:hasItem(xi.item.CLUMP_OF_EXORAY_MOLD) and
                         not player:hasKeyItem(xi.ki.EXORAY_MOLD_CRUMB1) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -190,7 +190,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.CLUMP_OF_EXORAY_MOLD) and
+                        not player:hasItem(xi.item.CLUMP_OF_EXORAY_MOLD) and
                         not player:hasKeyItem(xi.ki.EXORAY_MOLD_CRUMB2) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -204,7 +204,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.CLUMP_OF_EXORAY_MOLD) and
+                        not player:hasItem(xi.item.CLUMP_OF_EXORAY_MOLD) and
                         not player:hasKeyItem(xi.ki.EXORAY_MOLD_CRUMB3) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -221,7 +221,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.CHUNK_OF_BOMB_COAL) and
+                        not player:hasItem(xi.item.CHUNK_OF_BOMB_COAL) and
                         not player:hasKeyItem(xi.ki.BOMB_COAL_FRAGMENT1) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -235,7 +235,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.CHUNK_OF_BOMB_COAL) and
+                        not player:hasItem(xi.item.CHUNK_OF_BOMB_COAL) and
                         not player:hasKeyItem(xi.ki.BOMB_COAL_FRAGMENT2) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -249,7 +249,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.CHUNK_OF_BOMB_COAL) and
+                        not player:hasItem(xi.item.CHUNK_OF_BOMB_COAL) and
                         not player:hasKeyItem(xi.ki.BOMB_COAL_FRAGMENT3) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -266,7 +266,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.PIECE_OF_ANCIENT_PAPYRUS) and
+                        not player:hasItem(xi.item.PIECE_OF_ANCIENT_PAPYRUS) and
                         not player:hasKeyItem(xi.ki.ANCIENT_PAPYRUS_SHRED1) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -280,7 +280,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.PIECE_OF_ANCIENT_PAPYRUS) and
+                        not player:hasItem(xi.item.PIECE_OF_ANCIENT_PAPYRUS) and
                         not player:hasKeyItem(xi.ki.ANCIENT_PAPYRUS_SHRED2) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then
@@ -294,7 +294,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.PIECE_OF_ANCIENT_PAPYRUS) and
+                        not player:hasItem(xi.item.PIECE_OF_ANCIENT_PAPYRUS) and
                         not player:hasKeyItem(xi.ki.ANCIENT_PAPYRUS_SHRED3) and
                         not xi.settings.main.OLDSCHOOL_G1
                     then

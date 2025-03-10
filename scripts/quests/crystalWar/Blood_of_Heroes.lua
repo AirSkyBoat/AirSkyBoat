@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.CRYSTAL_WAR, xi.quest.id.crystalWar.BLOO
 
 quest.reward =
 {
-    item  = xi.items.RAM_STAFF,
+    item  = xi.item.RAM_STAFF,
     title = xi.title.HOUSE_AURCHIAT_RETAINER,
 }
 

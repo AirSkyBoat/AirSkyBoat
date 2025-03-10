@@ -147,7 +147,7 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     local kenapaProg = quest:getVar(player, 'kenapaProg')
 
-                    if npcUtil.tradeHasExactly(trade, xi.items.HARD_BOILED_EGG) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.HARD_BOILED_EGG) then
                         -- Traded item without receiving order
                         if kenapaProg < 3 then
                             if math.random(1, 2) == 1 then
@@ -180,12 +180,12 @@ quest.sections =
                     elseif kenapaProg == 1 then
                         return quest:progressEvent(319)
                     elseif kenapaProg == 2 then
-                        return quest:progressEvent(320, 0, xi.items.HARD_BOILED_EGG)
+                        return quest:progressEvent(320, 0, xi.item.HARD_BOILED_EGG)
                     elseif kenapaProg == 3 then
                         local randEvent = math.random(1, 3)
 
                         if randEvent == 1 then
-                            return quest:progressEvent(320, 0, xi.items.HARD_BOILED_EGG) -- Repeats Order
+                            return quest:progressEvent(320, 0, xi.item.HARD_BOILED_EGG) -- Repeats Order
                         elseif randEvent == 2 then
                             return quest:progressEvent(321) -- "Or Whatever"
                         else
@@ -199,7 +199,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.SLICE_OF_GRILLED_HARE) and
+                        npcUtil.tradeHasExactly(trade, xi.item.SLICE_OF_GRILLED_HARE) and
                         quest:getVar(player, 'kerutotoProg') == 1
                     then
                         return quest:progressEvent(332, 440)
@@ -210,7 +210,7 @@ quest.sections =
                     local kerutotoProgress = quest:getVar(player, 'kerutotoProg')
 
                     if kerutotoProgress == 1 then
-                        return quest:event(315, 0, xi.items.SLICE_OF_GRILLED_HARE)
+                        return quest:event(315, 0, xi.item.SLICE_OF_GRILLED_HARE)
                     elseif kerutotoProgress == 2 then
                         return quest:event(333)
                     end
@@ -227,7 +227,7 @@ quest.sections =
             ['Ohbiru-Dohbiru'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.CUP_OF_WINDURSTIAN_TEA, xi.items.TORTILLA, xi.items.CLUMP_OF_PAMTAM_KELP }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.CUP_OF_WINDURSTIAN_TEA, xi.item.TORTILLA, xi.item.CLUMP_OF_PAMTAM_KELP }) then
                         local ohbiruProgress = quest:getVar(player, 'ohbiruProg')
 
                         -- Traded all 3 items & Didn't ask for order

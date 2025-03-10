@@ -28,7 +28,7 @@ local spawnedMobs =
 
 quest.reward =
 {
-    item     = xi.items.GALLANT_SURCOAT,
+    item     = xi.item.GALLANT_SURCOAT,
     fame     = 60,
     fameArea = xi.quest.fame_area.SANDORIA,
 }
@@ -200,7 +200,7 @@ quest.sections =
                     local questProgress = quest:getVar(player, 'Prog')
 
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.WELL_WEIGHT) and
+                        npcUtil.tradeHasExactly(trade, xi.item.WELL_WEIGHT) and
                         questProgress == 5
                     then
                         return quest:progressEvent(113)
@@ -213,7 +213,7 @@ quest.sections =
                     if
                         questProgress == 5 and
                         player:hasKeyItem(xi.ki.STRANGE_SHEET_OF_PAPER) and
-                        not player:hasItem(xi.items.WELL_WEIGHT)
+                        not player:hasItem(xi.item.WELL_WEIGHT)
                     then
                         npcUtil.popFromQM(player, npc, spawnedMobs, { claim = true, hide = 0 })
                     elseif

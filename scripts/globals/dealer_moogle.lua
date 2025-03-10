@@ -25,13 +25,13 @@ local csidLookup =
 local kuponLookup =
 {
     -- [coupon item id] = { related key item id, index of items in itemList (table below) }
-    [xi.items.MOG_KUPON_A_DBCD] = { xi.ki.MOG_KUPON_A_DBCD, 1 },
-    [xi.items.MOG_KUPON_A_DXAR] = { xi.ki.MOG_KUPON_A_DXAR, 2 },
-    [xi.items.MOG_KUPON_AW_ABS] = { xi.ki.MOG_KUPON_AW_ABS, 3 },
-    [xi.items.MOG_KUPON_AW_PAN] = { xi.ki.MOG_KUPON_AW_PAN, 4 },
-    [xi.items.MOG_KUPON_A_LUM ] = { xi.ki.MOG_KUPON_A_LUM,  5 },
+    [xi.item.MOG_KUPON_A_DBCD] = { xi.ki.MOG_KUPON_A_DBCD, 1 },
+    [xi.item.MOG_KUPON_A_DXAR] = { xi.ki.MOG_KUPON_A_DXAR, 2 },
+    [xi.item.MOG_KUPON_AW_ABS] = { xi.ki.MOG_KUPON_AW_ABS, 3 },
+    [xi.item.MOG_KUPON_AW_PAN] = { xi.ki.MOG_KUPON_AW_PAN, 4 },
+    [xi.item.MOG_KUPON_A_LUM ] = { xi.ki.MOG_KUPON_A_LUM,  5 },
 
-    --[xi.items.MOG_KUPON_W_PULSE] = { xi.keyItem.MOG_KUPON_W_PULSE, 35 },
+    --[xi.item.MOG_KUPON_W_PULSE] = { xi.keyItem.MOG_KUPON_W_PULSE, 35 },
 }
 
 -- WARNING!
@@ -43,87 +43,87 @@ local itemList =
     -- Kupon A-DBcd: Dynamis - Beaucedine (MOG_KUPON_A_DBCD = 2745)
     [1] =
     {
-        xi.items.WARRIORS_CUISSES,
-        xi.items.MELEE_CYCLAS,
-        xi.items.CLERICS_BRIAULT,
-        xi.items.SORCERERS_COAT,
-        xi.items.DUELISTS_TABARD,
-        xi.items.ASSASSINS_CULOTTES,
-        xi.items.VALOR_BREECHES,
-        xi.items.ABYSS_CUIRASS,
-        xi.items.MONSTER_GAITERS,
-        xi.items.BARDS_JUSTAUCORPS,
-        xi.items.SCOUTS_SOCKS,
-        xi.items.SAOTOME_DOMARU,
-        xi.items.KOGA_CHAINMAIL,
-        xi.items.WYRM_MAIL,
-        xi.items.SUMMONERS_DOUBLET,
-        xi.items.MIRAGE_JUBBAH,
-        xi.items.COMMODORE_FRAC,
-        xi.items.PANTIN_TOBE,
-        xi.items.ETOILE_TIGHTS,
-        xi.items.ARGUTE_GOWN,
+        xi.item.WARRIORS_CUISSES,
+        xi.item.MELEE_CYCLAS,
+        xi.item.CLERICS_BRIAULT,
+        xi.item.SORCERERS_COAT,
+        xi.item.DUELISTS_TABARD,
+        xi.item.ASSASSINS_CULOTTES,
+        xi.item.VALOR_BREECHES,
+        xi.item.ABYSS_CUIRASS,
+        xi.item.MONSTER_GAITERS,
+        xi.item.BARDS_JUSTAUCORPS,
+        xi.item.SCOUTS_SOCKS,
+        xi.item.SAOTOME_DOMARU,
+        xi.item.KOGA_CHAINMAIL,
+        xi.item.WYRM_MAIL,
+        xi.item.SUMMONERS_DOUBLET,
+        xi.item.MIRAGE_JUBBAH,
+        xi.item.COMMODORE_FRAC,
+        xi.item.PANTIN_TOBE,
+        xi.item.ETOILE_TIGHTS,
+        xi.item.ARGUTE_GOWN,
     },
 
     -- Kupon A-DXar: Dynamis - Xarcabard (MOG_KUPON_A_DXAR = 2746)
     [2] =
     {
-        xi.items.WARRIORS_LORICA,
-        xi.items.MELEE_CROWN,
-        xi.items.CLERICS_MITTS,
-        xi.items.SORCERERS_PETASOS,
-        xi.items.DUELISTS_CHAPEAU,
-        xi.items.ASSASSINS_ARMLETS,
-        xi.items.VALOR_SURCOAT,
-        xi.items.ABYSS_BURGEONET,
-        xi.items.MONSTER_GLOVES,
-        xi.items.BARDS_CANNIONS,
-        xi.items.SCOUTS_JERKIN,
-        xi.items.SAOTOME_KABUTO,
-        xi.items.KOGA_TEKKO,
-        xi.items.WYRM_ARMET,
-        xi.items.SUMMONERS_HORN,
-        xi.items.MIRAGE_KEFFIYEH,
-        xi.items.COMMODORE_TRICORNE,
-        xi.items.PANTIN_TAJ,
-        xi.items.ETOILE_CASAQUE,
-        xi.items.ARGUTE_MORTARBOARD,
+        xi.item.WARRIORS_LORICA,
+        xi.item.MELEE_CROWN,
+        xi.item.CLERICS_MITTS,
+        xi.item.SORCERERS_PETASOS,
+        xi.item.DUELISTS_CHAPEAU,
+        xi.item.ASSASSINS_ARMLETS,
+        xi.item.VALOR_SURCOAT,
+        xi.item.ABYSS_BURGEONET,
+        xi.item.MONSTER_GLOVES,
+        xi.item.BARDS_CANNIONS,
+        xi.item.SCOUTS_JERKIN,
+        xi.item.SAOTOME_KABUTO,
+        xi.item.KOGA_TEKKO,
+        xi.item.WYRM_ARMET,
+        xi.item.SUMMONERS_HORN,
+        xi.item.MIRAGE_KEFFIYEH,
+        xi.item.COMMODORE_TRICORNE,
+        xi.item.PANTIN_TAJ,
+        xi.item.ETOILE_CASAQUE,
+        xi.item.ARGUTE_MORTARBOARD,
     },
 
     -- Kupon AW-Abs: Absolute Virtue (MOG_KUPON_AW_ABS = 2802)
     [3] =
     {
-        xi.items.NINURTAS_SASH,
-        xi.items.MARSS_RING,
-        xi.items.BELLONAS_RING,
-        xi.items.MINERVAS_RING,
-        xi.items.FUTSUNO_MITAMA,
-        xi.items.AUREOLE,
-        xi.items.RAPHAELS_ROD,
+        xi.item.NINURTAS_SASH,
+        xi.item.MARSS_RING,
+        xi.item.BELLONAS_RING,
+        xi.item.MINERVAS_RING,
+        xi.item.FUTSUNO_MITAMA,
+        xi.item.AUREOLE,
+        xi.item.RAPHAELS_ROD,
     },
 
     -- Kupon AW-Pan: Pandemonium Warden (MOG_KUPON_AW_PAN = 2801)
     [4] =
     {
-        xi.items.HACHIRYU_HARAMAKI,
-        xi.items.NANATSUSAYA,
-        xi.items.DORJE,
-        xi.items.SHENLONGS_BAGHNAKHS,
+        xi.item.HACHIRYU_HARAMAKI,
+        xi.item.NANATSUSAYA,
+        xi.item.DORJE,
+        xi.item.SHENLONGS_BAGHNAKHS,
     },
 
     -- Kupon A-Lum: Sea NM System (MOG_KUPON_A_LUM = 2736)
     [5] =
     {
-        xi.items.JUSTICE_TORQUE,
-        xi.items.HOPE_TORQUE,
-        xi.items.PRUDENCE_TORQUE,
-        xi.items.FORTITUDE_TORQUE,
-        xi.items.FAITH_TORQUE,
-        xi.items.TEMPERANCE_TORQUE,
-        xi.items.LOVE_TORQUE,
-        xi.items.MERCIFUL_CAPE,
-        xi.items.ALTRUISTIC_CAPE,
-        xi.items.ASTUTE_CAPE,
+        xi.item.JUSTICE_TORQUE,
+        xi.item.HOPE_TORQUE,
+        xi.item.PRUDENCE_TORQUE,
+        xi.item.FORTITUDE_TORQUE,
+        xi.item.FAITH_TORQUE,
+        xi.item.TEMPERANCE_TORQUE,
+        xi.item.LOVE_TORQUE,
+        xi.item.MERCIFUL_CAPE,
+        xi.item.ALTRUISTIC_CAPE,
+        xi.item.ASTUTE_CAPE,
     },
 
     --[[
@@ -294,7 +294,7 @@ local itemList =
     -- Mog Kupon W-Pulse: Pulse weapons
     [35] =
     {
-        xi.items.GIRRU,
+        xi.item.GIRRU,
     },
 
     -- Kupon AW-GFII: Geas Fete (Content Level 119+) (deprecated)

@@ -14,7 +14,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.SPICE_GAL
 
 quest.reward =
 {
-    item = xi.items.MIRATETES_MEMOIRS,
+    item = xi.item.MIRATETES_MEMOIRS,
     fame = 40,
     fameArea = xi.quest.fame_area.SANDORIA,
 }
@@ -118,7 +118,7 @@ quest.sections =
             onEventFinish =
             {
                 [725] = function(player, csid, option, npc)
-                    if npcUtil.giveItem(player, xi.items.MIRATETES_MEMOIRS) then
+                    if npcUtil.giveItem(player, xi.item.MIRATETES_MEMOIRS) then
                         player:delKeyItem(xi.ki.RIVERNEWORT)
                         quest:setVar(player, 'Option', getConquestTally())
                     end

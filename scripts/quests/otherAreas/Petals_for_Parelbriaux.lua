@@ -19,7 +19,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.PETA
 
 quest.reward =
 {
-    item = xi.items.POWERFUL_ROPE,
+    item = xi.item.POWERFUL_ROPE,
     title = xi.title.PUTRID_PURVEYOR_OF_PUNGENT_PETALS,
 }
 

@@ -18,7 +18,7 @@ local quest = Quest:new(xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.THE_DI
 
 quest.reward =
 {
-    item = xi.items.RANDOM_RING,
+    item = xi.item.RANDOM_RING,
 }
 
 quest.sections =

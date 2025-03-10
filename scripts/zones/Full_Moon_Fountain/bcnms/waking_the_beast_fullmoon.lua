@@ -12,13 +12,13 @@ local battlefieldObject = {}
 
 local loot =
 {
-    xi.items.CARBUNCLES_CUFFS,
-    xi.items.IFRITS_BOW,
-    xi.items.SHIVAS_SHOTEL,
-    xi.items.TITANS_BASELARDE,
-    xi.items.GARUDAS_SICKLE,
-    xi.items.LEVIATHANS_COUSE,
-    xi.items.RAMUHS_MACE,
+    xi.item.CARBUNCLES_CUFFS,
+    xi.item.IFRITS_BOW,
+    xi.item.SHIVAS_SHOTEL,
+    xi.item.TITANS_BASELARDE,
+    xi.item.GARUDAS_SICKLE,
+    xi.item.LEVIATHANS_COUSE,
+    xi.item.RAMUHS_MACE,
 }
 
 battlefieldObject.onBattlefieldInitialise = function(battlefield)

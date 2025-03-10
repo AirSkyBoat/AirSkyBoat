@@ -31,7 +31,7 @@ quest.sections =
 
         [xi.zone.PORT_WINDURST] =
         {
-            ['Hakkuru-Rinkuru'] = quest:progressEvent(274, 0, xi.items.BLOCK_OF_ANIMAL_GLUE),
+            ['Hakkuru-Rinkuru'] = quest:progressEvent(274, 0, xi.item.BLOCK_OF_ANIMAL_GLUE),
 
             onEventFinish =
             {
@@ -54,15 +54,15 @@ quest.sections =
             ['Hakkuru-Rinkuru'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.BLOCK_OF_ANIMAL_GLUE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.BLOCK_OF_ANIMAL_GLUE) then
                         return quest:event(277, quest.reward.gil)
                     else
-                        return quest:event(275, 0, xi.items.BLOCK_OF_ANIMAL_GLUE)
+                        return quest:event(275, 0, xi.item.BLOCK_OF_ANIMAL_GLUE)
                     end
                 end,
 
                 onTrigger = function(player, npc)
-                    return quest:event(275, 0, xi.items.BLOCK_OF_ANIMAL_GLUE)
+                    return quest:event(275, 0, xi.item.BLOCK_OF_ANIMAL_GLUE)
                 end,
             },
 

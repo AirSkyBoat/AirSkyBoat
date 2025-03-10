@@ -22,9 +22,9 @@ entity.onTrigger = function(player, npc)
         4509,   10,    -- Distilled Water
         17395,   9,    -- Lugworm
         1021,  450,    -- Hatchet
-        xi.items.SCROLL_OF_REGEN,     3974,
-        xi.items.SCROLL_OF_REGEN_II,  7203,
-        xi.items.SCROLL_OF_SLEEPGA,  10304,
+        xi.item.SCROLL_OF_REGEN,     3974,
+        xi.item.SCROLL_OF_REGEN_II,  7203,
+        xi.item.SCROLL_OF_SLEEPGA,  10304,
         4376,  108,    -- Meat Jerky
         5299,  133,    -- Salsa
         2867, 9000,    -- Mhaura Waystone

@@ -18,7 +18,7 @@ local quest = Quest:new(xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.ARTS_A
 
 quest.reward =
 {
-    item = xi.items.IMPERIAL_BRONZE_PIECE,
+    item = xi.item.IMPERIAL_BRONZE_PIECE,
 }
 
 quest.sections =
@@ -65,7 +65,7 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Stage') == 1 and
-                        npcUtil.tradeHasExactly(trade, xi.items.BOWL_OF_SUTLAC)
+                        npcUtil.tradeHasExactly(trade, xi.item.BOWL_OF_SUTLAC)
                     then
                         return quest:progressEvent(573)
                     end
@@ -166,7 +166,7 @@ quest.sections =
                 end,
 
                 [517] = function(player, csid, option, npc)
-                    if npcUtil.giveItem(player, xi.items.BOWL_OF_SUTLAC) then
+                    if npcUtil.giveItem(player, xi.item.BOWL_OF_SUTLAC) then
                         quest:setVar(player, 'Prog', 0)
                         quest:setVar(player, 'Stage', 1)
                     end

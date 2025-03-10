@@ -17,7 +17,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.FOR_
 
 quest.reward =
 {
-    item = xi.items.JAGUAR_MANTLE,
+    item = xi.item.JAGUAR_MANTLE,
 }
 
 quest.sections =
@@ -31,7 +31,7 @@ quest.sections =
 
         [xi.zone.OLDTON_MOVALPOLOS] =
         {
-            ['Koblakiq'] = quest:progressEvent(14, { [1] = xi.items.ARNICA_ROOT }),
+            ['Koblakiq'] = quest:progressEvent(14, { [1] = xi.item.ARNICA_ROOT }),
 
             onEventFinish =
             {
@@ -56,7 +56,7 @@ quest.sections =
                     local prog = quest:getVar(player, 'Prog')
 
                     if prog == 0 then
-                        return quest:event(15, { [1] = xi.items.ARNICA_ROOT })
+                        return quest:event(15, { [1] = xi.item.ARNICA_ROOT })
                     elseif prog == 1 and not player:hasKeyItem(xi.ki.GLITTERING_FRAGMENT) then
                         return quest:progressEvent(16, { [1] = xi.ki.GLITTERING_FRAGMENT })
                     elseif prog == 4 then
@@ -94,8 +94,8 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if quest:getVar(player, 'Prog') == 0 and npcUtil.tradeHasExactly(trade, { xi.items.ARNICA_ROOT }) then
-                        return quest:progressEvent(87, { [1] = xi.items.ARNICA_ROOT })
+                    if quest:getVar(player, 'Prog') == 0 and npcUtil.tradeHasExactly(trade, { xi.item.ARNICA_ROOT }) then
+                        return quest:progressEvent(87, { [1] = xi.item.ARNICA_ROOT })
                     end
                 end,
             },

@@ -18,7 +18,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.JEUNO,
-    item  = xi.items.CHORAL_SLIPPERS,
+    item  = xi.item.CHORAL_SLIPPERS,
 }
 
 quest.sections =
@@ -77,7 +77,7 @@ quest.sections =
             ['Bki_Tbujhja'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.FLASK_OF_HOLY_WATER }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.FLASK_OF_HOLY_WATER }) then
                         return quest:progressEvent(151)
                     end
                 end,
@@ -109,7 +109,7 @@ quest.sections =
                 [151] = function(player, csid, option, npc)
                     quest:setVar(player, 'Prog ', 3)
                     quest:setVar(player, 'pickSarcophagus ', math.random(1, 5))
-                    player:messageSpecial(ID.text.ITEM_OBTAINED, xi.items.FLASK_OF_HOLY_WATER)
+                    player:messageSpecial(ID.text.ITEM_OBTAINED, xi.item.FLASK_OF_HOLY_WATER)
                 end,
             },
         },
@@ -124,7 +124,7 @@ quest.sections =
                     if
                         quest:getVar(player, 'Prog') == 3 and
                         quest:getVar(player, 'nmKilled') == 0 and
-                        npcUtil.tradeHasExactly(trade, { xi.items.FLASK_OF_HOLY_WATER }) and
+                        npcUtil.tradeHasExactly(trade, { xi.item.FLASK_OF_HOLY_WATER }) and
                         offset == quest:getVar(player, 'pickSarcophagus') - 1 and
                         npcUtil.popFromQM(player, npc, { ID.mob.YUM_KIMIL, ID.mob.YUM_KIMIL + 1, ID.mob.YUM_KIMIL + 2 }, { hide = 0 })
                     then

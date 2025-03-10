@@ -17,7 +17,7 @@ quest.reward =
 {
     fame     = 80,
     fameArea = xi.quest.fame_area.BASTOK,
-    item     = xi.items.SPATHA,
+    item     = xi.item.SPATHA,
     title    = xi.title.BASTOK_WELCOMING_COMMITTEE,
 }
 
@@ -67,7 +67,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        player:getEquipID(xi.slot.SUB) == xi.items.SHELL_SHIELD and
+                        player:getEquipID(xi.slot.SUB) == xi.item.SHELL_SHIELD and
                         quest:getVar(player, 'Prog') == 0
                     then
                         return quest:progressEvent(52)

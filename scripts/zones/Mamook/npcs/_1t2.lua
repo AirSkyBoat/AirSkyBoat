@@ -6,7 +6,7 @@
 local entity = {}
 
 entity.onTrade = function(player, npc, trade)
-    local item = xi.items.MAMOOK_SILVERSCALE_KEY
+    local item = xi.item.MAMOOK_SILVERSCALE_KEY
 
     if
         player:getXPos() >= -239.2 and

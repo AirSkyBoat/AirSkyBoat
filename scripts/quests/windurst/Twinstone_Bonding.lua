@@ -25,7 +25,7 @@ quest.sections =
 
         [xi.zone.WINDURST_WOODS] =
         {
-            ['Gioh_Ajihri'] = quest:progressEvent(487, 0, xi.items.TWINSTONE_EARRING),
+            ['Gioh_Ajihri'] = quest:progressEvent(487, 0, xi.item.TWINSTONE_EARRING),
 
             onEventFinish =
             {
@@ -48,7 +48,7 @@ quest.sections =
             ['Gioh_Ajihri'] =
             {
                 onTrigger = function(player, npc)
-                    local item = xi.items.TWINSTONE_EARRING
+                    local item = xi.item.TWINSTONE_EARRING
                     if player:needToZone() then
                         return quest:event(491, 0, item)
                     end
@@ -60,7 +60,7 @@ quest.sections =
                     if
                         quest:getVar(player, 'Prog') == 1 and
                         not player:needToZone() and
-                        npcUtil.tradeHasExactly(trade, { { xi.items.TWINSTONE_EARRING, 1 } })
+                        npcUtil.tradeHasExactly(trade, { { xi.item.TWINSTONE_EARRING, 1 } })
                     then
                         return quest:progressEvent(490)
                     end
@@ -88,7 +88,7 @@ quest.sections =
                         {
                             fame = 80,
                             fameArea = xi.quest.fame_area.WINDURST,
-                            item = xi.items.WRAPPED_BOW,
+                            item = xi.item.WRAPPED_BOW,
                             title = xi.title.BOND_FIXER
                         }
                     end

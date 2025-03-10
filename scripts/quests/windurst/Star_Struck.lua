@@ -16,7 +16,7 @@ quest.reward =
 {
     fame     = 20,
     fameArea = xi.quest.fame_area.WINDURST,
-    item     = xi.items.COMPOUND_EYE_CIRCLET,
+    item     = xi.item.COMPOUND_EYE_CIRCLET,
 }
 
 quest.sections =
@@ -31,7 +31,7 @@ quest.sections =
             ['Koru-Moru'] =
             {
                 onTrigger = function(player, npc)
-                    if player:hasItem(xi.items.TORN_EPISTLE) then
+                    if player:hasItem(xi.item.TORN_EPISTLE) then
                         return quest:progressEvent(197)
                     end
                 end,
@@ -58,9 +58,9 @@ quest.sections =
             ['Koru-Moru'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.TORN_EPISTLE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.TORN_EPISTLE) then
                         return quest:progressEvent(199)
-                    elseif npcUtil.tradeHasExactly(trade, xi.items.METEORITE) then
+                    elseif npcUtil.tradeHasExactly(trade, xi.item.METEORITE) then
                         return quest:progressEvent(211)
                     end
                 end,

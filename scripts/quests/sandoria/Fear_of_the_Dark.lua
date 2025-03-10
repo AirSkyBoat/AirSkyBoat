@@ -55,7 +55,7 @@ quest.sections =
             ['Secodiand'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.BAT_WING, 2 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.BAT_WING, 2 } }) then
                         return quest:progressEvent(18)
                     end
                 end,

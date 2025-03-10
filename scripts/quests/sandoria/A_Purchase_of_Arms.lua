@@ -18,7 +18,7 @@ quest.reward =
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
     title    = xi.title.ARMS_TRADER,
-    item     = xi.items.ELM_STAFF,
+    item     = xi.item.ELM_STAFF,
 
 }
 

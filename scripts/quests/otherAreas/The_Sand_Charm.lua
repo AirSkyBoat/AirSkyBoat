@@ -47,7 +47,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, "status") == 3 then
-                        return quest:progressEvent(126, xi.items.SAND_CHARM)
+                        return quest:progressEvent(126, xi.item.SAND_CHARM)
                     end
                 end,
             },
@@ -86,8 +86,8 @@ quest.sections =
             ['Celestina'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHas(trade, xi.items.SAND_CHARM) then
-                        return quest:event(127, 0, xi.items.SAND_CHARM)
+                    if npcUtil.tradeHas(trade, xi.item.SAND_CHARM) then
+                        return quest:event(127, 0, xi.item.SAND_CHARM)
                     end
                 end,
             },

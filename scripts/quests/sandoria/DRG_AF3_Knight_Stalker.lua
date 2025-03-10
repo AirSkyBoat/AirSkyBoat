@@ -20,7 +20,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.KNIGHT_ST
 
 quest.reward =
 {
-    item     = xi.items. DRACHEN_ARMET,
+    item     = xi.item. DRACHEN_ARMET,
     fame     = 60,
     fameArea = xi.quest.fame_area.SANDORIA,
     title    = xi.title.PARAGON_OF_DRAGOON_EXCELLENCE,

@@ -21,7 +21,7 @@ quest.reward =
 {
     fame     = 40,
     fameArea = xi.quest.fame_area.BASTOK,
-    item     = xi.items.CHAOS_SOLLERETS,
+    item     = xi.item.CHAOS_SOLLERETS,
 }
 
 quest.sections =
@@ -58,8 +58,8 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        not player:hasItem(xi.items.GERWITZS_AXE) and
-                        npcUtil.tradeHasExactly(trade, xi.items.DARKSTEEL_INGOT) and
+                        not player:hasItem(xi.item.GERWITZS_AXE) and
+                        npcUtil.tradeHasExactly(trade, xi.item.DARKSTEEL_INGOT) and
                         npcUtil.popFromQM(player, npc, ordellesID.mob.DARK_PUPPET_OFFSET, { hide = 0 })
                     then
                         player:confirmTrade()
@@ -73,8 +73,8 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        not player:hasItem(xi.items.GERWITZS_SWORD) and
-                        npcUtil.tradeHasExactly(trade, xi.items.GERWITZS_AXE) and
+                        not player:hasItem(xi.item.GERWITZS_SWORD) and
+                        npcUtil.tradeHasExactly(trade, xi.item.GERWITZS_AXE) and
                         npcUtil.popFromQM(player, npc, ordellesID.mob.DARK_PUPPET_OFFSET + 1, { hide = 0 })
                     then
                         player:confirmTrade()
@@ -88,7 +88,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.GERWITZS_SWORD) and
+                        npcUtil.tradeHasExactly(trade, xi.item.GERWITZS_SWORD) and
                         npcUtil.popFromQM(player, npc, ordellesID.mob.DARK_PUPPET_OFFSET + 2, { hide = 0 })
                     then
                         player:confirmTrade()

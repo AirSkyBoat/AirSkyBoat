@@ -17,7 +17,7 @@ local norgID = require("scripts/zones/Norg/IDs")
 local eAltepaID = require("scripts/zones/Eastern_Altepa_Desert/IDs")
 -----------------------------------
 local quest = Quest:new(xi.quest.log_id.OUTLANDS, xi.quest.id.outlands.TWENTY_IN_PIRATE_YEARS)
-local weaponsReward = { xi.items.ANJU,  xi.items.ZUSHIO }
+local weaponsReward = { xi.item.ANJU,  xi.item.ZUSHIO }
 
 quest.reward =
 {

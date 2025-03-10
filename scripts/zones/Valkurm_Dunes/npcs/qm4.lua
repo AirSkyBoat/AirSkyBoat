@@ -48,9 +48,9 @@ entity.onTrade = function(player, npc, trade)
     else
         if
             npc:getStatus() == xi.status.NORMAL and
-            npcUtil.tradeHasExactly(trade, xi.items.PIRATES_CHART)
+            npcUtil.tradeHasExactly(trade, xi.item.PIRATES_CHART)
         then
-            player:messageSpecial(ID.text.RETURN_TO_SEA, xi.items.PIRATES_CHART)
+            player:messageSpecial(ID.text.RETURN_TO_SEA, xi.item.PIRATES_CHART)
             player:startEvent(14, 0, 0, 0, 3)
         end
     end

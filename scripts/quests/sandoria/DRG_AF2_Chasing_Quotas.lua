@@ -25,7 +25,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.CHASING_Q
 
 quest.reward =
 {
-    item     = xi.items. DRACHEN_BRAIS,
+    item     = xi.item. DRACHEN_BRAIS,
     fame     = 40,
     fameArea = xi.quest.fame_area.SANDORIA,
 }
@@ -120,7 +120,7 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.GOLD_HAIRPIN) and
+                        npcUtil.tradeHasExactly(trade, xi.item.GOLD_HAIRPIN) and
                         quest:getVar(player, 'Prog') == 0
                     then
                         player:tradeComplete()

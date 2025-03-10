@@ -43,7 +43,7 @@ entity.onTrade = function(player, npc, trade)
         local y = points[currentPoint][2]
         local z = points[currentPoint][3]
         GetMobByID(coney):setSpawn(x, y, z, 0)
-        if npcUtil.tradeHas(trade, xi.items.SANDORIAN_CARROT) and npcUtil.popFromQM(player, npc, coney) then
+        if npcUtil.tradeHas(trade, xi.item.SANDORIAN_CARROT) and npcUtil.popFromQM(player, npc, coney) then
             player:confirmTrade()
         end
     end

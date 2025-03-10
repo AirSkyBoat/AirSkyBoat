@@ -49,9 +49,9 @@ end
 
 local rings =
 {
-    xi.items.RAJAS_RING,
-    xi.items.SATTVA_RING,
-    xi.items.TAMAS_RING,
+    xi.item.RAJAS_RING,
+    xi.item.SATTVA_RING,
+    xi.item.TAMAS_RING,
 }
 
 local ringCheck = function(player)

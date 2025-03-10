@@ -19,7 +19,7 @@ quest.reward =
 {
     fame     = 125,
     fameArea = xi.quest.fame_area.BASTOK,
-    item     = xi.items.PURPLE_BELT,
+    item     = xi.item.PURPLE_BELT,
     title    = xi.title.PURPLE_BELT,
 }
 
@@ -54,7 +54,7 @@ quest.sections =
             ['Paujean'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.LUMBERING_HORN, xi.items.RAMPAGING_HORN }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.LUMBERING_HORN, xi.item.RAMPAGING_HORN }) then
                         return quest:progressEvent(196)
                     end
                 end,

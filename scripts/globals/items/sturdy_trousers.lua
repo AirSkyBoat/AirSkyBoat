@@ -8,7 +8,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.MAX_HP_BOOST)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.STURDY_TROUSERS then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.STURDY_TROUSERS then
         target:delStatusEffect(xi.effect.MAX_HP_BOOST)
     end
 
@@ -16,8 +16,8 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.STURDY_TROUSERS) then
-        target:addStatusEffect(xi.effect.MAX_HP_BOOST, 10, 0, 1800, 0, 0, 0, xi.items.STURDY_TROUSERS)
+    if target:hasEquipped(xi.item.STURDY_TROUSERS) then
+        target:addStatusEffect(xi.effect.MAX_HP_BOOST, 10, 0, 1800, 0, 0, 0, xi.item.STURDY_TROUSERS)
     end
 end
 

@@ -16,50 +16,50 @@ entity.onTrigger = function(player, npc)
         [xi.assault.mission.LEUJAOAM_CLEANSING] =
         {
             {
-                { itemid = xi.items.UNAPPRAISED_RING, droprate = 700 },
-                { itemid = xi.items.UNAPPRAISED_BOX,  droprate = 300 },
+                { itemid = xi.item.UNAPPRAISED_RING, droprate = 700 },
+                { itemid = xi.item.UNAPPRAISED_BOX,  droprate = 300 },
             },
         },
 
         [xi.assault.mission.ORICHALCUM_SURVEY] =
         {
             {
-                { itemid = xi.items.UNAPPRAISED_NECKLACE, droprate = 300 },
-                { itemid = xi.items.UNAPPRAISED_BOX,      droprate = 400 },
-                { itemid = xi.items.UNAPPRAISED_GLOVES,   droprate = 300 },
+                { itemid = xi.item.UNAPPRAISED_NECKLACE, droprate = 300 },
+                { itemid = xi.item.UNAPPRAISED_BOX,      droprate = 400 },
+                { itemid = xi.item.UNAPPRAISED_GLOVES,   droprate = 300 },
             },
         },
 
         [xi.assault.mission.ESCORT_PROFESSOR_CHANOIX] =
         {
             {
-                { itemid = xi.items.UNAPPRAISED_CAPE, droprate = 600 },
-                { itemid = xi.items.UNAPPRAISED_BOX,  droprate = 400 },
+                { itemid = xi.item.UNAPPRAISED_CAPE, droprate = 600 },
+                { itemid = xi.item.UNAPPRAISED_BOX,  droprate = 400 },
             },
         },
 
         [xi.assault.mission.SHANARHA_GRASS_CONSERVATION] =
         {
             {
-                { itemid = xi.items.UNAPPRAISED_SASH, droprate = 700 },
-                { itemid = xi.items.UNAPPRAISED_BOX,  droprate = 300 },
+                { itemid = xi.item.UNAPPRAISED_SASH, droprate = 700 },
+                { itemid = xi.item.UNAPPRAISED_BOX,  droprate = 300 },
             },
         },
 
         [xi.assault.mission.COUNTING_SHEEP] =
         {
             {
-                { itemid = xi.items.UNAPPRAISED_DAGGER, droprate = 600 },
-                { itemid = xi.items.UNAPPRAISED_BOX,    droprate = 400 },
+                { itemid = xi.item.UNAPPRAISED_DAGGER, droprate = 600 },
+                { itemid = xi.item.UNAPPRAISED_BOX,    droprate = 400 },
             },
         },
 
         [xi.assault.mission.SUPPLIES_RECOVER] =
         {
             {
-                { itemid = xi.items.UNAPPRAISED_DAGGER, droprate = 500 },
-                { itemid = xi.items.UNAPPRAISED_GLOVES, droprate = 150 },
-                { itemid = xi.items.UNAPPRAISED_BOX,    droprate = 350 },
+                { itemid = xi.item.UNAPPRAISED_DAGGER, droprate = 500 },
+                { itemid = xi.item.UNAPPRAISED_GLOVES, droprate = 150 },
+                { itemid = xi.item.UNAPPRAISED_BOX,    droprate = 350 },
             },
         },
     }
@@ -69,14 +69,14 @@ entity.onTrigger = function(player, npc)
         [xi.assault.mission.LEUJAOAM_CLEANSING] =
         {
             {
-                { itemid = xi.items.HI_POTION_P3, droprate = 1000 },
+                { itemid = xi.item.HI_POTION_P3, droprate = 1000 },
             },
             {
-                { itemid = xi.items.HI_POTION_P3, droprate = 100 },
+                { itemid = xi.item.HI_POTION_P3, droprate = 100 },
                 { itemid = 0,                     droprate = 900 },
             },
             {
-                { itemid = xi.items.REMEDY,       droprate = 530 },
+                { itemid = xi.item.REMEDY,       droprate = 530 },
                 { itemid = 0,                     droprate = 470 },
             },
         },
@@ -84,10 +84,10 @@ entity.onTrigger = function(player, npc)
         [xi.assault.mission.ORICHALCUM_SURVEY] =
         {
             {
-                { itemid = xi.items.HI_POTION_P3, droprate = 1000 },
+                { itemid = xi.item.HI_POTION_P3, droprate = 1000 },
             },
             {
-                { itemid = xi.items.REMEDY,       droprate = 530 },
+                { itemid = xi.item.REMEDY,       droprate = 530 },
                 { itemid = 0,                     droprate = 470 },
             },
         },
@@ -95,19 +95,19 @@ entity.onTrigger = function(player, npc)
         [xi.assault.mission.ESCORT_PROFESSOR_CHANOIX] =
         {
             {
-                { itemid = xi.items.HI_POTION_P3,   droprate = 100 },
+                { itemid = xi.item.HI_POTION_P3,   droprate = 100 },
                 { itemid = 0,                       droprate = 900 },
             },
             {
-                { itemid = xi.items.HI_POTION_P2,   droprate = 850 },
+                { itemid = xi.item.HI_POTION_P2,   droprate = 850 },
                 { itemid = 0,                       droprate = 150 },
             },
             {
-                { itemid = xi.items.HI_POTION_TANK, droprate = 600 },
+                { itemid = xi.item.HI_POTION_TANK, droprate = 600 },
                 { itemid = 0,                       droprate = 400 },
             },
             {
-                { itemid = xi.items.RERAISER,       droprate = 150 },
+                { itemid = xi.item.RERAISER,       droprate = 150 },
                 { itemid = 0,                       droprate = 850 },
             },
         },
@@ -115,11 +115,11 @@ entity.onTrigger = function(player, npc)
         [xi.assault.mission.SHANARHA_GRASS_CONSERVATION] =
         {
             {
-                { itemid = xi.items.HI_POTION_P3, droprate = 750 },
+                { itemid = xi.item.HI_POTION_P3, droprate = 750 },
                 { itemid = 0,                     droprate = 250 },
             },
             {
-                { itemid = xi.items.REMEDY,       droprate = 800 },
+                { itemid = xi.item.REMEDY,       droprate = 800 },
                 { itemid = 0,                     droprate = 200 },
             },
         },
@@ -127,14 +127,14 @@ entity.onTrigger = function(player, npc)
         [xi.assault.mission.COUNTING_SHEEP] =
         {
             {
-                { itemid = xi.items.HI_POTION_P2,   droprate = 1000 },
+                { itemid = xi.item.HI_POTION_P2,   droprate = 1000 },
             },
             {
-                { itemid = xi.items.HI_POTION_TANK, droprate = 500 },
+                { itemid = xi.item.HI_POTION_TANK, droprate = 500 },
                 { itemid = 0,                       droprate = 500 },
             },
             {
-                { itemid = xi.items.RERAISER,       droprate = 300 },
+                { itemid = xi.item.RERAISER,       droprate = 300 },
                 { itemid = 0,                       droprate = 700 },
             },
         },
@@ -142,19 +142,19 @@ entity.onTrigger = function(player, npc)
         [xi.assault.mission.SUPPLIES_RECOVERY] =
         {
             {
-                { itemid = xi.items.HI_POTION_P3,   droprate = 850 },
+                { itemid = xi.item.HI_POTION_P3,   droprate = 850 },
                 { itemid = 0,                       droprate = 150 },
             },
             {
-                { itemid = xi.items.HI_RERAISER,    droprate = 500 },
+                { itemid = xi.item.HI_RERAISER,    droprate = 500 },
                 { itemid = 0,                       droprate = 500 },
             },
             {
-                { itemid = xi.items.HI_POTION_TNAK, droprate = 600 },
+                { itemid = xi.item.HI_POTION_TNAK, droprate = 600 },
                 { itemid = 0,                       droprate = 400 },
             },
             {
-                { itemid = xi.items.HI_ETHER_TNAK,  droprate = 400 },
+                { itemid = xi.item.HI_ETHER_TNAK,  droprate = 400 },
                 { itemid = 0,                       droprate = 600 },
             },
         },

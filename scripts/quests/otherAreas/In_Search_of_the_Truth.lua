@@ -14,7 +14,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.IN_S
 
 quest.reward =
 {
-    item = xi.items.GRAMARY_CAPE,
+    item = xi.item.GRAMARY_CAPE,
 }
 
 quest.sections =

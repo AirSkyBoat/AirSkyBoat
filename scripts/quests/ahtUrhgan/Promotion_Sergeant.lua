@@ -117,7 +117,7 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Prog') == 3 and
-                        npcUtil.tradeHasExactly(trade, xi.items.BOWL_OF_SUTLAC)
+                        npcUtil.tradeHasExactly(trade, xi.item.BOWL_OF_SUTLAC)
                     then
                         return quest:progressEvent(304)
                     end

@@ -69,8 +69,8 @@ quest.sections =
             ['Ropunono'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.AHRIMAN_LENS) then
-                        return quest:progressEvent(288, 0, xi.items.AHRIMAN_LENS, xi.items.SHELLING_PIECE)
+                    if npcUtil.tradeHasExactly(trade, xi.item.AHRIMAN_LENS) then
+                        return quest:progressEvent(288, 0, xi.item.AHRIMAN_LENS, xi.item.SHELLING_PIECE)
                     end
                 end,
             },
@@ -96,17 +96,17 @@ quest.sections =
             ['Ropunono'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:event(289, 0, xi.items.AHRIMAN_LENS, xi.items.SHELLING_PIECE)
+                    return quest:event(289, 0, xi.item.AHRIMAN_LENS, xi.item.SHELLING_PIECE)
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.SHELLING_PIECE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.SHELLING_PIECE) then
                         if quest:getVar(player, 'Coin') == 1 then
                             -- Real Shelling Piece
-                            return quest:progressEvent(292, 0, 0, xi.items.SHELLING_PIECE)
+                            return quest:progressEvent(292, 0, 0, xi.item.SHELLING_PIECE)
                         else
                             -- Fake Shelling Piece
-                            return quest:progressEvent(296, 0, 0, xi.items.SHELLING_PIECE)
+                            return quest:progressEvent(296, 0, 0, xi.item.SHELLING_PIECE)
                         end
                     end
                 end,
@@ -135,7 +135,7 @@ quest.sections =
             ['_5i0'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.RUSTY_KEY) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.RUSTY_KEY) then
                         return quest:progressEvent(41)
                     end
                 end,
@@ -154,7 +154,7 @@ quest.sections =
                     local rand = math.random()
 
                     -- Only allow if player doesn't have coin
-                    if not player:hasItem(xi.items.SHELLING_PIECE) then
+                    if not player:hasItem(xi.item.SHELLING_PIECE) then
                         if rand > 0.2 then
                             player:messageSpecial(incorrect[math.random(1, 4)])
                             return quest:progressEvent(47)
@@ -177,7 +177,7 @@ quest.sections =
                     local rand = math.random()
 
                     -- Only allow if player doesn't have coin
-                    if not player:hasItem(xi.items.SHELLING_PIECE) then
+                    if not player:hasItem(xi.item.SHELLING_PIECE) then
                         if rand > 0.2 then
                             player:messageSpecial(incorrect[math.random(1, 4)])
                             return quest:progressEvent(49)
@@ -200,7 +200,7 @@ quest.sections =
                     local rand = math.random()
 
                     -- Only allow if player doesn't have coin
-                    if not player:hasItem(xi.items.SHELLING_PIECE) then
+                    if not player:hasItem(xi.item.SHELLING_PIECE) then
                         if rand > 0.2 then
                             player:messageSpecial(incorrect[math.random(1, 4)])
                             return quest:progressEvent(51)
@@ -226,19 +226,19 @@ quest.sections =
 
                 -- Correct coin (Flag correct coin)
                 [46] = function(player, csid, option, npc)
-                    if option == 1 and npcUtil.giveItem(player, xi.items.SHELLING_PIECE) then
+                    if option == 1 and npcUtil.giveItem(player, xi.item.SHELLING_PIECE) then
                         quest:setVar(player, 'Coin', 1)
                     end
                 end,
 
                 [48] = function(player, csid, option, npc)
-                    if option == 1 and npcUtil.giveItem(player, xi.items.SHELLING_PIECE) then
+                    if option == 1 and npcUtil.giveItem(player, xi.item.SHELLING_PIECE) then
                         quest:setVar(player, 'Coin', 1)
                     end
                 end,
 
                 [50] = function(player, csid, option, npc)
-                    if option == 1 and npcUtil.giveItem(player, xi.items.SHELLING_PIECE) then
+                    if option == 1 and npcUtil.giveItem(player, xi.item.SHELLING_PIECE) then
                         quest:setVar(player, 'Coin', 1)
                     end
                 end,
@@ -246,19 +246,19 @@ quest.sections =
                 -- Inorrect coin
                 [49] = function(player, csid, option, npc)
                     if option == 2 then
-                        npcUtil.giveItem(player, xi.items.SHELLING_PIECE)
+                        npcUtil.giveItem(player, xi.item.SHELLING_PIECE)
                     end
                 end,
 
                 [47] = function(player, csid, option, npc)
                     if option == 2 then
-                        npcUtil.giveItem(player, xi.items.SHELLING_PIECE)
+                        npcUtil.giveItem(player, xi.item.SHELLING_PIECE)
                     end
                 end,
 
                 [51] = function(player, csid, option, npc)
                     if option == 2 then
-                        npcUtil.giveItem(player, xi.items.SHELLING_PIECE)
+                        npcUtil.giveItem(player, xi.item.SHELLING_PIECE)
                     end
                 end,
             },

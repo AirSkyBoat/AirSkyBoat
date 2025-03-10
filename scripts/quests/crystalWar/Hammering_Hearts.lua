@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.CRYSTAL_WAR, xi.quest.id.crystalWar.HAMM
 
 quest.reward =
 {
-    item = xi.items.TRAINEE_HAMMER,
+    item = xi.item.TRAINEE_HAMMER,
 }
 
 quest.sections =
@@ -63,7 +63,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.HEAVY_QUADAV_CHESTPLATE, xi.items.HEAVY_QUADAV_BACKPLATE }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.HEAVY_QUADAV_CHESTPLATE, xi.item.HEAVY_QUADAV_BACKPLATE }) then
                         return quest:progressEvent(41)
                     end
                 end,

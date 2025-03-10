@@ -53,7 +53,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { { xi.items.COPPER_INGOT, 1 } }) and
+                        npcUtil.tradeHasExactly(trade, { { xi.item.COPPER_INGOT, 1 } }) and
                         not player:needToZone()
                     then
                         return quest:progressEvent(216)

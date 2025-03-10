@@ -8,7 +8,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.STR_BOOST)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.SULTANS_BELT then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.SULTANS_BELT then
         target:delStatusEffect(xi.effect.STR_BOOST)
     end
 
@@ -16,8 +16,8 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.SULTANS_BELT) then
-        target:addStatusEffect(xi.effect.STR_BOOST, 10, 0, 60, 0, 0, 0, xi.items.SULTANS_BELT)
+    if target:hasEquipped(xi.item.SULTANS_BELT) then
+        target:addStatusEffect(xi.effect.STR_BOOST, 10, 0, 60, 0, 0, 0, xi.item.SULTANS_BELT)
     end
 end
 

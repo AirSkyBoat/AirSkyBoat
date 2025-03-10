@@ -102,7 +102,7 @@ entity.onEventFinish = function(player, csid, option)
     if csid == 700 then
         player:setCharVar("moral", 2)
     elseif csid == 705 then
-        if npcUtil.giveItem(player, xi.items.YAGUDO_HEADDRESS_CUTTING) then
+        if npcUtil.giveItem(player, xi.item.YAGUDO_HEADDRESS_CUTTING) then
             player:setCharVar("moral", 4)
         end
     elseif csid == 10011 and option == 2 then
@@ -111,10 +111,10 @@ entity.onEventFinish = function(player, csid, option)
         end
     elseif csid == 10011 and option == 1 then
         if player:getFreeSlotsCount() == 0 then
-            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.EARTH_CRYSTAL)
+            player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.EARTH_CRYSTAL)
         else
             player:addItem(4099) -- earth crystal
-            player:messageSpecial(ID.text.ITEM_OBTAINED, xi.items.EARTH_CRYSTAL)
+            player:messageSpecial(ID.text.ITEM_OBTAINED, xi.item.EARTH_CRYSTAL)
             xi.crafting.signupGuild(player, xi.crafting.guild.CLOTHCRAFT)
         end
     elseif csid == 10011 and option > 900 then

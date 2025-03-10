@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.WAKI
 
 quest.reward =
 {
-    item = xi.items.CARBUNCLES_POLE,
+    item = xi.item.CARBUNCLES_POLE,
 }
 
 quest.sections =

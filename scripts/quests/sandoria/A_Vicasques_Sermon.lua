@@ -18,7 +18,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
-    item = xi.items.BRASS_RING,
+    item = xi.item.BRASS_RING,
     title = xi.title.THE_BENEVOLENT_ONE,
 }
 
@@ -64,7 +64,7 @@ quest.sections =
                     if quest:getVar(player, 'Prog') == 1 then
                         return quest:progressEvent(600)
                     elseif quest:getVar(player, 'Prog') == 0 then
-                        return quest:messageSpecial(ID.text.ABIOLEGET_PEAS, xi.items.BLUE_PEAS, 70)
+                        return quest:messageSpecial(ID.text.ABIOLEGET_PEAS, xi.item.BLUE_PEAS, 70)
                     end
                 end,
 
@@ -74,7 +74,7 @@ quest.sections =
 
                     if gil == 70 and count == 1 then
                         player:tradeComplete()
-                        npcUtil.giveItem(player, xi.items.BLUE_PEAS)
+                        npcUtil.giveItem(player, xi.item.BLUE_PEAS)
                         return quest:event(591)
                     end
                 end,
@@ -96,7 +96,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 0 then
-                        return quest:messageSpecial(ronfaureID.text.NO_MORE_NO_LESS, xi.items.BLUE_PEAS)
+                        return quest:messageSpecial(ronfaureID.text.NO_MORE_NO_LESS, xi.item.BLUE_PEAS)
                     elseif quest:getVar(player, 'Prog') == 1 then
                         return quest:messageSpecial(ronfaureID.text.THANKS_TO_GODDESS)
                     else
@@ -108,7 +108,7 @@ quest.sections =
                     local count = trade:getItemCount()
                     local bluePeas = trade:getItemQty(618)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.BLUE_PEAS) and
+                        npcUtil.tradeHasExactly(trade, xi.item.BLUE_PEAS) and
                         quest:getVar(player, 'Prog') == 0
                     then
                         player:tradeComplete()
@@ -116,7 +116,7 @@ quest.sections =
                         player:showText(npc, ronfaureID.text.THANKS_TO_GODDESS)
                         return quest:event(19)
                     elseif bluePeas > 1 and count == bluePeas then
-                        player:showText(npc, ronfaureID.text.ONLY_NEED_ONE, xi.items.BLUE_PEAS)
+                        player:showText(npc, ronfaureID.text.ONLY_NEED_ONE, xi.item.BLUE_PEAS)
                     else
                         player:showText(npc, ronfaureID.text.CANNOT_ACCEPT_THIS)
                         return quest:event(19)

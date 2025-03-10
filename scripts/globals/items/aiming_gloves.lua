@@ -6,16 +6,16 @@
 local itemObject = {}
 
 itemObject.onItemCheck = function(target)
-    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.AIMING_GLOVES) ~= nil then
-        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.AIMING_GLOVES)
+    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.AIMING_GLOVES) ~= nil then
+        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.AIMING_GLOVES)
     end
 
     return 0
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.AIMING_GLOVES) then
-        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 60, 0, 0, 0, xi.items.AIMING_GLOVES)
+    if target:hasEquipped(xi.item.AIMING_GLOVES) then
+        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 60, 0, 0, 0, xi.item.AIMING_GLOVES)
     end
 end
 

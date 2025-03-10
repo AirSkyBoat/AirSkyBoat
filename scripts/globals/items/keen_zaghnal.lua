@@ -9,7 +9,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.ACCURACY_BOOST)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.KEEN_ZAGHNAL then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.KEEN_ZAGHNAL then
         target:delStatusEffect(xi.effect.ACCURACY_BOOST)
     end
 
@@ -17,8 +17,8 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.KEEN_ZAGHNAL) then
-        target:addStatusEffect(xi.effect.ACCURACY_BOOST, 3, 0, 1800, 0, 0, 0, xi.items.KEEN_ZAGHNAL)
+    if target:hasEquipped(xi.item.KEEN_ZAGHNAL) then
+        target:addStatusEffect(xi.effect.ACCURACY_BOOST, 3, 0, 1800, 0, 0, 0, xi.item.KEEN_ZAGHNAL)
     end
 end
 

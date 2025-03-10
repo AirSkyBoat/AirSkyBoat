@@ -15,7 +15,7 @@ quest.reward =
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
     title    = xi.title.FAITH_LIKE_A_CANDLE,
-    item   = xi.items.FRIARS_ROPE,
+    item   = xi.item.FRIARS_ROPE,
 
 }
 
@@ -56,7 +56,7 @@ quest.sections =
             ['Pagisalis'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.LUMP_OF_BEESWAX, 2 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.LUMP_OF_BEESWAX, 2 } }) then
                         return quest:progressEvent(563)
                     else
                         return quest:event(564)

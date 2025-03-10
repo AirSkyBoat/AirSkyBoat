@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.UNDE
 
 quest.reward =
 {
-    item = xi.items.AMBER_EARRING,
+    item = xi.item.AMBER_EARRING,
     title = xi.title.LIL_CUPID
 }
 
@@ -73,7 +73,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if not player:hasKeyItem(xi.ki.ETCHED_RING) and
-                    npcUtil.tradeHas(trade, xi.items.FAT_GREEDIE) and
+                    npcUtil.tradeHas(trade, xi.item.FAT_GREEDIE) and
                     quest:getVar(player, 'status') == 3 then
                         if math.random(100) <= 20 then
                             player:startEvent(35) -- Ring found!
@@ -85,7 +85,7 @@ quest.sections =
 
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'status') == 2 then
-                        return quest:event(34, xi.items.FAT_GREEDIE)
+                        return quest:event(34, xi.item.FAT_GREEDIE)
                     end
                 end,
             },

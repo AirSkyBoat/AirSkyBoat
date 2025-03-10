@@ -44,7 +44,7 @@ local misareauxGlobal =
         if
             npc:getStatus() == xi.status.NORMAL and
             not baited and
-            npcUtil.tradeHas(trade, xi.items.SLICE_OF_CARP)
+            npcUtil.tradeHas(trade, xi.item.SLICE_OF_CARP)
         then
             npc:setLocalVar("[Ziphius]Bait"..player:getName(), 1)
             npc:setLocalVar("[Ziphius]Baited", 1)

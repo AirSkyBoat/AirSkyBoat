@@ -14,7 +14,7 @@ local quest = Quest:new(xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.OPERAT
 
 quest.reward =
 {
-    item  = xi.items.PUPPETRY_CHURIDARS,
+    item  = xi.item.PUPPETRY_CHURIDARS,
 }
 
 quest.sections =
@@ -62,7 +62,7 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { xi.items.FLASK_OF_SLEEPING_POTION, xi.items.CUP_OF_CHAI }) and
+                        npcUtil.tradeHasExactly(trade, { xi.item.FLASK_OF_SLEEPING_POTION, xi.item.CUP_OF_CHAI }) and
                         quest:getVar(player, 'Prog') == 1
                     then
                         return quest:progressEvent(780)

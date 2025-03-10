@@ -10,14 +10,14 @@ local entity = {}
 
 local lootTable =
 {
-    xi.items.FIGHTING_FISH_TANK,
-    xi.items.GOBLIN_DIE,
-    xi.items.PIECE_OF_ATTOHWA_GINSENG,
-    xi.items.MAMOOL_JA_COLLAR,
-    xi.items.DIVINATION_SPHERE,
-    xi.items.TORN_EPISTLE,
-    xi.items.GILT_GLASSES,
-    xi.items.WILD_RABBIT_TAIL,
+    xi.item.FIGHTING_FISH_TANK,
+    xi.item.GOBLIN_DIE,
+    xi.item.PIECE_OF_ATTOHWA_GINSENG,
+    xi.item.MAMOOL_JA_COLLAR,
+    xi.item.DIVINATION_SPHERE,
+    xi.item.TORN_EPISTLE,
+    xi.item.GILT_GLASSES,
+    xi.item.WILD_RABBIT_TAIL,
 }
 
 entity.onTrigger = function(player, npc)

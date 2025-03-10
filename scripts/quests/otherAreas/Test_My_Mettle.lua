@@ -47,7 +47,7 @@ quest.sections =
 
         [xi.zone.SELBINA] =
         {
-            ['Devean'] = quest:progressEvent(120, xi.items.POWER_SANDALS, xi.items.POWER_SANDALS, 0, 0, xi.items.FLINT_STONE, xi.items.FLINT_STONE),
+            ['Devean'] = quest:progressEvent(120, xi.item.POWER_SANDALS, xi.item.POWER_SANDALS, 0, 0, xi.item.FLINT_STONE, xi.item.FLINT_STONE),
 
             onEventFinish =
             {
@@ -107,7 +107,7 @@ quest.sections =
             ['Devean'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.POWER_SANDALS) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.POWER_SANDALS) then
                         player:tradeComplete()
                         local hoursRemaining = calculateHoursRemaining(player)
 
@@ -126,12 +126,12 @@ quest.sections =
 
                     if hoursRemaining > 0 then
                         -- Remind player how much time is remaining
-                        return quest:event(121, xi.items.POWER_SANDALS, hoursRemaining)
+                        return quest:event(121, xi.item.POWER_SANDALS, hoursRemaining)
                     end
 
-                    if player:hasItem(xi.items.POWER_SANDALS) then
+                    if player:hasItem(xi.item.POWER_SANDALS) then
                         -- Get rid of Power Sandals before reattempting
-                        return quest:event(125, xi.items.POWER_SANDALS)
+                        return quest:event(125, xi.item.POWER_SANDALS)
                     end
 
                     -- Quest failed

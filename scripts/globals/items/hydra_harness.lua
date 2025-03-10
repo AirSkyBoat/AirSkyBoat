@@ -7,16 +7,16 @@
 local itemObject = {}
 
 itemObject.onItemCheck = function(target)
-    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.HYDRA_HARNESS) ~= nil then
-        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.HYDRA_HARNESS)
+    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.HYDRA_HARNESS) ~= nil then
+        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.HYDRA_HARNESS)
     end
 
     return 0
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.HYDRA_HARNESS) then
-        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 180, 0, 0, 0, xi.items.HYDRA_HARNESS)
+    if target:hasEquipped(xi.item.HYDRA_HARNESS) then
+        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 180, 0, 0, 0, xi.item.HYDRA_HARNESS)
     end
 end
 

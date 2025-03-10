@@ -5,7 +5,7 @@
 local entity = {}
 
 entity.onTrade = function(player, npc, trade)
-    local item = xi.items.HALVUNG_SHAKUDO_KEY
+    local item = xi.item.HALVUNG_SHAKUDO_KEY
 
     if npcUtil.tradeHasExactly(trade, { item, item + 1, item + 2 }) then
         player:confirmTrade()

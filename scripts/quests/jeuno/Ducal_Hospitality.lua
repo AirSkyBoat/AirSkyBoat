@@ -17,11 +17,11 @@ local questItemSets =
     {
         items =
         {
-            xi.items.HANDFUL_OF_COUNTERFEIT_GIL,
-            xi.items.LOAF_OF_GOBLIN_BREAD,
-            xi.items.GOBLIN_DOLL,
-            xi.items.GOBLIN_MUSHPOT,
-            xi.items.GOBLIN_PIE,
+            xi.item.HANDFUL_OF_COUNTERFEIT_GIL,
+            xi.item.LOAF_OF_GOBLIN_BREAD,
+            xi.item.GOBLIN_DOLL,
+            xi.item.GOBLIN_MUSHPOT,
+            xi.item.GOBLIN_PIE,
         },
         textOption = 0,
     },
@@ -30,9 +30,9 @@ local questItemSets =
     {
         items =
         {
-            xi.items.PILE_OF_CHOCOBO_BEDDING,
-            xi.items.SET_OF_KAISERIN_COSMETICS,
-            xi.items.MY_FIRST_MAGIC_KIT,
+            xi.item.PILE_OF_CHOCOBO_BEDDING,
+            xi.item.SET_OF_KAISERIN_COSMETICS,
+            xi.item.MY_FIRST_MAGIC_KIT,
         },
         textOption = 1,
     },
@@ -41,10 +41,10 @@ local questItemSets =
     {
         items =
         {
-            xi.items.PIECE_OF_EASTERN_PAPER,
-            xi.items.SHURIKEN,
-            xi.items.SILVER_OBI,
-            xi.items.TONOSAMA_RICE_BALL,
+            xi.item.PIECE_OF_EASTERN_PAPER,
+            xi.item.SHURIKEN,
+            xi.item.SILVER_OBI,
+            xi.item.TONOSAMA_RICE_BALL,
         },
         textOption = 4,
     },
@@ -53,10 +53,10 @@ local questItemSets =
     {
         items =
         {
-            xi.items.DART,
-            xi.items.KONGOU_INAHO,
-            xi.items.NYUMOMO_DOLL,
-            xi.items.CONE_OF_SNOLL_GELATO,
+            xi.item.DART,
+            xi.item.KONGOU_INAHO,
+            xi.item.NYUMOMO_DOLL,
+            xi.item.CONE_OF_SNOLL_GELATO,
         },
         textOption = 4,
     },
@@ -65,10 +65,10 @@ local questItemSets =
     {
         items =
         {
-            xi.items.COPY_OF_FERNANS_DIARIES,
-            xi.items.NAPHILLE_POCHETTE,
-            xi.items.SPHENE_EARRING,
-            xi.items.TURQUOISE_RING,
+            xi.item.COPY_OF_FERNANS_DIARIES,
+            xi.item.NAPHILLE_POCHETTE,
+            xi.item.SPHENE_EARRING,
+            xi.item.TURQUOISE_RING,
         },
         textOption = 4,
     }

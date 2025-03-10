@@ -17,7 +17,7 @@ quest.reward =
 {
     fame = 75,
     fameArea = xi.quest.fame_area.WINDURST,
-    item = xi.items.FISH_SCALE_SHIELD
+    item = xi.item.FISH_SCALE_SHIELD
 }
 
 quest.sections =
@@ -30,7 +30,7 @@ quest.sections =
 
         [xi.zone.PORT_WINDURST] =
         {
-            ['Sigismund'] = quest:progressEvent(196, 0, xi.items.STARFALL_TEAR),
+            ['Sigismund'] = quest:progressEvent(196, 0, xi.item.STARFALL_TEAR),
 
             onEventFinish =
             {
@@ -49,17 +49,17 @@ quest.sections =
         [xi.zone.PORT_WINDURST] =
         {
             -- Supporting Character dialogue after Accepted
-            ['Tohopka'] = quest:event(198, 0, xi.items.STARFALL_TEAR, xi.items.HANDFUL_OF_PUGIL_SCALES),
+            ['Tohopka'] = quest:event(198, 0, xi.item.STARFALL_TEAR, xi.item.HANDFUL_OF_PUGIL_SCALES),
 
             -- Quest Completion
             ['Sigismund'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:event(197, 0, xi.items.STARFALL_TEAR)
+                    return quest:event(197, 0, xi.item.STARFALL_TEAR)
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.STARFALL_TEAR, 1 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.STARFALL_TEAR, 1 } }) then
                         return quest:progressEvent(199)
                     end
                 end
@@ -93,8 +93,8 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         VanadielHour() <= 3 and
-                        npcUtil.tradeHasExactly(trade, { { xi.items.HANDFUL_OF_PUGIL_SCALES, 1 } }) and
-                        npcUtil.giveItem(player, xi.items.STARFALL_TEAR)
+                        npcUtil.tradeHasExactly(trade, { { xi.item.HANDFUL_OF_PUGIL_SCALES, 1 } }) and
+                        npcUtil.giveItem(player, xi.item.STARFALL_TEAR)
                     then
                         player:confirmTrade()
                         if quest:getVar(player, 'Prog') == 0 then

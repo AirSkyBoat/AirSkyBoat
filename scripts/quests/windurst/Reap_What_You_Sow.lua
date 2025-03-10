@@ -14,7 +14,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.REAP_WHAT
 
 quest.reward =
 {
-    item = xi.items.STATIONERY_SET,
+    item = xi.item.STATIONERY_SET,
     gil = 700,
     fame = 75,
     fameArea = xi.quest.fame_area.WINDURST,
@@ -40,7 +40,7 @@ quest.sections =
                     then
                         return quest:event(483)
                     else
-                        return quest:progressEvent(463, 0, xi.items.SOBBING_FUNGUS, xi.items.BAG_OF_HERB_SEEDS)
+                        return quest:progressEvent(463, 0, xi.item.SOBBING_FUNGUS, xi.item.BAG_OF_HERB_SEEDS)
                     end
                 end,
             },
@@ -48,7 +48,7 @@ quest.sections =
             onEventFinish =
             {
                 [463] = function(player, csid, option, npc)
-                    if option == 3 and npcUtil.giveItem(player, xi.items.BAG_OF_HERB_SEEDS) then
+                    if option == 3 and npcUtil.giveItem(player, xi.item.BAG_OF_HERB_SEEDS) then
                         quest:begin(player)
                     end
                 end,
@@ -69,16 +69,16 @@ quest.sections =
                     local rand = math.random()
 
                     if rand > 0.5 then
-                        return quest:progressEvent(464, 0, xi.items.SOBBING_FUNGUS, xi.items.BAG_OF_HERB_SEEDS)
+                        return quest:progressEvent(464, 0, xi.item.SOBBING_FUNGUS, xi.item.BAG_OF_HERB_SEEDS)
                     else
                         return quest:progressEvent(476)
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.SOBBING_FUNGUS) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.SOBBING_FUNGUS) then
                         return quest:progressEvent(475, 500, 131)
-                    elseif npcUtil.tradeHasExactly(trade, xi.items.DEATHBALL) then
+                    elseif npcUtil.tradeHasExactly(trade, xi.item.DEATHBALL) then
                         return quest:progressEvent(477, 700)
                     end
                 end,

@@ -132,13 +132,13 @@ quest.sections =
 
                 onTrigger = function(player, npc)
                     if skillCheck(player) >= 30 and skillCheck(player) < 39 then
-                        return quest:event(162, xi.items.DARK_BASS, xi.items.GIANT_CATFISH, xi.items.OGRE_EEL, xi.items.VEYDAL_WRASSE)
+                        return quest:event(162, xi.item.DARK_BASS, xi.item.GIANT_CATFISH, xi.item.OGRE_EEL, xi.item.VEYDAL_WRASSE)
                     elseif skillCheck(player) >= 40 and skillCheck(player) < 49 then
-                        return quest:event(163, xi.items.ZAFMLUG_BASS, xi.items.GIANT_DONKO, xi.items.BHEFHEL_MARLIN, xi.items.BLADEFISH, xi.items.SILVER_SHARK)
+                        return quest:event(163, xi.item.ZAFMLUG_BASS, xi.item.GIANT_DONKO, xi.item.BHEFHEL_MARLIN, xi.item.BLADEFISH, xi.item.SILVER_SHARK)
                     elseif skillCheck(player) >= 50 and skillCheck(player) <= 74 then
-                        return quest:event(164, xi.items.JUNGLE_CATFISH, xi.items.GAVIAL_FISH, xi.items.PIRARUCU, xi.items.EMPEROR_FISH, xi.items.MEGALODON, xi.items.MORINABALIGI)
+                        return quest:event(164, xi.item.JUNGLE_CATFISH, xi.item.GAVIAL_FISH, xi.item.PIRARUCU, xi.item.EMPEROR_FISH, xi.item.MEGALODON, xi.item.MORINABALIGI)
                     elseif skillCheck(player) >= 75 then
-                        return quest:event(165, xi.items.PTERYGOTUS, xi.items.KALKANBALIGI, xi.items.TAKITARO, xi.items.SEA_ZOMBIE, xi.items.TITANICTUS, xi.items.TURNABALIGI, xi.items.CAVE_CHERAX, xi.items.TRICORN)
+                        return quest:event(165, xi.item.PTERYGOTUS, xi.item.KALKANBALIGI, xi.item.TAKITARO, xi.item.SEA_ZOMBIE, xi.item.TITANICTUS, xi.item.TURNABALIGI, xi.item.CAVE_CHERAX, xi.item.TRICORN)
                     end
                 end,
             },
@@ -177,13 +177,13 @@ quest.sections =
 
                 onTrigger = function(player, npc)
                     if skillCheck(player) >= 30 and skillCheck(player) < 39 then
-                        return quest:event(162, xi.items.DARK_BASS, xi.items.GIANT_CATFISH, xi.items.OGRE_EEL, xi.items.VEYDAL_WRASSE)
+                        return quest:event(162, xi.item.DARK_BASS, xi.item.GIANT_CATFISH, xi.item.OGRE_EEL, xi.item.VEYDAL_WRASSE)
                     elseif skillCheck(player) >= 40 and skillCheck(player) < 49 then
-                        return quest:event(163, xi.items.ZAFMLUG_BASS, xi.items.GIANT_DONKO, xi.items, xi.items.BHEFHEL_MARLIN, xi.items.SILVER_SHARK)
+                        return quest:event(163, xi.item.ZAFMLUG_BASS, xi.item.GIANT_DONKO, xi.items, xi.item.BHEFHEL_MARLIN, xi.item.SILVER_SHARK)
                     elseif skillCheck(player) >= 50 and skillCheck(player) <= 74 then
-                        return quest:event(164, xi.items.JUNGLE_CATFISH, xi.items.GAVIAL_FISH, xi.items.PIRARUCU, xi.items.EMPEROR_FISH, xi.items.MEGALODON, xi.items.MORINABALIGI)
+                        return quest:event(164, xi.item.JUNGLE_CATFISH, xi.item.GAVIAL_FISH, xi.item.PIRARUCU, xi.item.EMPEROR_FISH, xi.item.MEGALODON, xi.item.MORINABALIGI)
                     elseif skillCheck(player) >= 75 then
-                        return quest:event(165, xi.items.PTERYGOTUS, xi.items.KALKANBALIGI, xi.items.TAKITARO, xi.items.SEA_ZOMBIE, xi.items.TITANICTUS, xi.items.TURNABALIGI, xi.items.CAVE_CHERAX, xi.items.TRICORN)
+                        return quest:event(165, xi.item.PTERYGOTUS, xi.item.KALKANBALIGI, xi.item.TAKITARO, xi.item.SEA_ZOMBIE, xi.item.TITANICTUS, xi.item.TURNABALIGI, xi.item.CAVE_CHERAX, xi.item.TRICORN)
                     end
                 end,
             },

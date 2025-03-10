@@ -17,7 +17,7 @@ local content = Battlefield:new({
     index         = 2,
     entryNpc      = "_4l1",
     exitNpcs      = { "_4l2", "_4l3", "_4l4" },
-    requiredItems = { xi.items.MOON_ORB, wearMessage = ID.text.A_CRACK_HAS_FORMED, wornMessage = ID.text.ORB_CRACKED },
+    requiredItems = { xi.item.MOON_ORB, wearMessage = ID.text.A_CRACK_HAS_FORMED, wornMessage = ID.text.ORB_CRACKED },
 })
 
 content.groups =
@@ -31,36 +31,36 @@ content.loot =
 {
 
     {
-        { item = xi.items.DEMON_HORN, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.DEMON_HORN, weight = xi.loot.weight.NORMAL },
     },
 
     {
-        { item = xi.items.FORSETIS_AXE, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.ARAMISS_RAPIER, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.SPARTAN_CESTI, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.SAIREN, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.ARCHALAUSS_POLE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.FORSETIS_AXE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.ARAMISS_RAPIER, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.SPARTAN_CESTI, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.SAIREN, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.ARCHALAUSS_POLE, weight = xi.loot.weight.NORMAL },
     },
 
     {
-        { item = xi.items.LIGHT_BOOMERANG, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.ARMBRUST, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.SCHWARZ_LANCE, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.OMOKAGE, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.ARCHALAUSS_POLE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.LIGHT_BOOMERANG, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.ARMBRUST, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.SCHWARZ_LANCE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.OMOKAGE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.ARCHALAUSS_POLE, weight = xi.loot.weight.NORMAL },
     },
 
     {
-        { item = xi.items.VASSAGOS_SCYTHE, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.KABRAKANS_AXE, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.DRAGVANDIL, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.HAMELIN_FLUTE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.VASSAGOS_SCYTHE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.KABRAKANS_AXE, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.DRAGVANDIL, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.HAMELIN_FLUTE, weight = xi.loot.weight.NORMAL },
     },
 
     {
-        { item = xi.items.NONE, weight = xi.loot.weight.HIGH },
-        { item = xi.items.SCROLL_OF_CARNAGE_ELEGY, weight = xi.loot.weight.NORMAL },
-        { item = xi.items.ICE_SPIRIT_PACT, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.NONE, weight = xi.loot.weight.HIGH },
+        { item = xi.item.SCROLL_OF_CARNAGE_ELEGY, weight = xi.loot.weight.NORMAL },
+        { item = xi.item.ICE_SPIRIT_PACT, weight = xi.loot.weight.NORMAL },
     },
 }
 

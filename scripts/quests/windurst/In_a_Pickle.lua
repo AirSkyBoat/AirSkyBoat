@@ -16,7 +16,7 @@ quest.reward =
 {
     fame = 75,
     fameArea = xi.quest.fame_area.WINDURST,
-    item = xi.items.BONE_HAIRPIN,
+    item = xi.item.BONE_HAIRPIN,
     itemParams = { fromTrade = true, }
 }
 
@@ -29,7 +29,7 @@ quest.sections =
 
         [xi.zone.WINDURST_WATERS] =
         {
-            ['Chamama'] = quest:progressEvent(654, 0, xi.items.RARAB_TAIL),
+            ['Chamama'] = quest:progressEvent(654, 0, xi.item.RARAB_TAIL),
 
             onEventFinish =
             {
@@ -52,7 +52,7 @@ quest.sections =
             ['Chamama'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.SMOOTH_STONE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.SMOOTH_STONE) then
                         local rand = math.random(1, 4)
                         if rand <= 2 then
                             player:confirmTrade()
@@ -68,7 +68,7 @@ quest.sections =
                 end,
 
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(655, 0, xi.items.RARAB_TAIL) -- IN A PICKLE + RARAB TAIL: Quest Objective Reminder
+                    return quest:progressEvent(655, 0, xi.item.RARAB_TAIL) -- IN A PICKLE + RARAB TAIL: Quest Objective Reminder
                 end,
             },
 
@@ -94,7 +94,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if quest:getVar(player, 'repeat') == 1 then
-                        if npcUtil.tradeHasExactly(trade, xi.items.SMOOTH_STONE) then
+                        if npcUtil.tradeHasExactly(trade, xi.item.SMOOTH_STONE) then
                             local rand = math.random(1, 4)
                             if rand <= 2 then
                                 player:confirmTrade()

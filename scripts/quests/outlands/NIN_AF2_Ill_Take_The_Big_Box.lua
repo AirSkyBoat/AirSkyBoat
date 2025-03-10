@@ -21,7 +21,7 @@ quest.reward =
 {
     fameArea = xi.quest.fame_area.NORG,
     fame = 75,
-    item = xi.items.NINJA_HAKAMA,
+    item = xi.item.NINJA_HAKAMA,
 }
 
 quest.sections =
@@ -99,7 +99,7 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.OAK_POLE) and
+                        npcUtil.tradeHasExactly(trade, xi.item.OAK_POLE) and
                         quest:getVar(player, 'Prog') == 2
                     then
                         return quest:progressEvent(92)

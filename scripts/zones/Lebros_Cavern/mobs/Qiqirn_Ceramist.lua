@@ -12,7 +12,7 @@ entity.onMobSpawn = function(mob)
 end
 
 entity.onMobDeath = function(mob, player, optParams)
-    xi.assault.addMobDropTempItem(mob, player, xi.items.QIQIRN_MINE, 50)
+    xi.assault.addMobDropTempItem(mob, player, xi.item.QIQIRN_MINE, 50)
 end
 
 entity.onMobDespawn = function(mob)

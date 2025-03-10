@@ -132,7 +132,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.HIGH_KINDREDS_CREST, 5 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.HIGH_KINDREDS_CREST, 5 } }) then
                         return quest:progressEvent(10195, 1)
                     end
                 end,

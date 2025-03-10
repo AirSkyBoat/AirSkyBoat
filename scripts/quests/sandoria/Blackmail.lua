@@ -55,10 +55,10 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                    npcUtil.tradeHasExactly(trade, { { xi.items.CASTLE_FLOOR_PLANS, 1 } }) and
+                    npcUtil.tradeHasExactly(trade, { { xi.item.CASTLE_FLOOR_PLANS, 1 } }) and
                     quest:getVar(player, 'Prog') == 2
                     then
-                        return quest:progressEvent(648, 0, xi.items.CASTLE_FLOOR_PLANS)
+                        return quest:progressEvent(648, 0, xi.item.CASTLE_FLOOR_PLANS)
                     end
                 end,
 
@@ -68,13 +68,13 @@ quest.sections =
                         return quest:event(645)
 
                     elseif quest:getVar(player, 'Prog') == 1 then
-                        return quest:progressEvent(646, 0, xi.items.CASTLE_FLOOR_PLANS)
+                        return quest:progressEvent(646, 0, xi.item.CASTLE_FLOOR_PLANS)
 
                     elseif quest:getVar(player, 'Prog') == 2 then
-                        return quest:event(647, 0, xi.items.CASTLE_FLOOR_PLANS)
+                        return quest:event(647, 0, xi.item.CASTLE_FLOOR_PLANS)
 
                     elseif player:hasCompletedQuest(quest.areaId, quest.questId) then
-                        return quest:progressEvent(650, 0, xi.items.CASTLE_FLOOR_PLANS)
+                        return quest:progressEvent(650, 0, xi.item.CASTLE_FLOOR_PLANS)
                     end
                 end,
             },

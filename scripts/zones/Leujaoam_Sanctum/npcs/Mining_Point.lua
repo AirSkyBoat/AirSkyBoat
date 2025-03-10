@@ -19,8 +19,8 @@ entity.onTrigger = function(player, npc)
         return
     end
 
-    if not xi.assault.hasTempItem(player, xi.items.PICKAXE) then
-        player:messageSpecial(ID.text.MINING_POSSIBLE, xi.items.PICKAXE)
+    if not xi.assault.hasTempItem(player, xi.item.PICKAXE) then
+        player:messageSpecial(ID.text.MINING_POSSIBLE, xi.item.PICKAXE)
         return
     end
 
@@ -48,10 +48,10 @@ entity.onTrigger = function(player, npc)
             worm:updateEnmity(player)
 
         elseif rand < 99 then
-            npcUtil.giveItem(player, xi.items.PEBBLE)
+            npcUtil.giveItem(player, xi.item.PEBBLE)
 
         else
-            npcUtil.giveTempItem(player, xi.items.CHUNK_OF_ORICHALCUM_ORE)
+            npcUtil.giveTempItem(player, xi.item.CHUNK_OF_ORICHALCUM_ORE)
             instance:setProgress(1)
 
             for _, qiqirn in pairs(ID.mob[xi.assault.mission.ORICHALCUM_SURVEY].MOBS_START) do
@@ -62,8 +62,8 @@ entity.onTrigger = function(player, npc)
         -- Sample rate: 205
         -- 3% chance to break
         if math.random(1, 100) < 3 then
-            player:messageSpecial(ID.text.PICKAXE_BREAKS, xi.items.PICKAXE)
-            xi.assault.delTempItem(player, xi.items.PICKAXE)
+            player:messageSpecial(ID.text.PICKAXE_BREAKS, xi.item.PICKAXE)
+            xi.assault.delTempItem(player, xi.item.PICKAXE)
         end
 
         -- If node has been struck 8 times, hide for 5 minutes and reset

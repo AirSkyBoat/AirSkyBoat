@@ -51,7 +51,7 @@ local function handleTradeEvent(player, trade)
     local mobOne = mission:getVar(player, 'MobOne')
 
     -- Trading Soul Plates
-    if mobOne ~= 0 and npcUtil.tradeHasExactly(trade, xi.items.SOUL_PLATE) then
+    if mobOne ~= 0 and npcUtil.tradeHasExactly(trade, xi.item.SOUL_PLATE) then
         local mobTwo = mission:getVar(player, 'MobTwo')
         local mobThree = mission:getVar(player, 'MobThree')
         local platesTraded = mission:getVar(player, 'Plates')

@@ -27,7 +27,7 @@ local spawnedMobs =
 
 quest.reward =
 {
-    item = xi.items.CHANOIXS_GORGET
+    item = xi.item.CHANOIXS_GORGET
 }
 
 quest.sections =

@@ -202,7 +202,7 @@ end
 
 xi.moghouse.moogleTrade = function(player, npc, trade)
     if player:isInMogHouse() then
-        local numBronze = trade:getItemQty(xi.items.IMPERIAL_BRONZE_PIECE)
+        local numBronze = trade:getItemQty(xi.item.IMPERIAL_BRONZE_PIECE)
 
         if numBronze > 0 then
             if xi.moghouse.addMogLockerExpiryTime(player, numBronze) then
@@ -213,18 +213,18 @@ xi.moghouse.moogleTrade = function(player, npc, trade)
 
         local eggComponents =
         {
-            xi.items.EGG_LOCKER,
-            xi.items.EGG_TABLE,
-            xi.items.EGG_STOOL,
-            xi.items.EGG_LANTERN,
+            xi.item.EGG_LOCKER,
+            xi.item.EGG_TABLE,
+            xi.item.EGG_STOOL,
+            xi.item.EGG_LANTERN,
         }
 
         if npcUtil.tradeHasExactly(trade, eggComponents) then
-            if npcUtil.giveItem(player, xi.items.EGG_BUFFET) then
+            if npcUtil.giveItem(player, xi.item.EGG_BUFFET) then
                 player:tradeComplete()
             end
 
-        elseif npcUtil.tradeHasExactly(trade, xi.items.EGG_BUFFET) then
+        elseif npcUtil.tradeHasExactly(trade, xi.item.EGG_BUFFET) then
             if npcUtil.giveItem(player, eggComponents) then
                 player:tradeComplete()
             end
@@ -248,8 +248,8 @@ xi.moghouse.moogleTrigger = function(player, npc)
                 local treePlaced = player:getCharVar("[StarlightMisc]TreePlaced")
                 local placedDay = player:getCharVar("[StarlightMisc]TreeTimePlaced")
                 local earnedReward = player:getCharVar("[StarlightMisc]DreamHatHQ")
-                local hasItem = player:hasItem(xi.items.DREAM_HAT_P1)
-                local hasPresent = player:hasItem(xi.items.SPECIAL_PRESENT)
+                local hasItem = player:hasItem(xi.item.DREAM_HAT_P1)
+                local hasPresent = player:hasItem(xi.item.SPECIAL_PRESENT)
                 local currentDay = VanadielUniqueDay()
 
                 if treePlaced ~= 0 then
@@ -282,7 +282,7 @@ xi.moghouse.moogleTrigger = function(player, npc)
 
         if lockerTs then
             if lockerTs == -1 then -- Expired
-                player:messageSpecial(zones[player:getZoneID()].text.MOG_LOCKER_OFFSET + 1, xi.items.IMPERIAL_BRONZE_PIECE)
+                player:messageSpecial(zones[player:getZoneID()].text.MOG_LOCKER_OFFSET + 1, xi.item.IMPERIAL_BRONZE_PIECE)
             else
                 player:messageSpecial(zones[player:getZoneID()].text.MOG_LOCKER_OFFSET, lockerTs)
             end

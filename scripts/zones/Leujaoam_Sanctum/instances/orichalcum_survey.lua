@@ -34,7 +34,7 @@ end
 instanceObject.afterInstanceRegister = function(player)
     local instance = player:getInstance()
 
-    xi.assault.afterInstanceRegister(player, xi.items.CAGE_OF_AZOUPH_FIREFLIES)
+    xi.assault.afterInstanceRegister(player, xi.item.CAGE_OF_AZOUPH_FIREFLIES)
     GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(-432.000, -27.627, 169.000, 129)
     GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(-432.000, -27.588, 167.000, 129)
 end

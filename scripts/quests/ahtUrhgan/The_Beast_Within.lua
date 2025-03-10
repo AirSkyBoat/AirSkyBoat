@@ -40,7 +40,7 @@ quest.sections =
                         lastDivination <= VanadielUniqueDay() and
                         not quest:getMustZone(player)
                     then
-                        return quest:progressEvent(760, xi.items.BLUE_MAGES_TESTIMONY)
+                        return quest:progressEvent(760, xi.item.BLUE_MAGES_TESTIMONY)
                     end
                 end,
             },
@@ -67,7 +67,7 @@ quest.sections =
             ['Imperial_Whitegate'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHas(trade, xi.items.BLUE_MAGES_TESTIMONY) then
+                    if npcUtil.tradeHas(trade, xi.item.BLUE_MAGES_TESTIMONY) then
                         return quest:progressEvent(762)
                     end
                 end,

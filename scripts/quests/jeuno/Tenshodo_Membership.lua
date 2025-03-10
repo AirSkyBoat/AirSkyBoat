@@ -13,7 +13,7 @@ local quest = Quest:new(xi.quest.log_id.JEUNO, xi.quest.id.jeuno.TENSHODO_MEMBER
 
 quest.reward =
 {
-    item = xi.items.TENSHODO_INVITE,
+    item = xi.item.TENSHODO_INVITE,
     keyItem = xi.ki.TENSHODO_MEMBERS_CARD,
 }
 
@@ -89,7 +89,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { xi.items.TENSHODO_INVITE })
+                        npcUtil.tradeHasExactly(trade, { xi.item.TENSHODO_INVITE })
                     then
                         return quest:progressEvent(108)
                     end

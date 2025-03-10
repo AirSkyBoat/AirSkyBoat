@@ -21,7 +21,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.JEUNO,
-    item  = xi.items.CHORAL_JUSTAUCORPS,
+    item  = xi.item.CHORAL_JUSTAUCORPS,
     title = xi.title.PARAGON_OF_BARD_EXCELLENCE,
 }
 

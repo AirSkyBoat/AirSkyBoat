@@ -14,7 +14,7 @@ end
 
 entity.onTrigger = function(player, npc)
     if xi.settings.main.ENABLE_ABYSSEA == 1 then
-        npcUtil.giveItem(player, xi.items.TREMORSTONE)
+        npcUtil.giveItem(player, xi.item.TREMORSTONE)
     end
 end
 

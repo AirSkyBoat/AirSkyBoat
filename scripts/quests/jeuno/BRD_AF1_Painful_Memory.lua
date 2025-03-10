@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.JEUNO, xi.quest.id.jeuno.PAINFUL_MEMORY)
 
 quest.reward =
 {
-    item  = xi.items.PAPER_KNIFE,
+    item  = xi.item.PAPER_KNIFE,
 }
 
 quest.sections =

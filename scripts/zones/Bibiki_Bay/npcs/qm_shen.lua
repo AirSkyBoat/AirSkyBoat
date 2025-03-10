@@ -11,7 +11,7 @@ local entity = {}
 
 entity.onTrade = function(player, npc, trade)
     if
-        npcUtil.tradeHasExactly(trade, xi.items.SHRIMP_LANTERN) and
+        npcUtil.tradeHasExactly(trade, xi.item.SHRIMP_LANTERN) and
         npcUtil.popFromQM(player, npc, ID.mob.SHEN)
     then
         player:confirmTrade()

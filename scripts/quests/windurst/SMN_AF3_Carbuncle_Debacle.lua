@@ -14,7 +14,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.CARBUNCLE
 
 quest.reward =
 {
-    item            =   xi.items.EVOKERS_HORN,
+    item            =   xi.item.EVOKERS_HORN,
     fame            =   60,
     fameArea        =   xi.quest.fame_area.WINDURST,
     title           =   xi.title.PARAGON_OF_SUMMONER_EXCELLENCE,
@@ -98,7 +98,7 @@ quest.sections =
                         return quest:progressEvent(10022)
                     elseif
                         questProgress == 3 and
-                        not player:hasItem(xi.items.LIGHTNING_PENDULUM)
+                        not player:hasItem(xi.item.LIGHTNING_PENDULUM)
                     then
                         return quest:progressEvent(10023)
                     end
@@ -108,12 +108,12 @@ quest.sections =
             onEventFinish =
             {
                 [10022] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.LIGHTNING_PENDULUM)
+                    npcUtil.giveItem(player, xi.item.LIGHTNING_PENDULUM)
                     quest:setVar(player, 'Prog', 3)
                 end,
 
                 [10023] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.LIGHTNING_PENDULUM)
+                    npcUtil.giveItem(player, xi.item.LIGHTNING_PENDULUM)
                 end,
             },
         },
@@ -147,7 +147,7 @@ quest.sections =
                         return quest:progressEvent(86)
                     elseif
                         questProgress == 6 and
-                        not player:hasItem(xi.items.WIND_PENDULUM)
+                        not player:hasItem(xi.item.WIND_PENDULUM)
                     then
                         return quest:progressEvent(87)
                     else
@@ -159,12 +159,12 @@ quest.sections =
             onEventFinish =
             {
                 [86] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.WIND_PENDULUM)
+                    npcUtil.giveItem(player, xi.item.WIND_PENDULUM)
                     quest:setVar(player, 'Prog', 6)
                 end,
 
                 [87] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.WIND_PENDULUM)
+                    npcUtil.giveItem(player, xi.item.WIND_PENDULUM)
                 end
             },
         },

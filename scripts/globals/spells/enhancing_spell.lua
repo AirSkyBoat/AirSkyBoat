@@ -411,8 +411,8 @@ xi.spells.enhancing.calculateEnhancingDuration = function(caster, target, spell,
         (spellEffect >= xi.effect.ENFIRE_II and spellEffect <= xi.effect.ENWATER_II)
     then
         if
-            caster:getEquipID(xi.slot.MAIN) == xi.items.BUZZARD_TUCK or
-            caster:getEquipID(xi.slot.SUB) == xi.items.BUZZARD_TUCK
+            caster:getEquipID(xi.slot.MAIN) == xi.item.BUZZARD_TUCK or
+            caster:getEquipID(xi.slot.SUB) == xi.item.BUZZARD_TUCK
         then
             duration = duration + 30 -- Sword enhancement spell duration +5
         end

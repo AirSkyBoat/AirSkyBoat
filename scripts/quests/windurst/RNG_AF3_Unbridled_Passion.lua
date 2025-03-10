@@ -17,7 +17,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.UNBRIDLED
 
 quest.reward =
 {
-    item     = xi.items.HUNTERS_SOCKS,
+    item     = xi.item.HUNTERS_SOCKS,
     title    = xi.title.PARAGON_OF_RANGER_EXCELLENCE,
 }
 
@@ -34,7 +34,7 @@ quest.sections =
 
         [xi.zone.WINDURST_WOODS] =
         {
-            ['Perih_Vashai'] = quest:progressEvent(541, 0, xi.items.TWINSTONE_EARRING),
+            ['Perih_Vashai'] = quest:progressEvent(541, 0, xi.item.TWINSTONE_EARRING),
 
             onEventFinish =
             {
@@ -61,7 +61,7 @@ quest.sections =
                     elseif quest:getVar(player, 'Prog') < 7 then
                         return quest:event(542)-- during RNG AF3
                     elseif quest:getVar(player, 'Prog') == 7 then
-                        return quest:progressEvent(546, 0, xi.items.HUNTERS_SOCKS) -- complete RNG AF3
+                        return quest:progressEvent(546, 0, xi.item.HUNTERS_SOCKS) -- complete RNG AF3
                     end
                 end,
             },
@@ -80,9 +80,9 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 1 then
-                        return quest:progressEvent(10009, 0, xi.items.TWINSTONE_EARRING, xi.items.GOLD_EARRING)
+                        return quest:progressEvent(10009, 0, xi.item.TWINSTONE_EARRING, xi.item.GOLD_EARRING)
                     elseif quest:getVar(player, 'Prog') == 2 then
-                        return quest:event(10010, 0, 0, xi.items.GOLD_EARRING)
+                        return quest:event(10010, 0, 0, xi.item.GOLD_EARRING)
                     elseif quest:getVar(player, 'Prog') == 3 then
                         return quest:event(10012)
                     end
@@ -90,7 +90,7 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.GOLD_EARRING) and
+                        npcUtil.tradeHasExactly(trade, xi.item.GOLD_EARRING) and
                         quest:getVar(player, 'Prog') == 2
                     then
                         return quest:progressEvent(10011)
@@ -127,7 +127,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 5 then
-                        return quest:progressEvent(6, 0, xi.items.TWINSTONE_EARRING)
+                        return quest:progressEvent(6, 0, xi.item.TWINSTONE_EARRING)
                     elseif quest:getVar(player, 'Prog') == 6 then
                         return quest:progressEvent(7)
                     end
@@ -163,7 +163,7 @@ quest.sections =
                 end,
 
                 [7] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, { { xi.items.ICE_ARROW, 99 } })
+                    npcUtil.giveItem(player, { { xi.item.ICE_ARROW, 99 } })
                     quest:setVar(player, 'Prog', 7)
                 end,
 

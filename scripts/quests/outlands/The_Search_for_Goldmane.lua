@@ -89,7 +89,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.COPPER_KEY) and
+                        npcUtil.tradeHasExactly(trade, xi.item.COPPER_KEY) and
                         quest:getVar(player, 'Prog') == 2
                     then
                         return quest:progressEvent(41)
@@ -165,7 +165,7 @@ quest.sections =
                 end,
 
                 [37] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.DELUXE_CARBINE)
+                    npcUtil.giveItem(player, xi.item.DELUXE_CARBINE)
                     quest:setVar(player, 'Prog', 6)
                 end,
             },

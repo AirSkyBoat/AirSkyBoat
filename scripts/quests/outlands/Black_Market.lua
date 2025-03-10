@@ -56,11 +56,11 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.NORTHERN_FUR, 4 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.NORTHERN_FUR, 4 } }) then
                         return quest:progressEvent(17, 1199, 1199)
-                    elseif npcUtil.tradeHasExactly(trade, { { xi.items.PIECES_OF_EASTERN_POTTERY, 4 } }) then
+                    elseif npcUtil.tradeHasExactly(trade, { { xi.item.PIECES_OF_EASTERN_POTTERY, 4 } }) then
                         return quest:progressEvent(18, 1200, 1200)
-                    elseif npcUtil.tradeHasExactly(trade, { { xi.items.SOUTHERN_MUMMY, 4 } }) then
+                    elseif npcUtil.tradeHasExactly(trade, { { xi.item.SOUTHERN_MUMMY, 4 } }) then
                         return quest:progressEvent(19, 1201, 1201)
                     end
                 end,

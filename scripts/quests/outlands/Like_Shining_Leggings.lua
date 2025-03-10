@@ -22,7 +22,7 @@ quest.reward =
     fameArea = xi.quest.fame_area.NORG,
     fame     = 100,
     title    = xi.title.LOOKS_GOOD_IN_LEGGINGS,
-    item     = xi.items.SCROLL_OF_DOKUMORI_ICHI,
+    item     = xi.item.SCROLL_OF_DOKUMORI_ICHI,
 }
 
 quest.sections =
@@ -60,12 +60,12 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     local curNumTradedIn = quest:getVar(player, tradeTrackingVar)
-                    local numTradingInNow = trade:getItemQty(xi.items.RUSTY_LEGGINGS)
+                    local numTradingInNow = trade:getItemQty(xi.item.RUSTY_LEGGINGS)
                     local remainderNeeded = utils.clamp(requiredLeggings - curNumTradedIn, 0, requiredLeggings)
 
                     local clampedTrade = math.min(numTradingInNow, remainderNeeded) -- Only take the amount needed to complete the quest and nothing more
 
-                    if npcUtil.tradeHas(trade, { { xi.items.RUSTY_LEGGINGS, clampedTrade } }) then
+                    if npcUtil.tradeHas(trade, { { xi.item.RUSTY_LEGGINGS, clampedTrade } }) then
                         local totalWithTrade = curNumTradedIn + clampedTrade
                         successfulTradeNum = totalWithTrade
 

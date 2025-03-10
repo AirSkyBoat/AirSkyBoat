@@ -22,7 +22,7 @@ quest.reward =
 {
     fameArea = xi.quest.fame_area.NORG,
     fame = 75,
-    item = xi.items.NINJA_CHAINMAIL,
+    item = xi.item.NINJA_CHAINMAIL,
 }
 
 quest.sections =

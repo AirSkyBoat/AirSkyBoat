@@ -30,7 +30,7 @@ quest.sections =
 
         [xi.zone.LOWER_JEUNO] =
         {
-            ['Odasel'] = quest:progressEvent(10035, { [1] = xi.items.CHAMELEON_DIAMOND }),
+            ['Odasel'] = quest:progressEvent(10035, { [1] = xi.item.CHAMELEON_DIAMOND }),
 
             onEventFinish =
             {
@@ -51,12 +51,12 @@ quest.sections =
             ['Odasel'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:event(10037, { [1] = xi.items.CHAMELEON_DIAMOND })
+                    return quest:event(10037, { [1] = xi.item.CHAMELEON_DIAMOND })
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.CHAMELEON_DIAMOND) then
-                        return quest:progressEvent(10036, { [1] = xi.items.CHAMELEON_DIAMOND })
+                    if npcUtil.tradeHasExactly(trade, xi.item.CHAMELEON_DIAMOND) then
+                        return quest:progressEvent(10036, { [1] = xi.item.CHAMELEON_DIAMOND })
                     end
                 end,
             },

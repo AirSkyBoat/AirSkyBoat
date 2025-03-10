@@ -71,7 +71,7 @@ quest.sections =
             ['Parvipon'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.RABBIT_HIDE, 3 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.RABBIT_HIDE, 3 } }) then
                         return quest:progressEvent(89)
                     end
                 end,

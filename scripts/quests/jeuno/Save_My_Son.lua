@@ -19,7 +19,7 @@ quest.reward =
     gil = 2100,
     fame = 30,
     fameArea = xi.quest.fame_area.JEUNO,
-    item = xi.items.BEAST_WHISTLE,
+    item = xi.item.BEAST_WHISTLE,
     title = xi.title.LIFE_SAVER,
 }
 

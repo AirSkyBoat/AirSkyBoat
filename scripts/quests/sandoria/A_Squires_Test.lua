@@ -15,7 +15,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.A_SQUIRE_
 
 quest.reward =
 {
-    item     = xi.items.SPATHA,
+    item     = xi.item.SPATHA,
     fame     = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
     title    = xi.title.KNIGHT_IN_TRAINING,
@@ -78,14 +78,14 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 1 then
-                        return quest:messageSpecial(ID.text.REVIVAL_TREE_ROOT, xi.items.REVIVAL_TREE_ROOT)
+                        return quest:messageSpecial(ID.text.REVIVAL_TREE_ROOT, xi.item.REVIVAL_TREE_ROOT)
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Prog') == 1 and
-                        npcUtil.tradeHasExactly(trade, xi.items.REVIVAL_TREE_ROOT)
+                        npcUtil.tradeHasExactly(trade, xi.item.REVIVAL_TREE_ROOT)
                     then
                         return quest:progressEvent(617)
                     end

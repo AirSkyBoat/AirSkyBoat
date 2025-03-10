@@ -140,7 +140,7 @@ xi.chocobo.renterOnTrade = function(player, npc, trade, eventSucceed, eventFail)
     local info   = xi.chocobo.zoneInfo[zoneId]
 
     if
-        npcUtil.tradeHasExactly(trade, xi.items.FREE_CHOCOPASS) and
+        npcUtil.tradeHasExactly(trade, xi.item.FREE_CHOCOPASS) and
         (zoneId == xi.zone.WINDURST_WOODS or zoneId == xi.zone.BASTOK_MINES or zoneId == xi.zone.SOUTHERN_SAN_DORIA)
     then -- Chocopass Fails for Non-Starter Cities
         if info.past then -- Fails for Past Zones
@@ -156,7 +156,7 @@ xi.chocobo.renterOnTrade = function(player, npc, trade, eventSucceed, eventFail)
             player:startEvent(eventSucceed, price, currency)
         end
     elseif
-        npcUtil.tradeHasExactly(trade, xi.items.CHOCOBO_TICKET)
+        npcUtil.tradeHasExactly(trade, xi.item.CHOCOBO_TICKET)
     then -- Chocobo Ticket
         if info.past then -- Fails for Past Zones
             player:startEvent(eventFail)
@@ -296,7 +296,7 @@ xi.chocobo.confirmRentalAfterZoneIn = function(player)
     if not paid then
         return
     elseif chocoPass == 1 then
-        npcUtil.giveItem(player, xi.items.FREE_CHOCOPASS)
+        npcUtil.giveItem(player, xi.item.FREE_CHOCOPASS)
         player:PrintToPlayer(string.format("Error while zoning. Your position has been reset and ChocoPass refunded.", cost), xi.msg.channel.SYSTEM_3)
     elseif past == 1 and paid == 1 then
         npcUtil.giveCurrency(player, "allied_notes", cost or 0)

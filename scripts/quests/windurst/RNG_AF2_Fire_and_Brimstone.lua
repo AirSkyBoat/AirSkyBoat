@@ -17,7 +17,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.FIRE_AND_
 
 quest.reward =
 {
-    item     = xi.items.HUNTERS_BERET,
+    item     = xi.item.HUNTERS_BERET,
 }
 
 quest.sections =
@@ -57,18 +57,18 @@ quest.sections =
                     if quest:getVar(player, 'Prog') > 0 and quest:getVar(player, 'Prog') < 4 then
                         return quest:event(532) -- during RNG AF2
                     elseif quest:getVar(player, 'Prog') == 4 then
-                        return quest:progressEvent(535, 0, xi.items.TWINSTONE_EARRING, xi.items.OLD_EARRING)
+                        return quest:progressEvent(535, 0, xi.item.TWINSTONE_EARRING, xi.item.OLD_EARRING)
                     elseif quest:getVar(player, 'Prog') == 5 then
-                        return quest:event(536, 0, xi.items.TWINSTONE_EARRING, xi.items.OLD_EARRING)
+                        return quest:event(536, 0, xi.item.TWINSTONE_EARRING, xi.item.OLD_EARRING)
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.OLD_EARRING) and
+                        npcUtil.tradeHasExactly(trade, xi.item.OLD_EARRING) and
                         quest:getVar(player, 'Prog') == 5
                     then
-                        return quest:progressEvent(537, 0, xi.items.TWINSTONE_EARRING)
+                        return quest:progressEvent(537, 0, xi.item.TWINSTONE_EARRING)
                     end
                 end,
             },
@@ -157,7 +157,7 @@ quest.sections =
 
         [xi.zone.WINDURST_WOODS] =
         {
-            ['Gioh_Ajihri'] = quest:event(551, 0, xi.items.TWINSTONE_EARRING):importantOnce(),
+            ['Gioh_Ajihri'] = quest:event(551, 0, xi.item.TWINSTONE_EARRING):importantOnce(),
         },
     },
 }

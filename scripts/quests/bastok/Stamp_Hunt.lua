@@ -24,7 +24,7 @@ quest.reward =
 {
     fame = 50,
     fameArea = xi.quest.fame_area.BASTOK,
-    item = xi.items.LEATHER_GORGET,
+    item = xi.item.LEATHER_GORGET,
     title = xi.title.STAMPEDER,
 }
 

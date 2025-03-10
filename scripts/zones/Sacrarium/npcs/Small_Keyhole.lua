@@ -24,7 +24,7 @@ entity.onTrigger = function(player, npc)
 end
 
 entity.onTrade = function(player, npc, trade)
-    if npcUtil.tradeHas(trade, xi.items.CORAL_CREST_KEY) then
+    if npcUtil.tradeHas(trade, xi.item.CORAL_CREST_KEY) then
         if npc:getLocalVar("canTradeSecondKey") == 0 then
             npc:setLocalVar("canTradeSecondKey", 1)
             -- Opens lock visually to indicate to other players when to trade next key
@@ -41,7 +41,7 @@ entity.onTrade = function(player, npc, trade)
                     playerArg1:messageSpecial(ID.text.HAND_GROWN_NUMB)
 
                     playerArg1:timer(5000, function(playerArg2)
-                        playerArg2:messageSpecial(ID.text.CORAL_KEY_BREAKS, 0, xi.items.CORAL_CREST_KEY)
+                        playerArg2:messageSpecial(ID.text.CORAL_KEY_BREAKS, 0, xi.item.CORAL_CREST_KEY)
                         npc:setLocalVar("canTradeSecondKey", 0)
                         player:setSpeed(npc:getLocalVar("speed"))
                         playerArg2:confirmTrade()

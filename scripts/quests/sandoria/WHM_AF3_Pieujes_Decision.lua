@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.PIEUJE_S_
 
 quest.reward =
 {
-    item     = xi.items.HEALERS_BRIAULT,
+    item     = xi.item.HEALERS_BRIAULT,
     fame     = 60,
     fameArea = xi.quest.fame_area.SANDORIA,
     title    = xi.title.PARAGON_OF_WHITE_MAGE_EXCELLENCE,
@@ -58,7 +58,7 @@ quest.sections =
             {
                 function(player, prevZone)
                     if
-                        player:hasItem(xi.items.TAVNAZIA_BELL) and
+                        player:hasItem(xi.item.TAVNAZIA_BELL) and
                         quest:getVar(player, 'Prog') == 0
                     then
                         return 19
@@ -70,15 +70,15 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.TAVNAZIA_BELL) and
-                        not player:hasItem(xi.items.TAVNAZIAN_MASK) and
+                        npcUtil.tradeHasExactly(trade, xi.item.TAVNAZIA_BELL) and
+                        not player:hasItem(xi.item.TAVNAZIAN_MASK) and
                         npcUtil.popFromQM(player, npc, feiyinID.mob.ALTEDOUR_I_TAVNAZIA, { hide = 900 })
                     then
                         player:confirmTrade()
                         return quest:messageSpecial(feiyinID.text.CONSPICUOUSLY_EVIL_PRESENCE)
                     elseif
-                        npcUtil.tradeHasExactly(trade, xi.items.TAVNAZIA_BELL) and
-                        player:hasItem(xi.items.TAVNAZIAN_MASK)
+                        npcUtil.tradeHasExactly(trade, xi.item.TAVNAZIA_BELL) and
+                        player:hasItem(xi.item.TAVNAZIAN_MASK)
                     then
                         return player:messageSpecial(feiyinID.text.NOTHING_OUT_OF_ORDINARY)
                     end
@@ -99,7 +99,7 @@ quest.sections =
             ['Narcheral'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.TAVNAZIAN_MASK }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.TAVNAZIAN_MASK }) then
                         return quest:progressEvent(692)
                     end
                 end,

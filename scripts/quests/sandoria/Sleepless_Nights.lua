@@ -54,7 +54,7 @@ quest.sections =
             ['Paouala'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.JUG_OF_MARY_S_MILK, 1 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.JUG_OF_MARY_S_MILK, 1 } }) then
                         return quest:progressEvent(84)
                     end
                 end,

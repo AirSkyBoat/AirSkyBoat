@@ -9,7 +9,7 @@ local entity = {}
 
 entity.onMobInitialize = function(mob)
     mob:addListener("ITEM_DROPS", "ITEM_DROPS_GRATION", function(mobArg, loot)
-        loot:addItemFixed(xi.items.TATAMI_SHIELD, mob:getLocalVar("DropRate"))
+        loot:addItemFixed(xi.item.TATAMI_SHIELD, mob:getLocalVar("DropRate"))
     end)
 end
 

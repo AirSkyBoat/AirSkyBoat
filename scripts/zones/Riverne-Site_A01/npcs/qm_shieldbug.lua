@@ -22,7 +22,7 @@ entity.onTrade = function(player, npc, trade)
 end
 
 entity.onTrigger = function(player, npc)
-    npcUtil.giveItem(player, xi.items.SHIELD_BUG)
+    npcUtil.giveItem(player, xi.item.SHIELD_BUG)
 end
 
 entity.onEventUpdate = function(player, csid, option)

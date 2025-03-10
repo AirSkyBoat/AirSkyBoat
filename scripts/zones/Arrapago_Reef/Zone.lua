@@ -60,7 +60,7 @@ zoneObject.onEventFinish = function(player, csid, option)
     elseif csid == 237 then
         player:startEvent(240)
     elseif csid == 238 then
-        npcUtil.completeQuest(player, xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.AGAINST_ALL_ODDS, { item = xi.items.CORSAIRS_TRICORNE, var = "Quest[6][26]Prog" })
+        npcUtil.completeQuest(player, xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.AGAINST_ALL_ODDS, { item = xi.item.CORSAIRS_TRICORNE, var = "Quest[6][26]Prog" })
     elseif csid == 240 then
         player:setCharVar("Quest[6][26]Prog", 2)
     end

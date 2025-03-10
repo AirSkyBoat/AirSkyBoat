@@ -103,7 +103,7 @@ local eldiemeGlobal =
         local skullRespawn = zone:getLocalVar("SkullRespawn") or 0 -- 1 hour cooldown to respawn skulls
 
         if
-            npcUtil.tradeHasExactly(trade, xi.items.FLINT_STONE) and
+            npcUtil.tradeHasExactly(trade, xi.item.FLINT_STONE) and
             os.time() > skullRespawn
         then
             lightCandle(player, npc)
@@ -119,7 +119,7 @@ local eldiemeGlobal =
         if npc:getAnimation() == xi.anim.OPEN_DOOR then
             player:messageSpecial(ID.text.BRAZIER_ACTIVE)
         elseif os.time() > skullRespawn then
-            player:messageSpecial(ID.text.BRAZIER_OUT, 0, xi.items.FLINT_STONE)
+            player:messageSpecial(ID.text.BRAZIER_OUT, 0, xi.item.FLINT_STONE)
         else
             player:messageSpecial(ID.text.BRAZIER_COOLDOWN)
         end

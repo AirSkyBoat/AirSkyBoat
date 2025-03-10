@@ -20,7 +20,7 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.quest.fame_area.JEUNO,
-    item     = xi.items.BEAST_GAITERS,
+    item     = xi.item.BEAST_GAITERS,
 }
 
 quest.sections =
@@ -138,13 +138,13 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         npc:getStatus() == xi.status.NORMAL and
-                        npcUtil.tradeHasExactly(trade, xi.items.BEAST_COLLAR)
+                        npcUtil.tradeHasExactly(trade, xi.item.BEAST_COLLAR)
                     then
                         player:tradeComplete()
                         quest:setVar(player, 'Prog', 2)
                         npc:setStatus(xi.status.DISAPPEAR)
                         npc:updateNPCHideTime(900) -- 15 mins
-                        return quest:messageSpecial(castleOzID.text.TEBHI_ACCEPTS, xi.items.BEAST_COLLAR)
+                        return quest:messageSpecial(castleOzID.text.TEBHI_ACCEPTS, xi.item.BEAST_COLLAR)
                     end
                 end,
             },

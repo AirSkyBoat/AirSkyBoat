@@ -26,7 +26,7 @@ local positionTable =
 
 quest.reward =
 {
-    item = { { xi.items.IMPERIAL_BRONZE_PIECE, 3 } },
+    item = { { xi.item.IMPERIAL_BRONZE_PIECE, 3 } },
 }
 
 quest.sections =

@@ -53,7 +53,7 @@ quest.sections =
             ['Katsunaga'] =
             {
                 onTrigger = function(player, csid, option, npc)
-                    return quest:progressEvent(192, xi.items.GUGRU_TUNA)
+                    return quest:progressEvent(192, xi.item.GUGRU_TUNA)
                 end,
             },
 
@@ -77,11 +77,11 @@ quest.sections =
             ['Katsunaga'] =
             {
                 onTrigger = function(player, csid, option, npc)
-                    return quest:progressEvent(194, xi.items.GUGRU_TUNA)
+                    return quest:progressEvent(194, xi.item.GUGRU_TUNA)
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.GUGRU_TUNA) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.GUGRU_TUNA) then
                         local fishingStats = player:getFishingStats()
                         return quest:progressEvent(193, {
                             [1] = fishingStats["fishLinesCast"],

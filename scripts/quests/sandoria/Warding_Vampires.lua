@@ -58,7 +58,7 @@ quest.sections =
             ['Maloquedil'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.BULB_OF_SHAMAN_GARLIC, 2 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.BULB_OF_SHAMAN_GARLIC, 2 } }) then
                         return quest:progressEvent(23)
                     end
                 end,

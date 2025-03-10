@@ -31,7 +31,7 @@ quest.sections =
                 player:getFameLevel(xi.quest.fame_area.NORG) >= 1 and
                 player:getQuestStatus(xi.quest.log_id.WINDURST, xi.quest.id.windurst.THE_TENSHODO_SHOWDOWN) ~= QUEST_ACCEPTED and
                 player:getQuestStatus(xi.quest.log_id.WINDURST, xi.quest.id.windurst.AS_THICK_AS_THIEVES) ~= QUEST_ACCEPTED and
-                not player:hasItem(xi.items.MARAUDERS_KNIFE)
+                not player:hasItem(xi.item.MARAUDERS_KNIFE)
         end,
 
         [xi.zone.WINDURST_WOODS] =
@@ -75,7 +75,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.YAGUDO_BEAD_NECKLACE, 4 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.YAGUDO_BEAD_NECKLACE, 4 } }) then
                         return quest:progressEvent(88, { [0] = gilPerTrade })
                     end
                 end,
@@ -110,7 +110,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.YAGUDO_BEAD_NECKLACE, 4 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.YAGUDO_BEAD_NECKLACE, 4 } }) then
                         return quest:progressEvent(494, { [0] = gilPerTrade })
                     end
                 end,

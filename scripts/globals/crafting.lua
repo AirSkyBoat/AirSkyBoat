@@ -71,15 +71,15 @@ local testItemsByNPC =
 -- need to have robber rig here because it uses the same logic
 local hqCrystals =
 {
-    [0] = { id = xi.items.ROBBER_RIG,       cost = 1500 },
-    [1] = { id = xi.items.INFERNO_CRYSTAL,  cost = 200 },
-    [2] = { id = xi.items.GLACIER_CRYSTAL,  cost = 200 },
-    [3] = { id = xi.items.CYCLONE_CRYSTAL,  cost = 200 },
-    [4] = { id = xi.items.TERRA_CRYSTAL,    cost = 200 },
-    [5] = { id = xi.items.PLASMA_CRYSTAL,   cost = 200 },
-    [6] = { id = xi.items.TORRENT_CRYSTAL,  cost = 200 },
-    [7] = { id = xi.items.AURORA_CRYSTAL,   cost = 200 },
-    [8] = { id = xi.items.TWILIGHT_CRYSTAL, cost = 200 },
+    [0] = { id = xi.item.ROBBER_RIG,       cost = 1500 },
+    [1] = { id = xi.item.INFERNO_CRYSTAL,  cost = 200 },
+    [2] = { id = xi.item.GLACIER_CRYSTAL,  cost = 200 },
+    [3] = { id = xi.item.CYCLONE_CRYSTAL,  cost = 200 },
+    [4] = { id = xi.item.TERRA_CRYSTAL,    cost = 200 },
+    [5] = { id = xi.item.PLASMA_CRYSTAL,   cost = 200 },
+    [6] = { id = xi.item.TORRENT_CRYSTAL,  cost = 200 },
+    [7] = { id = xi.item.AURORA_CRYSTAL,   cost = 200 },
+    [8] = { id = xi.item.TWILIGHT_CRYSTAL, cost = 200 },
 }
 
 xi.crafting.gpRewards =

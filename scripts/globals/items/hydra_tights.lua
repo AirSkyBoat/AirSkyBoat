@@ -8,7 +8,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.HASTE)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.HYDRA_TIGHTS then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.HYDRA_TIGHTS then
         target:delStatusEffect(xi.effect.HASTE)
     end
 
@@ -16,9 +16,9 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.HYDRA_TIGHTS) then
+    if target:hasEquipped(xi.item.HYDRA_TIGHTS) then
         if not target:hasStatusEffect(xi.effect.HASTE) then
-            target:addStatusEffect(xi.effect.HASTE, 1000, 0, 180, 0, 0, 0, xi.items.HYDRA_TIGHTS)
+            target:addStatusEffect(xi.effect.HASTE, 1000, 0, 180, 0, 0, 0, xi.item.HYDRA_TIGHTS)
         else
             target:messageBasic(xi.msg.basic.NO_EFFECT)
         end

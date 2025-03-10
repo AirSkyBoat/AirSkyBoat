@@ -21,7 +21,7 @@ itemObject.onItemUse = function(target)
 end
 
 itemObject.onItemDrop = function(target, item)
-    target:addTempItem(xi.items.UNDERSEA_RUINS_FIREFLIES)
+    target:addTempItem(xi.item.UNDERSEA_RUINS_FIREFLIES)
 end
 
 return itemObject

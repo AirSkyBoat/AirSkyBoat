@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.THE_WA
 
 quest.reward =
 {
-    item  = xi.items.TURBO_ANIMATOR,
+    item  = xi.item.TURBO_ANIMATOR,
 }
 
 quest.sections =

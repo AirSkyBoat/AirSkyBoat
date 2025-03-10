@@ -142,11 +142,11 @@ quest.sections =
             ['Varun'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(101, { [1] = xi.items.SHARP_STONE })
+                    return quest:progressEvent(101, { [1] = xi.item.SHARP_STONE })
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.SHARP_STONE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.SHARP_STONE) then
                         return quest:progressEvent(102, { [0] = 2100 })
                     end
                 end,
@@ -170,9 +170,9 @@ quest.sections =
                     local lastTrade = player:getCharVar("[HELM]Last_Trade")
                     if os.time() > lastTrade + 4 then
                         if
-                            trade:hasItemQty(xi.items.PICKAXE, 1) and
+                            trade:hasItemQty(xi.item.PICKAXE, 1) and
                             trade:getItemCount() == 1 and
-                            not player:hasItem(xi.items.SHARP_STONE)
+                            not player:hasItem(xi.item.SHARP_STONE)
                         then
                             -- Do some mining (Pulling data from helm.lua)
                             player:delStatusEffect(xi.effect.INVISIBLE)
@@ -182,7 +182,7 @@ quest.sections =
                             local getItem = (math.random(1, 100) <= xi.settings.main.MINING_RATE) and 1 or 0
 
                             if getItem == 1 then
-                                getItem = xi.items.SHARP_STONE
+                                getItem = xi.item.SHARP_STONE
                             end
 
                             if isBreak == 1 then

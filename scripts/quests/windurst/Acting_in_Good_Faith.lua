@@ -15,7 +15,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.ACTING_IN
 
 quest.reward =
 {
-    item = xi.items.SCROLL_OF_TELEPORT_MEA,
+    item = xi.item.SCROLL_OF_TELEPORT_MEA,
     fame = 30,
     fameArea = xi.quest.fame_area.WINDURST,
 }

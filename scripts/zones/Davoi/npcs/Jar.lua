@@ -37,17 +37,17 @@ entity.onTrigger = function(player, npc)
 
     if
         testMyMettle ~= QUEST_ACCEPTED or
-        player:hasItem(xi.items.POWER_SANDALS)
+        player:hasItem(xi.item.POWER_SANDALS)
     then
         player:messageSpecial(ID.text.NOTHING_OUT_OF_ORDINARY)
         return
     end
 
     if player:getFreeSlotsCount() == 0 then
-        player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.POWER_SANDALS)
+        player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.POWER_SANDALS)
     else
-        player:addItem(xi.items.POWER_SANDALS)
-        player:messageSpecial(ID.text.ITEM_OBTAINED, xi.items.POWER_SANDALS)
+        player:addItem(xi.item.POWER_SANDALS)
+        player:messageSpecial(ID.text.ITEM_OBTAINED, xi.item.POWER_SANDALS)
         move(npc)
     end
 end

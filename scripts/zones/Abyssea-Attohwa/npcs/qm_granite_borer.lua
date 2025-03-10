@@ -10,11 +10,11 @@ require('scripts/globals/abyssea')
 local entity = {}
 
 entity.onTrade = function(player, npc, trade)
-    xi.abyssea.qmOnTrade(player, npc, trade, ID.mob.GRANITE_BORER, { xi.items.WITHERED_COCOON })
+    xi.abyssea.qmOnTrade(player, npc, trade, ID.mob.GRANITE_BORER, { xi.item.WITHERED_COCOON })
 end
 
 entity.onTrigger = function(player, npc)
-    xi.abyssea.qmOnTrigger(player, npc, 0, 0, { xi.items.WITHERED_COCOON })
+    xi.abyssea.qmOnTrigger(player, npc, 0, 0, { xi.item.WITHERED_COCOON })
 end
 
 entity.onEventUpdate = function(player, csid, option)

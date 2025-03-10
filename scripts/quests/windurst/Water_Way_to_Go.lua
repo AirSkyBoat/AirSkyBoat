@@ -31,14 +31,14 @@ quest.sections =
 
         [xi.zone.WINDURST_WATERS] =
         {
-            ['Ohbiru-Dohbiru'] = quest:progressEvent(352, 0, xi.items.CANTEEN_OF_GIDDEUS_WATER),
+            ['Ohbiru-Dohbiru'] = quest:progressEvent(352, 0, xi.item.CANTEEN_OF_GIDDEUS_WATER),
 
             onEventFinish =
             {
                 [352] = function(player, csid, option, npc)
                     if
                         option == 0 and
-                        npcUtil.giveItem(player, xi.items.RHINOSTERY_CANTEEN)
+                        npcUtil.giveItem(player, xi.item.RHINOSTERY_CANTEEN)
                     then
                         quest:begin(player)
                     end
@@ -57,7 +57,7 @@ quest.sections =
             ['Giddeus_Spring'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.RHINOSTERY_CANTEEN) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.RHINOSTERY_CANTEEN) then
                         return quest:progressEvent(55)
                     end
                 end,
@@ -66,7 +66,7 @@ quest.sections =
             onEventFinish =
             {
                 [55] = function(player, csid, option, npc)
-                    if npcUtil.giveItem(player, xi.items.CANTEEN_OF_GIDDEUS_WATER) then
+                    if npcUtil.giveItem(player, xi.item.CANTEEN_OF_GIDDEUS_WATER) then
                         player:confirmTrade()
                     end
                 end,
@@ -78,15 +78,15 @@ quest.sections =
             ['Ohbiru-Dohbiru'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.CANTEEN_OF_GIDDEUS_WATER) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.CANTEEN_OF_GIDDEUS_WATER) then
                         return quest:progressEvent(355, 900)
                     end
                 end,
 
                 onTrigger = function(player, npc)
                     if
-                        not player:findItem(xi.items.RHINOSTERY_CANTEEN) and
-                        not player:findItem(xi.items.CANTEEN_OF_GIDDEUS_WATER)
+                        not player:findItem(xi.item.RHINOSTERY_CANTEEN) and
+                        not player:findItem(xi.item.CANTEEN_OF_GIDDEUS_WATER)
                     then
                         return quest:progressEvent(354)
                     else
@@ -98,7 +98,7 @@ quest.sections =
             onEventFinish =
             {
                 [354] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.RHINOSTERY_CANTEEN)
+                    npcUtil.giveItem(player, xi.item.RHINOSTERY_CANTEEN)
                 end,
 
                 [355] = function(player, csid, option, npc)
@@ -126,7 +126,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.CANTEEN_OF_GIDDEUS_WATER) and
+                        npcUtil.tradeHasExactly(trade, xi.item.CANTEEN_OF_GIDDEUS_WATER) and
                         quest:getVar(player, "waterRepeat") == 1
                     then
                         return quest:progressEvent(355, 900)
@@ -138,20 +138,20 @@ quest.sections =
                         not player:getQuestStatus(xi.quest.log_id.WINDURST, xi.quest.id.windurst.CURSES_FOILED_A_GOLEM) ~= QUEST_ACCEPTED and
                         quest:getVar(player, "waterRepeat") == 0
                     then
-                        return quest:progressEvent(352, 0, xi.items.CANTEEN_OF_GIDDEUS_WATER)
+                        return quest:progressEvent(352, 0, xi.item.CANTEEN_OF_GIDDEUS_WATER)
                     elseif
                         quest:getVar(player, "waterRepeat") == 1
                     then
                         if
-                            not player:findItem(xi.items.RHINOSTERY_CANTEEN) and
-                            not player:findItem(xi.items.CANTEEN_OF_GIDDEUS_WATER)
+                            not player:findItem(xi.item.RHINOSTERY_CANTEEN) and
+                            not player:findItem(xi.item.CANTEEN_OF_GIDDEUS_WATER)
                         then
                             return quest:progressEvent(354)
                         else
                             return quest:event(353)
                         end
                     else
-                        return quest:event(356, 0, xi.items.CANTEEN_OF_GIDDEUS_WATER)
+                        return quest:event(356, 0, xi.item.CANTEEN_OF_GIDDEUS_WATER)
                     end
                 end,
             },
@@ -161,14 +161,14 @@ quest.sections =
                 [352] = function(player, csid, option, npc)
                     if
                         option == 0 and
-                        npcUtil.giveItem(player, xi.items.RHINOSTERY_CANTEEN)
+                        npcUtil.giveItem(player, xi.item.RHINOSTERY_CANTEEN)
                     then
                         quest:setVar(player, "waterRepeat", 1)
                     end
                 end,
 
                 [354] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.RHINOSTERY_CANTEEN)
+                    npcUtil.giveItem(player, xi.item.RHINOSTERY_CANTEEN)
                 end,
 
                 [355] = function(player, csid, option, npc)
@@ -187,7 +187,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.RHINOSTERY_CANTEEN) and
+                        npcUtil.tradeHasExactly(trade, xi.item.RHINOSTERY_CANTEEN) and
                         quest:getVar(player, "waterRepeat") == 1
                     then
                         return quest:progressEvent(55)
@@ -198,7 +198,7 @@ quest.sections =
             onEventFinish =
             {
                 [55] = function(player, csid, option, npc)
-                    if npcUtil.giveItem(player, xi.items.CANTEEN_OF_GIDDEUS_WATER) then
+                    if npcUtil.giveItem(player, xi.item.CANTEEN_OF_GIDDEUS_WATER) then
                         player:confirmTrade()
                     end
                 end,

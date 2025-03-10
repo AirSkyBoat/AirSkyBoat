@@ -187,7 +187,7 @@ for _, npcEntry in pairs(hourglassVendors) do
             if
                 gil == xi.settings.main.TIMELESS_HOURGLASS_COST and
                 count == 1 and
-                not player:hasItem(xi.items.TIMELESS_HOURGLASS)
+                not player:hasItem(xi.item.TIMELESS_HOURGLASS)
             then
                 player:startEvent(eventId + 4)
             -- currency exchanges
@@ -227,7 +227,7 @@ for _, npcEntry in pairs(hourglassVendors) do
     m:addOverride(string.format('xi.zones.%s.npcs.%s.onTrigger', npcEntry[1], npcEntry[2]), function(player, npc)
         local eventId = npcEntry[5]
         if player:hasKeyItem(xi.ki.VIAL_OF_SHROUDED_SAND) then
-            player:startEvent(eventId + 3, npcEntry[3][1], xi.settings.main.CURRENCY_EXCHANGE_RATE, npcEntry[3][2], xi.settings.main.CURRENCY_EXCHANGE_RATE, npcEntry[3][3], xi.settings.main.TIMELESS_HOURGLASS_COST, xi.items.TIMELESS_HOURGLASS, xi.settings.main.TIMELESS_HOURGLASS_COST)
+            player:startEvent(eventId + 3, npcEntry[3][1], xi.settings.main.CURRENCY_EXCHANGE_RATE, npcEntry[3][2], xi.settings.main.CURRENCY_EXCHANGE_RATE, npcEntry[3][3], xi.settings.main.TIMELESS_HOURGLASS_COST, xi.item.TIMELESS_HOURGLASS, xi.settings.main.TIMELESS_HOURGLASS_COST)
         else
             player:startEvent(eventId)
         end
@@ -265,11 +265,11 @@ for _, npcEntry in pairs(hourglassVendors) do
         local eventId = npcEntry[5]
         if csid == eventId + 4 then -- Bought hourglass
             if player:getFreeSlotsCount() == 0 then
-                player:messageSpecial(zones[player:getZoneID()].text.ITEM_CANNOT_BE_OBTAINED, xi.items.TIMELESS_HOURGLASS)
+                player:messageSpecial(zones[player:getZoneID()].text.ITEM_CANNOT_BE_OBTAINED, xi.item.TIMELESS_HOURGLASS)
             else
                 player:tradeComplete()
-                player:addItem(xi.items.TIMELESS_HOURGLASS)
-                player:messageSpecial(zones[player:getZoneID()].text.ITEM_OBTAINED, xi.items.TIMELESS_HOURGLASS)
+                player:addItem(xi.item.TIMELESS_HOURGLASS)
+                player:messageSpecial(zones[player:getZoneID()].text.ITEM_OBTAINED, xi.item.TIMELESS_HOURGLASS)
             end
         elseif csid == eventId + 5 then -- Currency conversion to Singles
             if player:getFreeSlotsCount() == 0 then

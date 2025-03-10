@@ -16,7 +16,7 @@ itemObject.onItemEquip = function(player, item)
                 if
                     playerAttkedListener:isPC() and
                     playerAttkedListener:getQuestStatus(xi.quest.log_id.BASTOK, xi.quest.id.bastok.BLADE_OF_DARKNESS) >= QUEST_ACCEPTED and
-                    playerAttkedListener:getEquipID(xi.slot.MAIN) == xi.items.CHAOSBRINGER and
+                    playerAttkedListener:getEquipID(xi.slot.MAIN) == xi.item.CHAOSBRINGER and
                     mobAttkedListener:getHP() == 0
                 then
                     playerAttkedListener:incrementCharVar("ChaosbringerKills", 1)

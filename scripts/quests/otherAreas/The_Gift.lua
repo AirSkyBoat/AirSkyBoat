@@ -13,7 +13,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.THE_
 
 quest.reward =
 {
-    item = xi.items.SLEEP_DAGGER,
+    item = xi.item.SLEEP_DAGGER,
     title = xi.title.SAVIOR_OF_LOVE
 }
 
@@ -28,7 +28,7 @@ quest.sections =
 
         [xi.zone.SELBINA] =
         {
-            ['Oswald'] = quest:event(70, xi.items.DANCESHROOM),
+            ['Oswald'] = quest:event(70, xi.item.DANCESHROOM),
 
             onEventFinish =
             {
@@ -51,8 +51,8 @@ quest.sections =
             ['Oswald'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.DANCESHROOM) then
-                        return quest:progressEvent(72, 0, xi.items.DANCESHROOM)
+                    if npcUtil.tradeHasExactly(trade, xi.item.DANCESHROOM) then
+                        return quest:progressEvent(72, 0, xi.item.DANCESHROOM)
                     end
                 end,
 

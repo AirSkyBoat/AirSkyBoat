@@ -422,7 +422,7 @@ xi.additionalEffect.attack = function(attacker, defender, baseAttackDamage, item
     elseif addType == xi.additionalEffect.procType.BRIGAND then
         if
             defender:getPool() == 531 and
-            attacker:getEquipID(xi.slot.MAIN) == xi.items.BUCCANEERS_KNIFE
+            attacker:getEquipID(xi.slot.MAIN) == xi.item.BUCCANEERS_KNIFE
         then
             defender:setMod(xi.mod.DMG, 0)
             defender:setLocalVar("killable", 1)

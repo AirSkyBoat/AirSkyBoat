@@ -34,7 +34,7 @@ quest.reward =
 {
     fame     = 120,
     fameArea = xi.quest.fame_area.WINDURST,
-    item     = xi.items.PROMISE_BADGE,
+    item     = xi.item.PROMISE_BADGE,
 }
 
 quest.sections =
@@ -202,16 +202,16 @@ quest.sections =
                     if player:hasKeyItem(xi.ki.INVISIBLE_MAN_STICKER) then
                         return quest:event(800)
                     elseif quest:getVar(player, 'Chamama') > 0 then
-                        return quest:event(798, 0, xi.items.CLUMP_OF_SHOALWEED, xi.ki.INVISIBLE_MAN_STICKER)
+                        return quest:event(798, 0, xi.item.CLUMP_OF_SHOALWEED, xi.ki.INVISIBLE_MAN_STICKER)
                     else
-                        return quest:progressEvent(797, 0, xi.items.CLUMP_OF_SHOALWEED, xi.ki.INVISIBLE_MAN_STICKER)
+                        return quest:progressEvent(797, 0, xi.item.CLUMP_OF_SHOALWEED, xi.ki.INVISIBLE_MAN_STICKER)
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Chamama') == 1 and
-                        npcUtil.tradeHasExactly(trade, xi.items.CLUMP_OF_SHOALWEED) and
+                        npcUtil.tradeHasExactly(trade, xi.item.CLUMP_OF_SHOALWEED) and
                         not player:hasKeyItem(xi.ki.INVISIBLE_MAN_STICKER)
                     then
                         return quest:progressEvent(799, 0, 0, xi.ki.INVISIBLE_MAN_STICKER)

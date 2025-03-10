@@ -153,7 +153,7 @@ quest.sections =
                 end,
 
                 [10154] = function(player, csid, option, npc)
-                    local dancersCasaque = xi.items.DANCERS_CASAQUE_F - player:getGender()
+                    local dancersCasaque = xi.item.DANCERS_CASAQUE_F - player:getGender()
 
                     if npcUtil.giveItem(player, dancersCasaque) then
                         quest:complete(player)
@@ -176,7 +176,7 @@ quest.sections =
                 end,
 
                 [10211] = function(player, csid, option, npc)
-                    local dancersCasaque = xi.items.DANCERS_CASAQUE_F - player:getGender()
+                    local dancersCasaque = xi.item.DANCERS_CASAQUE_F - player:getGender()
 
                     if npcUtil.giveItem(player, dancersCasaque) then
                         quest:complete(player)

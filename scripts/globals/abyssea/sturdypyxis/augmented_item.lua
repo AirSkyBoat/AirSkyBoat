@@ -14,65 +14,65 @@ local augdrops =
 {
     [xi.zone.ABYSSEA_KONSCHTAT] =
     {
-        xi.items.DARK_RING,
-        xi.items.TOWER_SHIELD,
-        xi.items.WIVRE_HAIRPIN,
+        xi.item.DARK_RING,
+        xi.item.TOWER_SHIELD,
+        xi.item.WIVRE_HAIRPIN,
     },
 
     [xi.zone.ABYSSEA_TAHRONGI] =
     {
-        xi.items.ADAMAN_BARBUTA,
-        xi.items.DEMONS_RING,
-        xi.items.WIVRE_GORGET,
+        xi.item.ADAMAN_BARBUTA,
+        xi.item.DEMONS_RING,
+        xi.item.WIVRE_GORGET,
     },
 
     [xi.zone.ABYSSEA_LA_THEINE] =
     {
-        xi.items.JEWELED_COLLAR,
-        xi.items.RASETSU_JINPACHI,
-        xi.items.TARUTARU_SASH,
+        xi.item.JEWELED_COLLAR,
+        xi.item.RASETSU_JINPACHI,
+        xi.item.TARUTARU_SASH,
     },
 
     [xi.zone.ABYSSEA_ATTOHWA] =
     {
-        xi.items.GLEAMING_SPEAR,
-        xi.items.LORE_SLOPS,
-        xi.items.VERSA_MUFFLERS,
+        xi.item.GLEAMING_SPEAR,
+        xi.item.LORE_SLOPS,
+        xi.item.VERSA_MUFFLERS,
     },
 
     [xi.zone.ABYSSEA_MISAREAUX] =
     {
-        xi.items.GULES_LEGGINGS,
-        xi.items.GLEAMING_ZAGHNAL,
-        xi.items.LIGHT_EARRING,
+        xi.item.GULES_LEGGINGS,
+        xi.item.GLEAMING_ZAGHNAL,
+        xi.item.LIGHT_EARRING,
     },
 
     [xi.zone.ABYSSEA_VUNKERL] =
     {
-        xi.items.DIAMOND_RING,
-        xi.items.GULES_MITTENS,
-        xi.items.LORE_SABOTS,
+        xi.item.DIAMOND_RING,
+        xi.item.GULES_MITTENS,
+        xi.item.LORE_SABOTS,
     },
 
     [xi.zone.ABYSSEA_ALTEPA] =
     {
-        xi.items.FIRMAMENT,
-        xi.items.GUISARME,
-        xi.items.RIBAULDEQUIN,
+        xi.item.FIRMAMENT,
+        xi.item.GUISARME,
+        xi.item.RIBAULDEQUIN,
     },
 
     [xi.zone.ABYSSEA_ULEGUERAND] =
     {
-        xi.items.DIRE_SCYTHE,
-        xi.items.SAVATE_FISTS,
-        xi.items.VODUN_MACE,
+        xi.item.DIRE_SCYTHE,
+        xi.item.SAVATE_FISTS,
+        xi.item.VODUN_MACE,
     },
 
     [xi.zone.ABYSSEA_GRAUBERG] =
     {
-        xi.items.DOOM_TABAR,
-        xi.items.YATAGHAN,
-        xi.items.YUKITSUGU,
+        xi.item.DOOM_TABAR,
+        xi.item.YATAGHAN,
+        xi.item.YUKITSUGU,
     },
 }
 
@@ -82,7 +82,7 @@ local augdrops =
 ---------------------------------------------------------------------------------------------
 local augs =
 {
-    [xi.items.DARK_RING] =
+    [xi.item.DARK_RING] =
     {
         augments =
         {
@@ -95,7 +95,7 @@ local augs =
         },
     },
 
-    [xi.items.TOWER_SHIELD] =
+    [xi.item.TOWER_SHIELD] =
     {
         augments =
         {
@@ -108,7 +108,7 @@ local augs =
         },
     },
 
-    [xi.items.WIVRE_HAIRPIN] =
+    [xi.item.WIVRE_HAIRPIN] =
     {
         augments =
         {
@@ -121,7 +121,7 @@ local augs =
         },
     },
 
-    [xi.items.ADAMAN_BARBUTA] =
+    [xi.item.ADAMAN_BARBUTA] =
     {
         augments =
         {
@@ -135,7 +135,7 @@ local augs =
         },
     },
 
-    [xi.items.DEMONS_RING] =
+    [xi.item.DEMONS_RING] =
     {
         augments =
         {
@@ -149,7 +149,7 @@ local augs =
         },
     },
 
-    [xi.items.WIVRE_GORGET] =
+    [xi.item.WIVRE_GORGET] =
     {
         augments =
         {
@@ -162,7 +162,7 @@ local augs =
         },
     },
 
-    [xi.items.JEWELED_COLLAR] =
+    [xi.item.JEWELED_COLLAR] =
     {
         augments =
         {
@@ -178,7 +178,7 @@ local augs =
         },
     },
 
-    [xi.items.RASETSU_JINPACHI] =
+    [xi.item.RASETSU_JINPACHI] =
     {
         augments =
         {
@@ -190,7 +190,7 @@ local augs =
         },
     },
 
-    [xi.items.TARUTARU_SASH] =
+    [xi.item.TARUTARU_SASH] =
     {
         augments =
         {
@@ -203,7 +203,7 @@ local augs =
         },
     },
 
-    [xi.items.GLEAMING_SPEAR] =
+    [xi.item.GLEAMING_SPEAR] =
     {
         augments =
         {
@@ -220,7 +220,7 @@ local augs =
         },
     },
 
-    [xi.items.LORE_SLOPS] =
+    [xi.item.LORE_SLOPS] =
     {
         augments =
         {
@@ -232,7 +232,7 @@ local augs =
         },
     },
 
-    [xi.items.VERSA_MUFFLERS] =
+    [xi.item.VERSA_MUFFLERS] =
     {
         augments =
         {
@@ -245,7 +245,7 @@ local augs =
         },
     },
 
-    [xi.items.GULES_LEGGINGS] =
+    [xi.item.GULES_LEGGINGS] =
     {
         augments =
         {
@@ -258,7 +258,7 @@ local augs =
         },
     },
 
-    [xi.items.GLEAMING_ZAGHNAL] =
+    [xi.item.GLEAMING_ZAGHNAL] =
     {
         augments =
         {
@@ -270,7 +270,7 @@ local augs =
         },
     },
 
-    [xi.items.LIGHT_EARRING] =
+    [xi.item.LIGHT_EARRING] =
     {
         augments =
         {
@@ -283,7 +283,7 @@ local augs =
         },
     },
 
-    [xi.items.DIAMOND_RING] =
+    [xi.item.DIAMOND_RING] =
     {
         augments =
         {
@@ -295,7 +295,7 @@ local augs =
         },
     },
 
-    [xi.items.GULES_MITTENS] =
+    [xi.item.GULES_MITTENS] =
     {
         augments =
         {
@@ -307,7 +307,7 @@ local augs =
         },
     },
 
-    [xi.items.LORE_SABOTS] =
+    [xi.item.LORE_SABOTS] =
     {
         augments =
         {
@@ -319,7 +319,7 @@ local augs =
         },
     },
 
-    [xi.items.FIRMAMENT] =
+    [xi.item.FIRMAMENT] =
     {
         augments =
         {
@@ -331,7 +331,7 @@ local augs =
         },
     },
 
-    [xi.items.GUISARME] =
+    [xi.item.GUISARME] =
     {
         augments =
         {
@@ -344,7 +344,7 @@ local augs =
         },
     },
 
-    [xi.items.RIBAULDEQUIN] =
+    [xi.item.RIBAULDEQUIN] =
     {
         augments =
         {
@@ -357,7 +357,7 @@ local augs =
         },
     },
 
-    [xi.items.DIRE_SCYTHE] =
+    [xi.item.DIRE_SCYTHE] =
     {
         augments =
         {
@@ -372,7 +372,7 @@ local augs =
         },
     },
 
-    [xi.items.SAVATE_FISTS] =
+    [xi.item.SAVATE_FISTS] =
     {
         augments =
         {
@@ -384,7 +384,7 @@ local augs =
         },
     },
 
-    [xi.items.VODUN_MACE] =
+    [xi.item.VODUN_MACE] =
     {
         augments =
         {
@@ -397,7 +397,7 @@ local augs =
         },
     },
 
-    [xi.items.DOOM_TABAR] =
+    [xi.item.DOOM_TABAR] =
     {
         augments =
         {
@@ -409,7 +409,7 @@ local augs =
         },
     },
 
-    [xi.items.YATAGHAN] =
+    [xi.item.YATAGHAN] =
     {
         augments =
         {
@@ -422,7 +422,7 @@ local augs =
         },
     },
 
-    [xi.items.YUKITSUGU] =
+    [xi.item.YUKITSUGU] =
     {
         augments =
         {
@@ -444,33 +444,33 @@ local augs =
 -------------------------------------------------------------------------------
 local augTierDeduction =
 {
-    [xi.items.DARK_RING       ] = { 3, 3, 3, 2, 0 },
-    [xi.items.TOWER_SHIELD    ] = { 5, 2, 2, 0, 0 },
-    [xi.items.WIVRE_HAIRPIN   ] = { 3, 3, 3, 2, 0 },
-    [xi.items.ADAMAN_BARBUTA  ] = { 6, 6, 6, 4, 0 },
-    [xi.items.DEMONS_RING     ] = { 4, 4, 4, 3, 0 },
-    [xi.items.WIVRE_GORGET    ] = { 3, 3, 3, 0, 0 },
-    [xi.items.JEWELED_COLLAR  ] = { 7, 7, 3, 2, 0 },
-    [xi.items.RASETSU_JINPACHI] = { 2, 2, 2, 0, 0 },
-    [xi.items.TARUTARU_SASH   ] = { 5, 5, 3, 2, 0 },
-    [xi.items.GLEAMING_SPEAR  ] = { 6, 5, 4, 3, 0 },
-    [xi.items.LORE_SLOPS      ] = { 3, 3, 2, 0, 0 },
-    [xi.items.VERSA_MUFFLERS  ] = { 2, 2, 2, 0, 0 },
-    [xi.items.GULES_LEGGINGS  ] = { 4, 4, 3, 0, 0 },
-    [xi.items.GLEAMING_ZAGHNAL] = { 4, 4, 2, 0, 0 },
-    [xi.items.LIGHT_EARRING   ] = { 3, 3, 3, 0, 0 },
-    [xi.items.DIAMOND_RING    ] = { 4, 4, 2, 0, 0 },
-    [xi.items.GULES_MITTENS   ] = { 3, 3, 2, 0, 0 },
-    [xi.items.LORE_SABOTS     ] = { 2, 2, 2, 1, 0 },
-    [xi.items.FIRMAMENT       ] = { 4, 4, 3, 2, 0 },
-    [xi.items.GUISARME        ] = { 4, 4, 3, 2, 0 },
-    [xi.items.RIBAULDEQUIN    ] = { 4, 4, 3, 2, 0 },
-    [xi.items.DIRE_SCYTHE     ] = { 6, 6, 4, 2, 0 },
-    [xi.items.SAVATE_FISTS    ] = { 3, 3, 2, 0, 0 },
-    [xi.items.VODUN_MACE      ] = { 4, 4, 3, 2, 0 },
-    [xi.items.DOOM_TABAR      ] = { 3, 3, 2, 0, 0 },
-    [xi.items.YATAGHAN        ] = { 4, 4, 3, 2, 0 },
-    [xi.items.YUKITSUGU       ] = { 3, 3, 2, 0, 0 },
+    [xi.item.DARK_RING       ] = { 3, 3, 3, 2, 0 },
+    [xi.item.TOWER_SHIELD    ] = { 5, 2, 2, 0, 0 },
+    [xi.item.WIVRE_HAIRPIN   ] = { 3, 3, 3, 2, 0 },
+    [xi.item.ADAMAN_BARBUTA  ] = { 6, 6, 6, 4, 0 },
+    [xi.item.DEMONS_RING     ] = { 4, 4, 4, 3, 0 },
+    [xi.item.WIVRE_GORGET    ] = { 3, 3, 3, 0, 0 },
+    [xi.item.JEWELED_COLLAR  ] = { 7, 7, 3, 2, 0 },
+    [xi.item.RASETSU_JINPACHI] = { 2, 2, 2, 0, 0 },
+    [xi.item.TARUTARU_SASH   ] = { 5, 5, 3, 2, 0 },
+    [xi.item.GLEAMING_SPEAR  ] = { 6, 5, 4, 3, 0 },
+    [xi.item.LORE_SLOPS      ] = { 3, 3, 2, 0, 0 },
+    [xi.item.VERSA_MUFFLERS  ] = { 2, 2, 2, 0, 0 },
+    [xi.item.GULES_LEGGINGS  ] = { 4, 4, 3, 0, 0 },
+    [xi.item.GLEAMING_ZAGHNAL] = { 4, 4, 2, 0, 0 },
+    [xi.item.LIGHT_EARRING   ] = { 3, 3, 3, 0, 0 },
+    [xi.item.DIAMOND_RING    ] = { 4, 4, 2, 0, 0 },
+    [xi.item.GULES_MITTENS   ] = { 3, 3, 2, 0, 0 },
+    [xi.item.LORE_SABOTS     ] = { 2, 2, 2, 1, 0 },
+    [xi.item.FIRMAMENT       ] = { 4, 4, 3, 2, 0 },
+    [xi.item.GUISARME        ] = { 4, 4, 3, 2, 0 },
+    [xi.item.RIBAULDEQUIN    ] = { 4, 4, 3, 2, 0 },
+    [xi.item.DIRE_SCYTHE     ] = { 6, 6, 4, 2, 0 },
+    [xi.item.SAVATE_FISTS    ] = { 3, 3, 2, 0, 0 },
+    [xi.item.VODUN_MACE      ] = { 4, 4, 3, 2, 0 },
+    [xi.item.DOOM_TABAR      ] = { 3, 3, 2, 0, 0 },
+    [xi.item.YATAGHAN        ] = { 4, 4, 3, 2, 0 },
+    [xi.item.YUKITSUGU       ] = { 3, 3, 2, 0, 0 },
 }
 
 local function GetAugItemID(npc, slot)

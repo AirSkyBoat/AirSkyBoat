@@ -57,7 +57,7 @@ quest.sections =
                     if prevZone == xi.zone.PALBOROUGH_MINES then
                         if quest:getVar(player, 'Prog') == 0 then
                             return 130
-                        elseif not player:hasItem(xi.items.CHAOSBRINGER) then
+                        elseif not player:hasItem(xi.item.CHAOSBRINGER) then
                             return 131
                         end
                     end
@@ -67,13 +67,13 @@ quest.sections =
             onEventFinish =
             {
                 [130] = function(player, csid, option, npc)
-                    if npcUtil.giveItem(player, xi.items.CHAOSBRINGER) then
+                    if npcUtil.giveItem(player, xi.item.CHAOSBRINGER) then
                         quest:setVar(player, 'Prog', 1)
                     end
                 end,
 
                 [131] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.items.CHAOSBRINGER)
+                    npcUtil.giveItem(player, xi.item.CHAOSBRINGER)
                 end,
             },
         },

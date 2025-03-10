@@ -57,7 +57,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.ENGRAVED_KEY) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.ENGRAVED_KEY) then
                         return quest:progressEvent(658)
                     end
                 end,

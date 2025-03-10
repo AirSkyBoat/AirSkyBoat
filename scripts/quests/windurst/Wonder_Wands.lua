@@ -18,7 +18,7 @@ quest.reward =
     fame     = 150,
     fameArea = xi.quest.fame_area.WINDURST,
     title    = xi.title.DOCTOR_SHANTOTTOS_GUINEA_PIG,
-    item     = xi.items.NEW_MOON_ARMLETS,
+    item     = xi.item.NEW_MOON_ARMLETS,
     gil      = 4800,
 }
 
@@ -57,19 +57,19 @@ quest.sections =
             ['Hakkuru-Rinkuru'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.OAK_STAFF, xi.items.MYTHRIL_ROD, xi.items.ROSE_WAND }) then
-                        return quest:progressEvent(265, 0, xi.items.OAK_STAFF, xi.items.MYTHRIL_ROD, xi.items.ROSE_WAND)
+                    if npcUtil.tradeHasExactly(trade, { xi.item.OAK_STAFF, xi.item.MYTHRIL_ROD, xi.item.ROSE_WAND }) then
+                        return quest:progressEvent(265, 0, xi.item.OAK_STAFF, xi.item.MYTHRIL_ROD, xi.item.ROSE_WAND)
                     end
                 end,
 
                 onTrigger = function(player, npc)
-                    return quest:event(260, 0, xi.items.OAK_STAFF, xi.items.MYTHRIL_ROD, xi.items.ROSE_WAND)
+                    return quest:event(260, 0, xi.item.OAK_STAFF, xi.item.MYTHRIL_ROD, xi.item.ROSE_WAND)
                 end,
             },
 
-            ['Goltata']        = quest:event(257, 0, 0, xi.items.OAK_STAFF),
-            ['Yaman-Hachuman'] = quest:event(256, 0, 0, 0, xi.items.MYTHRIL_ROD),
-            ['Ohruru']         = quest:event(258, 0, xi.items.ROSE_WAND),
+            ['Goltata']        = quest:event(257, 0, 0, xi.item.OAK_STAFF),
+            ['Yaman-Hachuman'] = quest:event(256, 0, 0, 0, xi.item.MYTHRIL_ROD),
+            ['Ohruru']         = quest:event(258, 0, xi.item.ROSE_WAND),
 
             onEventFinish =
             {
@@ -96,9 +96,9 @@ quest.sections =
                 [267] = function(player, csid, option, npc)
                     local wands =
                     {
-                        xi.items.MYTHRIL_ROD,
-                        xi.items.OAK_STAFF,
-                        xi.items.ROSE_WAND,
+                        xi.item.MYTHRIL_ROD,
+                        xi.item.OAK_STAFF,
+                        xi.item.ROSE_WAND,
                     }
 
                     table.remove(wands, math.random(1, #wands))

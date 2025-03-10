@@ -18,7 +18,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
-    item = xi.items.SCROLL_OF_TELEPORT_HOLLA,
+    item = xi.item.SCROLL_OF_TELEPORT_HOLLA,
     title = xi.title.PILGRIM_TO_HOLLA,
 }
 

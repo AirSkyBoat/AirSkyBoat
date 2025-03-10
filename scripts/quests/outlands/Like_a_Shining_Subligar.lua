@@ -22,7 +22,7 @@ quest.reward =
     fameArea = xi.quest.fame_area.NORG,
     fame     = 100,
     title    = xi.title.LOOKS_SUBLIME_IN_A_SUBLIGAR,
-    item     = xi.items.SCROLL_OF_KURAYAMI_ICHI,
+    item     = xi.item.SCROLL_OF_KURAYAMI_ICHI,
 }
 
 quest.sections =
@@ -60,12 +60,12 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     local curNumTradedIn = quest:getVar(player, tradeTrackingVar)
-                    local numTradingInNow = trade:getItemQty(xi.items.RUSTY_SUBLIGAR)
+                    local numTradingInNow = trade:getItemQty(xi.item.RUSTY_SUBLIGAR)
                     local remainderNeeded = utils.clamp(requiredSubligars - curNumTradedIn, 0, requiredSubligars)
 
                     local clampedTrade = math.min(numTradingInNow, remainderNeeded) -- Only take the amount needed to complete the quest and nothing more
 
-                    if npcUtil.tradeHas(trade, { { xi.items.RUSTY_SUBLIGAR, clampedTrade } }) then
+                    if npcUtil.tradeHas(trade, { { xi.item.RUSTY_SUBLIGAR, clampedTrade } }) then
                         local totalWithTrade = curNumTradedIn + clampedTrade
                         successfulTradeNum = totalWithTrade
 

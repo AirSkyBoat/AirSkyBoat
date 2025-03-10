@@ -16,11 +16,11 @@ local m = Module:new("era_helm")
 -- Default items removed
 local itemsRemoved =
 {
-    xi.items.DRAGON_FRUIT,        -- 24 November  2007 (WotG)
-    xi.items.SPRIG_OF_DYERS_WOAD, -- 9 September  2008 (WotG)
-    xi.items.AQUILARIA_LOG,       -- 22 September 2010 (Abyssea)
-    xi.items.BUTTERPEAR,          -- 20 September 2011 (Abyssea)
-    xi.items.KAPOR_LOG,           -- 21 December  2011 (Abyssea)
+    xi.item.DRAGON_FRUIT,        -- 24 November  2007 (WotG)
+    xi.item.SPRIG_OF_DYERS_WOAD, -- 9 September  2008 (WotG)
+    xi.item.AQUILARIA_LOG,       -- 22 September 2010 (Abyssea)
+    xi.item.BUTTERPEAR,          -- 20 September 2011 (Abyssea)
+    xi.item.KAPOR_LOG,           -- 21 December  2011 (Abyssea)
 }
 
 --[[

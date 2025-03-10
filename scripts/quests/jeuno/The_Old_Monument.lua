@@ -22,7 +22,7 @@ quest.reward =
 {
     --Fame handled in end quest due to 3 nations getting fame.
     title = xi.title.RESEARCHER_OF_CLASSICS,
-    item  = xi.items.POETIC_PARCHMENT,
+    item  = xi.item.POETIC_PARCHMENT,
 }
 
 quest.sections =
@@ -107,18 +107,18 @@ quest.sections =
             ['Song_Runes'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.SHEET_OF_PARCHMENT) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.SHEET_OF_PARCHMENT) then
                         return quest:progressEvent(2)
                     end
                 end,
 
-                onTrigger = quest:messageSpecial(buburimuID.text.SONG_RUNES_REQUIRE, xi.items.SHEET_OF_PARCHMENT),
+                onTrigger = quest:messageSpecial(buburimuID.text.SONG_RUNES_REQUIRE, xi.item.SHEET_OF_PARCHMENT),
             },
 
             onEventFinish =
             {
                 [2] = function(player, csid, option, npc)
-                    player:messageSpecial(buburimuID.text.SONG_RUNES_WRITING, xi.items.SHEET_OF_PARCHMENT)
+                    player:messageSpecial(buburimuID.text.SONG_RUNES_WRITING, xi.item.SHEET_OF_PARCHMENT)
 
                     if quest:complete(player) then
                         player:confirmTrade()

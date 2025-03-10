@@ -7,16 +7,16 @@
 local itemObject = {}
 
 itemObject.onItemCheck = function(target)
-    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.DEDUCTIVE_BROCADE_OBI) ~= nil then
-        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.DEDUCTIVE_BROCADE_OBI)
+    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.DEDUCTIVE_BROCADE_OBI) ~= nil then
+        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.DEDUCTIVE_BROCADE_OBI)
     end
 
     return 0
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.DEDUCTIVE_BROCADE_OBI) then
-        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 60, 0, 0, 0, xi.items.DEDUCTIVE_BROCADE_OBI)
+    if target:hasEquipped(xi.item.DEDUCTIVE_BROCADE_OBI) then
+        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 60, 0, 0, 0, xi.item.DEDUCTIVE_BROCADE_OBI)
     end
 end
 

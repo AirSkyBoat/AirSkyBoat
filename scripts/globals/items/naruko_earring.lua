@@ -8,7 +8,7 @@ local itemObject = {}
 
 itemObject.onItemCheck = function(target)
     local effect = target:getStatusEffect(xi.effect.ENMITY_BOOST)
-    if effect ~= nil and effect:getItemSourceID() == xi.items.NARUKO_EARRING then
+    if effect ~= nil and effect:getItemSourceID() == xi.item.NARUKO_EARRING then
         target:delStatusEffect(xi.effect.ENMITY_BOOST)
     end
 
@@ -16,8 +16,8 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.NARUKO_EARRING) then
-        target:addStatusEffect(xi.effect.ENMITY_BOOST, 10, 0, 180, 0, 0, 0, xi.items.NARUKO_EARRING)
+    if target:hasEquipped(xi.item.NARUKO_EARRING) then
+        target:addStatusEffect(xi.effect.ENMITY_BOOST, 10, 0, 180, 0, 0, 0, xi.item.NARUKO_EARRING)
     end
 end
 

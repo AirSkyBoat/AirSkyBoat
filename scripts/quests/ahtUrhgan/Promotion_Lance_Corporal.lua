@@ -218,9 +218,9 @@ quest.sections =
                     local score = quest:getVar(player, 'Score')
 
                     if score == 1 then
-                        quest.reward.item = xi.items.IMPERIAL_GOLD_PIECE
+                        quest.reward.item = xi.item.IMPERIAL_GOLD_PIECE
                     elseif score == 2 then
-                        quest.reward.item = { xi.items.IMPERIAL_GOLD_PIECE, 2 }
+                        quest.reward.item = { xi.item.IMPERIAL_GOLD_PIECE, 2 }
                     end
 
                     if quest:complete(player) then

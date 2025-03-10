@@ -17,7 +17,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
-    item = xi.items.SCROLL_OF_DRAIN,
+    item = xi.item.SCROLL_OF_DRAIN,
 }
 
 quest.sections =
@@ -63,7 +63,7 @@ quest.sections =
             ['Novalmauge'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.VIAL_OF_BEASTMAN_BLOOD) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.VIAL_OF_BEASTMAN_BLOOD) then
                         return quest:progressEvent(12)
                     end
                 end,

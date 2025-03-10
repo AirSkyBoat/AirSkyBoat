@@ -18,7 +18,7 @@ quest.reward =
 {
     fame     = 20,
     fameArea = xi.quest.fame_area.WINDURST,
-    item     = xi.items.RANGERS_NECKLACE,
+    item     = xi.item.RANGERS_NECKLACE,
     title    = xi.title.THE_FANGED_ONE,
 }
 

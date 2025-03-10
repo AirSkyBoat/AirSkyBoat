@@ -16,7 +16,7 @@ quest.reward =
 {
     fame     = 80,
     fameArea = xi.quest.fame_area.WINDURST,
-    item     = xi.items.BRASS_ROD,
+    item     = xi.item.BRASS_ROD,
 }
 
 quest.sections =
@@ -28,7 +28,7 @@ quest.sections =
 
         [xi.zone.WINDURST_WALLS] =
         {
-            ['Shantotto'] = quest:event(171, 0, 0, 0, 0, 0, 0, xi.items.PINCH_OF_BOMB_ASH, xi.items.BONE_CHIP),
+            ['Shantotto'] = quest:event(171, 0, 0, 0, 0, 0, 0, xi.item.PINCH_OF_BOMB_ASH, xi.item.BONE_CHIP),
 
             onEventFinish =
             {
@@ -51,12 +51,12 @@ quest.sections =
             ['Shantotto'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.PINCH_OF_BOMB_ASH, { xi.items.BONE_CHIP, 2 } }) then
-                        return quest:progressEvent(173, 0, 0, 0, 0, 0, 0, xi.items.PINCH_OF_BOMB_ASH, xi.items.BONE_CHIP)
+                    if npcUtil.tradeHasExactly(trade, { xi.item.PINCH_OF_BOMB_ASH, { xi.item.BONE_CHIP, 2 } }) then
+                        return quest:progressEvent(173, 0, 0, 0, 0, 0, 0, xi.item.PINCH_OF_BOMB_ASH, xi.item.BONE_CHIP)
                     end
                 end,
 
-                onTrigger = quest:event(172, 0, 0, 0, 0, 0, 0, xi.items.PINCH_OF_BOMB_ASH, xi.items.BONE_CHIP)
+                onTrigger = quest:event(172, 0, 0, 0, 0, 0, 0, xi.item.PINCH_OF_BOMB_ASH, xi.item.BONE_CHIP)
             },
 
             onEventFinish =

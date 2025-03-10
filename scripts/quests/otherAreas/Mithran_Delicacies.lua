@@ -15,7 +15,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.MITH
 
 quest.reward =
 {
-    item = xi.items.BLACKENED_SIREDON,
+    item = xi.item.BLACKENED_SIREDON,
 }
 
 quest.sections =
@@ -27,7 +27,7 @@ quest.sections =
 
         [xi.zone.CARPENTERS_LANDING] =
         {
-            ['Anguenet'] = quest:progressEvent(21, 0, xi.items.MUDDY_SIREDON),
+            ['Anguenet'] = quest:progressEvent(21, 0, xi.item.MUDDY_SIREDON),
 
             onEventFinish =
             {
@@ -47,15 +47,15 @@ quest.sections =
 
         [xi.zone.CARPENTERS_LANDING] =
         {
-            ['Anguenet'] = quest:progressEvent(21, 0, xi.items.MUDDY_SIREDON),
+            ['Anguenet'] = quest:progressEvent(21, 0, xi.item.MUDDY_SIREDON),
 
             ['Lourdaude'] =
             {
                 onTrade = function(player, npc, trade)
                     if player:getFreeSlotsCount() == 0 then
-                        return quest:messageSpecial(carpentersID.text.FULL_INVENTORY_AFTER_TRADE, xi.items.BLACKENED_SIREDON)
+                        return quest:messageSpecial(carpentersID.text.FULL_INVENTORY_AFTER_TRADE, xi.item.BLACKENED_SIREDON)
                     elseif
-                        npcUtil.tradeHasExactly(trade,  xi.items.MUDDY_SIREDON) and
+                        npcUtil.tradeHasExactly(trade,  xi.item.MUDDY_SIREDON) and
                         quest:getVar(player, 'Status') == 0
                     then
                         return quest:progressEvent(24, 0, 0, 100)
@@ -102,9 +102,9 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if player:getFreeSlotsCount() == 0 then
-                        return quest:messageSpecial(carpentersID.text.FULL_INVENTORY_AFTER_TRADE, xi.items.BLACKENED_SIREDON)
+                        return quest:messageSpecial(carpentersID.text.FULL_INVENTORY_AFTER_TRADE, xi.item.BLACKENED_SIREDON)
                     elseif
-                        npcUtil.tradeHasExactly(trade,  xi.items.MUDDY_SIREDON) and
+                        npcUtil.tradeHasExactly(trade,  xi.item.MUDDY_SIREDON) and
                         quest:getVar(player, 'Status') == 0
                     then
                         return quest:progressEvent(24, 0, 0, 100)
@@ -134,7 +134,7 @@ quest.sections =
                     if quest:getVar(player, 'Status') == 1 then
                         quest:setVar(player, 'Status', 0)
                         player:confirmTrade()
-                        npcUtil.giveItem(player, xi.items.BLACKENED_SIREDON)
+                        npcUtil.giveItem(player, xi.item.BLACKENED_SIREDON)
                     end
                 end,
             },

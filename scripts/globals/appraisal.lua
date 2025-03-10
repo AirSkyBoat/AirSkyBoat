@@ -106,35 +106,35 @@ xi.appraisal.origin =
 
 xi.appraisal.unappraisedItems =
 {
-    xi.items.UNAPPRAISED_SWORD,
-    xi.items.UNAPPRAISED_DAGGER,
-    xi.items.UNAPPRAISED_POLEARM,
-    xi.items.UNAPPRAISED_AXE,
-    xi.items.UNAPPRAISED_BOW,
-    xi.items.UNAPPRAISED_GLOVES,
-    xi.items.UNAPPRAISED_FOOTWEAR,
-    xi.items.UNAPPRAISED_HEADPIECE,
-    xi.items.UNAPPRAISED_EARRING,
-    xi.items.UNAPPRAISED_RING,
-    xi.items.UNAPPRAISED_CAPE,
-    xi.items.UNAPPRAISED_SASH,
-    xi.items.UNAPPRAISED_SHIELD,
-    xi.items.UNAPPRAISED_NECKLACE,
-    xi.items.UNAPPRAISED_INGOT,
-    xi.items.UNAPPRAISED_POTION,
-    xi.items.UNAPPRAISED_CLOTH,
-    xi.items.UNAPPRAISED_BOX,
+    xi.item.UNAPPRAISED_SWORD,
+    xi.item.UNAPPRAISED_DAGGER,
+    xi.item.UNAPPRAISED_POLEARM,
+    xi.item.UNAPPRAISED_AXE,
+    xi.item.UNAPPRAISED_BOW,
+    xi.item.UNAPPRAISED_GLOVES,
+    xi.item.UNAPPRAISED_FOOTWEAR,
+    xi.item.UNAPPRAISED_HEADPIECE,
+    xi.item.UNAPPRAISED_EARRING,
+    xi.item.UNAPPRAISED_RING,
+    xi.item.UNAPPRAISED_CAPE,
+    xi.item.UNAPPRAISED_SASH,
+    xi.item.UNAPPRAISED_SHIELD,
+    xi.item.UNAPPRAISED_NECKLACE,
+    xi.item.UNAPPRAISED_INGOT,
+    xi.item.UNAPPRAISED_POTION,
+    xi.item.UNAPPRAISED_CLOTH,
+    xi.item.UNAPPRAISED_BOX,
 }
 
 xi.appraisal.appraisalItems =
 {
-    [xi.items.UNAPPRAISED_SWORD] =
+    [xi.item.UNAPPRAISED_SWORD] =
     {
         [xi.assault.mission.AZURE_EXPERIMENTS] =
         {
             items =
             {
-                { 1000, xi.items.MACUAHUITL_M1 },
+                { 1000, xi.item.MACUAHUITL_M1 },
             },
         },
 
@@ -142,7 +142,7 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 1000, xi.items.KILIJ },
+                { 1000, xi.item.KILIJ },
             },
         },
 
@@ -150,9 +150,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 550, xi.items.GUST_CLAYMORE },
-                { 400, xi.items.UCHIGATANA_P1 },
-                {  50, xi.items.DJINNBRINGER  },
+                { 550, xi.item.GUST_CLAYMORE },
+                { 400, xi.item.UCHIGATANA_P1 },
+                {  50, xi.item.DJINNBRINGER  },
             },
         },
 
@@ -160,11 +160,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 450, xi.items.GUST_CLAYMORE   },
-                { 300, xi.items.UCHIGATANA_P1   },
-                { 200, xi.items.PEALING_ANELACE },
-                { 100, xi.items.KAGIROI         },
-                {  50, xi.items.STORM_SCIMITAR  },
+                { 450, xi.item.GUST_CLAYMORE   },
+                { 300, xi.item.UCHIGATANA_P1   },
+                { 200, xi.item.PEALING_ANELACE },
+                { 100, xi.item.KAGIROI         },
+                {  50, xi.item.STORM_SCIMITAR  },
             },
         },
 
@@ -172,11 +172,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 100, xi.items.DJINNBRINGER    },
-                { 450, xi.items.GUST_CLAYMORE   },
-                {  50, xi.items.PEALING_NAGAN   },
-                { 350, xi.items.UCHIGATANA_P1   },
-                {  50, xi.items.KAGIROI         },
+                { 100, xi.item.DJINNBRINGER    },
+                { 450, xi.item.GUST_CLAYMORE   },
+                {  50, xi.item.PEALING_NAGAN   },
+                { 350, xi.item.UCHIGATANA_P1   },
+                {  50, xi.item.KAGIROI         },
             },
         },
 
@@ -184,10 +184,10 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 450, xi.items.GUST_CLAYMORE  },
-                { 300, xi.items.UCHIGATANA_P1  },
-                { 200, xi.items.DURANDAL       },
-                {  50, xi.items.SANGUINE_SWORD },
+                { 450, xi.item.GUST_CLAYMORE  },
+                { 300, xi.item.UCHIGATANA_P1  },
+                { 200, xi.item.DURANDAL       },
+                {  50, xi.item.SANGUINE_SWORD },
             },
         },
 
@@ -195,10 +195,10 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 450, xi.items.GUST_CLAYMORE },
-                { 300, xi.items.UCHIGATANA_P1 },
-                { 200, xi.items.HOTARUMARU    },
-                {  50, xi.items.KUMOKIRIMARU  },
+                { 450, xi.item.GUST_CLAYMORE },
+                { 300, xi.item.UCHIGATANA_P1 },
+                { 200, xi.item.HOTARUMARU    },
+                {  50, xi.item.KUMOKIRIMARU  },
             },
         },
 
@@ -206,9 +206,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 650, xi.items.GUST_CLAYMORE  },
-                { 300, xi.items.UCHIGATANA_P1  },
-                {  50, xi.items.KOSETSUSAMONJI },
+                { 650, xi.item.GUST_CLAYMORE  },
+                { 300, xi.item.UCHIGATANA_P1  },
+                {  50, xi.item.KOSETSUSAMONJI },
             },
         },
 
@@ -216,9 +216,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 650, xi.items.GUST_CLAYMORE    },
-                { 300, xi.items.UCHIGATANA_P1    },
-                {  50, xi.items.IMMORTALS_SHOTEL },
+                { 650, xi.item.GUST_CLAYMORE    },
+                { 300, xi.item.UCHIGATANA_P1    },
+                {  50, xi.item.IMMORTALS_SHOTEL },
             },
         },
 
@@ -226,9 +226,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 600, xi.items.CLAYMORE      },
-                { 350, xi.items.GUST_CLAYMORE },
-                {  50, xi.items.LOCKHEART     },
+                { 600, xi.item.CLAYMORE      },
+                { 350, xi.item.GUST_CLAYMORE },
+                {  50, xi.item.LOCKHEART     },
             },
         },
 
@@ -236,8 +236,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 750, xi.items.BRONZE_SWORD       },
-                { 250, xi.items.KATAYAMA_ICHIMONJI },
+                { 750, xi.item.BRONZE_SWORD       },
+                { 250, xi.item.KATAYAMA_ICHIMONJI },
             },
         },
 
@@ -245,9 +245,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 600, xi.items.BRONZE_SWORD   },
-                { 350, xi.items.XIPHOS         },
-                {  50, xi.items.GLOOM_CLAYMORE },
+                { 600, xi.item.BRONZE_SWORD   },
+                { 350, xi.item.XIPHOS         },
+                {  50, xi.item.GLOOM_CLAYMORE },
             },
         },
 
@@ -255,9 +255,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 600, xi.items.BRONZE_SWORD  },
-                { 350, xi.items.UCHIGATANA_P1 },
-                {  50, xi.items.NAMIKIRIMARU  },
+                { 600, xi.item.BRONZE_SWORD  },
+                { 350, xi.item.UCHIGATANA_P1 },
+                {  50, xi.item.NAMIKIRIMARU  },
             },
         },
 
@@ -265,9 +265,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 650, xi.items.BRONZE_SWORD  },
-                { 320, xi.items.UCHIGATANA_P1 },
-                {  30, xi.items.DAIHANNYA     },
+                { 650, xi.item.BRONZE_SWORD  },
+                { 320, xi.item.UCHIGATANA_P1 },
+                {  30, xi.item.DAIHANNYA     },
             },
         },
 
@@ -275,8 +275,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 750, xi.items.BRONZE_SWORD },
-                { 250, xi.items.KAMEWARI     },
+                { 750, xi.item.BRONZE_SWORD },
+                { 250, xi.item.KAMEWARI     },
             },
         },
 
@@ -284,25 +284,25 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 850, xi.items.BRONZE_SWORD },
-                { 150, xi.items.NADRS        },
+                { 850, xi.item.BRONZE_SWORD },
+                { 150, xi.item.NADRS        },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_DAGGER] =
+    [xi.item.UNAPPRAISED_DAGGER] =
     {
         [xi.assault.mission.COUNTING_SHEEP] =
         {
             items =
             {
-                { 300, xi.items.KYOFU              },
-                { 250, xi.items.HUSHED_DAGGER      },
-                { 200, xi.items.SPARK_DAGGER       },
-                { 100, xi.items.KATARS             },
-                {  50, xi.items.PONDEROUS_GULLY    },
-                {  50, xi.items.PONDEROUS_MANOPLES },
-                {  50, xi.items.PAHLUWAN_KATARS    },
+                { 300, xi.item.KYOFU              },
+                { 250, xi.item.HUSHED_DAGGER      },
+                { 200, xi.item.SPARK_DAGGER       },
+                { 100, xi.item.KATARS             },
+                {  50, xi.item.PONDEROUS_GULLY    },
+                {  50, xi.item.PONDEROUS_MANOPLES },
+                {  50, xi.item.PAHLUWAN_KATARS    },
             },
         },
 
@@ -310,11 +310,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 400, xi.items.KYOFU            },
-                { 250, xi.items.HUSHED_DAGGER    },
-                { 250, xi.items.SPARK_DAGGER     },
-                {  50, xi.items.ARGENT_DAGGER    },
-                {  50, xi.items.PALLADIUM_DAGGER },
+                { 400, xi.item.KYOFU            },
+                { 250, xi.item.HUSHED_DAGGER    },
+                { 250, xi.item.SPARK_DAGGER     },
+                {  50, xi.item.ARGENT_DAGGER    },
+                {  50, xi.item.PALLADIUM_DAGGER },
             },
         },
 
@@ -322,14 +322,14 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 350, xi.items.KYOFU              },
-                { 270, xi.items.HUSHED_DAGGER      },
-                { 270, xi.items.SPARK_DAGGER       },
-                {  50, xi.items.KARASUAGEHA        },
-                {  30, xi.items.KATARS             },
-                {  10, xi.items.TOJAKU             },
-                {  10, xi.items.PONDEROUS_GULLY    },
-                {  10, xi.items.PONDEROUS_MANOPLES },
+                { 350, xi.item.KYOFU              },
+                { 270, xi.item.HUSHED_DAGGER      },
+                { 270, xi.item.SPARK_DAGGER       },
+                {  50, xi.item.KARASUAGEHA        },
+                {  30, xi.item.KATARS             },
+                {  10, xi.item.TOJAKU             },
+                {  10, xi.item.PONDEROUS_GULLY    },
+                {  10, xi.item.PONDEROUS_MANOPLES },
             },
         },
 
@@ -338,14 +338,14 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 350, xi.items.KYOFU              },
-                { 270, xi.items.SPARK_DAGGER       },
-                { 150, xi.items.HUSHED_DAGGER      },
-                {  80, xi.items.KATARS             },
-                {  50, xi.items.PONDEROUS_GULLY    },
-                {  40, xi.items.PONDEROUS_MANOPLES },
-                {  30, xi.items.TOJAKU             },
-                {  30, xi.items.ASSASSINS_JAMBIYA  },
+                { 350, xi.item.KYOFU              },
+                { 270, xi.item.SPARK_DAGGER       },
+                { 150, xi.item.HUSHED_DAGGER      },
+                {  80, xi.item.KATARS             },
+                {  50, xi.item.PONDEROUS_GULLY    },
+                {  40, xi.item.PONDEROUS_MANOPLES },
+                {  30, xi.item.TOJAKU             },
+                {  30, xi.item.ASSASSINS_JAMBIYA  },
             },
         },
 
@@ -353,9 +353,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 700, xi.items.BRONZE_KNIFE  },
-                { 250, xi.items.KUNAI         },
-                {  50, xi.items.FRUIT_PUNCHES },
+                { 700, xi.item.BRONZE_KNIFE  },
+                { 250, xi.item.KUNAI         },
+                {  50, xi.item.FRUIT_PUNCHES },
             },
         },
 
@@ -363,8 +363,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 950, xi.items.BRONZE_KNIFE },
-                {  50, xi.items.NIKKARIAOE   },
+                { 950, xi.item.BRONZE_KNIFE },
+                {  50, xi.item.NIKKARIAOE   },
             },
         },
 
@@ -372,8 +372,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 950, xi.items.BRONZE_KNIFE },
-                {  50, xi.items.BEESTINGER   },
+                { 950, xi.item.BRONZE_KNIFE },
+                {  50, xi.item.BEESTINGER   },
             },
         },
 
@@ -381,8 +381,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 950, xi.items.KUNAI       },
-                {  50, xi.items.RETALIATORS },
+                { 950, xi.item.KUNAI       },
+                {  50, xi.item.RETALIATORS },
             },
         },
 
@@ -390,8 +390,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 950, xi.items.BRONZE_KNIFE  },
-                {  50, xi.items.KIDNEY_DAGGER },
+                { 950, xi.item.BRONZE_KNIFE  },
+                {  50, xi.item.KIDNEY_DAGGER },
             },
         },
 
@@ -399,8 +399,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.KUNAI   },
-                { 100, xi.items.SHINOGI },
+                { 900, xi.item.KUNAI   },
+                { 100, xi.item.SHINOGI },
             },
         },
 
@@ -408,8 +408,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BRONZE_KNUCKLES },
-                { 100, xi.items.SONIC_KNUCKLES  },
+                { 900, xi.item.BRONZE_KNUCKLES },
+                { 100, xi.item.SONIC_KNUCKLES  },
             },
         },
 
@@ -417,19 +417,19 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BRONZE_KNIFE },
-                { 100, xi.items.BANO_DEL_SOL },
+                { 900, xi.item.BRONZE_KNIFE },
+                { 100, xi.item.BANO_DEL_SOL },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_POLEARM] =
+    [xi.item.UNAPPRAISED_POLEARM] =
     {
         [xi.assault.mission.BREAKING_MORALE] =
         {
             items =
             {
-                { 1000, xi.items.SPARK_SPEAR },
+                { 1000, xi.item.SPARK_SPEAR },
             },
         },
 
@@ -437,7 +437,7 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 1000, xi.items.SPARK_SPEAR },
+                { 1000, xi.item.SPARK_SPEAR },
             },
         },
 
@@ -445,7 +445,7 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 1000, xi.items.SICKLE }
+                { 1000, xi.item.SICKLE }
             },
         },
 
@@ -453,13 +453,13 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 200, xi.items.IMPERIAL_WAND    },
-                { 200, xi.items.BRASS_ZAGHNAL    },
-                { 150, xi.items.HOLLY_STAFF_P1   },
-                { 350, xi.items.SPARK_SPEAR      },
-                { 100, xi.items.STEELSPLITTER   },
-                { 100, xi.items.WILLOW_WAND_P1   },
-                { 100, xi.items.PEALING_BUZDYGAN },
+                { 200, xi.item.IMPERIAL_WAND    },
+                { 200, xi.item.BRASS_ZAGHNAL    },
+                { 150, xi.item.HOLLY_STAFF_P1   },
+                { 350, xi.item.SPARK_SPEAR      },
+                { 100, xi.item.STEELSPLITTER   },
+                { 100, xi.item.WILLOW_WAND_P1   },
+                { 100, xi.item.PEALING_BUZDYGAN },
             },
         },
 
@@ -467,7 +467,7 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 1000, xi.items.SPARK_SPEAR },
+                { 1000, xi.item.SPARK_SPEAR },
             },
         },
 
@@ -475,11 +475,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 200, xi.items.HOLLY_STAFF_P1 },
-                { 400, xi.items.BRASS_ZAGHNAL  },
-                { 200, xi.items.WILLOW_WAND_P1 },
-                {  50, xi.items.PUK_LANCE      },
-                { 150, xi.items.SPARK_SPEAR    },
+                { 200, xi.item.HOLLY_STAFF_P1 },
+                { 400, xi.item.BRASS_ZAGHNAL  },
+                { 200, xi.item.WILLOW_WAND_P1 },
+                {  50, xi.item.PUK_LANCE      },
+                { 150, xi.item.SPARK_SPEAR    },
             },
         },
 
@@ -487,12 +487,12 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 250, xi.items.HOLLY_STAFF_P1 },
-                { 250, xi.items.BRASS_ZAGHNAL  },
-                { 200, xi.items.SPARK_SPEAR    },
-                { 150, xi.items.HOLLY_POLE_P1  },
-                { 100, xi.items.WILLOW_WAND_P1 },
-                {  50, xi.items.YIGIT_STAFF    },
+                { 250, xi.item.HOLLY_STAFF_P1 },
+                { 250, xi.item.BRASS_ZAGHNAL  },
+                { 200, xi.item.SPARK_SPEAR    },
+                { 150, xi.item.HOLLY_POLE_P1  },
+                { 100, xi.item.WILLOW_WAND_P1 },
+                {  50, xi.item.YIGIT_STAFF    },
             },
         },
 
@@ -500,8 +500,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 750, xi.items.SPARK_SPEAR },
-                { 250, xi.items.SPARK_LANCE },
+                { 750, xi.item.SPARK_SPEAR },
+                { 250, xi.item.SPARK_LANCE },
             },
         },
 
@@ -509,11 +509,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 200, xi.items.SPARK_SPEAR       },
-                { 200, xi.items.WILLOW_WAND_P1    },
-                { 150, xi.items.HOLLY_STAFF_P1    },
-                { 350, xi.items.BRASS_ZAGHNAL     },
-                { 100, xi.items.VOLUNTEERS_SCYTHE },
+                { 200, xi.item.SPARK_SPEAR       },
+                { 200, xi.item.WILLOW_WAND_P1    },
+                { 150, xi.item.HOLLY_STAFF_P1    },
+                { 350, xi.item.BRASS_ZAGHNAL     },
+                { 100, xi.item.VOLUNTEERS_SCYTHE },
             },
         },
 
@@ -521,8 +521,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.ASH_CLUB      },
-                { 100, xi.items.HEAVY_HALBERD },
+                { 900, xi.item.ASH_CLUB      },
+                { 100, xi.item.HEAVY_HALBERD },
             },
         },
 
@@ -530,8 +530,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 700, xi.items.MAPLE_WAND  },
-                { 300, xi.items.A_LOUTRANCE },
+                { 700, xi.item.MAPLE_WAND  },
+                { 300, xi.item.A_LOUTRANCE },
             },
         },
 
@@ -539,9 +539,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 700, xi.items.MAPLE_WAND     },
-                { 200, xi.items.BRONZE_ZAGHNAL },
-                { 100, xi.items.WEBCUTTER      },
+                { 700, xi.item.MAPLE_WAND     },
+                { 200, xi.item.BRONZE_ZAGHNAL },
+                { 100, xi.item.WEBCUTTER      },
             },
         },
 
@@ -549,8 +549,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.ASH_CLUB      },
-                { 100, xi.items.PILGRIMS_WAND },
+                { 900, xi.item.ASH_CLUB      },
+                { 100, xi.item.PILGRIMS_WAND },
             },
         },
 
@@ -558,8 +558,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.MAPLE_WAND  },
-                { 100, xi.items.DRYAD_STAFF },
+                { 900, xi.item.MAPLE_WAND  },
+                { 100, xi.item.DRYAD_STAFF },
             },
         },
 
@@ -567,8 +567,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.MAPLE_WAND   },
-                { 100, xi.items.GELONG_STAFF },
+                { 900, xi.item.MAPLE_WAND   },
+                { 100, xi.item.GELONG_STAFF },
             },
         },
 
@@ -576,19 +576,19 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.ASH_CLUB },
-                { 100, xi.items.GAE_BOLG },
+                { 900, xi.item.ASH_CLUB },
+                { 100, xi.item.GAE_BOLG },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_AXE] =
+    [xi.item.UNAPPRAISED_AXE] =
     {
         [xi.assault.mission.REQUIEM] =
         {
             items =
             {
-                { 1000, xi.items.PICKAXE },
+                { 1000, xi.item.PICKAXE },
             },
         },
 
@@ -596,7 +596,7 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 1000, xi.items.PICKAXE },
+                { 1000, xi.item.PICKAXE },
             },
         },
 
@@ -604,12 +604,12 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 400, xi.items.HATCHET          },
-                { 300, xi.items.PROMINENCE_AXE   },
-                { 100, xi.items.TOMAHAWK_P1      },
-                { 100, xi.items.FURNACE_TABARZIN },
-                {  50, xi.items.BLIZZARD_TOPOROK },
-                {  50, xi.items.MARID_ANCUS      },
+                { 400, xi.item.HATCHET          },
+                { 300, xi.item.PROMINENCE_AXE   },
+                { 100, xi.item.TOMAHAWK_P1      },
+                { 100, xi.item.FURNACE_TABARZIN },
+                {  50, xi.item.BLIZZARD_TOPOROK },
+                {  50, xi.item.MARID_ANCUS      },
             },
         },
 
@@ -617,7 +617,7 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 1000, xi.items.PICKAXE },
+                { 1000, xi.item.PICKAXE },
             },
         },
 
@@ -625,10 +625,10 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 600, xi.items.HATCHET        },
-                { 100, xi.items.TOMAHAWK_P1    },
-                { 150, xi.items.WAMOURA_AXE    },
-                { 150, xi.items.PROMINENCE_AXE },
+                { 600, xi.item.HATCHET        },
+                { 100, xi.item.TOMAHAWK_P1    },
+                { 150, xi.item.WAMOURA_AXE    },
+                { 150, xi.item.PROMINENCE_AXE },
             },
         },
 
@@ -636,7 +636,7 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 1000, xi.items.PICKAXE },
+                { 1000, xi.item.PICKAXE },
             },
         },
 
@@ -645,12 +645,12 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 400, xi.items.HATCHET        },
-                { 300, xi.items.PICKAXE        },
-                { 100, xi.items.TOMAHAWK_P1    },
-                { 100, xi.items.PROMINENCE_AXE },
-                {  50, xi.items.ERIKS_AXE      },
-                -- {  50, xi.items.RAMPAGER       }, -- Not verified
+                { 400, xi.item.HATCHET        },
+                { 300, xi.item.PICKAXE        },
+                { 100, xi.item.TOMAHAWK_P1    },
+                { 100, xi.item.PROMINENCE_AXE },
+                {  50, xi.item.ERIKS_AXE      },
+                -- {  50, xi.item.RAMPAGER       }, -- Not verified
             },
         },
 
@@ -658,8 +658,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 950, xi.items.BONE_AXE  },
-                {  50, xi.items.STORM_AXE },
+                { 950, xi.item.BONE_AXE  },
+                {  50, xi.item.STORM_AXE },
             },
         },
 
@@ -667,8 +667,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BUTTERFLY_AXE },
-                { 100, xi.items.EXECUTIONER   },
+                { 900, xi.item.BUTTERFLY_AXE },
+                { 100, xi.item.EXECUTIONER   },
             },
         },
 
@@ -676,8 +676,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BONE_AXE  },
-                { 100, xi.items.FRANSISCA },
+                { 900, xi.item.BONE_AXE  },
+                { 100, xi.item.FRANSISCA },
             },
         },
 
@@ -685,8 +685,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BONE_AXE },
-                { 100, xi.items.TABAR    },
+                { 900, xi.item.BONE_AXE },
+                { 100, xi.item.TABAR    },
             },
         },
 
@@ -694,8 +694,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BONE_AXE },
-                { 100, xi.items.LOHAR    },
+                { 900, xi.item.BONE_AXE },
+                { 100, xi.item.LOHAR    },
             },
         },
 
@@ -703,8 +703,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BUTTERFLY_AXE },
-                { 100, xi.items.NECKCHOPPER   },
+                { 900, xi.item.BUTTERFLY_AXE },
+                { 100, xi.item.NECKCHOPPER   },
             },
         },
 
@@ -712,21 +712,21 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BUTTERFLY_AXE },
-                { 100, xi.items.SCHWARZ_AXT   },
+                { 900, xi.item.BUTTERFLY_AXE },
+                { 100, xi.item.SCHWARZ_AXT   },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_BOW] =
+    [xi.item.UNAPPRAISED_BOW] =
     {
         [xi.assault.mission.LAMIA_NO_13] =
         {
             items =
             {
-                { 430, xi.items.LONGBOW_P1   },
-                { 430, xi.items.CROSSBOW_P1  },
-                { 140, xi.items.IMPERIAL_BOW },
+                { 430, xi.item.LONGBOW_P1   },
+                { 430, xi.item.CROSSBOW_P1  },
+                { 140, xi.item.IMPERIAL_BOW },
             },
         },
 
@@ -734,11 +734,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 330, xi.items.CROSSBOW_P1    },
-                { 550, xi.items.LONGBOW_P1     },
-                { 100, xi.items.CULVERIN       },
-                {  10, xi.items.CULVERIN_P1    },
-                {  10, xi.items.STORM_ZAMBURAK },
+                { 330, xi.item.CROSSBOW_P1    },
+                { 550, xi.item.LONGBOW_P1     },
+                { 100, xi.item.CULVERIN       },
+                {  10, xi.item.CULVERIN_P1    },
+                {  10, xi.item.STORM_ZAMBURAK },
             },
         },
 
@@ -746,8 +746,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.SHORTBOW },
-                { 100, xi.items.RIKONODO },
+                { 900, xi.item.SHORTBOW },
+                { 100, xi.item.RIKONODO },
             },
         },
 
@@ -755,8 +755,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LONGBOW   },
-                { 100, xi.items.VALIS_BOW },
+                { 900, xi.item.LONGBOW   },
+                { 100, xi.item.VALIS_BOW },
             },
         },
 
@@ -764,8 +764,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.SELF_BOW },
-                { 100, xi.items.WINGEDGE },
+                { 900, xi.item.SELF_BOW },
+                { 100, xi.item.WINGEDGE },
             },
         },
 
@@ -773,8 +773,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.CROSSBOW        },
-                { 100, xi.items.UNGUR_BOOMERANG },
+                { 900, xi.item.CROSSBOW        },
+                { 100, xi.item.UNGUR_BOOMERANG },
             },
         },
 
@@ -782,19 +782,19 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.CROSSBOW      },
-                { 100, xi.items.ALMOGAVAR_BOW },
+                { 900, xi.item.CROSSBOW      },
+                { 100, xi.item.ALMOGAVAR_BOW },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_GLOVES] =
+    [xi.item.UNAPPRAISED_GLOVES] =
     {
         [xi.assault.mission.ORICHALCUM_SURVEY] =
         {
             items =
             {
-                { 1000, xi.items.STORM_GAGES },
+                { 1000, xi.item.STORM_GAGES },
             },
         },
 
@@ -802,11 +802,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 280, xi.items.BRONZE_MITTENS_P1 },
-                { 300, xi.items.LEATHER_GLOVES    },
-                { 200, xi.items.COTTON_GLOVES     },
-                { 180, xi.items.CUFFS             },
-                {  50, xi.items.STORM_MANOPOLAS   },
+                { 280, xi.item.BRONZE_MITTENS_P1 },
+                { 300, xi.item.LEATHER_GLOVES    },
+                { 200, xi.item.COTTON_GLOVES     },
+                { 180, xi.item.CUFFS             },
+                {  50, xi.item.STORM_MANOPOLAS   },
             },
         },
 
@@ -814,11 +814,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 300, xi.items.LEATHER_GLOVES    },
-                { 280, xi.items.BRONZE_MITTENS_P1 },
-                { 200, xi.items.COTTON_GLOVES     },
-                { 180, xi.items.CUFFS             },
-                {  50, xi.items.STORM_GAGES       },
+                { 300, xi.item.LEATHER_GLOVES    },
+                { 280, xi.item.BRONZE_MITTENS_P1 },
+                { 200, xi.item.COTTON_GLOVES     },
+                { 180, xi.item.CUFFS             },
+                {  50, xi.item.STORM_GAGES       },
             },
         },
 
@@ -826,8 +826,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_GLOVES   },
-                { 100, xi.items.NIGHTMARE_GLOVES },
+                { 900, xi.item.LEATHER_GLOVES   },
+                { 100, xi.item.NIGHTMARE_GLOVES },
             },
         },
 
@@ -835,23 +835,23 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COTTON_GLOVES },
-                { 100, xi.items.HANZO_TEKKO   },
+                { 900, xi.item.COTTON_GLOVES },
+                { 100, xi.item.HANZO_TEKKO   },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_FOOTWEAR] =
+    [xi.item.UNAPPRAISED_FOOTWEAR] =
     {
         [xi.assault.mission.LAMIA_NO_13] =
         {
             items =
             {
-                { 200, xi.items.ASH_CLOGS          },
-                { 380, xi.items.BRONZE_LEGGINGS_P1 },
-                { 180, xi.items.LEATHER_HIGHBOOTS  },
-                {  60, xi.items.SOLEA              },
-                { 180, xi.items.STORM_GAMBIERAS    },
+                { 200, xi.item.ASH_CLOGS          },
+                { 380, xi.item.BRONZE_LEGGINGS_P1 },
+                { 180, xi.item.LEATHER_HIGHBOOTS  },
+                {  60, xi.item.SOLEA              },
+                { 180, xi.item.STORM_GAMBIERAS    },
             },
         },
 
@@ -859,10 +859,10 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  50, xi.items.STORM_CRACKOWS     },
-                { 350, xi.items.ASH_CLOGS          },
-                { 250, xi.items.BRONZE_LEGGINGS_P1 },
-                { 350, xi.items.LEATHER_HIGHBOOTS  },
+                {  50, xi.item.STORM_CRACKOWS     },
+                { 350, xi.item.ASH_CLOGS          },
+                { 250, xi.item.BRONZE_LEGGINGS_P1 },
+                { 350, xi.item.LEATHER_HIGHBOOTS  },
             },
         },
 
@@ -870,8 +870,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 950, xi.items.LEATHER_HIGHBOOTS },
-                {  50, xi.items.LEAPING_BOOTS     },
+                { 950, xi.item.LEATHER_HIGHBOOTS },
+                {  50, xi.item.LEAPING_BOOTS     },
             },
         },
 
@@ -879,8 +879,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_HIGHBOOTS },
-                { 100, xi.items.KUNG_FU_SHOES     },
+                { 900, xi.item.LEATHER_HIGHBOOTS },
+                { 100, xi.item.KUNG_FU_SHOES     },
             },
         },
 
@@ -888,8 +888,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.ASH_CLOGS       },
-                { 100, xi.items.TREDECIM_SCYTHE }, -- Tredecim Scythe or Cure Clogs
+                { 900, xi.item.ASH_CLOGS       },
+                { 100, xi.item.TREDECIM_SCYTHE }, -- Tredecim Scythe or Cure Clogs
             },
         },
 
@@ -897,8 +897,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.ASH_CLOGS         },
-                { 100, xi.items.STUMBLING_SANDALS },
+                { 900, xi.item.ASH_CLOGS         },
+                { 100, xi.item.STUMBLING_SANDALS },
             },
         },
 
@@ -906,23 +906,23 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_HIGHBOOTS },
-                { 100, xi.items.TROTTER_BOOTS     },
+                { 900, xi.item.LEATHER_HIGHBOOTS },
+                { 100, xi.item.TROTTER_BOOTS     },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_HEADPIECE] =
+    [xi.item.UNAPPRAISED_HEADPIECE] =
     {
         [xi.assault.mission.SAGELORD_ELIMINATION] =
         {
             items =
             {
-                { 150, xi.items.BRONZE_CAP_P1   },
-                { 200, xi.items.CIRCLET         },
-                { 300, xi.items.COTTON_HEADGEAR },
-                { 300, xi.items.LEATHER_BANDANA },
-                {  50, xi.items.STORM_ZUCCHETTO },
+                { 150, xi.item.BRONZE_CAP_P1   },
+                { 200, xi.item.CIRCLET         },
+                { 300, xi.item.COTTON_HEADGEAR },
+                { 300, xi.item.LEATHER_BANDANA },
+                {  50, xi.item.STORM_ZUCCHETTO },
             },
         },
 
@@ -930,11 +930,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  50, xi.items.STORM_TURBAN    },
-                { 200, xi.items.COTTON_HEADGEAR },
-                { 150, xi.items.BRONZE_CAP_P1   },
-                { 300, xi.items.LEATHER_BANDANA },
-                { 300, xi.items.CIRCLET         },
+                {  50, xi.item.STORM_TURBAN    },
+                { 200, xi.item.COTTON_HEADGEAR },
+                { 150, xi.item.BRONZE_CAP_P1   },
+                { 300, xi.item.LEATHER_BANDANA },
+                { 300, xi.item.CIRCLET         },
             },
         },
 
@@ -942,8 +942,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COPPER_HAIRPIN  },
-                { 100, xi.items.EMPRESS_HAIRPIN },
+                { 900, xi.item.COPPER_HAIRPIN  },
+                { 100, xi.item.EMPRESS_HAIRPIN },
             },
         },
 
@@ -951,8 +951,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_BANDANA },
-                { 100, xi.items.MUSHROOM_HELM   },
+                { 900, xi.item.LEATHER_BANDANA },
+                { 100, xi.item.MUSHROOM_HELM   },
             },
         },
 
@@ -960,8 +960,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_BANDANA },
-                { 100, xi.items.SPELUNKERS_HAT  },
+                { 900, xi.item.LEATHER_BANDANA },
+                { 100, xi.item.SPELUNKERS_HAT  },
             },
         },
 
@@ -969,8 +969,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BONE_HAIRPIN   },
-                { 100, xi.items.DODGE_HEADBAND },
+                { 900, xi.item.BONE_HAIRPIN   },
+                { 100, xi.item.DODGE_HEADBAND },
             },
         },
 
@@ -978,8 +978,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COPPER_HAIRPIN    },
-                { 100, xi.items.ENTRANCING_RIBBON },
+                { 900, xi.item.COPPER_HAIRPIN    },
+                { 100, xi.item.ENTRANCING_RIBBON },
             },
         },
 
@@ -987,24 +987,24 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_BANDANA },
-                { 100, xi.items.FUNGUS_HAT      },
+                { 900, xi.item.LEATHER_BANDANA },
+                { 100, xi.item.FUNGUS_HAT      },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_EARRING] =
+    [xi.item.UNAPPRAISED_EARRING] =
     {
         [xi.assault.mission.EXCAVATION_DUTY] =
         {
             items =
             {
-                { 250, xi.items.SHELL_EARRING   },
-                { 210, xi.items.BONE_EARRING    },
-                { 250, xi.items.BEETLE_EARRING  },
-                { 200, xi.items.SILVER_EARRING  },
-                {  60, xi.items.RERAISE_EARRING },
-                {  30, xi.items.STORM_LOOP      },
+                { 250, xi.item.SHELL_EARRING   },
+                { 210, xi.item.BONE_EARRING    },
+                { 250, xi.item.BEETLE_EARRING  },
+                { 200, xi.item.SILVER_EARRING  },
+                {  60, xi.item.RERAISE_EARRING },
+                {  30, xi.item.STORM_LOOP      },
             },
         },
 
@@ -1012,12 +1012,12 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 220, xi.items.MAGNIFYING_EARRING },
-                { 200, xi.items.BONE_EARRING       },
-                { 210, xi.items.BEETLE_EARRING     },
-                { 270, xi.items.ELUSIVE_EARRING    },
-                {  60, xi.items.SILVER_EARRING     },
-                {  40, xi.items.SHELL_EARRING      },
+                { 220, xi.item.MAGNIFYING_EARRING },
+                { 200, xi.item.BONE_EARRING       },
+                { 210, xi.item.BEETLE_EARRING     },
+                { 270, xi.item.ELUSIVE_EARRING    },
+                {  60, xi.item.SILVER_EARRING     },
+                {  40, xi.item.SHELL_EARRING      },
             },
         },
 
@@ -1025,12 +1025,12 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 220, xi.items.SHELL_EARRING  },
-                { 200, xi.items.BONE_EARRING   },
-                { 210, xi.items.BEETLE_EARRING },
-                { 270, xi.items.SILVER_EARRING },
-                {  60, xi.items.HEIMS_EARRING  },
-                {  40, xi.items.STORM_EARRING  },
+                { 220, xi.item.SHELL_EARRING  },
+                { 200, xi.item.BONE_EARRING   },
+                { 210, xi.item.BEETLE_EARRING },
+                { 270, xi.item.SILVER_EARRING },
+                {  60, xi.item.HEIMS_EARRING  },
+                {  40, xi.item.STORM_EARRING  },
             },
         },
 
@@ -1038,8 +1038,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.SHELL_EARRING     },
-                { 100, xi.items.BLOODBEAD_EARRING },
+                { 900, xi.item.SHELL_EARRING     },
+                { 100, xi.item.BLOODBEAD_EARRING },
             },
         },
 
@@ -1047,8 +1047,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BONE_EARRING   },
-                { 100, xi.items.CASSIE_EARRING },
+                { 900, xi.item.BONE_EARRING   },
+                { 100, xi.item.CASSIE_EARRING },
             },
         },
 
@@ -1056,22 +1056,22 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BEETLE_EARRING  },
-                { 100, xi.items.OPTICAL_EARRING },
+                { 900, xi.item.BEETLE_EARRING  },
+                { 100, xi.item.OPTICAL_EARRING },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_RING] =
+    [xi.item.UNAPPRAISED_RING] =
     {
         [xi.assault.mission.LEUJAOAM_CLEANSING] =
         {
             items =
             {
-                { 500, xi.items.COPPER_RING   },
-                { 300, xi.items.BRASS_RING    },
-                { 150, xi.items.ARCHERS_RING  },
-                {  50, xi.items.IMPERIAL_RING },
+                { 500, xi.item.COPPER_RING   },
+                { 300, xi.item.BRASS_RING    },
+                { 150, xi.item.ARCHERS_RING  },
+                {  50, xi.item.IMPERIAL_RING },
             },
         },
 
@@ -1079,9 +1079,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 500, xi.items.COPPER_RING  },
-                { 300, xi.items.BRASS_RING   },
-                {  50, xi.items.HORIZON_RING },
+                { 500, xi.item.COPPER_RING  },
+                { 300, xi.item.BRASS_RING   },
+                {  50, xi.item.HORIZON_RING },
             },
         },
 
@@ -1089,10 +1089,10 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 500, xi.items.COPPER_RING },
-                { 300, xi.items.BRASS_RING  },
-                { 150, xi.items.ETHER_RING  },
-                {  50, xi.items.STORM_RING  },
+                { 500, xi.item.COPPER_RING },
+                { 300, xi.item.BRASS_RING  },
+                { 150, xi.item.ETHER_RING  },
+                {  50, xi.item.STORM_RING  },
             },
         },
 
@@ -1100,9 +1100,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 600, xi.items.COPPER_RING },
-                { 300, xi.items.BRASS_RING  },
-                { 100, xi.items.BOMB_RING   },
+                { 600, xi.item.COPPER_RING },
+                { 300, xi.item.BRASS_RING  },
+                { 100, xi.item.BOMB_RING   },
             },
         },
 
@@ -1110,9 +1110,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 600, xi.items.COPPER_RING   },
-                { 300, xi.items.BRASS_RING    },
-                { 100, xi.items.MALFLOOD_RING },
+                { 600, xi.item.COPPER_RING   },
+                { 300, xi.item.BRASS_RING    },
+                { 100, xi.item.MALFLOOD_RING },
             },
         },
 
@@ -1120,8 +1120,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BRASS_RING   },
-                { 100, xi.items.MALGUST_RING },
+                { 900, xi.item.BRASS_RING   },
+                { 100, xi.item.MALGUST_RING },
             },
         },
 
@@ -1129,8 +1129,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COPPER_RING  },
-                { 100, xi.items.MALDUST_RING },
+                { 900, xi.item.COPPER_RING  },
+                { 100, xi.item.MALDUST_RING },
             },
         },
 
@@ -1138,8 +1138,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COPPER_RING   },
-                { 100, xi.items.MALFROST_RING },
+                { 900, xi.item.COPPER_RING   },
+                { 100, xi.item.MALFROST_RING },
             },
         },
 
@@ -1147,8 +1147,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BRASS_RING  },
-                { 100, xi.items.SERKET_RING },
+                { 900, xi.item.BRASS_RING  },
+                { 100, xi.item.SERKET_RING },
             },
         },
 
@@ -1156,8 +1156,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COPPER_RING   },
-                { 100, xi.items.MALFLAME_RING },
+                { 900, xi.item.COPPER_RING   },
+                { 100, xi.item.MALFLAME_RING },
             },
         },
 
@@ -1165,8 +1165,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COPPER_RING    },
-                { 100, xi.items.BLOODBEAD_RING },
+                { 900, xi.item.COPPER_RING    },
+                { 100, xi.item.BLOODBEAD_RING },
             },
         },
 
@@ -1174,8 +1174,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BRASS_RING },
-                { 100, xi.items.JELLY_RING },
+                { 900, xi.item.BRASS_RING },
+                { 100, xi.item.JELLY_RING },
             },
         },
 
@@ -1183,23 +1183,23 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COPPER_RING   },
-                { 100, xi.items.MALFLASH_RING },
+                { 900, xi.item.COPPER_RING   },
+                { 100, xi.item.MALFLASH_RING },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_CAPE] =
+    [xi.item.UNAPPRAISED_CAPE] =
     {
         [xi.assault.mission.ESCORT_PROFESSOR_CHANOIX] =
         {
             items =
             {
-                { 350, xi.items.COTTON_CAPE_P1    },
-                { 300, xi.items.DHALMEL_MANTLE_P1 },
-                { 250, xi.items.LIZARD_MANTLE_P1  },
-                {  50, xi.items.RED_CAPE_P1       },
-                {  50, xi.items.STORM_MANTLE      },
+                { 350, xi.item.COTTON_CAPE_P1    },
+                { 300, xi.item.DHALMEL_MANTLE_P1 },
+                { 250, xi.item.LIZARD_MANTLE_P1  },
+                {  50, xi.item.RED_CAPE_P1       },
+                {  50, xi.item.STORM_MANTLE      },
             },
         },
 
@@ -1207,11 +1207,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 250, xi.items.LIZARD_MANTLE_P1  },
-                { 300, xi.items.DHALMEL_MANTLE_P1 },
-                { 250, xi.items.COTTON_CAPE_P1    },
-                { 150, xi.items.SNIPERS_MANTLE    },
-                {  50, xi.items.VOLITIONAL_MANTLE },
+                { 250, xi.item.LIZARD_MANTLE_P1  },
+                { 300, xi.item.DHALMEL_MANTLE_P1 },
+                { 250, xi.item.COTTON_CAPE_P1    },
+                { 150, xi.item.SNIPERS_MANTLE    },
+                {  50, xi.item.VOLITIONAL_MANTLE },
             },
         },
 
@@ -1219,11 +1219,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 300, xi.items.DHALMEL_MANTLE_P1 },
-                { 250, xi.items.COTTON_CAPE_P1    },
-                { 250, xi.items.LIZARD_MANTLE_P1  },
-                {  50, xi.items.STORM_CAPE        },
-                { 150, xi.items.ENHANCING_MANTLE  },
+                { 300, xi.item.DHALMEL_MANTLE_P1 },
+                { 250, xi.item.COTTON_CAPE_P1    },
+                { 250, xi.item.LIZARD_MANTLE_P1  },
+                {  50, xi.item.STORM_CAPE        },
+                { 150, xi.item.ENHANCING_MANTLE  },
             },
         },
 
@@ -1231,11 +1231,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 350, xi.items.COTTON_CAPE_P1    },
-                { 150, xi.items.LIZARD_MANTLE_P1  },
-                { 400, xi.items.DHALMEL_MANTLE_P1 },
-                {  50, xi.items.AILERON_MANTLE    },
-                {  50, xi.items.TEMPLARS_MANTLE   },
+                { 350, xi.item.COTTON_CAPE_P1    },
+                { 150, xi.item.LIZARD_MANTLE_P1  },
+                { 400, xi.item.DHALMEL_MANTLE_P1 },
+                {  50, xi.item.AILERON_MANTLE    },
+                {  50, xi.item.TEMPLARS_MANTLE   },
             },
         },
 
@@ -1243,8 +1243,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LIZARD_MANTLE_P1 },
-                { 100, xi.items.BAT_CAPE         },
+                { 900, xi.item.LIZARD_MANTLE_P1 },
+                { 100, xi.item.BAT_CAPE         },
             },
         },
 
@@ -1252,8 +1252,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COTTON_CAPE_P1   },
-                { 100, xi.items.BELLICOSE_MANTLE },
+                { 900, xi.item.COTTON_CAPE_P1   },
+                { 100, xi.item.BELLICOSE_MANTLE },
             },
         },
 
@@ -1261,8 +1261,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.RABBIT_MANTLE  },
-                { 100, xi.items.MIST_SILK_CAPE },
+                { 900, xi.item.RABBIT_MANTLE  },
+                { 100, xi.item.MIST_SILK_CAPE },
             },
         },
 
@@ -1270,25 +1270,25 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.COTTON_CAPE_P1 },
-                { 100, xi.items.NIGHT_CAPE     },
+                { 900, xi.item.COTTON_CAPE_P1 },
+                { 100, xi.item.NIGHT_CAPE     },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_SASH] =
+    [xi.item.UNAPPRAISED_SASH] =
     {
         [xi.assault.mission.SHANARHA_GRASS_CONSERVATION] =
         {
             items =
             {
-                { 250, xi.items.TALISMAN_OBI         },
-                { 250, xi.items.LUGWORM_BELT         },
-                { 150, xi.items.SILVER_OBI_P1        },
-                { 150, xi.items.LITTLE_WORM_BELT     },
-                { 100, xi.items.DEDUCTIVE_GOLD_OBI   },
-                {  50, xi.items.ENTHRALLING_GOLD_OBI },
-                {  50, xi.items.STORM_BELT           },
+                { 250, xi.item.TALISMAN_OBI         },
+                { 250, xi.item.LUGWORM_BELT         },
+                { 150, xi.item.SILVER_OBI_P1        },
+                { 150, xi.item.LITTLE_WORM_BELT     },
+                { 100, xi.item.DEDUCTIVE_GOLD_OBI   },
+                {  50, xi.item.ENTHRALLING_GOLD_OBI },
+                {  50, xi.item.STORM_BELT           },
             },
         },
 
@@ -1296,11 +1296,11 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 600, xi.items.TALISMAN_OBI  },
-                { 150, xi.items.LUGWORM_BELT  },
-                { 100, xi.items.SILVER_OBI_P1 },
-                {  50, xi.items.GRACE_CORSET  },
-                {  50, xi.items.GLEEMANS_BELT },
+                { 600, xi.item.TALISMAN_OBI  },
+                { 150, xi.item.LUGWORM_BELT  },
+                { 100, xi.item.SILVER_OBI_P1 },
+                {  50, xi.item.GRACE_CORSET  },
+                {  50, xi.item.GLEEMANS_BELT },
             },
         },
 
@@ -1308,29 +1308,29 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 200, xi.items.TALISMAN_OBI   },
-                { 200, xi.items.LUGWORM_BELT   },
-                { 300, xi.items.SILVER_OBI_P1  },
-                { 100, xi.items.CZARS_BELT     },
-                { 100, xi.items.MAHARAJAS_BELT },
-                {  50, xi.items.SULTANS_BELT   },
-                {  50, xi.items.STORM_SASH     },
+                { 200, xi.item.TALISMAN_OBI   },
+                { 200, xi.item.LUGWORM_BELT   },
+                { 300, xi.item.SILVER_OBI_P1  },
+                { 100, xi.item.CZARS_BELT     },
+                { 100, xi.item.MAHARAJAS_BELT },
+                {  50, xi.item.SULTANS_BELT   },
+                {  50, xi.item.STORM_SASH     },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_SHIELD] =
+    [xi.item.UNAPPRAISED_SHIELD] =
     {
         [xi.assault.mission.SAVING_PRIVATE_RYAAF] =
         {
             items =
             {
-                { 250, xi.items.MAPLE_SHIELD    },
-                { 200, xi.items.ELM_SHIELD      },
-                { 200, xi.items.OAK_SHIELD      },
-                { 150, xi.items.LAUAN_SHIELD    },
-                { 150, xi.items.MAHOGANY_SHIELD },
-                {  50, xi.items.STORM_SHIELD    },
+                { 250, xi.item.MAPLE_SHIELD    },
+                { 200, xi.item.ELM_SHIELD      },
+                { 200, xi.item.OAK_SHIELD      },
+                { 150, xi.item.LAUAN_SHIELD    },
+                { 150, xi.item.MAHOGANY_SHIELD },
+                {  50, xi.item.STORM_SHIELD    },
             },
         },
 
@@ -1338,8 +1338,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.OAK_SHIELD    },
-                { 100, xi.items.VIKING_SHIELD },
+                { 900, xi.item.OAK_SHIELD    },
+                { 100, xi.item.VIKING_SHIELD },
             },
         },
 
@@ -1347,8 +1347,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LAUAN_SHIELD },
-                { 100, xi.items.CLIPEUS      },
+                { 900, xi.item.LAUAN_SHIELD },
+                { 100, xi.item.CLIPEUS      },
             },
         },
 
@@ -1356,8 +1356,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.OAK_SHIELD    },
-                { 100, xi.items.VIKING_SHIELD },
+                { 900, xi.item.OAK_SHIELD    },
+                { 100, xi.item.VIKING_SHIELD },
             },
         },
 
@@ -1365,8 +1365,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.ELM_SHIELD    },
-                { 100, xi.items.MASTER_SHIELD },
+                { 900, xi.item.ELM_SHIELD    },
+                { 100, xi.item.MASTER_SHIELD },
             },
         },
 
@@ -1374,22 +1374,22 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.ASPIS        },
-                { 100, xi.items.ASTRAL_ASPIS },
+                { 900, xi.item.ASPIS        },
+                { 100, xi.item.ASTRAL_ASPIS },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_NECKLACE] =
+    [xi.item.UNAPPRAISED_NECKLACE] =
     {
         [xi.assault.mission.ORICHALCUM_SURVEY] =
         {
             items =
             {
-                { 550, xi.items.FEATHER_COLLAR },
-                { 300, xi.items.GORGET_P1      },
-                { 100, xi.items.JAGD_GORGET    },
-                {  50, xi.items.STORM_MUFFLER  },
+                { 550, xi.item.FEATHER_COLLAR },
+                { 300, xi.item.GORGET_P1      },
+                { 100, xi.item.JAGD_GORGET    },
+                {  50, xi.item.STORM_MUFFLER  },
             },
         },
 
@@ -1397,10 +1397,10 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 550, xi.items.FEATHER_COLLAR },
-                { 300, xi.items.GORGET_P1      },
-                { 100, xi.items.SPECTACLES     },
-                {  50, xi.items.STORM_TORQUE   },
+                { 550, xi.item.FEATHER_COLLAR },
+                { 300, xi.item.GORGET_P1      },
+                { 100, xi.item.SPECTACLES     },
+                {  50, xi.item.STORM_TORQUE   },
             },
         },
 
@@ -1408,8 +1408,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 950, xi.items.REGEN_COLLAR },
-                {  50, xi.items.MOON_AMULET  },
+                { 950, xi.item.REGEN_COLLAR },
+                {  50, xi.item.MOON_AMULET  },
             },
         },
 
@@ -1417,8 +1417,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_GORGET },
-                { 100, xi.items.RABBIT_CHARM   },
+                { 900, xi.item.LEATHER_GORGET },
+                { 100, xi.item.RABBIT_CHARM   },
             },
         },
 
@@ -1426,8 +1426,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.FEATHER_COLLAR  },
-                { 100, xi.items.ELEMENTAL_CHARM },
+                { 900, xi.item.FEATHER_COLLAR  },
+                { 100, xi.item.ELEMENTAL_CHARM },
             },
         },
 
@@ -1435,8 +1435,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.FEATHER_COLLAR   },
-                { 100, xi.items.CERULEAN_PENDANT },
+                { 900, xi.item.FEATHER_COLLAR   },
+                { 100, xi.item.CERULEAN_PENDANT },
             },
         },
 
@@ -1444,8 +1444,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.REGEN_COLLAR  },
-                { 100, xi.items.PEACOCK_CHARM },
+                { 900, xi.item.REGEN_COLLAR  },
+                { 100, xi.item.PEACOCK_CHARM },
             },
         },
 
@@ -1453,8 +1453,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.GORGET_P1        },
-                { 100, xi.items.BLOODBEAD_AMULET },
+                { 900, xi.item.GORGET_P1        },
+                { 100, xi.item.BLOODBEAD_AMULET },
             },
         },
 
@@ -1462,8 +1462,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.GORGET_P1       },
-                { 100, xi.items.BUBURIMU_GORGET },
+                { 900, xi.item.GORGET_P1       },
+                { 100, xi.item.BUBURIMU_GORGET },
             },
         },
 
@@ -1471,44 +1471,44 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.REGEN_COLLAR  },
-                { 100, xi.items.SPIDER_TORQUE },
+                { 900, xi.item.REGEN_COLLAR  },
+                { 100, xi.item.SPIDER_TORQUE },
             },
         },
     },
 
-    [xi.items.UNAPPRAISED_INGOT] =
+    [xi.item.UNAPPRAISED_INGOT] =
     {
 
     },
 
-    [xi.items.UNAPPRAISED_POTION] =
+    [xi.item.UNAPPRAISED_POTION] =
     {
 
     },
 
-    [xi.items.UNAPPRAISED_CLOTH] =
+    [xi.item.UNAPPRAISED_CLOTH] =
     {
 
     },
 
-    [xi.items.UNAPPRAISED_BOX] =
+    [xi.item.UNAPPRAISED_BOX] =
     {
         [xi.assault.mission.LEUJAOAM_CLEANSING] =
         {
             items =
             {
-                { 100, xi.items.WHITE_ROCK        },
-                { 200, xi.items.TSURARA           },
-                {  20, xi.items.PHALAENOPSIS      },
-                {  50, xi.items.GARDENIA_SEED     },
-                {  80, xi.items.GLASS_SHEET       },
-                { 200, xi.items.MERROW_SCALE      },
-                { 150, xi.items.SOULFLAYER_STAFF  },
-                { 100, xi.items.ICE_CRYSTAL       },
-                {  10, xi.items.TOOLBAG_JUSATSU   },
-                {  30, xi.items.IRON_BULLET_POUCH },
-                {  60, xi.items.LAKERDA           },
+                { 100, xi.item.WHITE_ROCK        },
+                { 200, xi.item.TSURARA           },
+                {  20, xi.item.PHALAENOPSIS      },
+                {  50, xi.item.GARDENIA_SEED     },
+                {  80, xi.item.GLASS_SHEET       },
+                { 200, xi.item.MERROW_SCALE      },
+                { 150, xi.item.SOULFLAYER_STAFF  },
+                { 100, xi.item.ICE_CRYSTAL       },
+                {  10, xi.item.TOOLBAG_JUSATSU   },
+                {  30, xi.item.IRON_BULLET_POUCH },
+                {  60, xi.item.LAKERDA           },
             },
         },
 
@@ -1516,17 +1516,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 100, xi.items.EGGPLANT              },
-                {  90, xi.items.GARDENIA_SEED         },
-                { 100, xi.items.ICE_CRYSTAL           },
-                {  70, xi.items.KABURA_QUIVER         },
-                { 130, xi.items.SQUARE_OF_LINEN_CLOTH },
-                {  80, xi.items.MERROW_SCALE          },
-                {  50, xi.items.PHALAENOPSIS          },
-                { 100, xi.items.POROGGO_HAT           },
-                {  60, xi.items.SOULFLAYER_STAFF      },
-                { 150, xi.items.TSURARA               },
-                {  70, xi.items.WHITE_ROCK            },
+                { 100, xi.item.EGGPLANT              },
+                {  90, xi.item.GARDENIA_SEED         },
+                { 100, xi.item.ICE_CRYSTAL           },
+                {  70, xi.item.KABURA_QUIVER         },
+                { 130, xi.item.SQUARE_OF_LINEN_CLOTH },
+                {  80, xi.item.MERROW_SCALE          },
+                {  50, xi.item.PHALAENOPSIS          },
+                { 100, xi.item.POROGGO_HAT           },
+                {  60, xi.item.SOULFLAYER_STAFF      },
+                { 150, xi.item.TSURARA               },
+                {  70, xi.item.WHITE_ROCK            },
             },
         },
 
@@ -1534,17 +1534,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 100, xi.items.EGGPLANT              },
-                {  90, xi.items.GARDENIA_SEED         },
-                { 100, xi.items.ICE_CRYSTAL           },
-                {  70, xi.items.KABURA_QUIVER         },
-                { 130, xi.items.SQUARE_OF_LINEN_CLOTH },
-                {  80, xi.items.TITANICTUS_SHELL      },
-                {  50, xi.items.PHALAENOPSIS          },
-                { 100, xi.items.POROGGO_HAT           },
-                {  60, xi.items.SOULFLAYER_STAFF      },
-                { 150, xi.items.TSURARA               },
-                {  70, xi.items.WHITE_ROCK            },
+                { 100, xi.item.EGGPLANT              },
+                {  90, xi.item.GARDENIA_SEED         },
+                { 100, xi.item.ICE_CRYSTAL           },
+                {  70, xi.item.KABURA_QUIVER         },
+                { 130, xi.item.SQUARE_OF_LINEN_CLOTH },
+                {  80, xi.item.TITANICTUS_SHELL      },
+                {  50, xi.item.PHALAENOPSIS          },
+                { 100, xi.item.POROGGO_HAT           },
+                {  60, xi.item.SOULFLAYER_STAFF      },
+                { 150, xi.item.TSURARA               },
+                {  70, xi.item.WHITE_ROCK            },
             },
         },
 
@@ -1552,19 +1552,19 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  50, xi.items.EGGPLANT            },
-                {  90, xi.items.GARDENIA_SEED       },
-                {  50, xi.items.ICE_CRYSTAL         },
-                {  70, xi.items.SILVER_BULLET_POUCH },
-                {  80, xi.items.MERROW_SCALE        },
-                {  50, xi.items.PHALAENOPSIS        },
-                {  50, xi.items.POROGGO_HAT         },
-                {  60, xi.items.SOULFLAYER_STAFF    },
-                {  50, xi.items.TSURARA             },
-                {  70, xi.items.WHITE_ROCK          },
-                {  50, xi.items.LAMP_MARIMO         },
-                { 150, xi.items.TOOLBAG_HIRAISHIN   },
-                { 150, xi.items.TOOLBAG_UCHITAKE    },
+                {  50, xi.item.EGGPLANT            },
+                {  90, xi.item.GARDENIA_SEED       },
+                {  50, xi.item.ICE_CRYSTAL         },
+                {  70, xi.item.SILVER_BULLET_POUCH },
+                {  80, xi.item.MERROW_SCALE        },
+                {  50, xi.item.PHALAENOPSIS        },
+                {  50, xi.item.POROGGO_HAT         },
+                {  60, xi.item.SOULFLAYER_STAFF    },
+                {  50, xi.item.TSURARA             },
+                {  70, xi.item.WHITE_ROCK          },
+                {  50, xi.item.LAMP_MARIMO         },
+                { 150, xi.item.TOOLBAG_HIRAISHIN   },
+                { 150, xi.item.TOOLBAG_UCHITAKE    },
             },
         },
 
@@ -1572,19 +1572,19 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  50, xi.items.EGGPLANT             },
-                {  50, xi.items.GARDENIA_SEED        },
-                {  50, xi.items.ICE_CRYSTAL          },
-                { 150, xi.items.SPARTAN_BULLET_POUCH },
-                {  70, xi.items.MERROW_SCALE         },
-                {  50, xi.items.PHALAENOPSIS         },
-                {  50, xi.items.POROGGO_HAT          },
-                {  60, xi.items.SOULFLAYER_STAFF     },
-                {  50, xi.items.TSURARA              },
-                {  70, xi.items.WHITE_ROCK           },
-                {  50, xi.items.IRON_BULLET_POUCH    },
-                { 150, xi.items.VENOM_BOLT_QUIVER    },
-                { 150, xi.items.GLASS_SHEET          },
+                {  50, xi.item.EGGPLANT             },
+                {  50, xi.item.GARDENIA_SEED        },
+                {  50, xi.item.ICE_CRYSTAL          },
+                { 150, xi.item.SPARTAN_BULLET_POUCH },
+                {  70, xi.item.MERROW_SCALE         },
+                {  50, xi.item.PHALAENOPSIS         },
+                {  50, xi.item.POROGGO_HAT          },
+                {  60, xi.item.SOULFLAYER_STAFF     },
+                {  50, xi.item.TSURARA              },
+                {  70, xi.item.WHITE_ROCK           },
+                {  50, xi.item.IRON_BULLET_POUCH    },
+                { 150, xi.item.VENOM_BOLT_QUIVER    },
+                { 150, xi.item.GLASS_SHEET          },
             },
         },
 
@@ -1593,19 +1593,19 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  50, xi.items.EGGPLANT             },
-                {  50, xi.items.GARDENIA_SEED        },
-                {  50, xi.items.ICE_CRYSTAL          },
-                { 150, xi.items.SPARTAN_BULLET_POUCH },
-                {  70, xi.items.MERROW_SCALE         },
-                {  50, xi.items.PHALAENOPSIS         },
-                {  50, xi.items.POROGGO_HAT          },
-                {  60, xi.items.SOULFLAYER_STAFF     },
-                {  50, xi.items.TSURARA              },
-                {  70, xi.items.WHITE_ROCK           },
-                {  50, xi.items.IRON_BULLET_POUCH    },
-                { 150, xi.items.VENOM_BOLT_QUIVER    },
-                { 150, xi.items.GLASS_SHEET          },
+                {  50, xi.item.EGGPLANT             },
+                {  50, xi.item.GARDENIA_SEED        },
+                {  50, xi.item.ICE_CRYSTAL          },
+                { 150, xi.item.SPARTAN_BULLET_POUCH },
+                {  70, xi.item.MERROW_SCALE         },
+                {  50, xi.item.PHALAENOPSIS         },
+                {  50, xi.item.POROGGO_HAT          },
+                {  60, xi.item.SOULFLAYER_STAFF     },
+                {  50, xi.item.TSURARA              },
+                {  70, xi.item.WHITE_ROCK           },
+                {  50, xi.item.IRON_BULLET_POUCH    },
+                { 150, xi.item.VENOM_BOLT_QUIVER    },
+                { 150, xi.item.GLASS_SHEET          },
             },
         },
 
@@ -1613,20 +1613,20 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  70, xi.items.DATE                         },
-                {  50, xi.items.EGGPLANT                     },
-                { 100, xi.items.CLUMP_OF_IMPERIAL_TEA_LEAVES },
-                {  40, xi.items.CHUNK_OF_KAOLIN              },
-                { 200, xi.items.MAMOOL_JA_COLLAR             },
-                { 150, xi.items.POROGGO_HAT                  },
-                {  60, xi.items.SPRIG_OF_SAGE                },
-                {  50, xi.items.SQUARE_OF_SILK_CLOTH         },
-                {  10, xi.items.TOOLBAG_KAWAHORI_OGI         },
-                {  10, xi.items.TOOLBAG_SHIHEI               },
-                {  10, xi.items.TOOLBAG_TSURARA              },
-                { 100, xi.items.WILD_ONION                   },
-                {  10, xi.items.TOOLBAG_UCHITAKE             },
-                { 140, xi.items.ISTAKOZ                      },
+                {  70, xi.item.DATE                         },
+                {  50, xi.item.EGGPLANT                     },
+                { 100, xi.item.CLUMP_OF_IMPERIAL_TEA_LEAVES },
+                {  40, xi.item.CHUNK_OF_KAOLIN              },
+                { 200, xi.item.MAMOOL_JA_COLLAR             },
+                { 150, xi.item.POROGGO_HAT                  },
+                {  60, xi.item.SPRIG_OF_SAGE                },
+                {  50, xi.item.SQUARE_OF_SILK_CLOTH         },
+                {  10, xi.item.TOOLBAG_KAWAHORI_OGI         },
+                {  10, xi.item.TOOLBAG_SHIHEI               },
+                {  10, xi.item.TOOLBAG_TSURARA              },
+                { 100, xi.item.WILD_ONION                   },
+                {  10, xi.item.TOOLBAG_UCHITAKE             },
+                { 140, xi.item.ISTAKOZ                      },
             },
         },
 
@@ -1634,17 +1634,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 170, xi.items.EGGPLANT                     },
-                { 150, xi.items.SPRIG_OF_SAGE                },
-                { 150, xi.items.CLUMP_OF_IMPERIAL_TEA_LEAVES },
-                {  70, xi.items.WILD_ONION                   },
-                { 100, xi.items.SPOOL_OF_RED_GRASS_THREAD    },
-                {  70, xi.items.MAMOOL_JA_COLLAR             },
-                {  40, xi.items.TOOLBAG_SAIRUI_RAN           },
-                {  30, xi.items.TOOLBAG_SHIHEI               },
-                {  40, xi.items.TOOLBAG_JUSATSU              },
-                { 100, xi.items.CHUNK_OF_KAOLIN              },
-                {  80, xi.items.POROGGO_HAT                  },
+                { 170, xi.item.EGGPLANT                     },
+                { 150, xi.item.SPRIG_OF_SAGE                },
+                { 150, xi.item.CLUMP_OF_IMPERIAL_TEA_LEAVES },
+                {  70, xi.item.WILD_ONION                   },
+                { 100, xi.item.SPOOL_OF_RED_GRASS_THREAD    },
+                {  70, xi.item.MAMOOL_JA_COLLAR             },
+                {  40, xi.item.TOOLBAG_SAIRUI_RAN           },
+                {  30, xi.item.TOOLBAG_SHIHEI               },
+                {  40, xi.item.TOOLBAG_JUSATSU              },
+                { 100, xi.item.CHUNK_OF_KAOLIN              },
+                {  80, xi.item.POROGGO_HAT                  },
             },
         },
 
@@ -1652,22 +1652,22 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 100, xi.items.DATE                    },
-                {  25, xi.items.EGGPLANT                },
-                {  25, xi.items.IMPERIAL_TEA_LEAVES     },
-                {  25, xi.items.CHUNK_OF_KAOLIN         },
-                {  25, xi.items.LAMIAN_ARMLET           },
-                { 100, xi.items.MAMOOL_JA_COLLAR        },
-                { 100, xi.items.TROLL_PAULDRON          },
-                { 100, xi.items.POROGGO_HAT             },
-                {  25, xi.items.SPRIG_OF_SAGE           },
-                {  25, xi.items.SOULFLAYER_STAFF        },
-                { 100, xi.items.TOOLBAG_JUSATSU         },
-                { 100, xi.items.TOOLBAG_KAGINAWA        },
-                { 100, xi.items.TOOLBAG_MIZU_DEPPO      },
-                { 100, xi.items.TOOLBAG_SHIHEI          },
-                {  25, xi.items.SQUARE_OF_WAMOURA_CLOTH },
-                {  25, xi.items.WILD_ONION              },
+                { 100, xi.item.DATE                    },
+                {  25, xi.item.EGGPLANT                },
+                {  25, xi.item.IMPERIAL_TEA_LEAVES     },
+                {  25, xi.item.CHUNK_OF_KAOLIN         },
+                {  25, xi.item.LAMIAN_ARMLET           },
+                { 100, xi.item.MAMOOL_JA_COLLAR        },
+                { 100, xi.item.TROLL_PAULDRON          },
+                { 100, xi.item.POROGGO_HAT             },
+                {  25, xi.item.SPRIG_OF_SAGE           },
+                {  25, xi.item.SOULFLAYER_STAFF        },
+                { 100, xi.item.TOOLBAG_JUSATSU         },
+                { 100, xi.item.TOOLBAG_KAGINAWA        },
+                { 100, xi.item.TOOLBAG_MIZU_DEPPO      },
+                { 100, xi.item.TOOLBAG_SHIHEI          },
+                {  25, xi.item.SQUARE_OF_WAMOURA_CLOTH },
+                {  25, xi.item.WILD_ONION              },
             },
         },
 
@@ -1675,16 +1675,16 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 250, xi.items.DATE                     },
-                {  40, xi.items.CHUNK_OF_IMPERIAL_CERMET },
-                {  40, xi.items.KAOLIN                   },
-                {  40, xi.items.LAMIAN_ARMET             },
-                { 280, xi.items.MAMOOL_JA_COLLAR         },
-                { 230, xi.items.POROGGO_HAT              },
-                {  40, xi.items.TOOLBAG_HIRAISHIN        },
-                {  20, xi.items.TOOLBAG_MIZU_DEPPO       },
-                {  20, xi.items.TOOLBAG_SHINOBI_TABI     },
-                {  20, xi.items.TOOLBAG_SHIHEI           },
+                { 250, xi.item.DATE                     },
+                {  40, xi.item.CHUNK_OF_IMPERIAL_CERMET },
+                {  40, xi.item.KAOLIN                   },
+                {  40, xi.item.LAMIAN_ARMET             },
+                { 280, xi.item.MAMOOL_JA_COLLAR         },
+                { 230, xi.item.POROGGO_HAT              },
+                {  40, xi.item.TOOLBAG_HIRAISHIN        },
+                {  20, xi.item.TOOLBAG_MIZU_DEPPO       },
+                {  20, xi.item.TOOLBAG_SHINOBI_TABI     },
+                {  20, xi.item.TOOLBAG_SHIHEI           },
             },
         },
 
@@ -1692,20 +1692,20 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 150, xi.items.CHUNK_OF_COPPER_ORE    },
-                { 100, xi.items.RED_ROCK               },
-                {  50, xi.items.SQUARE_OF_VELVET_CLOTH },
-                {  80, xi.items.PINCH_OF_BOMB_ASH      },
-                {  80, xi.items.PINCH_OF_SULFUR        },
-                {  50, xi.items.SPRIG_OF_HOLY_BASIL    },
-                { 200, xi.items.TROLL_PAULDRON         },
-                { 150, xi.items.CHUNK_OF_FLAN_MEAT     },
-                {  10, xi.items.TROLL_BRONZE_INGOT     },
-                {  20, xi.items.SILVER_BULLET_POUCH    },
-                {  10, xi.items.SPARTAN_BULLET_POUCH   },
-                {  20, xi.items.IRON_BULLET_POUCH      },
-                {  40, xi.items.BRONZE_BULLET_POUCH    },
-                {  30, xi.items.BULLET_POUCH           },
+                { 150, xi.item.CHUNK_OF_COPPER_ORE    },
+                { 100, xi.item.RED_ROCK               },
+                {  50, xi.item.SQUARE_OF_VELVET_CLOTH },
+                {  80, xi.item.PINCH_OF_BOMB_ASH      },
+                {  80, xi.item.PINCH_OF_SULFUR        },
+                {  50, xi.item.SPRIG_OF_HOLY_BASIL    },
+                { 200, xi.item.TROLL_PAULDRON         },
+                { 150, xi.item.CHUNK_OF_FLAN_MEAT     },
+                {  10, xi.item.TROLL_BRONZE_INGOT     },
+                {  20, xi.item.SILVER_BULLET_POUCH    },
+                {  10, xi.item.SPARTAN_BULLET_POUCH   },
+                {  20, xi.item.IRON_BULLET_POUCH      },
+                {  40, xi.item.BRONZE_BULLET_POUCH    },
+                {  30, xi.item.BULLET_POUCH           },
             },
         },
 
@@ -1713,12 +1713,12 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 200, xi.items.PINCH_OF_SULFUR     },
-                { 200, xi.items.CHUNK_OF_FLAN_MEAT  },
-                {  50, xi.items.BULLET_POUCH        },
-                { 200, xi.items.TROLL_PAULDRON      },
-                { 100, xi.items.SPARTAN_BULLET      },
-                { 250, xi.items.SPRIG_OF_HOLY_BASIL },
+                { 200, xi.item.PINCH_OF_SULFUR     },
+                { 200, xi.item.CHUNK_OF_FLAN_MEAT  },
+                {  50, xi.item.BULLET_POUCH        },
+                { 200, xi.item.TROLL_PAULDRON      },
+                { 100, xi.item.SPARTAN_BULLET      },
+                { 250, xi.item.SPRIG_OF_HOLY_BASIL },
             },
         },
 
@@ -1726,17 +1726,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 100, xi.items.PINCH_OF_BOMB_ASH   },
-                { 150, xi.items.CHUNK_OF_COPPER_ORE },
-                {  80, xi.items.CHUNK_OF_FLAN_MEAT  },
-                {  60, xi.items.SPRIG_OF_HOLY_BASIL },
-                {  20, xi.items.IRON_BULLET_POUCH   },
-                {  10, xi.items.SILVER_BULLET_POUCH },
-                {  50, xi.items.PETRIFIED_LOG       },
-                { 100, xi.items.RED_ROCK            },
-                { 250, xi.items.PINCH_OF_SULFUR     },
-                {  80, xi.items.TROLL_BRONZE_INGOT  },
-                { 100, xi.items.TROLL_PAULDRON      },
+                { 100, xi.item.PINCH_OF_BOMB_ASH   },
+                { 150, xi.item.CHUNK_OF_COPPER_ORE },
+                {  80, xi.item.CHUNK_OF_FLAN_MEAT  },
+                {  60, xi.item.SPRIG_OF_HOLY_BASIL },
+                {  20, xi.item.IRON_BULLET_POUCH   },
+                {  10, xi.item.SILVER_BULLET_POUCH },
+                {  50, xi.item.PETRIFIED_LOG       },
+                { 100, xi.item.RED_ROCK            },
+                { 250, xi.item.PINCH_OF_SULFUR     },
+                {  80, xi.item.TROLL_BRONZE_INGOT  },
+                { 100, xi.item.TROLL_PAULDRON      },
             },
         },
 
@@ -1744,20 +1744,20 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  35, xi.items.CHUNK_OF_COPPER_ORE  },
-                {  35, xi.items.PINCH_OF_SULFUR      },
-                {  35, xi.items.RED_ROCK             },
-                {  35, xi.items.PINCH_OF_BOMB_ASH    },
-                {  35, xi.items.TROLL_BROWNZE_SHEET  },
-                {  35, xi.items.TROLL_BRONZE_INGOT   },
-                { 300, xi.items.TROLL_PAULDRON       },
-                {  35, xi.items.SPRIG_OF_HOLY_BASIL  },
-                {  35, xi.items.IRON_BULLET_POUCH    },
-                {  35, xi.items.SILVER_BULLET_POUCH  },
-                { 100, xi.items.BRONZE_BULLET_POUCH  },
-                {  35, xi.items.BULLET_POUCH         },
-                { 100, xi.items.SPARTAN_BULLET_POUCH },
-                { 150, xi.items.FLAN_MEAT            },
+                {  35, xi.item.CHUNK_OF_COPPER_ORE  },
+                {  35, xi.item.PINCH_OF_SULFUR      },
+                {  35, xi.item.RED_ROCK             },
+                {  35, xi.item.PINCH_OF_BOMB_ASH    },
+                {  35, xi.item.TROLL_BROWNZE_SHEET  },
+                {  35, xi.item.TROLL_BRONZE_INGOT   },
+                { 300, xi.item.TROLL_PAULDRON       },
+                {  35, xi.item.SPRIG_OF_HOLY_BASIL  },
+                {  35, xi.item.IRON_BULLET_POUCH    },
+                {  35, xi.item.SILVER_BULLET_POUCH  },
+                { 100, xi.item.BRONZE_BULLET_POUCH  },
+                {  35, xi.item.BULLET_POUCH         },
+                { 100, xi.item.SPARTAN_BULLET_POUCH },
+                { 150, xi.item.FLAN_MEAT            },
             },
         },
 
@@ -1765,20 +1765,20 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  35, xi.items.CHUNK_OF_COPPER_ORE  },
-                {  35, xi.items.PINCH_OF_SULFUR      },
-                {  35, xi.items.RED_ROCK             },
-                {  35, xi.items.PINCH_OF_BOMB_ASH    },
-                {  35, xi.items.TROLL_BROWNZE_SHEET  },
-                {  35, xi.items.TROLL_BRONZE_INGOT   },
-                { 300, xi.items.TROLL_PAULDRON       },
-                {  35, xi.items.SPRIG_OF_HOLY_BASIL  },
-                {  35, xi.items.IRON_BULLET_POUCH    },
-                {  35, xi.items.SILVER_BULLET_POUCH  },
-                { 100, xi.items.BRONZE_BULLET_POUCH  },
-                {  35, xi.items.BULLET_POUCH         },
-                { 100, xi.items.SPARTAN_BULLET_POUCH },
-                { 150, xi.items.APKALLU_EGG          },
+                {  35, xi.item.CHUNK_OF_COPPER_ORE  },
+                {  35, xi.item.PINCH_OF_SULFUR      },
+                {  35, xi.item.RED_ROCK             },
+                {  35, xi.item.PINCH_OF_BOMB_ASH    },
+                {  35, xi.item.TROLL_BROWNZE_SHEET  },
+                {  35, xi.item.TROLL_BRONZE_INGOT   },
+                { 300, xi.item.TROLL_PAULDRON       },
+                {  35, xi.item.SPRIG_OF_HOLY_BASIL  },
+                {  35, xi.item.IRON_BULLET_POUCH    },
+                {  35, xi.item.SILVER_BULLET_POUCH  },
+                { 100, xi.item.BRONZE_BULLET_POUCH  },
+                {  35, xi.item.BULLET_POUCH         },
+                { 100, xi.item.SPARTAN_BULLET_POUCH },
+                { 150, xi.item.APKALLU_EGG          },
             },
         },
 
@@ -1786,16 +1786,16 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  40, xi.items.IGNEOUS_ROCK             },
-                {  50, xi.items.ROTTEN_QUIVER            },
-                {  50, xi.items.HOLY_BOLT_QUIVER         },
-                { 200, xi.items.BONE_CHIP                },
-                {  50, xi.items.CLEANING_TOOL_SET        },
-                {  20, xi.items.HANDFUL_OF_DRAGON_SCALES },
-                {  90, xi.items.QIQIRN_SANDBAG           },
-                { 150, xi.items.IMP_WING                 },
-                { 200, xi.items.BRONZE_BOLT              },
-                { 150, xi.items.SPRIG_OF_APPLE_MINT      },
+                {  40, xi.item.IGNEOUS_ROCK             },
+                {  50, xi.item.ROTTEN_QUIVER            },
+                {  50, xi.item.HOLY_BOLT_QUIVER         },
+                { 200, xi.item.BONE_CHIP                },
+                {  50, xi.item.CLEANING_TOOL_SET        },
+                {  20, xi.item.HANDFUL_OF_DRAGON_SCALES },
+                {  90, xi.item.QIQIRN_SANDBAG           },
+                { 150, xi.item.IMP_WING                 },
+                { 200, xi.item.BRONZE_BOLT              },
+                { 150, xi.item.SPRIG_OF_APPLE_MINT      },
             },
         },
 
@@ -1803,18 +1803,18 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  10, xi.items.CLEANING_TOOL_SET       },
-                {  20, xi.items.SPOOL_OF_RAINBOW_THREAD },
-                { 250, xi.items.BONE_CHIP               },
-                {  50, xi.items.SPRIG_OF_APPLE_MINT     },
-                {  30, xi.items.IGNEOUS_ROCK            },
-                { 200, xi.items.QIQIRN_SANDBAG          },
-                {  50, xi.items.IMP_WING                },
-                { 100, xi.items.ROTTEN_QUIVER           },
-                {  60, xi.items.BRONZE_BOLT_QUIVER      },
-                { 100, xi.items.WILD_ONION              },
-                {  50, xi.items.HOLY_BOLT_QUIVER        },
-                {  30, xi.items.SLEEP_BOLT_QUIVER       },
+                {  10, xi.item.CLEANING_TOOL_SET       },
+                {  20, xi.item.SPOOL_OF_RAINBOW_THREAD },
+                { 250, xi.item.BONE_CHIP               },
+                {  50, xi.item.SPRIG_OF_APPLE_MINT     },
+                {  30, xi.item.IGNEOUS_ROCK            },
+                { 200, xi.item.QIQIRN_SANDBAG          },
+                {  50, xi.item.IMP_WING                },
+                { 100, xi.item.ROTTEN_QUIVER           },
+                {  60, xi.item.BRONZE_BOLT_QUIVER      },
+                { 100, xi.item.WILD_ONION              },
+                {  50, xi.item.HOLY_BOLT_QUIVER        },
+                {  30, xi.item.SLEEP_BOLT_QUIVER       },
             },
         },
 
@@ -1822,16 +1822,16 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  30, xi.items.CHUNK_OF_GOLD_ORE     },
-                { 340, xi.items.QIQIRN_SANDBAG        },
-                { 200, xi.items.SPRIG_OF_APPLE_MINT   },
-                {  30, xi.items.BLOODY_BOLT_QUIVER    },
-                {  30, xi.items.HOLY_BOLT_QUIVER      },
-                {  30, xi.items.MYTHRIL_BOLT_QUIVER   },
-                {  30, xi.items.SLEEP_BOLT_QUIVER     },
-                {  30, xi.items.DARKSTEEL_BOLT_QUIVER },
-                { 250, xi.items.IMP_WING              },
-                {  30, xi.items.QIQIRN_SANDBAG        },
+                {  30, xi.item.CHUNK_OF_GOLD_ORE     },
+                { 340, xi.item.QIQIRN_SANDBAG        },
+                { 200, xi.item.SPRIG_OF_APPLE_MINT   },
+                {  30, xi.item.BLOODY_BOLT_QUIVER    },
+                {  30, xi.item.HOLY_BOLT_QUIVER      },
+                {  30, xi.item.MYTHRIL_BOLT_QUIVER   },
+                {  30, xi.item.SLEEP_BOLT_QUIVER     },
+                {  30, xi.item.DARKSTEEL_BOLT_QUIVER },
+                { 250, xi.item.IMP_WING              },
+                {  30, xi.item.QIQIRN_SANDBAG        },
             },
         },
 
@@ -1840,16 +1840,16 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  30, xi.items.CHUNK_OF_GOLD_ORE     },
-                { 340, xi.items.QIQIRN_SANDBAG        },
-                { 200, xi.items.SPRIG_OF_APPLE_MINT   },
-                {  30, xi.items.BLOODY_BOLT_QUIVER    },
-                {  30, xi.items.HOLY_BOLT_QUIVER      },
-                {  30, xi.items.MYTHRIL_BOLT_QUIVER   },
-                {  30, xi.items.SLEEP_BOLT_QUIVER     },
-                {  30, xi.items.DARKSTEEL_BOLT_QUIVER },
-                { 250, xi.items.IMP_WING              },
-                {  30, xi.items.QIQIRN_SANDBAG        },
+                {  30, xi.item.CHUNK_OF_GOLD_ORE     },
+                { 340, xi.item.QIQIRN_SANDBAG        },
+                { 200, xi.item.SPRIG_OF_APPLE_MINT   },
+                {  30, xi.item.BLOODY_BOLT_QUIVER    },
+                {  30, xi.item.HOLY_BOLT_QUIVER      },
+                {  30, xi.item.MYTHRIL_BOLT_QUIVER   },
+                {  30, xi.item.SLEEP_BOLT_QUIVER     },
+                {  30, xi.item.DARKSTEEL_BOLT_QUIVER },
+                { 250, xi.item.IMP_WING              },
+                {  30, xi.item.QIQIRN_SANDBAG        },
             },
         },
 
@@ -1858,16 +1858,16 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  30, xi.items.CHUNK_OF_GOLD_ORE     },
-                { 340, xi.items.QIQIRN_SANDBAG        },
-                { 200, xi.items.SPRIG_OF_APPLE_MINT   },
-                {  30, xi.items.BLOODY_BOLT_QUIVER    },
-                {  30, xi.items.HOLY_BOLT_QUIVER      },
-                {  30, xi.items.MYTHRIL_BOLT_QUIVER   },
-                {  30, xi.items.SLEEP_BOLT_QUIVER     },
-                {  30, xi.items.DARKSTEEL_BOLT_QUIVER },
-                { 250, xi.items.IMP_WING              },
-                {  30, xi.items.QIQIRN_SANDBAG        },
+                {  30, xi.item.CHUNK_OF_GOLD_ORE     },
+                { 340, xi.item.QIQIRN_SANDBAG        },
+                { 200, xi.item.SPRIG_OF_APPLE_MINT   },
+                {  30, xi.item.BLOODY_BOLT_QUIVER    },
+                {  30, xi.item.HOLY_BOLT_QUIVER      },
+                {  30, xi.item.MYTHRIL_BOLT_QUIVER   },
+                {  30, xi.item.SLEEP_BOLT_QUIVER     },
+                {  30, xi.item.DARKSTEEL_BOLT_QUIVER },
+                { 250, xi.item.IMP_WING              },
+                {  30, xi.item.QIQIRN_SANDBAG        },
             },
         },
 
@@ -1876,16 +1876,16 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  30, xi.items.CHUNK_OF_GOLD_ORE     },
-                { 340, xi.items.QIQIRN_SANDBAG        },
-                { 200, xi.items.SPRIG_OF_APPLE_MINT   },
-                {  30, xi.items.BLOODY_BOLT_QUIVER    },
-                {  30, xi.items.HOLY_BOLT_QUIVER      },
-                {  30, xi.items.MYTHRIL_BOLT_QUIVER   },
-                {  30, xi.items.SLEEP_BOLT_QUIVER     },
-                {  30, xi.items.DARKSTEEL_BOLT_QUIVER },
-                { 250, xi.items.IMP_WING              },
-                {  30, xi.items.QIQIRN_SANDBAG        },
+                {  30, xi.item.CHUNK_OF_GOLD_ORE     },
+                { 340, xi.item.QIQIRN_SANDBAG        },
+                { 200, xi.item.SPRIG_OF_APPLE_MINT   },
+                {  30, xi.item.BLOODY_BOLT_QUIVER    },
+                {  30, xi.item.HOLY_BOLT_QUIVER      },
+                {  30, xi.item.MYTHRIL_BOLT_QUIVER   },
+                {  30, xi.item.SLEEP_BOLT_QUIVER     },
+                {  30, xi.item.DARKSTEEL_BOLT_QUIVER },
+                { 250, xi.item.IMP_WING              },
+                {  30, xi.item.QIQIRN_SANDBAG        },
             },
         },
 
@@ -1893,25 +1893,25 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  10, xi.items.RUSTY_BUCKET               },
-                { 240, xi.items.QUTRUB_GORGET              },
-                { 200, xi.items.LAMIAN_ARMLET              },
-                {  60, xi.items.AHT_URHGAN_BRASS_INGOT     },
-                {  20, xi.items.STONE_QUIVER               },
-                {  60, xi.items.BONE_QUIVER                },
-                {  20, xi.items.BEETLE_QUIVER              },
-                {  10, xi.items.HORN_QUIVER                },
-                {  50, xi.items.SCORPION_QUIVER            },
-                {  50, xi.items.DEMON_QUIVER               },
-                {  30, xi.items.IRON_QUIVER                },
-                {  40, xi.items.SILVER_QUIVER              },
-                {  10, xi.items.FLASK_OF_DISTILLED_WATER   },
-                {  50, xi.items.SCROLL_OF_PUPPETS_OPERETTA },
-                {  50, xi.items.KABURA_QUIVER              },
-                {  10, xi.items.SLEEP_QUIVER               },
-                { 140, xi.items.ISTAKOZ                    },
-                {  10, xi.items.WILLOW_FISHING_ROD         },
-                {  10, xi.items.LITTLE_WORM                },
+                {  10, xi.item.RUSTY_BUCKET               },
+                { 240, xi.item.QUTRUB_GORGET              },
+                { 200, xi.item.LAMIAN_ARMLET              },
+                {  60, xi.item.AHT_URHGAN_BRASS_INGOT     },
+                {  20, xi.item.STONE_QUIVER               },
+                {  60, xi.item.BONE_QUIVER                },
+                {  20, xi.item.BEETLE_QUIVER              },
+                {  10, xi.item.HORN_QUIVER                },
+                {  50, xi.item.SCORPION_QUIVER            },
+                {  50, xi.item.DEMON_QUIVER               },
+                {  30, xi.item.IRON_QUIVER                },
+                {  40, xi.item.SILVER_QUIVER              },
+                {  10, xi.item.FLASK_OF_DISTILLED_WATER   },
+                {  50, xi.item.SCROLL_OF_PUPPETS_OPERETTA },
+                {  50, xi.item.KABURA_QUIVER              },
+                {  10, xi.item.SLEEP_QUIVER               },
+                { 140, xi.item.ISTAKOZ                    },
+                {  10, xi.item.WILLOW_FISHING_ROD         },
+                {  10, xi.item.LITTLE_WORM                },
             },
         },
 
@@ -1919,20 +1919,20 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                {  20, xi.items.SPRIG_OF_APPLE_MINT    },
-                { 250, xi.items.QUTRUB_GORGET          },
-                { 250, xi.items.LAMIAN_ARMLET          },
-                {  20, xi.items.AHT_URHGAN_BRASS_INGOT },
-                {  20, xi.items.STONE_QUIVER           },
-                {  60, xi.items.BONE_QUIVER            },
-                {  20, xi.items.BEETLE_QUIVER          },
-                {  20, xi.items.DEMON_QUIVER           },
-                {  40, xi.items.SILVER_QUIVER          },
-                {  60, xi.items.LIGHT_SPIRIT_PACT      },
-                {  20, xi.items.KABURA_QUIVER          },
-                {  20, xi.items.SLEEP_QUIVER           },
-                { 190, xi.items.ISTAKOZ                },
-                {  10, xi.items.RUSTY_BUCKET           },
+                {  20, xi.item.SPRIG_OF_APPLE_MINT    },
+                { 250, xi.item.QUTRUB_GORGET          },
+                { 250, xi.item.LAMIAN_ARMLET          },
+                {  20, xi.item.AHT_URHGAN_BRASS_INGOT },
+                {  20, xi.item.STONE_QUIVER           },
+                {  60, xi.item.BONE_QUIVER            },
+                {  20, xi.item.BEETLE_QUIVER          },
+                {  20, xi.item.DEMON_QUIVER           },
+                {  40, xi.item.SILVER_QUIVER          },
+                {  60, xi.item.LIGHT_SPIRIT_PACT      },
+                {  20, xi.item.KABURA_QUIVER          },
+                {  20, xi.item.SLEEP_QUIVER           },
+                { 190, xi.item.ISTAKOZ                },
+                {  10, xi.item.RUSTY_BUCKET           },
             },
         },
 
@@ -1940,17 +1940,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 150, xi.items.RUSTY_BUCKET             },
-                { 250, xi.items.LITTLE_WORM              },
-                { 250, xi.items.FLASK_OF_DISTILLED_WATER },
-                { 100, xi.items.LAMIAN_ARMLET            },
-                {  50, xi.items.KING_TRUFFLE             },
-                {  50, xi.items.QUTRUB_GORGET            },
-                {  20, xi.items.SILVER_QUIVER            },
-                {  20, xi.items.SLEEP_QUIVER             },
-                {  40, xi.items.STONE_QUIVER             },
-                {  30, xi.items.BONE_QUIVER              },
-                {  40, xi.items.BEETLE_QUIVER            },
+                { 150, xi.item.RUSTY_BUCKET             },
+                { 250, xi.item.LITTLE_WORM              },
+                { 250, xi.item.FLASK_OF_DISTILLED_WATER },
+                { 100, xi.item.LAMIAN_ARMLET            },
+                {  50, xi.item.KING_TRUFFLE             },
+                {  50, xi.item.QUTRUB_GORGET            },
+                {  20, xi.item.SILVER_QUIVER            },
+                {  20, xi.item.SLEEP_QUIVER             },
+                {  40, xi.item.STONE_QUIVER             },
+                {  30, xi.item.BONE_QUIVER              },
+                {  40, xi.item.BEETLE_QUIVER            },
             },
         },
 
@@ -1959,17 +1959,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 150, xi.items.RUSTY_BUCKET             },
-                { 250, xi.items.LITTLE_WORM              },
-                { 250, xi.items.FLASK_OF_DISTILLED_WATER },
-                { 100, xi.items.LAMIAN_ARMLET            },
-                {  50, xi.items.KING_TRUFFLE             },
-                {  50, xi.items.QUTRUB_GORGET            },
-                {  20, xi.items.SILVER_QUIVER            },
-                {  20, xi.items.SLEEP_QUIVER             },
-                {  40, xi.items.STONE_QUIVER             },
-                {  30, xi.items.BONE_QUIVER              },
-                {  40, xi.items.BEETLE_QUIVER            },
+                { 150, xi.item.RUSTY_BUCKET             },
+                { 250, xi.item.LITTLE_WORM              },
+                { 250, xi.item.FLASK_OF_DISTILLED_WATER },
+                { 100, xi.item.LAMIAN_ARMLET            },
+                {  50, xi.item.KING_TRUFFLE             },
+                {  50, xi.item.QUTRUB_GORGET            },
+                {  20, xi.item.SILVER_QUIVER            },
+                {  20, xi.item.SLEEP_QUIVER             },
+                {  40, xi.item.STONE_QUIVER             },
+                {  30, xi.item.BONE_QUIVER              },
+                {  40, xi.item.BEETLE_QUIVER            },
             },
         },
 
@@ -1978,17 +1978,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 150, xi.items.RUSTY_BUCKET             },
-                { 250, xi.items.LITTLE_WORM              },
-                { 250, xi.items.FLASK_OF_DISTILLED_WATER },
-                { 100, xi.items.LAMIAN_ARMLET            },
-                {  50, xi.items.KING_TRUFFLE             },
-                {  50, xi.items.QUTRUB_GORGET            },
-                {  20, xi.items.SILVER_QUIVER            },
-                {  20, xi.items.SLEEP_QUIVER             },
-                {  40, xi.items.STONE_QUIVER             },
-                {  30, xi.items.BONE_QUIVER              },
-                {  40, xi.items.BEETLE_QUIVER            },
+                { 150, xi.item.RUSTY_BUCKET             },
+                { 250, xi.item.LITTLE_WORM              },
+                { 250, xi.item.FLASK_OF_DISTILLED_WATER },
+                { 100, xi.item.LAMIAN_ARMLET            },
+                {  50, xi.item.KING_TRUFFLE             },
+                {  50, xi.item.QUTRUB_GORGET            },
+                {  20, xi.item.SILVER_QUIVER            },
+                {  20, xi.item.SLEEP_QUIVER             },
+                {  40, xi.item.STONE_QUIVER             },
+                {  30, xi.item.BONE_QUIVER              },
+                {  40, xi.item.BEETLE_QUIVER            },
             },
         },
 
@@ -1997,17 +1997,17 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 150, xi.items.RUSTY_BUCKET             },
-                { 250, xi.items.LITTLE_WORM              },
-                { 250, xi.items.FLASK_OF_DISTILLED_WATER },
-                { 100, xi.items.LAMIAN_ARMLET            },
-                {  50, xi.items.KING_TRUFFLE             },
-                {  50, xi.items.QUTRUB_GORGET            },
-                {  20, xi.items.SILVER_QUIVER            },
-                {  20, xi.items.SLEEP_QUIVER             },
-                {  40, xi.items.STONE_QUIVER             },
-                {  30, xi.items.BONE_QUIVER              },
-                {  40, xi.items.BEETLE_QUIVER            },
+                { 150, xi.item.RUSTY_BUCKET             },
+                { 250, xi.item.LITTLE_WORM              },
+                { 250, xi.item.FLASK_OF_DISTILLED_WATER },
+                { 100, xi.item.LAMIAN_ARMLET            },
+                {  50, xi.item.KING_TRUFFLE             },
+                {  50, xi.item.QUTRUB_GORGET            },
+                {  20, xi.item.SILVER_QUIVER            },
+                {  20, xi.item.SLEEP_QUIVER             },
+                {  40, xi.item.STONE_QUIVER             },
+                {  30, xi.item.BONE_QUIVER              },
+                {  40, xi.item.BEETLE_QUIVER            },
             },
         },
 
@@ -2015,9 +2015,9 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 800, xi.items.LEATHER_TROUSERS },
-                { 100, xi.items.FALCONERS_HOSE   },
-                { 100, xi.items.SABLE_CUISSES    },
+                { 800, xi.item.LEATHER_TROUSERS },
+                { 100, xi.item.FALCONERS_HOSE   },
+                { 100, xi.item.SABLE_CUISSES    },
             },
         },
 
@@ -2025,8 +2025,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.SLACKS       },
-                { 100, xi.items.MAGIC_SLACKS },
+                { 900, xi.item.SLACKS       },
+                { 100, xi.item.MAGIC_SLACKS },
             },
         },
 
@@ -2034,8 +2034,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.BOMB_ARM  },
-                { 100, xi.items.BOMB_CORE },
+                { 900, xi.item.BOMB_ARM  },
+                { 100, xi.item.BOMB_CORE },
             },
         },
 
@@ -2043,8 +2043,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.DART       },
-                { 100, xi.items.BAILATHORN },
+                { 900, xi.item.DART       },
+                { 100, xi.item.BAILATHORN },
             },
         },
 
@@ -2052,8 +2052,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LEATHER_TROUSERS },
-                { 100, xi.items.BRAVOS_SUBLIGAR  },
+                { 900, xi.item.LEATHER_TROUSERS },
+                { 100, xi.item.BRAVOS_SUBLIGAR  },
             },
         },
 
@@ -2061,8 +2061,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.CORNETTE   },
-                { 100, xi.items.MARYS_HORN },
+                { 900, xi.item.CORNETTE   },
+                { 100, xi.item.MARYS_HORN },
             },
         },
 
@@ -2070,8 +2070,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.LINEN_SLOPS   },
-                { 100, xi.items.LUNA_SUBLIGAR },
+                { 900, xi.item.LINEN_SLOPS   },
+                { 100, xi.item.LUNA_SUBLIGAR },
             },
         },
 
@@ -2079,8 +2079,8 @@ xi.appraisal.appraisalItems =
         {
             items =
             {
-                { 900, xi.items.SLACKS        },
-                { 100, xi.items.JET_SERAWEELS },
+                { 900, xi.item.SLACKS        },
+                { 100, xi.item.JET_SERAWEELS },
             },
         },
     },

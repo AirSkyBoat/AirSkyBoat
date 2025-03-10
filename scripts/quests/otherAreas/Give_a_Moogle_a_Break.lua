@@ -37,8 +37,8 @@ local questAvailable =
     {
         onTrigger = function(player, npc)
             return quest:progressEvent(30005, { [3] = 5,
-                                                [5] = xi.items.POWER_BOW,
-                                                [6] = xi.items.BEETLE_RING,
+                                                [5] = xi.item.POWER_BOW,
+                                                [6] = xi.item.BEETLE_RING,
                                                 })
         end,
     },
@@ -65,7 +65,7 @@ local questAccepted =
     ['Moogle'] =
     {
         onTrade = function(player, npc, trade)
-            if npcUtil.tradeHasExactly(trade, { xi.items.POWER_BOW, xi.items.BEETLE_RING }) then
+            if npcUtil.tradeHasExactly(trade, { xi.item.POWER_BOW, xi.item.BEETLE_RING }) then
                 return quest:progressEvent(30007)
             end
         end,
@@ -79,8 +79,8 @@ local questAccepted =
             end
 
             if questProgress == 0 then
-                return quest:progressEvent(30006, { [5] = xi.items.POWER_BOW,
-                                                    [6] = xi.items.BEETLE_RING,
+                return quest:progressEvent(30006, { [5] = xi.item.POWER_BOW,
+                                                    [6] = xi.item.BEETLE_RING,
                                                     })
             elseif
                 questProgress == 1 and

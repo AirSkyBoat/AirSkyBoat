@@ -15,7 +15,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.MESSENGER
 
 quest.reward =
 {
-    item     = xi.items.BLESSED_HAMMER,
+    item     = xi.item.BLESSED_HAMMER,
     fame     = 20,
     fameArea = xi.quest.fame_area.SANDORIA,
 }
@@ -55,7 +55,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if
-                        not player:hasItem(xi.items.TAVNAZIA_PASS) and
+                        not player:hasItem(xi.item.TAVNAZIA_PASS) and
                         npcUtil.popFromQM(player, npc, valkID.mob.MARCHELUTE, { claim = true, hide = 0 })
                     then
                         return quest:messageSpecial(valkID.text.FOUL_PRESENSE)
@@ -71,7 +71,7 @@ quest.sections =
             ['Narcheral'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.TAVNAZIA_PASS) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.TAVNAZIA_PASS) then
                         return quest:progressEvent(690) -- Finish quest.
                     end
                 end,

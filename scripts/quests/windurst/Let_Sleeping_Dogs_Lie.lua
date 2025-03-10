@@ -18,7 +18,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.LET_SLEEP
 
 quest.reward =
 {
-    item = xi.items.HYPNO_STAFF,
+    item = xi.item.HYPNO_STAFF,
     fame = 75,
     fameArea = xi.quest.fame_area.WINDURST,
     title = xi.title.SPOILSPORT,
@@ -62,7 +62,7 @@ quest.sections =
             ['Paku-Nakku'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.BUNCH_OF_BLAZING_PEPPERS) and quest:getVar(player, 'Prog') == 1 then
+                    if npcUtil.tradeHasExactly(trade, xi.item.BUNCH_OF_BLAZING_PEPPERS) and quest:getVar(player, 'Prog') == 1 then
                         return quest:progressEvent(494)
                     end
                 end,
@@ -136,16 +136,16 @@ quest.sections =
             ['qm1'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.SICKLE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.SICKLE) then
                         local chance = math.random(1, 5)
                         if chance <= 2 then
-                            npcUtil.giveItem(player, xi.items.BUNCH_OF_BLAZING_PEPPERS)
+                            npcUtil.giveItem(player, xi.item.BUNCH_OF_BLAZING_PEPPERS)
                             player:tradeComplete(false)
-                            return player:startEvent(12, 1102, 0, 0, xi.items.BUNCH_OF_BLAZING_PEPPERS)-- successful no break
+                            return player:startEvent(12, 1102, 0, 0, xi.item.BUNCH_OF_BLAZING_PEPPERS)-- successful no break
                         elseif chance == 3 then
-                            npcUtil.giveItem(player, xi.items.BUNCH_OF_BLAZING_PEPPERS)
+                            npcUtil.giveItem(player, xi.item.BUNCH_OF_BLAZING_PEPPERS)
                             player:confirmTrade()
-                            return player:startEvent(12, 1102, 1, 0, xi.items.BUNCH_OF_BLAZING_PEPPERS) -- successful but breaks
+                            return player:startEvent(12, 1102, 1, 0, xi.item.BUNCH_OF_BLAZING_PEPPERS) -- successful but breaks
                         elseif chance == 4 then
                             player:confirmTrade()
                             return player:startEvent(12, 0, 1, 0) -- unsuccessful and breaks

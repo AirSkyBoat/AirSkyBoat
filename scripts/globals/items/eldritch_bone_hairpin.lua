@@ -7,16 +7,16 @@
 local itemObject = {}
 
 itemObject.onItemCheck = function(target)
-    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.ELDRITCH_BONE_HAIRPIN) ~= nil then
-        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.ELDRITCH_BONE_HAIRPIN)
+    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.ELDRITCH_BONE_HAIRPIN) ~= nil then
+        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.ELDRITCH_BONE_HAIRPIN)
     end
 
     return 0
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.ELDRITCH_BONE_HAIRPIN) then
-        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 1800, 0, 0, 0, xi.items.ELDRITCH_BONE_HAIRPIN)
+    if target:hasEquipped(xi.item.ELDRITCH_BONE_HAIRPIN) then
+        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 1800, 0, 0, 0, xi.item.ELDRITCH_BONE_HAIRPIN)
     end
 end
 

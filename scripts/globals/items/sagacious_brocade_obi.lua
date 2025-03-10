@@ -10,7 +10,7 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
-    target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 600, 0, 0, 0, xi.items.SAGACIOUS_BROCADE_OBI)
+    target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 600, 0, 0, 0, xi.item.SAGACIOUS_BROCADE_OBI)
 end
 
 itemObject.onEffectGain = function(target, effect)

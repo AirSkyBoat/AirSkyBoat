@@ -202,7 +202,7 @@ end
 xi.job_utils.dragoon.abilityCheckAngon = function(player, target, ability)
     local id = player:getEquipID(xi.slot.AMMO)
 
-    if id == xi.items.ANGON then
+    if id == xi.item.ANGON then
         return 0, 0
     else
         return xi.msg.basic.CANNOT_PERFORM, 0
@@ -785,8 +785,8 @@ xi.job_utils.dragoon.pickAndUseDamageBreath = function(player, target)
     -- If all resistances are equal, a random breath is used.
     -- However there innately exists a chance where wyvern use breath based on weakness.
     if
-        headEquipID == xi.items.DRACHEN_ARMET or
-        headEquipID == xi.items.DRACHEN_ARMET_P1 or
+        headEquipID == xi.item.DRACHEN_ARMET or
+        headEquipID == xi.item.DRACHEN_ARMET_P1 or
         math.random() < 0.5
     then
         for i, v in ipairs(breathList) do

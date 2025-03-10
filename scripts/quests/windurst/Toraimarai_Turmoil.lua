@@ -33,7 +33,7 @@ quest.sections =
 
         [xi.zone.WINDURST_WATERS] =
         {
-            ['Ohbiru-Dohbiru'] = quest:progressEvent(785, 4500, xi.keyItem.RHINOSTERY_CERTIFICATE, xi.items.STARMITE_SHELL),
+            ['Ohbiru-Dohbiru'] = quest:progressEvent(785, 4500, xi.keyItem.RHINOSTERY_CERTIFICATE, xi.item.STARMITE_SHELL),
 
             onEventFinish =
             {
@@ -58,10 +58,10 @@ quest.sections =
             ['Ohbiru-Dohbiru'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:event(786, 4500, xi.keyItem.RHINOSTERY_CERTIFICATE, xi.items.STARMITE_SHELL) -- Reminder text.
+                    return quest:event(786, 4500, xi.keyItem.RHINOSTERY_CERTIFICATE, xi.item.STARMITE_SHELL) -- Reminder text.
                 end,
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.STARMITE_SHELL, 3 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.STARMITE_SHELL, 3 } }) then
                         return quest:progressEvent(791)
                     end
                 end,
@@ -89,10 +89,10 @@ quest.sections =
             ['Ohbiru-Dohbiru'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:event(795, 4500, 0, xi.items.STARMITE_SHELL) --dialog for repeat
+                    return quest:event(795, 4500, 0, xi.item.STARMITE_SHELL) --dialog for repeat
                 end,
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.STARMITE_SHELL, 3 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.STARMITE_SHELL, 3 } }) then
                         return quest:progressEvent(791)
                     end
                 end,

@@ -14,9 +14,9 @@ end
 entity.onTrigger = function(player, npc)
     if
         npc:getStatus() == xi.status.NORMAL and
-        not player:hasItem(xi.items.OFFERING_TO_UGGALEPIH)
+        not player:hasItem(xi.item.OFFERING_TO_UGGALEPIH)
     then
-        if npcUtil.giveItem(player, xi.items.OFFERING_TO_UGGALEPIH) then -- Uggalepih Offering
+        if npcUtil.giveItem(player, xi.item.OFFERING_TO_UGGALEPIH) then -- Uggalepih Offering
             local positions =
             {
                 { 393.78, -0.30, 272.287 },

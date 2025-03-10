@@ -18,7 +18,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.THE_
 
 quest.reward =
 {
-    item = xi.items.MEMENTO_MUFFLER,
+    item = xi.item.MEMENTO_MUFFLER,
 }
 
 quest.sections =

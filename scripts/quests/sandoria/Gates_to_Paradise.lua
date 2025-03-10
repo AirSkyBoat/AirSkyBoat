@@ -19,7 +19,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
-    item = xi.items.COTTON_CAPE,
+    item = xi.item.COTTON_CAPE,
     title = xi.title.THE_PIOUS_ONE,
 }
 

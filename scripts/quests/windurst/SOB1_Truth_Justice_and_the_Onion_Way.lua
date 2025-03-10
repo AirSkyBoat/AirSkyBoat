@@ -15,7 +15,7 @@ quest.reward =
 {
     fame     = 10,
     fameArea = xi.quest.fame_area.WINDURST,
-    item     = xi.items.JUSTICE_BADGE,
+    item     = xi.item.JUSTICE_BADGE,
     title    = xi.title.STAR_ONION_BRIGADE_MEMBER,
 }
 
@@ -57,8 +57,8 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.RARAB_TAIL) then
-                        return quest:progressEvent(378, 0, xi.items.RARAB_TAIL, xi.items.JUSTICE_BADGE)
+                    if npcUtil.tradeHasExactly(trade, xi.item.RARAB_TAIL) then
+                        return quest:progressEvent(378, 0, xi.item.RARAB_TAIL, xi.item.JUSTICE_BADGE)
                     end
                 end,
             },

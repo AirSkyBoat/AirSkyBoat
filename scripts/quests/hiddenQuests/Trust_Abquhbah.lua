@@ -14,7 +14,7 @@ quest.sections =
     {
         check = function(player, questVars, vars)
             return not player:hasSpell(xi.magic.spell.ABQUHBAH) and
-                not player:findItem(xi.items.CIPHER_OF_ABQUHBAHS_ALTER_EGO) and
+                not player:findItem(xi.item.CIPHER_OF_ABQUHBAHS_ALTER_EGO) and
                 player:hasCompletedMission(xi.mission.log_id.TOAU, xi.mission.id.toau.IMMORTAL_SENTRIES) and
                 player:getCurrentMission(xi.mission.log_id.ROV) >= xi.mission.id.rov.EVER_FORWARD and
                 xi.settings.main.ENABLE_ROV == 1
@@ -35,7 +35,7 @@ quest.sections =
             {
                 [170] = function(player, csid, option, npc)
                     if xi.trust.hasPermit(player) then
-                        npcUtil.giveItem(player, xi.items.CIPHER_OF_ABQUHBAHS_ALTER_EGO)
+                        npcUtil.giveItem(player, xi.item.CIPHER_OF_ABQUHBAHS_ALTER_EGO)
                     end
                 end,
             },

@@ -14,7 +14,7 @@ local quest = Quest:new(xi.quest.log_id.AHT_URHGAN, xi.quest.id.ahtUrhgan.NAVIGA
 
 quest.reward =
 {
-    item  = xi.items.CORSAIRS_CULOTTES,
+    item  = xi.item.CORSAIRS_CULOTTES,
 }
 
 quest.sections =
@@ -53,7 +53,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.HYDROGAUGE) and
+                        npcUtil.tradeHasExactly(trade, xi.item.HYDROGAUGE) and
                         quest:getVar(player, 'Prog') == 0
                     then
                         return quest:progressEvent(283)
@@ -81,13 +81,13 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.HYDROGAUGE) and
+                        npcUtil.tradeHasExactly(trade, xi.item.HYDROGAUGE) and
                         quest:getVar(player, 'Prog') == 1
                     then
                         player:confirmTrade()
                         quest:setVar(player, 'Prog', 2)
                         quest:setVar(player, 'leypointTimer', getMidnight())
-                        return quest:messageSpecial(wajaomID.text.PLACE_HYDROGAUGE, xi.items.HYDROGAUGE)
+                        return quest:messageSpecial(wajaomID.text.PLACE_HYDROGAUGE, xi.item.HYDROGAUGE)
                     end
                 end,
 
@@ -101,7 +101,7 @@ quest.sections =
                         quest:getVar(player, 'leypointTimer') >= os.time() and
                         quest:getVar(player, 'Prog') == 2
                     then
-                        return quest:messageSpecial(wajaomID.text.ENIGMATIC_LIGHT, xi.items.HYDROGAUGE)
+                        return quest:messageSpecial(wajaomID.text.ENIGMATIC_LIGHT, xi.item.HYDROGAUGE)
                     else
                         return quest:messageSpecial(wajaomID.text.LEYPOINT)
                     end

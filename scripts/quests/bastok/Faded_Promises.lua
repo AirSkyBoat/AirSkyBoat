@@ -19,7 +19,7 @@ quest.reward =
 {
     fame     = 10,
     fameArea = xi.quest.fame_area.BASTOK,
-    item     = xi.items.FUKURO,
+    item     = xi.item.FUKURO,
     title    = xi.title.ASSASSIN_REJECT,
 }
 

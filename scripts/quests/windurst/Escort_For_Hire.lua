@@ -21,7 +21,7 @@ quest.reward =
     gil = 10000,
     fame = 100,
     fameArea = xi.quest.fame_area.WINDURST,
-    item = xi.items.MIRATETES_MEMOIRS,
+    item = xi.item.MIRATETES_MEMOIRS,
 }
 
 quest.sections =

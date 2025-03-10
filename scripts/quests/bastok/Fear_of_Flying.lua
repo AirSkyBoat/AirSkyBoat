@@ -16,7 +16,7 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.quest.fame_area.BASTOK,
-    item     = xi.items.BLACK_SILK_NECKERCHIEF,
+    item     = xi.item.BLACK_SILK_NECKERCHIEF,
     title    = xi.title.AIRSHIP_DENOUNCER,
 }
 
@@ -51,7 +51,7 @@ quest.sections =
             ['Kurando'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.SILKWORM_EGG) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.SILKWORM_EGG) then
                         return quest:progressEvent(171)
                     end
                 end,

@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.JEUNO, xi.quest.id.jeuno.A_NEW_DAWN)
 
 quest.reward =
 {
-    item     = xi.items.BEAST_TROUSERS,
+    item     = xi.item.BEAST_TROUSERS,
     title    = xi.title.PARAGON_OF_BEASTMASTER_EXCELLENCE,
 }
 
@@ -99,7 +99,7 @@ quest.sections =
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.PIECE_OF_MAHOGANY_LUMBER) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.PIECE_OF_MAHOGANY_LUMBER) then
                         player:tradeComplete()
                         return quest:progressEvent(148)
                     end

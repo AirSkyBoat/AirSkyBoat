@@ -14,7 +14,7 @@ local quest = Quest:new(xi.quest.log_id.BASTOK, xi.quest.id.bastok.CHIPS)
 
 quest.reward =
 {
-    item = xi.items.CCB_POLYMER_PUMP,
+    item = xi.item.CCB_POLYMER_PUMP,
 }
 
 quest.sections =
@@ -52,15 +52,15 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         npcUtil.tradeHasExactly(trade, {
-                        xi.items.CARMINE_CHIP,
-                        xi.items.CYAN_CHIP,
-                        xi.items.GRAY_CHIP
+                        xi.item.CARMINE_CHIP,
+                        xi.item.CYAN_CHIP,
+                        xi.item.GRAY_CHIP
                         }) and
-                        not player:hasItem(xi.items.CCB_POLYMER_PUMP)
+                        not player:hasItem(xi.item.CCB_POLYMER_PUMP)
                     then
                         return quest:progressEvent(883)
-                    elseif player:hasItem(xi.items.CCB_POLYMER_PUMP) or player:getFreeSlotsCount() == 0 then
-                        return quest:messageSpecial(metalworksID.text.FULL_INVENTORY_AFTER_TRADE, xi.items.CCB_POLYMER_PUMP)
+                    elseif player:hasItem(xi.item.CCB_POLYMER_PUMP) or player:getFreeSlotsCount() == 0 then
+                        return quest:messageSpecial(metalworksID.text.FULL_INVENTORY_AFTER_TRADE, xi.item.CCB_POLYMER_PUMP)
                     end
                 end,
             },
@@ -88,15 +88,15 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         npcUtil.tradeHasExactly(trade, {
-                        xi.items.CARMINE_CHIP,
-                        xi.items.CYAN_CHIP,
-                        xi.items.GRAY_CHIP
+                        xi.item.CARMINE_CHIP,
+                        xi.item.CYAN_CHIP,
+                        xi.item.GRAY_CHIP
                         }) and
-                        not player:hasItem(xi.items.CCB_POLYMER_PUMP)
+                        not player:hasItem(xi.item.CCB_POLYMER_PUMP)
                     then
                         return quest:progressEvent(884)
-                    elseif player:hasItem(xi.items.CCB_POLYMER_PUMP) or player:getFreeSlotsCount() == 0 then
-                        return quest:messageSpecial(metalworksID.text.FULL_INVENTORY_AFTER_TRADE, xi.items.CCB_POLYMER_PUMP)
+                    elseif player:hasItem(xi.item.CCB_POLYMER_PUMP) or player:getFreeSlotsCount() == 0 then
+                        return quest:messageSpecial(metalworksID.text.FULL_INVENTORY_AFTER_TRADE, xi.item.CCB_POLYMER_PUMP)
                     end
                 end,
             },
@@ -104,7 +104,7 @@ quest.sections =
             onEventFinish =
             {
                 [884] = function(player, csid, option, npc)
-                    if npcUtil.giveItem(player, xi.items.CCB_POLYMER_PUMP) then
+                    if npcUtil.giveItem(player, xi.item.CCB_POLYMER_PUMP) then
                         player:confirmTrade()
                     end
                 end,

@@ -13,7 +13,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.PRELUDE_O
 
 quest.reward =
 {
-    item     = xi.items.HEALERS_DUCKBILLS,
+    item     = xi.item.HEALERS_DUCKBILLS,
     fame     = 40,
     fameArea = xi.quest.fame_area.SANDORIA,
 }
@@ -53,7 +53,7 @@ quest.sections =
             ['Narcheral'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { xi.items.MOCCASINS, xi.items.CANTEEN_OF_YAGUDO_HOLY_WATER }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.MOCCASINS, xi.item.CANTEEN_OF_YAGUDO_HOLY_WATER }) then
                         return quest:progressEvent(691)
                     end
                 end,

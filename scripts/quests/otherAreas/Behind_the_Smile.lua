@@ -19,7 +19,7 @@ local quest = Quest:new(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.BEHI
 
 quest.reward =
 {
-    item = xi.items.MANNEQUIN_PUMPS,
+    item = xi.item.MANNEQUIN_PUMPS,
 }
 
 quest.sections =

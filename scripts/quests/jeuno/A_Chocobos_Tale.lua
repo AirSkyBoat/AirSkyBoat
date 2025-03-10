@@ -83,7 +83,7 @@ quest.sections =
                     elseif quest:getVar(player, 'Prog') == 1 then
                         return quest:event(246) -- Additional dialogue
                     elseif quest:getVar(player, 'Prog') == 3 then
-                        return quest:progressEvent(247, { [1] = xi.items.BOTTLE_OF_WARDING_OIL })
+                        return quest:progressEvent(247, { [1] = xi.item.BOTTLE_OF_WARDING_OIL })
                     elseif quest:getVar(player, 'Prog') == 4 then
                         return quest:event(248) -- Additional dialogue
                     end
@@ -107,12 +107,12 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 1 then
-                        return quest:progressEvent(21, { [1] = xi.items.BOTTLE_OF_WARDING_OIL })
+                        return quest:progressEvent(21, { [1] = xi.item.BOTTLE_OF_WARDING_OIL })
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.BOTTLE_OF_WARDING_OIL, 3 } }) and
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.BOTTLE_OF_WARDING_OIL, 3 } }) and
                         quest:getVar(player, 'Prog') == 2
                     then
                         return quest:progressEvent(22)

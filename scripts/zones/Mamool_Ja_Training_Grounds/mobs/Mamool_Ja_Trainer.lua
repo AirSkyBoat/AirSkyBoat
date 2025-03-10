@@ -7,26 +7,26 @@ local entity = {}
 
 local lootTable =
 {
-    xi.items.FIGHTING_FISH_TANK,
-    xi.items.GOBLIN_DIE,
-    xi.items.PIECE_OF_ATTOHWA_GINSENG,
-    xi.items.MAMOOL_JA_COLLAR,
-    xi.items.DIVINATION_SPHERE,
-    xi.items.TORN_EPISTLE,
-    xi.items.GILT_GLASSES,
-    xi.items.WILD_RABBIT_TAIL,
+    xi.item.FIGHTING_FISH_TANK,
+    xi.item.GOBLIN_DIE,
+    xi.item.PIECE_OF_ATTOHWA_GINSENG,
+    xi.item.MAMOOL_JA_COLLAR,
+    xi.item.DIVINATION_SPHERE,
+    xi.item.TORN_EPISTLE,
+    xi.item.GILT_GLASSES,
+    xi.item.WILD_RABBIT_TAIL,
 }
 
 local respawnTable =
 {
-    [xi.items.FIGHTING_FISH_TANK]       = 17047813,
-    [xi.items.GOBLIN_DIE]               = 17047814,
-    [xi.items.PIECE_OF_ATTOHWA_GINSENG] = 17047815,
-    [xi.items.MAMOOL_JA_COLLAR]         = 17047816,
-    [xi.items.DIVINATION_SPHERE]        = 17047817,
-    [xi.items.TORN_EPISTLE]             = 17047818,
-    [xi.items.GILT_GLASSES]             = 17047819,
-    [xi.items.WILD_RABBIT_TAIL]         = 17047820,
+    [xi.item.FIGHTING_FISH_TANK]       = 17047813,
+    [xi.item.GOBLIN_DIE]               = 17047814,
+    [xi.item.PIECE_OF_ATTOHWA_GINSENG] = 17047815,
+    [xi.item.MAMOOL_JA_COLLAR]         = 17047816,
+    [xi.item.DIVINATION_SPHERE]        = 17047817,
+    [xi.item.TORN_EPISTLE]             = 17047818,
+    [xi.item.GILT_GLASSES]             = 17047819,
+    [xi.item.WILD_RABBIT_TAIL]         = 17047820,
 }
 
 entity.onMobSpawn = function(mob)

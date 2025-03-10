@@ -49,9 +49,9 @@ quest.sections =
                         not quest:getMustZone(player)
                     then
                         if player:getRank(xi.nation.WINDURST) < 3 then
-                            return quest:progressEvent(391, 0, xi.items.WILD_ONION) -- Quest starting event. (In time)
+                            return quest:progressEvent(391, 0, xi.item.WILD_ONION) -- Quest starting event. (In time)
                         else
-                            return quest:progressEvent(388, 0, xi.items.WILD_ONION) -- Quest starting event. (Missed action)
+                            return quest:progressEvent(388, 0, xi.item.WILD_ONION) -- Quest starting event. (Missed action)
                         end
                     else
                         return quest:event(379) -- Default text.
@@ -86,14 +86,14 @@ quest.sections =
             ['Kohlo-Lakolo'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:event(392, 0, xi.items.WILD_ONION) -- Reminder text if you are still in time.
+                    return quest:event(392, 0, xi.item.WILD_ONION) -- Reminder text if you are still in time.
                 end,
 
                 onTrade = function(player, npc, trade)
                     if player:getFreeSlotsCount() == 0 then
-                        return mission:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.items.SCROLL_OF_BLAZE_SPIKES)
-                    elseif npcUtil.tradeHasExactly(trade, { { xi.items.WILD_ONION, 4 } }) then
-                        return quest:progressEvent(398, 0, xi.items.WILD_ONION) -- Trade in time. Quest goes on.
+                        return mission:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, xi.item.SCROLL_OF_BLAZE_SPIKES)
+                    elseif npcUtil.tradeHasExactly(trade, { { xi.item.WILD_ONION, 4 } }) then
+                        return quest:progressEvent(398, 0, xi.item.WILD_ONION) -- Trade in time. Quest goes on.
                     end
                 end,
             },
@@ -109,7 +109,7 @@ quest.sections =
                 [398] = function(player, csid, option, npc)
                     player:confirmTrade()
                     quest:setVar(player, 'Prog', 2)
-                    npcUtil.giveItem(player, xi.items.SCROLL_OF_BLAZE_SPIKES)
+                    npcUtil.giveItem(player, xi.item.SCROLL_OF_BLAZE_SPIKES)
                 end,
             },
         },
@@ -126,7 +126,7 @@ quest.sections =
         [xi.zone.PORT_WINDURST] =
         {
             ['Gomada-Vulmada'] = quest:event(394),
-            ['Kohlo-Lakolo']   = quest:event(399, 0, xi.items.WILD_ONION),
+            ['Kohlo-Lakolo']   = quest:event(399, 0, xi.item.WILD_ONION),
             ['Papo-Hopo']      = quest:event(393),
             ['Pichichi']       = quest:event(395),
             ['Pyo_Nzon']       = quest:event(396),
@@ -135,7 +135,7 @@ quest.sections =
 
         [xi.zone.WINDURST_WALLS] =
         {
-            ['_6n2'] = quest:progressEvent(288, 0, xi.items.WILD_ONION),
+            ['_6n2'] = quest:progressEvent(288, 0, xi.item.WILD_ONION),
 
             onEventFinish =
             {
@@ -187,16 +187,16 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 0 then
-                        return quest:event(389, 0, xi.items.WILD_ONION) -- Reminder text: Started quest late.
+                        return quest:event(389, 0, xi.item.WILD_ONION) -- Reminder text: Started quest late.
                     elseif quest:getVar(player, 'Prog') == 1 then
-                        return quest:event(387, 0, xi.items.WILD_ONION) -- Reminder text: In time for introduction but late before trade is done.
+                        return quest:event(387, 0, xi.item.WILD_ONION) -- Reminder text: In time for introduction but late before trade is done.
                     elseif quest:getVar(player, 'Prog') == 2 then
                         return quest:event(386)                         -- Reminder text: Late after trade. Quest Complete.
                     end
                 end,
 
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, { { xi.items.WILD_ONION, 4 } }) then
+                    if npcUtil.tradeHasExactly(trade, { { xi.item.WILD_ONION, 4 } }) then
                         return quest:progressEvent(390) -- Quest Complete.
                     end
                 end,
@@ -220,7 +220,7 @@ quest.sections =
                 [390] = function(player, csid, option, npc)
                     if quest:complete(player) then
                         player:confirmTrade()
-                        npcUtil.giveItem(player, xi.items.SCROLL_OF_BLAZE_SPIKES)
+                        npcUtil.giveItem(player, xi.item.SCROLL_OF_BLAZE_SPIKES)
                         player:setLocalVar('[2][41]mustZone', 1)
                     end
                 end,

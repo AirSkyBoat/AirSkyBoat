@@ -25,7 +25,7 @@ local spawnedMobs =
 
 quest.reward =
 {
-    item  = xi.items.GOLD_BEASTCOIN,
+    item  = xi.item.GOLD_BEASTCOIN,
     title = xi.title.MOBLIN_KINSMAN,
 }
 
@@ -37,7 +37,7 @@ quest.sections =
             player:getQuestStatus(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.AN_UNDERSTANDING_OVERLORD) ~= QUEST_ACCEPTED and
             player:getQuestStatus(xi.quest.log_id.OTHER_AREAS, xi.quest.id.otherAreas.A_MORAL_MANIFEST) ~= QUEST_ACCEPTED and
             player:getVar("BstHeadGearQuest_Conquest") < getConquestTally() and
-            not player:hasItem(xi.items.CHOPLIXS_COIF) and
+            not player:hasItem(xi.item.CHOPLIXS_COIF) and
             player:getMainLvl() >= 60
 
         -- this and other bstmn hat quests, are repeatable every conquest tally (i.e. 1 per tally). this will be a permanent var that gets reset every time the quest is redone.
@@ -98,7 +98,7 @@ quest.sections =
                         end
                     elseif
                         quest:getVar(player, 'Prog') == 3 and
-                        not player:hasItem(xi.items.GOBLIN_COIF_CUTTING) and
+                        not player:hasItem(xi.item.GOBLIN_COIF_CUTTING) and
                         not quest:getMustZone(player)
                     then
                         return quest:progressEvent(774)
@@ -107,7 +107,7 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { xi.items.BUFFALO_HIDE, xi.items.SQUARE_OF_SHEEP_LEATHER, { "gil", 10000 } }) and
+                        npcUtil.tradeHasExactly(trade, { xi.item.BUFFALO_HIDE, xi.item.SQUARE_OF_SHEEP_LEATHER, { "gil", 10000 } }) and
                         quest:getVar(player, 'Prog') == 1
                     then
                         return quest:progressEvent(772)
@@ -156,7 +156,7 @@ quest.sections =
 
                 [775] = function(player, csid, option, npc)
                     quest:setVar(player, 'Prog', 3)
-                    npcUtil.giveItem(player, xi.items.GOBLIN_COIF_CUTTING)
+                    npcUtil.giveItem(player, xi.item.GOBLIN_COIF_CUTTING)
                     quest:setMustZone(player) -- cap shows must zone before getting a new one if dropped/lost
                 end,
             },
@@ -177,7 +177,7 @@ quest.sections =
                         pos.y <= 9.0 and
                         pos.z <= -258.0 and
                         quest:getVar(player, 'Prog') == 3 and
-                        headEquip == xi.items.GOBLIN_COIF
+                        headEquip == xi.item.GOBLIN_COIF
                     then
                         return 61
                     elseif quest:getVar(player, 'Prog') == 7 then
@@ -191,12 +191,12 @@ quest.sections =
                 onTrigger = function(player, npc, trade)
                     local headEquip = player:getEquipID(xi.slot.HEAD)
                     if
-                        headEquip == xi.items.GOBLIN_COIF and
+                        headEquip == xi.item.GOBLIN_COIF and
                         player:hasKeyItem(xi.ki.GOBLIN_RECOMMENDATION_LETTER)
                     then
                         return quest:progressEvent(62)
                     elseif
-                        headEquip == (xi.items.GOBLIN_COIF) and
+                        headEquip == (xi.item.GOBLIN_COIF) and
                         quest:getVar(player, 'Prog') == 5
                     then
                         return quest:progressEvent(63)
@@ -205,7 +205,7 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { xi.items.GOBLIN_COIF }) and
+                        npcUtil.tradeHasExactly(trade, { xi.item.GOBLIN_COIF }) and
                         quest:getVar(player, 'Prog') == 6
                     then
                         return quest:progressEvent(64)
@@ -234,7 +234,7 @@ quest.sections =
                         player:confirmTrade()
                         player:setVar("BstHeadGearQuest_Conquest", getConquestTally())
                         quest:setVar(player, 'Prog', 7)
-                        npcUtil.giveItem(player, xi.items.CHOPLIXS_COIF)
+                        npcUtil.giveItem(player, xi.item.CHOPLIXS_COIF)
                 end,
 
                 [65] = function(player, csid, option, npc) --Zone out and back into Oldton Movalpolos for a cutscene that ends the quest and a Gold Beastcoin reward.

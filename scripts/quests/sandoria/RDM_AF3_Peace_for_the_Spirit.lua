@@ -23,7 +23,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.PEACE_FOR
 
 quest.reward =
 {
-    item = xi.items.WARLOCKS_CHAPEAU,
+    item = xi.item.WARLOCKS_CHAPEAU,
     fame = 60,
     fameArea = xi.quest.fame_area.SANDORIA,
     title = xi.title.PARAGON_OF_RED_MAGE_EXCELLENCE,
@@ -133,7 +133,7 @@ quest.sections =
 
                     if
                         progress == 1 and
-                        not player:hasItem(xi.items.ANTIQUE_COIN)
+                        not player:hasItem(xi.item.ANTIQUE_COIN)
                     then
                         SpawnMob(ID.mob.MISER_MURPHY)
                     end
@@ -143,7 +143,7 @@ quest.sections =
             ['Dry_Fountain'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.ANTIQUE_COIN) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.ANTIQUE_COIN) then
                         return quest:progressEvent(17)
                     end
                 end,
@@ -167,12 +167,12 @@ quest.sections =
 
                     if
                         progress == 4 and
-                        not player:hasItem(xi.items.NAIL_PULLER) and
+                        not player:hasItem(xi.item.NAIL_PULLER) and
                         npcUtil.popFromQM(player, npc, gcID.mob.GUARDIAN_STATUE, { claim = true, hide = 0 })
                     then
                         return quest:messageSpecial(gcID.text.SENSE_OF_FOREBODING)
                     else
-                        return quest:messageSpecial(gcID.text.BOX_SCATTERED, xi.items.NAIL_PULLER)
+                        return quest:messageSpecial(gcID.text.BOX_SCATTERED, xi.item.NAIL_PULLER)
                     end
                 end,
 
@@ -180,7 +180,7 @@ quest.sections =
                     local progress = quest:getVar(player, 'Prog')
 
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.NAIL_PULLER) and
+                        npcUtil.tradeHasExactly(trade, xi.item.NAIL_PULLER) and
                         progress == 4
                     then
                         return quest:progressEvent(14)

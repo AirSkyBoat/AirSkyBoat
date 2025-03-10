@@ -32,7 +32,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     print("triggered")
-                    if npcUtil.tradeHasExactly(trade, { xi.items.POETIC_PARCHMENT }) then
+                    if npcUtil.tradeHasExactly(trade, { xi.item.POETIC_PARCHMENT }) then
                         return quest:progressEvent(101)
                     end
                 end,

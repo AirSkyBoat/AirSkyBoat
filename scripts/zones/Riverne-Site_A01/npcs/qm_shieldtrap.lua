@@ -8,7 +8,7 @@ require("scripts/globals/npc_util")
 local entity = {}
 
 entity.onTrade = function(player, npc, trade)
-    if npcUtil.tradeHas(trade, xi.items.SHIELD_BUG) and npcUtil.popFromQM(player, npc, ID.mob.SHIELDTRAP) then
+    if npcUtil.tradeHas(trade, xi.item.SHIELD_BUG) and npcUtil.popFromQM(player, npc, ID.mob.SHIELDTRAP) then
         player:confirmTrade()
     end
 end

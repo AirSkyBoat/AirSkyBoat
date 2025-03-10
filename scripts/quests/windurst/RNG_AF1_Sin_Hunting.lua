@@ -18,7 +18,7 @@ local quest = Quest:new(xi.quest.log_id.WINDURST, xi.quest.id.windurst.SIN_HUNTI
 
 quest.reward =
 {
-    item     = xi.items.SNIPING_BOW,
+    item     = xi.item.SNIPING_BOW,
 }
 
 quest.sections =
@@ -79,7 +79,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 1 then
-                        return quest:progressEvent(3, 0, xi.items.GLITTERSAND)
+                        return quest:progressEvent(3, 0, xi.item.GLITTERSAND)
                     else
                         return quest:event(2)
                     end
@@ -87,7 +87,7 @@ quest.sections =
 
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.GLITTERSAND) and
+                        npcUtil.tradeHasExactly(trade, xi.item.GLITTERSAND) and
                         quest:getVar(player, 'Prog') == 2
                     then
                         return quest:progressEvent(5)
@@ -131,7 +131,7 @@ quest.sections =
                         quest:getVar(player, 'Prog') == 4 and
                         IsMoonFull()
                     then
-                        return quest:progressEvent(13, 0, xi.items.GLITTERSAND)
+                        return quest:progressEvent(13, 0, xi.item.GLITTERSAND)
                     end
                 end,
             },

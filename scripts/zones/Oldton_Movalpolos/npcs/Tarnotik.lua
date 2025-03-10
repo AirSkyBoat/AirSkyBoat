@@ -12,7 +12,7 @@ local entity = {}
 entity.onTrade = function(player, npc, trade)
     if
         player:getCurrentMission(xi.mission.log_id.COP) >= xi.mission.id.cop.THREE_PATHS and
-        npcUtil.tradeHasExactly(trade, xi.items.SNOW_LILY)
+        npcUtil.tradeHasExactly(trade, xi.item.SNOW_LILY)
     then
         if player:hasKeyItem(xi.ki.SHAFT_2716_OPERATING_LEVER) then
             player:startEvent(54)

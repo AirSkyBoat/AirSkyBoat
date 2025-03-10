@@ -17,7 +17,7 @@ quest.reward =
 {
     fame     = 20,
     fameArea = xi.quest.fame_area.JEUNO,
-    item     = xi.items.BARBAROI_AXE,
+    item     = xi.item.BARBAROI_AXE,
 }
 
 quest.sections =

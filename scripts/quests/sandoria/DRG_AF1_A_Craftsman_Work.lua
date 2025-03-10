@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.SANDORIA, xi.quest.id.sandoria.A_CRAFTSM
 
 quest.reward =
 {
-    item     = xi.items.PEREGRINE,
+    item     = xi.item.PEREGRINE,
     fame     = 20,
     fameArea = xi.quest.fame_area.SANDORIA,
 }

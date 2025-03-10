@@ -30,7 +30,7 @@ quest.sections =
 
         [xi.zone.NORTHERN_SAN_DORIA] =
         {
-            ['Morunaude'] = quest:progressEvent(635, 0, xi.ki.SMALL_TEACUP, xi.items.CUPBOARD),
+            ['Morunaude'] = quest:progressEvent(635, 0, xi.ki.SMALL_TEACUP, xi.item.CUPBOARD),
 
             onEventFinish =
             {
@@ -52,7 +52,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 0 then
-                        return quest:event(636, 0, xi.ki.SMALL_TEACUP, xi.items.CUPBOARD)
+                        return quest:event(636, 0, xi.ki.SMALL_TEACUP, xi.item.CUPBOARD)
                     end
                 end,
             },
@@ -61,18 +61,18 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.SPRIG_OF_MISTLETOE) and
+                        npcUtil.tradeHasExactly(trade, xi.item.SPRIG_OF_MISTLETOE) and
                         quest:getVar(player, 'Prog') == 1
                     then
-                        return quest:progressEvent(639, 0, 0, 0, xi.items.SPRIG_OF_MISTLETOE)
+                        return quest:progressEvent(639, 0, 0, 0, xi.item.SPRIG_OF_MISTLETOE)
                     end
                 end,
 
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 0 then
-                        return quest:progressEvent(637, 0, xi.ki.SMALL_TEACUP, xi.items.CUPBOARD, xi.items.SPRIG_OF_MISTLETOE)
+                        return quest:progressEvent(637, 0, xi.ki.SMALL_TEACUP, xi.item.CUPBOARD, xi.item.SPRIG_OF_MISTLETOE)
                     else
-                        return quest:event(638, 0, 0, 0, xi.items.SPRIG_OF_MISTLETOE)
+                        return quest:event(638, 0, 0, 0, xi.item.SPRIG_OF_MISTLETOE)
                     end
                 end,
             },

@@ -32,7 +32,7 @@ quest.sections =
 
         [xi.zone.KAZHAM] =
         {
-            ['Hari_Pakhroib'] = quest:progressEvent(68, xi.items.BUNCH_OF_WILD_PAMAMAS, xi.items.BUNCH_OF_WILD_PAMAMAS, xi.items.ICE_CLUSTER),
+            ['Hari_Pakhroib'] = quest:progressEvent(68, xi.item.BUNCH_OF_WILD_PAMAMAS, xi.item.BUNCH_OF_WILD_PAMAMAS, xi.item.ICE_CLUSTER),
 
             onEventFinish =
             {
@@ -58,7 +58,7 @@ quest.sections =
                 onTrigger = function(player, npc)
                 if not player:hasCompletedQuest(quest.areaId, quest.questId) then -- First time doing quest
                     if quest:getVar(player, 'Prog') == 0 then
-                        return quest:event(69, 0, xi.items.BUNCH_OF_WILD_PAMAMAS)
+                        return quest:event(69, 0, xi.item.BUNCH_OF_WILD_PAMAMAS)
                     elseif quest:getVar(player, 'Prog') >= 1 then
                         return quest:progressEvent(71)
                     end
@@ -66,21 +66,21 @@ quest.sections =
                     local itemOffering = math.random(1, 3)
                         if itemOffering == 1 then
                             quest:setVar(player, 'Repeat', 1) -- setting vars here instead of eventfinish due to CS message needing selected during event 68
-                            return quest:event(68, xi.items.BUNCH_OF_WILD_PAMAMAS, xi.items.BUNCH_OF_WILD_PAMAMAS, xi.items.ICE_CLUSTER)
+                            return quest:event(68, xi.item.BUNCH_OF_WILD_PAMAMAS, xi.item.BUNCH_OF_WILD_PAMAMAS, xi.item.ICE_CLUSTER)
                         elseif itemOffering == 2 then
                             quest:setVar(player, 'Repeat', 2)
-                            return quest:event(68, xi.items.WILD_MELON, xi.items.WILD_MELON, xi.items.ICE_CLUSTER)
+                            return quest:event(68, xi.item.WILD_MELON, xi.item.WILD_MELON, xi.item.ICE_CLUSTER)
                         elseif itemOffering == 3 then
                             quest:setVar(player, 'Repeat', 3)
-                            return quest:event(68, xi.items.WILD_PINEAPPLE, xi.items.WILD_PINEAPPLE, xi.items.ICE_CLUSTER)
+                            return quest:event(68, xi.item.WILD_PINEAPPLE, xi.item.WILD_PINEAPPLE, xi.item.ICE_CLUSTER)
                         end
                     elseif quest:getVar(player, 'Prog') == 0 then -- Reminder Message for repeat quest
                         if quest:getVar(player, 'Repeat') == 1 then
-                            return quest:event(69, 0, xi.items.BUNCH_OF_WILD_PAMAMAS)
+                            return quest:event(69, 0, xi.item.BUNCH_OF_WILD_PAMAMAS)
                         elseif quest:getVar(player, 'Repeat') == 2 then
-                            return quest:event(69, 0, xi.items.WILD_MELON)
+                            return quest:event(69, 0, xi.item.WILD_MELON)
                         elseif quest:getVar(player, 'Repeat') == 3 then
-                            return quest:event(69, 0, xi.items.WILD_PINEAPPLE)
+                            return quest:event(69, 0, xi.item.WILD_PINEAPPLE)
                         end
                     elseif quest:getVar(player, 'Prog') == 1 then -- Turn in of repeat quest
                         if quest:getVar(player, 'Repeat') >= 1 then
@@ -94,7 +94,7 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') >= 0 then
-                        return quest:event(70, 0, 0, xi.items.ICE_CLUSTER)
+                        return quest:event(70, 0, 0, xi.item.ICE_CLUSTER)
                     end
                 end,
             },
@@ -122,33 +122,33 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if not player:hasCompletedQuest(quest.areaId, quest.questId) then -- first time through quest
-                        if npcUtil.tradeHasExactly(trade, xi.items.BUNCH_OF_WILD_PAMAMAS) then
+                        if npcUtil.tradeHasExactly(trade, xi.item.BUNCH_OF_WILD_PAMAMAS) then
                             if quest:getVar(player, 'Prog') == 0 then
                                 player:tradeComplete()
                                 quest:setVar(player, 'Prog', 1)
-                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.items.BUNCH_OF_WILD_PAMAMAS)
+                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.item.BUNCH_OF_WILD_PAMAMAS)
                             elseif quest:getVar(player, 'Prog') == 1 then
                                 return quest:messageSpecial(ID.text.ALTAR_COMPLETED)
                             end
                         end
                     elseif quest:getVar(player, 'Prog') == 0 then -- repeat quest attempts.
                         if quest:getVar(player, 'Repeat') == 1 then
-                            if npcUtil.tradeHasExactly(trade, xi.items.BUNCH_OF_WILD_PAMAMAS) then
+                            if npcUtil.tradeHasExactly(trade, xi.item.BUNCH_OF_WILD_PAMAMAS) then
                                 quest:setVar(player, 'Prog', 1)
                                 player:tradeComplete()
-                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.items.BUNCH_OF_WILD_PAMAMAS)
+                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.item.BUNCH_OF_WILD_PAMAMAS)
                             end
                         elseif quest:getVar(player, 'Repeat') == 2 then
-                            if npcUtil.tradeHasExactly(trade, xi.items.WILD_MELON) then
+                            if npcUtil.tradeHasExactly(trade, xi.item.WILD_MELON) then
                                 quest:setVar(player, 'Prog', 1)
                                 player:tradeComplete()
-                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.items.WILD_MELON)
+                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.item.WILD_MELON)
                             end
                         elseif quest:getVar(player, 'Repeat') == 3 then
-                            if npcUtil.tradeHasExactly(trade, xi.items.WILD_PINEAPPLE) then
+                            if npcUtil.tradeHasExactly(trade, xi.item.WILD_PINEAPPLE) then
                                 quest:setVar(player, 'Prog', 1)
                                 player:tradeComplete()
-                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.items.WILD_PINEAPPLE)
+                                return quest:messageSpecial(ID.text.ALTAR_OFFERING, 0, xi.item.WILD_PINEAPPLE)
                             end
                         end
                     elseif quest:getVar(player, 'Prog') == 1 then -- turned in required item already

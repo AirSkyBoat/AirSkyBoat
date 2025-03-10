@@ -30,23 +30,23 @@ xi.furnitureQuests = xi.furnitureQuests or {}
 xi.furnitureQuests.furnitureQuestInfo =
 {
     -- verified via capture for at least rewardCS, rewardCsOption, waitTime
-    [xi.items.SIMPLE_BED]               = { itemName = "simple_bed", reward = xi.items.CHUNK_OF_IRON_ORE, rewardCS = 30003, rewardCsOption = 2, waitTime = 240, fameReq = 3, repeatable = false },
-    [xi.items.OAK_BED]                  = { itemName = "oak_bed", reward = xi.items.ETHER, rewardCS = 30003, rewardCsOption = 1, waitTime = 240, fameReq = 1, repeatable = false }, -- unknown fame
-    [xi.items.TARUTARU_DESK]            = { itemName = "tarutaru_desk", reward = xi.items.HI_POTION, rewardCS = 30003, rewardCsOption = 3, waitTime = 240, fameReq = 1, repeatable = false }, -- unknown fame
-    [xi.items.BUREAU]                   = { itemName = "bureau", reward = xi.items.SCROLL_OF_PROTECTRA_IV, rewardCS = 30003, rewardCsOption = 4, waitTime = 240, fameReq = 7, repeatable = false }, -- unknown fame, matching armoire
-    [xi.items.WICKER_BOX]               = { itemName = "wicker_box", reward = xi.items.HORN_QUIVER, rewardCS = 30003, rewardCsOption = 9, waitTime = 240, fameReq = 4, repeatable = false },
-    [xi.items.CUPBOARD]                 = { itemName = "cupboard", reward = xi.ki.SMALL_TEACUP, rewardCS = 30003, rewardCsOption = 15, waitTime = 240, fameReq = 5, repeatable = false }, -- reward is a KI
-    [xi.items.ARMOIRE]                  = { itemName = "armoire", reward = xi.items.SCROLL_OF_PROTECT_IV, rewardCS = 30003, rewardCsOption = 5, waitTime = 240, fameReq = 7, repeatable = false },
-    [xi.items.WATER_CASK]               = { itemName = "water_cask", reward = xi.items.FLASK_OF_DISTILLED_WATER, rewardCS = 30003, rewardCsOption = 6, waitTime = 240, fameReq = 1, repeatable = false }, -- unknown fame
-    [xi.items.WHITE_JAR]                = { itemName = "white_jar", reward = xi.items.FLASK_OF_PARALYZE_POTION, rewardCS = 30003, rewardCsOption = 8, waitTime = 240, fameReq = 4, repeatable = false },
-    [xi.items.STATIONERY_SET]           = { itemName = "stationery_set", reward = xi.items.SCROLL_OF_SCOPS_OPERETTA, rewardCS = 30003, rewardCsOption = 10, waitTime = 240, fameReq = 2, repeatable = false },
+    [xi.item.SIMPLE_BED]               = { itemName = "simple_bed", reward = xi.item.CHUNK_OF_IRON_ORE, rewardCS = 30003, rewardCsOption = 2, waitTime = 240, fameReq = 3, repeatable = false },
+    [xi.item.OAK_BED]                  = { itemName = "oak_bed", reward = xi.item.ETHER, rewardCS = 30003, rewardCsOption = 1, waitTime = 240, fameReq = 1, repeatable = false }, -- unknown fame
+    [xi.item.TARUTARU_DESK]            = { itemName = "tarutaru_desk", reward = xi.item.HI_POTION, rewardCS = 30003, rewardCsOption = 3, waitTime = 240, fameReq = 1, repeatable = false }, -- unknown fame
+    [xi.item.BUREAU]                   = { itemName = "bureau", reward = xi.item.SCROLL_OF_PROTECTRA_IV, rewardCS = 30003, rewardCsOption = 4, waitTime = 240, fameReq = 7, repeatable = false }, -- unknown fame, matching armoire
+    [xi.item.WICKER_BOX]               = { itemName = "wicker_box", reward = xi.item.HORN_QUIVER, rewardCS = 30003, rewardCsOption = 9, waitTime = 240, fameReq = 4, repeatable = false },
+    [xi.item.CUPBOARD]                 = { itemName = "cupboard", reward = xi.ki.SMALL_TEACUP, rewardCS = 30003, rewardCsOption = 15, waitTime = 240, fameReq = 5, repeatable = false }, -- reward is a KI
+    [xi.item.ARMOIRE]                  = { itemName = "armoire", reward = xi.item.SCROLL_OF_PROTECT_IV, rewardCS = 30003, rewardCsOption = 5, waitTime = 240, fameReq = 7, repeatable = false },
+    [xi.item.WATER_CASK]               = { itemName = "water_cask", reward = xi.item.FLASK_OF_DISTILLED_WATER, rewardCS = 30003, rewardCsOption = 6, waitTime = 240, fameReq = 1, repeatable = false }, -- unknown fame
+    [xi.item.WHITE_JAR]                = { itemName = "white_jar", reward = xi.item.FLASK_OF_PARALYZE_POTION, rewardCS = 30003, rewardCsOption = 8, waitTime = 240, fameReq = 4, repeatable = false },
+    [xi.item.STATIONERY_SET]           = { itemName = "stationery_set", reward = xi.item.SCROLL_OF_SCOPS_OPERETTA, rewardCS = 30003, rewardCsOption = 10, waitTime = 240, fameReq = 2, repeatable = false },
     -- not verified through capture yet but obvious what CS option matches based on text
-    [xi.items.BEVERAGE_BARREL]          = { itemName = "beverage_barrel", reward = xi.items.BOTTLE_OF_GRAPE_JUICE, rewardCS = 30003, rewardCsOption = 11, waitTime = -1, fameReq = 1, repeatable = true }, -- rumors that reward is based on nation not being in 3rd
-    [xi.items.COPY_OF_LINES_AND_SPACE]  = { itemName = "copy_of_lines_and_space", reward = xi.items.ONYX, rewardCS = 30003, rewardCsOption = 7, waitTime = 240, fameReq = 2, repeatable = false },
+    [xi.item.BEVERAGE_BARREL]          = { itemName = "beverage_barrel", reward = xi.item.BOTTLE_OF_GRAPE_JUICE, rewardCS = 30003, rewardCsOption = 11, waitTime = -1, fameReq = 1, repeatable = true }, -- rumors that reward is based on nation not being in 3rd
+    [xi.item.COPY_OF_LINES_AND_SPACE]  = { itemName = "copy_of_lines_and_space", reward = xi.item.ONYX, rewardCS = 30003, rewardCsOption = 7, waitTime = 240, fameReq = 2, repeatable = false },
     -- Unknowns
-    --[xi.items.FLOWER_STAND] = { itemName = "flower_stand", reward = 4545, rewardCS = 30003, rewardCsOption = ???, waitTime = -1, fameReq = 1, repeatable = true }, -- is this real? needs capture
-    --[xi.items.GALLEY_KITCHEN] = { itemName = "galley_kitchen", reward = fcn, rewardCS = 30003, rewardCsOption = 12, waitTime = -1, fameReq = 1, repeatable = true }, -- needs a function to pull reward from a set
-    --[xi.items.AURUM_COFFER] = { itemName = "aurum_coffer", reward = fnc, rewardCS = ???, rewardCsOption = ???, waitTime = -1, fameReq = 1, repeatable = true }, -- needs a fnc for rewards, no idea on CS
+    --[xi.item.FLOWER_STAND] = { itemName = "flower_stand", reward = 4545, rewardCS = 30003, rewardCsOption = ???, waitTime = -1, fameReq = 1, repeatable = true }, -- is this real? needs capture
+    --[xi.item.GALLEY_KITCHEN] = { itemName = "galley_kitchen", reward = fcn, rewardCS = 30003, rewardCsOption = 12, waitTime = -1, fameReq = 1, repeatable = true }, -- needs a function to pull reward from a set
+    --[xi.item.AURUM_COFFER] = { itemName = "aurum_coffer", reward = fnc, rewardCS = ???, rewardCsOption = ???, waitTime = -1, fameReq = 1, repeatable = true }, -- needs a fnc for rewards, no idea on CS
 }
 
 -----------------------------------------------------------------
@@ -138,13 +138,13 @@ xi.furnitureQuests.furnitureQuestsEventFinish = function(player, csid, option)
     -- get the item
     local itemLookup = xi.furnitureQuests.furnitureQuestInfo[triggeredQuestItem]
     if itemLookup ~= nil then
-        if triggeredQuestItem == xi.items.CUPBOARD then -- KeyItem Reward
+        if triggeredQuestItem == xi.item.CUPBOARD then -- KeyItem Reward
             npcUtil.giveKeyItem(player, itemLookup.reward)
             player:setCharVar(string.format("[%s]%s", itemLookup.itemName, "rewardTime"), 0)
             player:setCharVar(string.format("[%s]%s", itemLookup.itemName, "received"), 1)
         else -- Item Reward
             local quantity = 1
-            if triggeredQuestItem == xi.items.SIMPLE_BED then -- this is the only one which gives multiples
+            if triggeredQuestItem == xi.item.SIMPLE_BED then -- this is the only one which gives multiples
                 quantity = 4
             end
 

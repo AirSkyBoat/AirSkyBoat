@@ -7,16 +7,16 @@
 local itemObject = {}
 
 itemObject.onItemCheck = function(target)
-    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.MANA_WAND) ~= nil then
-        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.items.MANA_WAND)
+    if target:getStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.MANA_WAND) ~= nil then
+        target:delStatusEffect(xi.effect.ENCHANTMENT, nil, xi.item.MANA_WAND)
     end
 
     return 0
 end
 
 itemObject.onItemUse = function(target)
-    if target:hasEquipped(xi.items.MANA_WAND) then
-        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 1800, 0, 0, 0, xi.items.MANA_WAND)
+    if target:hasEquipped(xi.item.MANA_WAND) then
+        target:addStatusEffect(xi.effect.ENCHANTMENT, 0, 0, 1800, 0, 0, 0, xi.item.MANA_WAND)
     end
 end
 

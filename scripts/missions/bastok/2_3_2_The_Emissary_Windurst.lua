@@ -31,7 +31,7 @@ mission.sections =
             ['Uu_Zhoumo'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.items.ASPIR_KNIFE) then
+                    if npcUtil.tradeHasExactly(trade, xi.item.ASPIR_KNIFE) then
                         return mission:progressEvent(41)
                     end
                 end,

@@ -16,7 +16,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.quest.fame_area.SANDORIA,
-    item = xi.items.LYNX_BAGHNAKHS,
+    item = xi.item.LYNX_BAGHNAKHS,
 }
 
 quest.sections =

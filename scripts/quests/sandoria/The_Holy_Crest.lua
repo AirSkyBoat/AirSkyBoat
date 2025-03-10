@@ -115,19 +115,19 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Prog') >= 3 and -- allows players who drop it to get another one...
-                        not player:hasItem(xi.items.WYVERN_EGG)
+                        not player:hasItem(xi.item.WYVERN_EGG)
                     then
-                        if npcUtil.tradeHasExactly(trade, xi.items.PICKAXE) then
+                        if npcUtil.tradeHasExactly(trade, xi.item.PICKAXE) then
                             local chance = math.random(1, 5)
                             if chance <= 2 then
-                                npcUtil.giveItem(player, xi.items.WYVERN_EGG)
+                                npcUtil.giveItem(player, xi.item.WYVERN_EGG)
                                 player:tradeComplete(false)
-                                player:startEvent(60, 1159, 0, 0, xi.items.WYVERN_EGG)-- successful no break
+                                player:startEvent(60, 1159, 0, 0, xi.item.WYVERN_EGG)-- successful no break
                                 return quest:noAction()
                             elseif chance == 3 then
-                                npcUtil.giveItem(player, xi.items.WYVERN_EGG)
+                                npcUtil.giveItem(player, xi.item.WYVERN_EGG)
                                 player:confirmTrade()
-                                player:startEvent(60, 1159, 1, 0, xi.items.WYVERN_EGG) -- successful but breaks
+                                player:startEvent(60, 1159, 1, 0, xi.item.WYVERN_EGG) -- successful but breaks
                                 return quest:noAction()
                             elseif chance == 4 then
                                 player:confirmTrade()
@@ -151,12 +151,12 @@ quest.sections =
                 onTrigger = function(player, npc)
                     if
                         quest:getVar(player, 'Prog') == 3 and
-                        not player:hasItem(xi.items.WYVERN_EGG)
+                        not player:hasItem(xi.item.WYVERN_EGG)
                     then
                         return quest:message(northernSandoriaID.text.DEEP_IN_MAZE)
                     elseif
                         quest:getVar(player, 'Prog') == 3 and
-                        player:hasItem(xi.items.WYVERN_EGG)
+                        player:hasItem(xi.item.WYVERN_EGG)
                     then
                         return quest:progressEvent(62)
                     elseif quest:getVar(player, 'Prog') == 4 then
@@ -181,7 +181,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, xi.items.WYVERN_EGG) and
+                        npcUtil.tradeHasExactly(trade, xi.item.WYVERN_EGG) and
                         quest:getVar(player, 'Prog') == 4
                     then
                         return quest:progressEvent(33)

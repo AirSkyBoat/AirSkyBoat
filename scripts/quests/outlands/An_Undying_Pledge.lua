@@ -16,7 +16,7 @@ local quest = Quest:new(xi.quest.log_id.OUTLANDS, xi.quest.id.outlands.AN_UNDYIN
 
 quest.reward =
 {
-    item = xi.items.LIGHT_BUCKLER,
+    item = xi.item.LIGHT_BUCKLER,
     fameArea = xi.quest.fame_area.NORG,
     fame = 50,
 }
