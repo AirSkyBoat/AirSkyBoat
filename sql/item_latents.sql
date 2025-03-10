@@ -2321,9 +2321,14 @@ INSERT INTO `item_latents` VALUES (17527,15,-10,47,0);
 INSERT INTO `item_latents` VALUES (17527,21,-10,47,0);
 
 -- -------------------------------------------------------
+-- Sunlight Pole
+-- -------------------------------------------------------
+INSERT INTO `item_latents` VALUES (17529,370,1,42,1);     -- Regen 1/tick during Sunny weather
+
+-- -------------------------------------------------------
 -- Master Caster's Pole
 -- -------------------------------------------------------
-INSERT INTO `item_latents` VALUES (17530,71,8,70,2);    -- Citizens of Windurst: hMP +8
+INSERT INTO `item_latents` VALUES (17530,71,8,70,2);     -- Citizens of Windurst: hMP +8
 
 -- -------------------------------------------------------
 -- Ramuh's Staff

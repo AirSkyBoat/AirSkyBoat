@@ -267,6 +267,7 @@ void CLatentEffectContainer::CheckLatentsStatusEffect()
         switch (latentEffect.GetConditionsID())
         {
             case LATENT::STATUS_EFFECT_ACTIVE:
+            case LATENT::WEATHER_CONDITION:
             case LATENT::WEATHER_ELEMENT:
             case LATENT::NATION_CONTROL:
                 return ProcessLatentEffect(latentEffect);
@@ -574,6 +575,7 @@ void CLatentEffectContainer::CheckLatentsZone()
             case LATENT::ZONE:
             case LATENT::IN_ASSAULT:
             case LATENT::IN_DYNAMIS:
+            case LATENT::WEATHER_CONDITION:
             case LATENT::WEATHER_ELEMENT:
             case LATENT::NATION_CONTROL:
             case LATENT::ZONE_HOME_NATION:
@@ -603,6 +605,11 @@ void CLatentEffectContainer::CheckLatentsWeather(uint16 weather)
         if (latent.GetConditionsID() == LATENT::WEATHER_ELEMENT && owner != nullptr)
         {
             auto element = zoneutils::GetWeatherElement(battleutils::GetWeather(owner, false, weather));
+            return ApplyLatentEffect(latent, latent.GetConditionsValue() == element);
+        }
+        else if (latent.GetConditionsID() == LATENT::WEATHER_CONDITION && owner != nullptr)
+        {
+            auto element = battleutils::GetWeather(owner, false, weather);
             return ApplyLatentEffect(latent, latent.GetConditionsValue() == element);
         }
         return false;
@@ -1021,6 +1028,9 @@ bool CLatentEffectContainer::ProcessLatentEffect(CLatentEffect& latentEffect)
             break;
         case LATENT::JOB_LEVEL_ABOVE:
             expression = m_POwner->GetMLevel() >= latentEffect.GetConditionsValue();
+            break;
+        case LATENT::WEATHER_CONDITION:
+            expression = latentEffect.GetConditionsValue() == battleutils::GetWeather((CBattleEntity*)m_POwner, false);
             break;
         case LATENT::WEATHER_ELEMENT:
             expression = latentEffect.GetConditionsValue() == zoneutils::GetWeatherElement(battleutils::GetWeather((CBattleEntity*)m_POwner, false));

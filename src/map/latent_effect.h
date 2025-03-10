@@ -1,4 +1,4 @@
-﻿/*
+/*
 ===========================================================================
 
   Copyright (c) 2010-2015 Darkstar Dev Teams
@@ -71,7 +71,7 @@ enum class LATENT : uint16
     JOB_MULTIPLE_AT_NIGHT  = 39, // PARAM: 0: ODD, 2: EVEN, 3-X: DIVISOR
     EQUIPPED_IN_SLOT       = 40, // When item is equipped in the specified slot (e.g. Dweomer Knife, Erlking's Sword, etc.) PARAM: slotID
     // 41 free to use
-    // 42 free to use
+    WEATHER_CONDITION          = 42, // See Weather.h for WEATHER enum
     WEAPON_DRAWN_HP_UNDER      = 43, // PARAM: HP PERCENT
     HP_BASE_UNDER_TP_UNDER_100 = 44, // Base HP (no convert or +% taken into account) <= %, TP < 100
     MP_UNDER_VISIBLE_GEAR      = 45, // mp less than or equal to %, calculated using MP bonuses from visible gear only
