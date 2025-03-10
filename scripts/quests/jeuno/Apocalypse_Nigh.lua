@@ -170,7 +170,7 @@ quest.sections =
                 onTrigger = function(player, npc)
                     if
                         quest:getVar(player, 'Status') == 4 and
-                        player:getRank(player:getNation()) > 5
+                        player:getRank(player:getNation()) => 5
                     then
                         return quest:progressEvent(10057)
                     elseif quest:getVar(player, 'Status') == 5 then
