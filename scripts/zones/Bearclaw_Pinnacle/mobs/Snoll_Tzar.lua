@@ -72,19 +72,19 @@ entity.onMobFight = function(mob, player, target)
         mob:getBattleTime() - changeTime > 12
     then
         mob:useMobAbility(1644)
-        mob:setLocalVar("changeTime", mob:getBattleTime())
+        mob:setLocalVar("selfDestructed", 1)
     end
 end
 
 entity.onMobDeath = function(mob, player, optParams)
     local bf = mob:getBattlefield()
-    local changeTime = mob:getLocalVar("changeTime")
     local gameOver = mob:getLocalVar("gameover")
+    local selfDestructed = mob:getLocalVar("selfDestructed")
 
     -- end BCNM
     if
         gameOver == 1 and
-        mob:getBattleTime() - changeTime > 3
+        selfDestructed == 1
     then
         mob:setAnimationSub(4)
         bf:lose()
