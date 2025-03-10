@@ -2,6 +2,9 @@ require("scripts/globals/common")
 require("scripts/globals/interaction/quest")
 
 utils = {}
+-- Event cancelled constant, replaces the hardcoded value of 1073741824 in many
+-- scripts.
+utils.EVENT_CANCELLED_OPTION = bit.lshift(1, 30)
 
 -- Max uint32 constant, replaces negative values in event parameters
 -- Note: If correcting a negative value, this is *already* -1, adjust accordingly!
@@ -36,6 +39,53 @@ local function mergen(...)
     return res
 end
 
+-- https://stackoverflow.com/questions/49979017/how-to-get-current-function-call-stack-depth-in-lua
+-- NOTE: Supposedly this is slow. Only use this during debugging and not for live!
+function utils.getStackDepth()
+    local depth = 0
+    while true do
+        if not debug.getinfo(3 + depth) then
+            break
+        end
+        depth = depth + 1
+    end
+    return depth
+end
+-- https://www.lua.org/pil/23.1.1.html
+function utils.getObjectFromScope(objName, depth)
+    local idx = 1
+    while true do
+        local name, value = debug.getlocal(depth, idx)
+        if not name then
+            break
+        end
+        if name == objName then
+            return value
+        end
+        idx = idx + 1
+    end
+    return nil
+end
+function utils.getDebugPrinter(printEntityName, settingOrCondition, prefix)
+    return function(...)
+        if settingOrCondition then
+            local t = { ... }
+            if prefix then
+                t = { prefix, ... }
+            end
+            local str = tostring(unpack(t))
+            print(str)
+            local depth  = utils.getStackDepth()
+            local player = utils.getObjectFromScope(printEntityName, depth + 1)
+            if player then
+                player:printToPlayer(str, xi.msg.channel.SYSTEM_3, '')
+            end
+        end
+    end
+end
+function utils.getDebugPlayerPrinter(settingOrCondition, prefix)
+    return utils.getDebugPrinter('player', settingOrCondition, prefix)
+end
 function utils.bind(func, ...)
     local args = packn(...)
     return function(...)
@@ -97,10 +147,19 @@ function utils.join(input1, input2)
     return result
 end
 
+-- For use alongside os.time()
 function utils.minutes(minutes)
     return minutes * 60
 end
 
+-- For use alongside os.time()
+function utils.hours(hours)
+    return hours * 60 * 60
+end
+-- For use alongside os.time()
+function utils.days(days)
+    return days * 60 * 60 * 24
+end
 -- Generates a random permutation of integers >= min_val and <= max_val
 -- If a min_val isn't given, 1 is used (assumes permutation of lua indices)
 function utils.permgen(max_val, min_val)
@@ -211,7 +270,7 @@ end
 
 -- Given a table and a filter function, returns a new table composed of the
 -- elements that pass the given filter.
--- e.g: utils.filter({ "a", "b", "c", "d" }, function(k, v) return v >= "c" end)  --> { "c", "d }
+-- e.g: utils.filter({ "a", "b", "c", "d" }, function(k, v) return v >= "c" end)  --> { "c", "d" }
 function utils.filter(tbl, func)
     local out = {}
 
@@ -405,7 +464,6 @@ function utils.takeShadows(target, mob, dmg, shadowbehav)
 end
 
 function utils.conalDamageAdjustment(attacker, target, skill, maxDamage, minimumPercentage)
-    local finalDamage = 1
     -- #TODO: Currently all cone attacks use static 45 degree (360 scale) angles in core, when cone attacks
     -- have different angles and there's a method to fetch the angle, use a line like the below
     -- local coneAngle = skill:getConalAngle()
@@ -430,7 +488,7 @@ function utils.conalDamageAdjustment(attacker, target, skill, maxDamage, minimum
     local damagePerAngle   = (maxDamage - minimumDamage) / coneAngle
     local additionalDamage = damagePerAngle * conalAnglePower
 
-    finalDamage = math.max(1, math.ceil(minimumDamage + additionalDamage))
+    local finalDamage = math.max(1, math.ceil(minimumDamage + additionalDamage))
 
     return finalDamage
 end
@@ -467,6 +525,15 @@ function utils.thirdeye(target)
     end
 end
 
+function utils.getActiveJobLevel(actor, job)
+    local jobLevel = 0
+    if actor:getMainJob() == job then
+        jobLevel = actor:getMainLvl()
+    elseif actor:getSubJob() == job then
+        jobLevel = actor:getSubLvl()
+    end
+    return jobLevel
+end
 -----------------------------------
 --     SKILL LEVEL CALCULATOR
 --     Returns a skill level based on level and rating.
@@ -482,33 +549,35 @@ end
 local skillLevelTable =
 {
     --         A+             A-             B+             B              B-             C+             C              C-             D              E              F             G
-    [1]  = { { 3.00,   6 }, { 3.00,   6 }, { 2.90,   5 }, { 2.90,   5 }, { 2.90,   5 }, { 2.80,   5 }, { 2.80,   5 }, { 2.80,   5 }, { 2.70,   4 }, { 2.50,   4 }, { 2.30,   4 }, { 2.00,   3 } }, -- Level <= 50
-    [50] = { { 5.00, 153 }, { 5.00, 153 }, { 4.90, 147 }, { 4.90, 147 }, { 4.90, 147 }, { 4.80, 142 }, { 4.80, 142 }, { 4.80, 142 }, { 4.70, 136 }, { 4.50, 126 }, { 4.30, 116 }, { 4.00, 101 } }, -- Level > 50 and Level <= 60
-    [60] = { { 4.85, 203 }, { 4.10, 203 }, { 3.70, 196 }, { 3.23, 196 }, { 2.70, 196 }, { 2.50, 190 }, { 2.25, 190 }, { 2.00, 190 }, { 1.85, 183 }, { 1.95, 171 }, { 2.05, 159 }, { 2.00, 141 } }, -- Level > 60 and Level <= 70
-    [70] = { { 5.00, 251 }, { 5.00, 244 }, { 4.60, 233 }, { 4.40, 228 }, { 3.40, 223 }, { 3.00, 215 }, { 2.60, 212 }, { 2.00, 210 }, { 1.85, 201 }, { 2.00, 190 }, { 2.00, 179 }, { 2.00, 161 } }, -- Level > 70 and Level <= 75
-    [75] = { { 5.00, 251 }, { 5.00, 244 }, { 5.00, 256 }, { 5.00, 250 }, { 5.00, 240 }, { 5.00, 230 }, { 5.00, 225 }, { 5.00, 220 }, { 4.00, 210 }, { 3.00, 200 }, { 2.00, 189 }, { 2.00, 171 } }, -- Level > 75 and Level <= 80
-    [80] = { { 6.00, 301 }, { 6.00, 294 }, { 6.00, 281 }, { 6.00, 275 }, { 6.00, 265 }, { 6.00, 255 }, { 6.00, 250 }, { 6.00, 245 }, { 5.00, 230 }, { 4.00, 215 }, { 3.00, 199 }, { 2.00, 181 } }, -- Level > 80 and Level <= 90
-    [90] = { { 7.00, 361 }, { 7.00, 354 }, { 7.00, 341 }, { 7.00, 335 }, { 7.00, 325 }, { 7.00, 315 }, { 7.00, 310 }, { 7.00, 305 }, { 6.00, 280 }, { 5.00, 255 }, { 4.00, 229 }, { 2.00, 201 } }, -- Level > 90
+    [  0] = { { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 }, { 0.00,   0 } }, -- No level/Fallback
+    [  1]  = { { 3.00,   6 }, { 3.00,   6 }, { 2.90,   5 }, { 2.90,   5 }, { 2.90,   5 }, { 2.80,   5 }, { 2.80,   5 }, { 2.80,   5 }, { 2.70,   4 }, { 2.50,   4 }, { 2.30,   4 }, { 2.00,   3 } }, -- Level <= 50
+    [ 50] = { { 5.00, 153 }, { 5.00, 153 }, { 4.90, 147 }, { 4.90, 147 }, { 4.90, 147 }, { 4.80, 142 }, { 4.80, 142 }, { 4.80, 142 }, { 4.70, 136 }, { 4.50, 126 }, { 4.30, 116 }, { 4.00, 101 } }, -- Level > 50 and Level <= 60
+    [ 60] = { { 4.85, 203 }, { 4.10, 203 }, { 3.70, 196 }, { 3.23, 196 }, { 2.70, 196 }, { 2.50, 190 }, { 2.25, 190 }, { 2.00, 190 }, { 1.85, 183 }, { 1.95, 171 }, { 2.05, 159 }, { 2.00, 141 } }, -- Level > 60 and Level <= 70
+    [ 70] = { { 5.00, 251 }, { 5.00, 244 }, { 4.60, 233 }, { 4.40, 228 }, { 3.40, 223 }, { 3.00, 215 }, { 2.60, 212 }, { 2.00, 210 }, { 1.85, 201 }, { 2.00, 190 }, { 2.00, 179 }, { 2.00, 161 } }, -- Level > 70 and Level <= 75
+    [ 75] = { { 5.00, 251 }, { 5.00, 244 }, { 5.00, 256 }, { 5.00, 250 }, { 5.00, 240 }, { 5.00, 230 }, { 5.00, 225 }, { 5.00, 220 }, { 4.00, 210 }, { 3.00, 200 }, { 2.00, 189 }, { 2.00, 171 } }, -- Level > 75 and Level <= 80
+    [ 80] = { { 6.00, 301 }, { 6.00, 294 }, { 6.00, 281 }, { 6.00, 275 }, { 6.00, 265 }, { 6.00, 255 }, { 6.00, 250 }, { 6.00, 245 }, { 5.00, 230 }, { 4.00, 215 }, { 3.00, 199 }, { 2.00, 181 } }, -- Level > 80 and Level <= 90
+    [ 90] = { { 7.00, 361 }, { 7.00, 354 }, { 7.00, 341 }, { 7.00, 335 }, { 7.00, 325 }, { 7.00, 315 }, { 7.00, 310 }, { 7.00, 305 }, { 6.00, 280 }, { 5.00, 255 }, { 4.00, 229 }, { 2.00, 201 } }, -- Level > 90
+    [100] = { { 1.00, 424 }, { 1.00, 417 }, { 1.00, 404 }, { 1.00, 398 }, { 1.00, 388 }, { 1.00, 378 }, { 1.00, 373 }, { 1.00, 368 }, { 1.00, 334 }, { 1.00, 300 }, { 1.00, 265 }, { 1.00, 219 } }, -- Level > 99
 }
 
 -- Get the corresponding table entry to use in skillLevelTable based on level range
 -- TODO: Minval for ranges 2 and 3 in the conditional is probably not necessary
 local function getSkillLevelIndex(level, rank)
-    local rangeId = nil
+    local rangeId = 100
 
     if level <= 50 then
         rangeId = 1
-    elseif level > 50 and level <= 60 then
+    elseif level <= 60 then
         rangeId = 50
-    elseif level > 60 and level <= 70 then
+    elseif level <= 70 then
         rangeId = 60
-    elseif level > 70 and level <= 75 and rank > 2 then -- If this is Rank A+ or A- then skip
+    elseif level <= 75 and rank > 2 then -- If this is Rank A+ or A- then skip
         rangeId = 75
-    elseif level > 70 and level <= 80 then -- If B+ or below do this
+    elseif level <= 80 then -- If B+ or below do this
         rangeId = 70
-    elseif level > 80 and level <= 90 then
+    elseif level <= 90 then
         rangeId = 80
-    elseif level > 90 and level <= 99 then
+    elseif level <= 99 then
         rangeId = 90
     end
 
@@ -517,7 +586,8 @@ end
 
 function utils.getSkillLvl(rank, level)
     local levelTableIndex = getSkillLevelIndex(level, rank)
-    return ((level - levelTableIndex) * skillLevelTable[levelTableIndex][rank][1]) + skillLevelTable[levelTableIndex][rank][2]
+    local skillLevel      = (level - levelTableIndex) * skillLevelTable[levelTableIndex][rank][1] + skillLevelTable[levelTableIndex][rank][2]
+    return skillLevel
 end
 
 function utils.getMobSkillLvl(rank, level)
@@ -688,6 +758,9 @@ end
 -- used for tables that do not define specific indices.
 -- See: Sigil NPCs
 function utils.contains(value, collection)
+    if collection == nil then
+        return false
+    end
     for _, v in pairs(collection) do
         if value == v then
             return true
@@ -754,6 +827,18 @@ function utils.splitStr(s, sep)
     return fields
 end
 
+-- Remove whitespace from the beginning and end of a string
+function utils.trimStr(s)
+    local s1 = string.gsub(s, '^s%+', '')
+    return string.gsub(s1, '%s+$', '')
+end
+-- Split a single string argument into multiple arguments
+function utils.splitArg(s)
+    local comma   = string.gsub(s, ',', ' ')
+    local spaces  = string.gsub(comma, '%s+', ' ')
+    local trimmed = utils.trimStr(spaces)
+    return utils.splitStr(trimmed, ' ')
+end
 function utils.mobTeleport(mob, hideDuration, pos, disAnim, reapAnim)
     --TODO Table of animations that are used for teleports for reference
 
@@ -808,6 +893,9 @@ function utils.mobTeleport(mob, hideDuration, pos, disAnim, reapAnim)
     end)
 end
 
+-----------------------------------
+-- Spatial position utilities
+-----------------------------------
 local ffxiRotConversionFactor = 360.0 / 255.0
 local degreesConvFactor = 255 / 360
 
@@ -911,6 +999,21 @@ end
 
 function utils.angleToRotation(radians)
     return radians * ffxiAngleToRotationFactor
+end
+
+-- Returns 24h Clock Time (example: 04:30 = 430, 21:30 = 2130)
+function utils.vanadielClockTime()
+    return tonumber(VanadielHour() .. string.format('%02d', VanadielMinute()))
+end
+-- Converts a number to a binary string
+function utils.intToBinary(x)
+    local bin = ''
+    while x > 1 do
+        bin = tostring(x % 2) .. bin
+        x = math.floor(x / 2)
+    end
+    bin = tostring(x) .. bin
+    return bin
 end
 
 -- Returns inline value  boolean      any     any
