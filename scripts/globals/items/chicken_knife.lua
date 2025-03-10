@@ -12,10 +12,11 @@ itemObject.onItemEquip = function(player, item)
         if dLvl >= 1 then
             -- exponential approx to data points from retail capture
             local chance = utils.clamp(100 * 0.0096906 * math.exp(0.176839 * dLvl), 1.33, 33)
-            if
-                math.random(1, 100) <= chance and
-                not playerArg:hasStatusEffect(xi.effect.FLEE)
-            then
+            if math.random(1, 100) <= chance then
+                if playerArg:hasStatusEffect(xi.effect.FLEE) then
+                    playerArg:delStatusEffect(xi.effect.FLEE)
+                end
+
                 playerArg:addStatusEffect(xi.effect.FLEE, 100, 0, 30)
             end
         end
