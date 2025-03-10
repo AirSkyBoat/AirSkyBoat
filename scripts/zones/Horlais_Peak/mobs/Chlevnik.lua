@@ -15,6 +15,7 @@ entity.onMobSpawn = function(mob)
     mob:setMod(xi.mod.TRIPLE_ATTACK, 5)
     mob:addMod(xi.mod.STUNRES, 90)
     mob:addMod(xi.mod.SLEEPRES, 90)
+    mob:addMod(xi.mod.LULLABYRES, 90)
     mob:setMobMod(xi.mobMod.NO_MOVE, 0)
     mob:setMobMod(xi.mobMod.ADD_EFFECT, 1)
     mob:setTP(3000) -- opens fight with a skill
