@@ -394,7 +394,6 @@ xi.treasure.treasureInfo =
 
                         code = function(player)
                             npcUtil.giveKeyItem(player, xi.ki.UN_MOMENT)
-                            player:incrementCharVar("Quest[1][62]Prog", 1)
                         end,
                     },
                 },
@@ -435,7 +434,6 @@ xi.treasure.treasureInfo =
 
                         code = function(player)
                             npcUtil.giveKeyItem(player, xi.ki.UN_MOMENT)
-                            player:incrementCharVar("Quest[1][62]Prog", 1)
                         end,
                     },
                 },
@@ -471,7 +469,6 @@ xi.treasure.treasureInfo =
 
                         code = function(player)
                             npcUtil.giveKeyItem(player, xi.ki.LEPHEMERE)
-                            player:incrementCharVar("Quest[1][62]Prog", 1)
                         end,
                     },
                 },
@@ -855,7 +852,6 @@ xi.treasure.treasureInfo =
 
                         code = function(player)
                             npcUtil.giveKeyItem(player, xi.ki.LANCIENNE)
-                            player:incrementCharVar("Quest[1][62]Prog", 1)
                         end,
                     },
                 },
