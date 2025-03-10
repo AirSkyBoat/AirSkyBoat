@@ -7719,7 +7719,7 @@ INSERT INTO `mob_groups` VALUES (17,3647,108,'Skeleton_Warrior',330,1,2264,0,0,1
 INSERT INTO `mob_groups` VALUES (18,3646,108,'Skeleton_Sorcerer',330,1,2264,0,0,11,13,0);
 INSERT INTO `mob_groups` VALUES (19,3912,108,'Thunder_Elemental',330,4,2410,0,0,18,20,0);
 INSERT INTO `mob_groups` VALUES (20,3170,108,'Poltergeist',330,0,0,0,0,18,20,0);
-INSERT INTO `mob_groups` VALUES (21,1812,108,'Grenade',330,8,0,0,0,15,17,0);
+INSERT INTO `mob_groups` VALUES (21,1812,108,'Grenade',330,8,6027,0,0,15,17,0);
 INSERT INTO `mob_groups` VALUES (22,2473,108,'Mad_Sheep',330,0,1563,0,0,11,14,0);
 INSERT INTO `mob_groups` VALUES (23,4359,108,'Wolf_Zombie',330,1,226,0,0,8,10,0);
 INSERT INTO `mob_groups` VALUES (24,1738,108,'Goblin_Tinkerer',330,0,6029,0,0,12,16,0);
@@ -12581,7 +12581,7 @@ INSERT INTO `mob_groups` VALUES (29,6660,191,'Goblin_Bladesmith',330,0,3150,0,0,
 INSERT INTO `mob_groups` VALUES (30,6665,191,'Goblin_Bushwhacker',330,0,3167,0,0,90,91,0);
 INSERT INTO `mob_groups` VALUES (31,724,191,'Chocoboleech',0,128,470,1100,0,24,25,0);
 INSERT INTO `mob_groups` VALUES (32,5528,191,'Fire_Elemental',0,128,0,0,0,75,75,0);
-INSERT INTO `mob_groups` VALUES (33,4273,191,'Wadi_Leech',0,128,2599,0,0,11,14,0);
+INSERT INTO `mob_groups` VALUES (33,4273,191,'Wadi_Leech',330,0,2599,0,0,11,14,0);
 INSERT INTO `mob_groups` VALUES (34,6890,191,'Celaeno',0,128,0,0,0,100,100,0);
 
 -- ------------------------------------------------------------
