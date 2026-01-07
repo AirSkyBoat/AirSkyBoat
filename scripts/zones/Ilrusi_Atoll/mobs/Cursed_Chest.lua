@@ -3,26 +3,9 @@
 --  Mob: Cursed Chest
 -----------------------------------
 local ID = require("scripts/zones/Ilrusi_Atoll/IDs")
+local goldenSalvage = require("scripts/zones/Ilrusi_Atoll/instances/golden_salvage")
 local entity = {}
 print("[GS][Chest][LOAD] mob Cursed_Chest.lua loaded")
-
-
-local function CheckForDrawnIn(centerX, centerY, centerZ, playerX, playerY, playerZ, rayon, maxRayon)
-    local difX = playerX - centerX
-    local difY = playerY - centerY
-    local difZ = playerZ - centerZ
-    local distance = math.sqrt(math.pow(difX, 2) + math.pow(difY, 2) + math.pow(difZ, 2))
-
-    --print(string.format("[GS][Mob][CheckForDrawnIn] distance=%.2f  min=%.2f  max=%.2f", distance, rayon, maxRayon))
-
-    if distance > rayon and distance < maxRayon then
-        --print("[GS][Mob][CheckForDrawnIn] returning TRUE")
-        return true
-    else
-        --print("[GS][Mob][CheckForDrawnIn] returning FALSE")
-        return false
-    end
-end
 
 entity.onTrigger = function(player, mob)
     local instance = player:getInstance()
@@ -44,7 +27,7 @@ entity.onTrigger = function(player, mob)
     local mobID    = mob:getID()
     local instance = player:getInstance()
     local figureheadChestID = instance:getLocalVar("figureheadChestID")
-    local cursedChestMOBEntity = GetMobByID(mob:getID(), player:getInstance())
+    local cursedChestMOBEntity = GetMobByID(mob:getID(), player:getInstance()) 
 
     if mobID == figureheadChestID then
         instance:setLocalVar("figureheadChestOpened", 1)
@@ -52,9 +35,11 @@ entity.onTrigger = function(player, mob)
         print(instance:getLocalVar("figureheadChestOpened"))
        
         --TODO: a player an ctrl+a the winningchest and kill it, prevent that or make a if else statement
-        --make the chest not appear yellow and still be targetable
+        --despawn the chests after winning
         --cursed chest doesnt aggro a lvl 99 whereas on retail it does. it would be easy to make it aggro but keeping the name yellow(unclaimed) while doing so might be harder
         --check if the portal and lockbox spawns and you can tele out with awards
+
+     
 
         mob:entityAnimationPacket("open")
         player:messageSpecial(ID.text.CHEST)
@@ -66,23 +51,17 @@ entity.onTrigger = function(player, mob)
 
         player:timer(20000, function()
         instance:setProgress(1)
+        
+        
         end)
         print("ending mob onTrigger")
-       
-       
- 
+
     else
         print("[GS][Chest][onTrigger] mob:ontrigger NO MATCH")
-        --mob:hideName(false)
         mob:setModelId(258)
-        
         mob:setAnimationSub(1)
         mob:setStatus(xi.status.UPDATE)
-        --mob:setStatus(xi.status.NORMAL)
-        
-        --mob:setStatus(xi.status.UPDATE)
         mob:setMobMod(xi.mobMod.NO_AGGRO, 0)
-      
     end
     
     print("ending mob onTrigger")
