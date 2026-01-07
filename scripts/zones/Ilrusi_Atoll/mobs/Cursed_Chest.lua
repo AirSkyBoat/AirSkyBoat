@@ -18,7 +18,7 @@ entity.onTrigger = function(player, mob)
     end
 
 
-    if mob:checkDistance(mob) > 3 then
+    if player:checkDistance(mob) > 3 then
         print("[GS][Chest][onTrigger] too far -> MUST_BE_CLOSER_CHEST")
         player:messageSpecial(ID.text.MUST_BE_CLOSER_CHEST)
         return
@@ -73,6 +73,8 @@ entity.onMobSpawn = function(mob)
     local mobID    = mob:getID()
     local instance = mob:getInstance()
     local figureheadChestID = instance and instance:getLocalVar("figureheadChestID")
+    local randomRotation = math.random() * 2 * math.pi
+    mob:setRotation(randomRotation)
 
     
     --mob:hideName(false) 
@@ -80,6 +82,7 @@ entity.onMobSpawn = function(mob)
     mob:setAnimationSub(0)
     mob:setMobMod(xi.mobMod.NO_DESPAWN, 1)
     mob:setMobMod(xi.mobMod.NO_AGGRO, 1)
+    DisallowRespawn(mob:getID(), true)
         
 
     print("[GS][Mob][onMobSpawn] finished init; status=NORMAL hidden=true animSub=0")
@@ -94,13 +97,13 @@ entity.onMobEngaged = function(mob, target)
 end
 
 entity.onMobDisengage = function(mob)
-    --print("[GS][Mob][onMobDisengage] mob=", mob:getID())
-    --local spawn = mob:getSpawnPos()
-    --mob:setRotation(spawn.rot)
-    --mob:hideName(true)
-    --mob:setStatus(xi.status.NORMAL)
-    --mob:setAnimationSub(0)
-    --print("[GS][Mob][onMobDisengage] reset to chest state (hidden, animSub=0, status=NORMAL)")
+    mob:setStatus(xi.status.NORMAL)
+    mob:setAnimationSub(0)
+    mob:setModelId(960)
+    mob:hideName(true)
+    mob:setMobMod(xi.mobMod.NO_AGGRO, 1)
+    
+    
 end
 
 entity.onMobFight = function(mob, target)
@@ -111,19 +114,14 @@ entity.onMobFight = function(mob, target)
         mob:setMobMod(xi.mobMod.DRAW_IN, 3)
         mob:setLocalVar("despawn", 0)
     else
-        mob:setMobMod(dsp.mobMod.DRAW_IN, 0)
+        mob:setMobMod(xi.mobMod.DRAW_IN, 0)
         if mob:getLocalVar("despawn") == 0 then
             mob:setLocalVar("despawn", os.time() + 30)
         end
     end
     if mob:getLocalVar("despawn") ~= 0 then
         if mob:getLocalVar("despawn") < os.time() then
-            mob:setStatus(dsp.status.NORMAL)
-            mob:disengage()
-            mob:AnimationSub(0)
-            mob:setHP(mob:getMaxHP())
-            mob:setModelId(960)
-            mob:hideName(true)
+            mob:disengage() 
         end
     end
 end
@@ -133,6 +131,8 @@ entity.onMobDeath = function(mob, player, optParams)
 end
 
 entity.onMobDespawn = function(mob)
+    GetNPCByID(mob:getID(), mob:getInstance()):setStatus(xi.status.DISAPPEAR)
+    
 end
 
 return entity
