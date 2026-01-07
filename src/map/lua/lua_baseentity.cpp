@@ -6431,7 +6431,7 @@ uint16 CLuaBaseEntity::getFame(sol::object const& areaObj)
         {
             case 0: // San d'Oria
             case 1: // Bastok
-            case 2: // Windurst
+            case 2: // Windurst / Kazham / Mhaura
                 fame = static_cast<uint16>(PChar->profile.fame[fameArea] * fameMultiplier);
                 break;
             case 3: // Jeuno
@@ -6492,7 +6492,7 @@ void CLuaBaseEntity::addFame(sol::object const& areaObj, uint16 fame)
         {
             case 0: // San d'Oria
             case 1: // Bastok
-            case 2: // Windurst
+            case 2: // Windurst / Kazham / Mhaura
                 PChar->profile.fame[fameArea] += fame;
                 break;
             case 3: // Jeuno
@@ -6553,7 +6553,7 @@ void CLuaBaseEntity::setFame(sol::object const& areaObj, uint16 fame)
         {
             case 0: // San d'Oria
             case 1: // Bastok
-            case 2: // Windurst
+            case 2: // Windurst / Kazham / Mhaura
                 PChar->profile.fame[fameArea] = fame;
                 break;
             case 3: // Jeuno

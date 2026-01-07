@@ -36,22 +36,22 @@ function onTrigger(player, target, famezone)
     -- validate famezone
     local fameAreas =
     {
-        "San d'Oria",               -- 0
-        "Bastok",                   -- 1
-        "Windurst",                 -- 2
-        "Jeuno",                    -- 3
-        "Selbina / Rabao",          -- 4
-        "Norg",                     -- 5
-        "Abyssea - Konschtat",      -- 6
-        "Abyssea - Tahrongi",       -- 7
-        "Abyssea - La Theine",      -- 8
-        "Abyssea - Misareaux",      -- 9
-        "Abyssea - Vunkerl",        -- 10
-        "Abyssea - Attohwa",        -- 11
-        "Abyssea - Altepa",         -- 12
-        "Abyssea - Grauberg",       -- 13
-        "Abyssea - Uleguerand",     -- 14
-        "Adoulin"                   -- 15
+        "San d'Oria",                   -- 0
+        "Bastok",                       -- 1
+        "Windurst / Kazham / Mhaura",   -- 2
+        "Jeuno",                        -- 3
+        "Selbina / Rabao",              -- 4
+        "Norg",                         -- 5
+        "Abyssea - Konschtat",          -- 6
+        "Abyssea - Tahrongi",           -- 7
+        "Abyssea - La Theine",          -- 8
+        "Abyssea - Misareaux",          -- 9
+        "Abyssea - Vunkerl",            -- 10
+        "Abyssea - Attohwa",            -- 11
+        "Abyssea - Altepa",             -- 12
+        "Abyssea - Grauberg",           -- 13
+        "Abyssea - Uleguerand",         -- 14
+        "Adoulin"                       -- 15
     }
 
     -- Validate famezone

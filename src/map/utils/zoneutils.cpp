@@ -68,7 +68,7 @@ namespace zoneutils
 
     void TOTDChange(TIMETYPE TOTD)
     {
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             PZone.second->TOTDChange(TOTD);
         }
@@ -84,7 +84,7 @@ namespace zoneutils
     void InitializeWeather()
     {
         TracyZoneScoped;
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             if (!PZone.second->IsWeatherStatic())
             {
@@ -107,7 +107,7 @@ namespace zoneutils
 
     void SavePlayTime()
     {
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             PZone.second->SavePlayTime();
         }
@@ -148,7 +148,7 @@ namespace zoneutils
 
     CCharEntity* GetCharByName(std::string name)
     {
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             CCharEntity* PChar = PZone.second->GetCharByName(name);
 
@@ -163,7 +163,7 @@ namespace zoneutils
     CCharEntity* GetCharFromWorld(uint32 charid, uint16 targid)
     {
         // will not return pointers to players in Mog House
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             if (PZone.first == 0)
             {
@@ -180,7 +180,7 @@ namespace zoneutils
 
     CCharEntity* GetChar(uint32 charid)
     {
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             CBaseEntity* PEntity = PZone.second->GetCharByID(charid);
             if (PEntity)
@@ -197,7 +197,7 @@ namespace zoneutils
         CCharEntity* PSecondary = nullptr;
         CCharEntity* PTernary   = nullptr;
 
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             // clang-format off
             PZone.second->ForEachChar([primary, ternary, &PPrimary, &PSecondary, &PTernary](CCharEntity* PChar)
@@ -267,7 +267,7 @@ namespace zoneutils
      *                                                                       *
      ************************************************************************/
 
-    void LoadNPCList()
+    static void LoadNPCList()
     {
         TracyZoneScoped;
         ShowInfo("Loading NPCs");
@@ -315,7 +315,7 @@ namespace zoneutils
                     {
                         while (sql->NextRow() == SQL_SUCCESS)
                         {
-                            const char* contentTag = (const char*)sql->GetData(0);
+                            const char* contentTag = reinterpret_cast<const char*>(sql->GetData(0));
                             if (!luautils::IsContentEnabled(contentTag))
                             {
                                 continue;
@@ -323,41 +323,41 @@ namespace zoneutils
 
                             uint32 NpcID = sql->GetUIntData(1);
 
-                            if (PZone->GetType() != ZONE_TYPE::DUNGEON_INSTANCED)
+                            if (PZone && PZone->GetType() != ZONE_TYPE::DUNGEON_INSTANCED)
                             {
-                                CNpcEntity* PNpc = new CNpcEntity;
+                                auto PNpc = std::make_unique<CNpcEntity>();
                                 PNpc->targid     = NpcID & 0xFFF;
                                 PNpc->id         = NpcID;
 
                                 PNpc->name       = sql->GetStringData(2); // Internal name
                                 PNpc->packetName = sql->GetStringData(3); // Name sent to the client (when applicable)
 
-                                PNpc->loc.p.rotation = (uint8)sql->GetIntData(4);
+                                PNpc->loc.p.rotation = static_cast<uint8>(sql->GetIntData(4));
                                 PNpc->loc.p.x        = sql->GetFloatData(5);
                                 PNpc->loc.p.y        = sql->GetFloatData(6);
                                 PNpc->loc.p.z        = sql->GetFloatData(7);
-                                PNpc->loc.p.moving   = (uint16)sql->GetUIntData(8);
+                                PNpc->loc.p.moving   = static_cast<uint16>(sql->GetUIntData(8));
 
                                 PNpc->m_TargID = sql->GetUIntData(8) >> 16;
 
-                                PNpc->speed    = (uint8)sql->GetIntData(9);  // Overwrites baseentity.cpp's defined speed
-                                PNpc->speedsub = (uint8)sql->GetIntData(10); // Overwrites baseentity.cpp's defined speedsub
+                                PNpc->speed    = static_cast<uint8>(sql->GetIntData(9)); // Overwrites baseentity.cpp's defined speed
+                                PNpc->speedsub = static_cast<uint8>(sql->GetIntData(10)); // Overwrites baseentity.cpp's defined speedsub
 
-                                PNpc->animation    = (uint8)sql->GetIntData(11);
-                                PNpc->animationsub = (uint8)sql->GetIntData(12);
+                                PNpc->animation    = static_cast<uint8>(sql->GetIntData(11));
+                                PNpc->animationsub = static_cast<uint8>(sql->GetIntData(12));
 
-                                PNpc->namevis = (uint8)sql->GetIntData(13);
+                                PNpc->namevis = static_cast<uint8>(sql->GetIntData(13));
                                 PNpc->status  = static_cast<STATUS_TYPE>(sql->GetIntData(14));
                                 PNpc->m_flags = sql->GetUIntData(15);
 
                                 uint16 sqlModelID[10];
-                                memcpy(&sqlModelID, sql->GetData(16), 20);
+                                memcpy(sqlModelID, sql->GetData(16), sizeof(sqlModelID));
                                 PNpc->look = look_t(sqlModelID);
 
-                                PNpc->name_prefix = (uint8)sql->GetIntData(17);
-                                PNpc->widescan    = (uint8)sql->GetIntData(18);
+                                PNpc->name_prefix = static_cast<uint8>(sql->GetIntData(17));
+                                PNpc->widescan    = static_cast<uint8>(sql->GetIntData(18));
 
-                                PZone->InsertNPC(PNpc);
+                                PZone->InsertNPC(PNpc.release());
                             }
                         }
                     }
@@ -393,7 +393,7 @@ namespace zoneutils
      *                                                                       *
      ************************************************************************/
 
-    void LoadMOBList()
+    static void LoadMOBList()
     {
         TracyZoneScoped;
         ShowInfo("Loading Mobs");
@@ -795,7 +795,7 @@ namespace zoneutils
      *                                                                       *
      ************************************************************************/
 
-    CZone* CreateZone(uint16 ZoneID)
+    static CZone* CreateZone(uint16 ZoneID)
     {
         static const char* Query = "SELECT zonetype, restriction FROM zone_settings "
                                    "WHERE zoneid = %u LIMIT 1";
@@ -902,7 +902,7 @@ namespace zoneutils
         campaign::LoadState();
         campaign::LoadNations();
 
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             if (PZone.second->GetIP() != 0)
             {
@@ -1235,6 +1235,8 @@ namespace zoneutils
             case ZONE_PORT_WINDURST:
             case ZONE_WINDURST_WOODS:
             case ZONE_HEAVENS_TOWER:
+            case ZONE_MHAURA:
+            case ZONE_KAZHAM:
                 return 2;
             case ZONE_RULUDE_GARDENS:
             case ZONE_UPPER_JEUNO:
@@ -1257,7 +1259,7 @@ namespace zoneutils
 
     int GetWeatherElement(WEATHER weather)
     {
-        if (weather >= MAX_WEATHER_ID)
+        if (weather < 0 || weather >= MAX_WEATHER_ID)
         {
             ShowWarning("zoneutils::GetWeatherElement() - Invalid weather passed to function.");
             return 0;
@@ -1266,7 +1268,7 @@ namespace zoneutils
         // TODO: Fix weather ordering; at the moment, this current fire, water, earth, wind, snow, thunder
         // order MUST be preserved due to the weather enums going in this order. Those enums will
         // most likely have rippling effects, such as how weather data is stored in the db
-        static uint8 Element[] = {
+        static uint8 Element[MAX_WEATHER_ID] = {
             0, // WEATHER_NONE
             0, // WEATHER_SUNSHINE
             0, // WEATHER_CLOUDS
@@ -1288,7 +1290,7 @@ namespace zoneutils
             8, // WEATHER_GLOOM
             8, // WEATHER_DARKNESS
         };
-        return Element[weather];
+        return Element[static_cast<int>(weather)];
     }
 
     /************************************************************************
@@ -1299,7 +1301,7 @@ namespace zoneutils
 
     void FreeZoneList()
     {
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             destroy(PZone.second);
         }
@@ -1309,7 +1311,7 @@ namespace zoneutils
 
     void ForEachZone(const std::function<void(CZone*)>& func)
     {
-        for (auto PZone : g_PZoneList)
+        for (auto& PZone : g_PZoneList)
         {
             func(PZone.second);
         }

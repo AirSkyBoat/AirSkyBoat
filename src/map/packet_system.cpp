@@ -5217,7 +5217,7 @@ void SmallPacket0x084(map_session_data_t* const PSession, CCharEntity* const PCh
             {
                 case 0: // San d'Oria
                 case 1: // Bastok
-                case 2: // Windurst
+                case 2: // Windurst / Kazham / Mhaura
                     fame = (uint16)(PChar->profile.fame[fameArea] * fameMultiplier);
                     break;
                 case 3: // Jeuno
@@ -5319,7 +5319,7 @@ void SmallPacket0x085(map_session_data_t* const PSession, CCharEntity* const PCh
         {
             case 0: // San d'Oria
             case 1: // Bastok
-            case 2: // Windurst
+            case 2: // Windurst / Kazham / Mhaura
                 fame = (uint16)(PChar->profile.fame[fameArea] * fameMultiplier);
                 break;
             case 3: // Jeuno
