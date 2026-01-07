@@ -2194,10 +2194,10 @@ xi.appraisal.assaultChestTrigger = function(player, npc, qItemTable, regItemTabl
                 player:messageSpecial(zones[player:getZoneID()].text.ITEM_CANNOT_BE_OBTAINED, unappraisedItem)
                 return
             else
-                player:addItem({ id = unappraisedItem, appraisal = area })
                 for _, players in pairs(chars) do
                     players:messageName(zones[player:getZoneID()].text.PLAYER_OBTAINS_ITEM, player, unappraisedItem)
-                end 
+                end
+                player:addItem({ id = unappraisedItem, appraisal = area })
             end
         end
 
