@@ -35,13 +35,13 @@ end
 instanceObject.afterInstanceRegister = function(player)
     local instance = player:getInstance()
 
-    xi.assault.afterInstanceRegister(player, xi.items.CAGE_OF_REEF_FIREFLIES)
+    xi.assault.afterInstanceRegister(player, xi.items.CAGE_OF_DVUCCA_FIREFLIES)
     GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(-495.000, -9.695, -72.000, 0)
     GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(-490.000, -9.900, -72.000, 0)
 end
 
 instanceObject.onInstanceTimeUpdate = function(instance, elapsed)
-    local mob = GetMobByID(ID.mob[xi.assault.mission.SEAGULL_GROUNDED].MOBS_START.EXCALIAC, instance)
+    local mob = GetMobByID(ID.mob[xi.assault.mission.SEAGULL_GROUNDED].MOBS_START.EXCALIACE, instance)
     if mob ~= nil then
         instanceObject.onTrack(instance)
     end
@@ -322,7 +322,7 @@ instanceObject.onTrack = function(instance)
         },
     }
 
-    local mob = GetMobByID(ID.mob[xi.assault.mission.SEAGULL_GROUNDED].MOBS_START.EXCALIAC, instance)
+    local mob = GetMobByID(ID.mob[xi.assault.mission.SEAGULL_GROUNDED].MOBS_START.EXCALIACE, instance)
     local chars = instance:getChars()
     local mobs = instance:getMobs()
     local missionActive = mob:getLocalVar("missionActive")

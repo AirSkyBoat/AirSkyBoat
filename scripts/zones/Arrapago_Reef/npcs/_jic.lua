@@ -28,7 +28,6 @@ end
 entity.onEventFinish = function(player, csid, option, target)
     xi.instance.onEventFinish(player, csid, option)
     xi.assault.onInstanceCreatedCallback(player, inst)
-    end
 end
 
 return entity

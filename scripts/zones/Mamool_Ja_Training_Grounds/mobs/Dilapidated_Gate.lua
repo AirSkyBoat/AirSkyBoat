@@ -1,6 +1,8 @@
 -----------------------------------
 -- Area: Mamool Ja Training Grounds (Imperial Agent Rescue)
 --  MOB: Dilapidated_Gate
+-- Notes: I've seen a stave toss animate towards the door and not show any damage taken.
+--        Does that mean stave toss can miss a door? Youtube: lulmoink around 5:50.
 -----------------------------------
 local ID = require("scripts/zones/Mamool_Ja_Training_Grounds/IDs")
 -----------------------------------
@@ -11,6 +13,8 @@ entity.onMobSpawn = function(mob)
     mob:hideName(true)
     mob:setAutoAttackEnabled(false)
     mob:setMobMod(xi.mobMod.NO_MOVE, 1)
+    mob:setAllegiance(xi.allegiance.PLAYER)
+    mob:setUntargetable(true)
     mob:addListener("WEAPONSKILL_TAKE", "DILAPIDATED_GATE_WEAPONSKILL_TAKE", function(target, attacker, skillId, tp, action)
         if skillId == 1733 or skillId == 1923 then -- firespit
             target:setLocalVar("hits", target:getLocalVar("hits") + 1)
