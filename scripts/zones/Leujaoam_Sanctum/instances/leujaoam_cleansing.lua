@@ -32,6 +32,7 @@ instanceObject.onInstanceCreatedCallback = function(player, instance)
 end
 
 instanceObject.afterInstanceRegister = function(player)
+    --TODO: does the assault start and time to complete text already play? otherwise this might be a good place to put it
     local instance = player:getInstance()
 
     xi.assault.afterInstanceRegister(player, xi.items.CAGE_OF_AZOUPH_FIREFLIES)
@@ -54,10 +55,20 @@ instanceObject.onInstanceProgressUpdate = function(instance, progress)
 end
 
 instanceObject.onInstanceComplete = function(instance)
-    xi.assault.onInstanceComplete(instance, 8, 8)
+    local chars = instance:getChars()
+
+    for i, v in pairs(chars) do
+        v:messageSpecial(ID.text.RUNE_UNLOCKED_POS, 8, 8)
+        print("[GS] unlock message to", v:getName())
+    end
+
+    GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setStatus(xi.status.NORMAL)
+    GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setStatus(xi.status.NORMAL)
+    print("[GS] Rune/Lockbox set to NORMAL")
 end
 
 instanceObject.onEventFinish = function(player, csid, option)
+    xi.assault.instanceOnEventFinish(player, csid, xi.zone.ILRUSI_ATOLL)
 end
 
 return instanceObject

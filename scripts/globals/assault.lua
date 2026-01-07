@@ -72,6 +72,7 @@ xi.assault.onAssaultUpdate = function(player, csid, option)
 end
 
 xi.assault.onInstanceCreatedCallback = function(player, instance)
+        print("oninstanceCreated callback ASSAULT.LUA")
     if instance then
         instance:setLevelCap(player:getLocalVar("AssaultCap"))
         player:setLocalVar("AssaultCap", 0)
@@ -87,52 +88,101 @@ end
 xi.assault.afterInstanceRegister = function(player, fireFlies)
     local instance = player:getInstance()
     local assaultID = player:getCurrentAssault()
-    local levelCap = instance:getLevelCap()
-    local ID = zones[player:getZoneID()]
+    local levelCap = instance and instance:getLevelCap() or 0
+
+    
+
+    -- Use the instance's zone (not player's entrance zone) to get correct texts/mob lists
+    local zoneId = instance and instance:getZone():getID() or player:getZoneID()
+    local ID = zones[zoneId]
+
+    if instance then
+        instance:setLocalVar("firefliesItem", fireFlies or 0)
+    end
 
     player:setCharVar("assaultEntered", assaultID)
-    player:messageSpecial(ID.text.ASSAULT_START_OFFSET + assaultID, assaultID)
-    player:messageSpecial(ID.text.TIME_TO_COMPLETE, instance:getTimeLimit())
+
+    -- Prefer explicit ASSAULT_<id>_START if present
+    local startKey = "ASSAULT_" .. tostring(assaultID) .. "_START"
+    if ID and ID.text and ID.text[startKey] then
+        player:messageSpecial(ID.text[startKey], assaultID)
+    else
+        player:messageSpecial(ID.text.ASSAULT_START_OFFSET + assaultID, assaultID)
+    end
+
+    if instance then
+        player:messageSpecial(ID.text.TIME_TO_COMPLETE, instance:getTimeLimit())
+    end
+
     player:addTempItem(fireFlies)
 
     if levelCap ~= 0 then
         player:addStatusEffect(xi.effect.LEVEL_RESTRICTION, levelCap, 0, 0)
     end
 
-    for _, entity in pairs(ID.mob[assaultID].MOBS_START) do
-        SpawnMob(entity, instance)
+    print(("[DEBUG] instId=%s assaultID=%s"):format(instance and instance:getID() or "nil",
+                                                   tostring(player:getCurrentAssault())))
+    for _, id in pairs(ID.mob[assaultID].MOBS_START) do
+      local m = GetMobByID(id, instance)
+      print(("[DEBUG] in-instance present? id=%u  %s"):format(id, tostring(m ~= nil)))
+    end
+
+    -- Spawn mobs from the instance zone's mob list
+    if ID and ID.mob and ID.mob[assaultID] and ID.mob[assaultID].MOBS_START then
+        for _, entityId in pairs(ID.mob[assaultID].MOBS_START) do
+            SpawnMob(entityId, instance)
+        end
+    else
+        print(string.format("xi.assault.afterInstanceRegister: no MOBS_START for assault=%s zone=%s", tostring(assaultID), tostring(zoneId)))
     end
 end
 
 xi.assault.onInstanceFailure = function(instance)
-    for _, entity in pairs(instance:getMobs()) do
-        DespawnMob(entity:getID(), instance)
+    if not instance then
+        return
+    end
+
+    -- Defensive: read fireflies item if set (avoid nil reference)
+    local firefliesItem = instance:getLocalVar("firefliesItem") or 0
+
+    -- Instance-wide cleanup: despawn mobs and trigger exit CS for players.
+    for _, mob in pairs(instance:getMobs()) do
+        DespawnMob(mob:getID(), instance)
     end
 
     for _, entity in pairs(instance:getChars()) do
+        -- Send mission failed messages and trigger exit CS (zone will handle per-player cleanup)
         entity:messageSpecial(zones[instance:getZone():getID()].text.MISSION_FAILED, 10, 10)
         entity:startEvent(102)
+
+        -- Ensure leader armband flag is cleared so it's not left in a stale state after failure.
+        entity:setCharVar("Assault_Armband", 0)
     end
 end
 
 xi.assault.onInstanceComplete = function(instance, posX, posZ)
+    if not instance then
+        return
+    end
+
     local ID = zones[instance:getZone():getID()]
 
+    -- Instance-wide: unlock rune/lockbox and notify players
     GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setStatus(xi.status.NORMAL)
     GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setStatus(xi.status.NORMAL)
 
     for _, entity in pairs(instance:getChars()) do
+        -- Notify players (do not clear persistent charvars or temp items here; zone will handle per-player cleanup)
         entity:messageSpecial(ID.text.RUNE_UNLOCKED_POS, posX, posZ)
     end
 end
 
 xi.assault.instanceOnEventFinish = function(player, csid, zone)
     if csid == 102 then
-        local instance = player:getInstance()
-
-        for _, entity in pairs(instance:getChars()) do
-            entity:setPos(0, 0, 0, 0, zone)
-        end
+        -- This function is invoked per-player when their exit CS finishes.
+        -- Only perform the transport here; per-player persistent cleanup must happen in the zone handler
+        -- after the player is back to the non-instance context.
+        player:setPos(0, 0, 0, 0, zone)
     end
 end
 
@@ -143,10 +193,11 @@ xi.assault.runeReleaseFinish = function(player, csid, option)
         local ID            = zones[player:getZoneID()]
         local assaultID     = player:getCurrentAssault()
         local playerPenalty = math.max((#chars - 3) * 0.1, 0)
-        local bonusPoints   = instance:getLocalVar("BonusPoints")
+        local bonusPoints   = instance:getLocalVar("BonusPoints") or 0
         local pointModifier = xi.assault.missionInfo[assaultID].minimumPoints
-        local points        = pointModifier - (pointModifier * playerPenalty)
+        local basePoints    = pointModifier - (pointModifier * playerPenalty)
 
+        -- Defensive: ensure mobs are cleaned up
         for _, entity in pairs(instance:getMobs()) do
             DespawnMob(entity:getID(), instance)
         end
@@ -155,23 +206,32 @@ xi.assault.runeReleaseFinish = function(player, csid, option)
             if entity:getLocalVar("AssaultPointsAwarded") == 0 then
                 entity:setLocalVar("AssaultPointsAwarded", 1)
 
+                -- compute per-player award (do NOT mutate basePoints)
+                local award = basePoints
+
                 if entity:getCharVar("Assault_Armband") == 1 then
-                    points = points * 1.1
+                    award = award * 1.1
                 end
 
                 if entity:hasCompletedAssault(assaultID) then
-                    points = math.floor(points)
-                    entity:setVar("AssaultPromotion", entity:getCharVar("AssaultPromotion") + 1)
+                    award = math.floor(award)
+                    -- Persist promotion to charvar
+                    entity:setCharVar("AssaultPromotion", entity:getCharVar("AssaultPromotion") + 1)
                 else
-                    points = math.floor(points * 1.5)
-                    entity:setVar("AssaultPromotion", entity:getCharVar("AssaultPromotion") + 5)
+                    award = math.floor(award * 1.5)
+                    entity:setCharVar("AssaultPromotion", entity:getCharVar("AssaultPromotion") + 5)
                 end
 
-                entity:addAssaultPoint(xi.assault.getAssaultArea(player), points + bonusPoints)
-                entity:messageSpecial(ID.text.ASSAULT_POINTS_OBTAINED, points + bonusPoints)
-                entity:setVar("AssaultComplete", 1)
+                entity:addAssaultPoint(xi.assault.getAssaultArea(player), award + (bonusPoints or 0))
+                entity:messageSpecial(ID.text.ASSAULT_POINTS_OBTAINED, award + (bonusPoints or 0))
+                entity:setCharVar("AssaultComplete", 1)
                 entity:startEvent(102)
             end
+        end
+
+        -- Clear the Assault_Armband charvar for all characters now that the instance has completed.
+        for _, entity in pairs(chars) do
+            entity:setCharVar("Assault_Armband", 0)
         end
     end
 end

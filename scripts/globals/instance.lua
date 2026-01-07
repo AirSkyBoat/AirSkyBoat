@@ -56,7 +56,7 @@ xi.instance.lookup =
 {
     [xi.zone.ILRUSI_ATOLL] =
     {
-        -- Assault: Golden Salvage
+        { 5500, { 219, 41, -4, 0, 60, 4, 1 }, { 219, 4 }, { 108, 0 } }, -- Assault: Golden Salvage
         -- Assault: Lamia No.13
         { 5502, { 219, 43, -4, 0, 70, 4, 1 }, { 219, 4 }, { 147, 0 } }, -- Assault: Extermination
         -- Assault: Demolition Duty
@@ -484,13 +484,41 @@ xi.instance.updateInstanceTime = function(instance, elapsed, text)
     local remainingTimeLimit = (instance:getTimeLimit()) * 60 - (elapsed / 1000)
     local wipeTime = instance:getWipeTime()
 
+    
+    -- If instance has no players, start a no-players timer and only fail after 180s
+    -- elapsed is milliseconds; stored timer uses milliseconds
+    local NO_PLAYERS_GRACE_MS = 180 * 1000
+    if not players or (type(players) == "table" and next(players) == nil) then
+        local noPlayersSince = instance:getLocalVar("noPlayersSince") or 0
+        if noPlayersSince == 0 then
+            instance:setLocalVar("noPlayersSince", elapsed)
+            noPlayersSince = elapsed
+        end
+
+        if (elapsed - noPlayersSince) > NO_PLAYERS_GRACE_MS then
+            -- nobody returned within grace period -> fail instance
+            instance:fail()
+            return
+        end
+
+        -- don't progress further while waiting for possible rejoin
+        return
+    else
+        -- players present: clear any previously set no-players timer
+        if instance:getLocalVar("noPlayersSince") ~= 0 then
+            instance:setLocalVar("noPlayersSince", 0)
+        end
+    end
+
+    -- Normal failure conditions
+    if remainingTimeLimit < 0 then
+        instance:fail()
+        return
+    end
+
     if
-        remainingTimeLimit < 0 or
-        (
-            wipeTime ~= 0 and
-            (elapsed - wipeTime) / 1000 > 180
-        ) or
-        players == nil
+        wipeTime ~= 0 and
+        (elapsed - wipeTime) / 1000 > 180
     then
         instance:fail()
         return
@@ -523,3 +551,4 @@ xi.instance.updateInstanceTime = function(instance, elapsed, text)
 
     setInstanceLastTimeUpdateMessage(instance, players, remainingTimeLimit, text)
 end
+

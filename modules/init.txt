@@ -52,6 +52,7 @@ era/cpp/
 #      General SQL
 #-----------------------
 era/sql/
+#custom/sql/mob_zones/00_original/
 #-----------------------
 #        Dynamis
 #-----------------------

@@ -42,6 +42,7 @@ function onTrigger(player, str)
     local successfullyExecuted, errorMessage = pcall(scriptObj)
     if not successfullyExecuted then
         player:PrintToPlayer("Error calling: " .. str .. "\n" .. errorMessage)
+        print(errorMessage)
     end
 
     -- Restore the os table..

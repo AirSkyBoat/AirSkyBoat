@@ -54,7 +54,7 @@ entity.onTrigger = function(player, npc)
             },
         },
 
-        [xi.assault.mission.SUPPLIES_RECOVER] =
+        [xi.assault.mission.SUPPLIES_RECOVERY] =
         {
             {
                 { itemid = xi.items.UNAPPRAISED_DAGGER, droprate = 500 },

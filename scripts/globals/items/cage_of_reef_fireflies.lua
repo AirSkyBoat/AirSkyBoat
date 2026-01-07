@@ -17,6 +17,13 @@ itemObject.onItemCheck = function(target)
 end
 
 itemObject.onItemUse = function(target)
+    -- If the player is in an instance, count the instance as a failure when they use the fireflies.
+    local instance = target:getInstance()
+    if instance then
+        print("[FIREFLIES] Player using Reef Fireflies inside instance; failing instance.")
+        instance:fail()
+    end
+
     target:addStatusEffectEx(xi.effect.TELEPORT, 0, xi.teleport.id.REEF, 0, 1)
 end
 

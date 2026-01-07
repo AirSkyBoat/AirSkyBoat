@@ -10,7 +10,8 @@ entity.onTrade = function(player, npc, trade)
 end
 
 entity.onTrigger = function(player, npc)
-    player:startEvent(10018)
+    player:startEvent(10014)
+    --player:startEvent(10018) the real event, possibly the previous person gave a fake event to stop people from playing the buggy escort quest
 end
 
 entity.onEventUpdate = function(player, csid, option)
